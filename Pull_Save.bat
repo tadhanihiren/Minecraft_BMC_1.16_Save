@@ -1,39 +1,46 @@
 @echo off
-echo Pulling latest save from GitHub (merges, keeps local changes)...
+echo ============================================
+echo  Pulling Minecraft save from GitHub
+echo  (local save is backed up first as ZIP)
+echo ============================================
 echo.
 
-set REPO_URL=https://github.com/tadhanihiren/Minecraft_BMC_1.16_Save.git
 set SAVE_DIR=%~dp0golida
+set REPO_URL=https://github.com/tadhanihiren/Minecraft_BMC_1.16_Save.git
 
-if exist "%SAVE_DIR%\.git" (
-    rem Already a git repo - just pull latest
-    cd /d "%SAVE_DIR%"
-    rem save any uncommitted local changes
-    git stash
-    git pull
-    git stash pop
-    echo.
-    echo Done! Save updated.
-    pause
-    exit /b 0
+rem ---- 1. Back up current local save as ZIP ----
+if exist "%SAVE_DIR%\*.dat" (
+    for /f "tokens=2 delims==" %%a in ('wmic os get localdatetime /value ^| find "="') do set DT=%%a
+    set ZIPNAME=golida_backup_%DT:~0,14%.zip
+    set ZIPNAME=%ZIPNAME: =%
+    echo Backing up current save to: %ZIPNAME%
+    powershell -NoProfile -Command "Compress-Archive -Path '%SAVE_DIR%\*' -DestinationPath '%~dp0%ZIPNAME%' -Force"
+    echo Backup done: %~dp0%ZIPNAME%
+) else (
+    echo No existing save to back up. Skipping backup.
 )
 
+rem ---- 2. Delete old save ----
 if exist "%SAVE_DIR%" (
-    echo Existing golida folder found but it's not a git repo.
-    echo Converting it to a git repo before pulling...
-    cd /d "%SAVE_DIR%"
-    git init
-    git remote add origin %REPO_URL%
-    git fetch origin
-    git checkout -b main origin/main
-    echo.
-    echo Done! Save merged with GitHub.
-    pause
-    exit /b 0
+    echo Removing old save...
+    rmdir /s /q "%SAVE_DIR%"
 )
 
-echo No save folder found. Cloning fresh copy...
+rem ---- 3. Fresh clone (overwrite) ----
+echo Cloning fresh copy from GitHub...
 git clone %REPO_URL% "%SAVE_DIR%"
+
+if %errorlevel% neq 0 (
+    echo.
+    echo Error: Failed to clone! Your backup ZIP is still there.
+    pause
+    exit /b 1
+)
+
 echo.
-echo Done! Save downloaded.
+echo ============================================
+echo  Done!
+echo  - New save downloaded to %SAVE_DIR%
+echo  - Old save backed up as ZIP in this folder
+echo ============================================
 pause
