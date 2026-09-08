@@ -1,0 +1,18 @@
+{
+	id: "e2213efa-e199-36df-a470-b95d2ceff842"
+	type: "player"
+	player_name: "StrangerKnight"
+	ranks: { }
+	properties: {
+		"ftbchunks:allow_explosions": 0b
+		"ftbteams:display_name": "StrangerKnight"
+		"ftbteams:color": "#FFF159"
+		"ftbchunks:block_edit_mode": "allies"
+		"ftbchunks:block_interact_mode": "allies"
+		"ftbteams:description": ""
+		"ftbteams:free_to_join": 0b
+		"ftbchunks:allow_fake_players": 1b
+	}
+	message_history: [ ]
+	extra: { }
+}

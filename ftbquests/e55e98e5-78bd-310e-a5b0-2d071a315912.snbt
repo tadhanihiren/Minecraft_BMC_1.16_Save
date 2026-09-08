@@ -1,0 +1,13 @@
+{
+	version: 1
+	uuid: "e55e98e578bd310ea5b02d071a315912"
+	name: "zadio"
+	can_edit: false
+	lock: false
+	auto_pin: false
+	task_progress: { }
+	started: { }
+	completed: { }
+	claimed_rewards: { }
+	pinned_quests: [ ]
+}

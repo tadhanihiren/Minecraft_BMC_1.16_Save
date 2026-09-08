@@ -1,0 +1,13 @@
+{
+	version: 1
+	uuid: "e2213efae19936dfa470b95d2ceff842"
+	name: "StrangerKnight"
+	can_edit: false
+	lock: false
+	auto_pin: false
+	task_progress: { }
+	started: { }
+	completed: { }
+	claimed_rewards: { }
+	pinned_quests: [ ]
+}

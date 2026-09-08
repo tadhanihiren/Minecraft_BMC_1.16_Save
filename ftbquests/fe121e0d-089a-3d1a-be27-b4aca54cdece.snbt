@@ -1,0 +1,13 @@
+{
+	version: 1
+	uuid: "fe121e0d089a3d1abe27b4aca54cdece"
+	name: "R0-bin-H00D"
+	can_edit: false
+	lock: false
+	auto_pin: false
+	task_progress: { }
+	started: { }
+	completed: { }
+	claimed_rewards: { }
+	pinned_quests: [ ]
+}

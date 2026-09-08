@@ -1,0 +1,18 @@
+{
+	id: "fe121e0d-089a-3d1a-be27-b4aca54cdece"
+	type: "player"
+	player_name: "R0-bin-H00D"
+	ranks: { }
+	properties: {
+		"ftbchunks:allow_explosions": 0b
+		"ftbteams:display_name": "R0-bin-H00D"
+		"ftbteams:color": "#59FF74"
+		"ftbchunks:block_edit_mode": "allies"
+		"ftbchunks:block_interact_mode": "allies"
+		"ftbteams:description": ""
+		"ftbteams:free_to_join": 0b
+		"ftbchunks:allow_fake_players": 1b
+	}
+	message_history: [ ]
+	extra: { }
+}

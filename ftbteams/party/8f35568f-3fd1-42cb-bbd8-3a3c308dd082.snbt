@@ -1,0 +1,30 @@
+{
+	id: "8f35568f-3fd1-42cb-bbd8-3a3c308dd082"
+	type: "party"
+	owner: "b5be052b-5a5f-4144-a50d-46cf03d1878e"
+	ranks: {
+		b5be052b-5a5f-4144-a50d-46cf03d1878e: "owner"
+		fe121e0d-089a-3d1a-be27-b4aca54cdece: "member"
+		e55e98e5-78bd-310e-a5b0-2d071a315912: "member"
+		e2213efa-e199-36df-a470-b95d2ceff842: "member"
+	}
+	properties: {
+		"ftbchunks:allow_explosions": 0b
+		"ftbteams:display_name": "moonvil's Party"
+		"ftbteams:color": "#59FF6F"
+		"ftbchunks:block_edit_mode": "allies"
+		"ftbchunks:block_interact_mode": "allies"
+		"ftbteams:description": ""
+		"ftbteams:free_to_join": 1b
+		"ftbchunks:allow_fake_players": 1b
+	}
+	message_history: [
+		{ from: "00000000-0000-0000-0000-000000000000", date: 1788672890303L, text: "{\"color\":\"yellow\",\"extra\":[{\"text\":\"moonvil\"},{\"text\":\" joined your party!\"}],\"text\":\"\"}" }
+		{ from: "b5be052b-5a5f-4144-a50d-46cf03d1878e", date: 1788672890426L, text: "{\"color\":\"green\",\"text\":\"Invited zadio\"}" }
+		{ from: "b5be052b-5a5f-4144-a50d-46cf03d1878e", date: 1788672890427L, text: "{\"color\":\"green\",\"text\":\"Invited R0-bin-H00D\"}" }
+		{ from: "00000000-0000-0000-0000-000000000000", date: 1788672901005L, text: "{\"color\":\"green\",\"extra\":[{\"text\":\"zadio\"},{\"text\":\" joined your party!\"}],\"text\":\"\"}" }
+		{ from: "00000000-0000-0000-0000-000000000000", date: 1788672902415L, text: "{\"color\":\"green\",\"extra\":[{\"text\":\"R0-bin-H00D\"},{\"text\":\" joined your party!\"}],\"text\":\"\"}" }
+		{ from: "00000000-0000-0000-0000-000000000000", date: 1788685868724L, text: "{\"color\":\"green\",\"extra\":[{\"text\":\"StrangerKnight\"},{\"text\":\" joined your party!\"}],\"text\":\"\"}" }
+	]
+	extra: { }
+}

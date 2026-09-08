@@ -1,0 +1,18 @@
+{
+	id: "e55e98e5-78bd-310e-a5b0-2d071a315912"
+	type: "player"
+	player_name: "zadio"
+	ranks: { }
+	properties: {
+		"ftbchunks:allow_explosions": 0b
+		"ftbteams:display_name": "zadio"
+		"ftbteams:color": "#E559FF"
+		"ftbchunks:block_edit_mode": "allies"
+		"ftbchunks:block_interact_mode": "allies"
+		"ftbteams:description": ""
+		"ftbteams:free_to_join": 0b
+		"ftbchunks:allow_fake_players": 1b
+	}
+	message_history: [ ]
+	extra: { }
+}

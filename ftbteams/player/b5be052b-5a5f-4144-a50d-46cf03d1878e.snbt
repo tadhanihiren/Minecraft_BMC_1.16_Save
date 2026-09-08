@@ -1,0 +1,18 @@
+{
+	id: "b5be052b-5a5f-4144-a50d-46cf03d1878e"
+	type: "player"
+	player_name: "moonvil"
+	ranks: { }
+	properties: {
+		"ftbchunks:allow_explosions": 0b
+		"ftbteams:display_name": "moonvil"
+		"ftbteams:color": "#59FFCD"
+		"ftbchunks:block_edit_mode": "allies"
+		"ftbchunks:block_interact_mode": "allies"
+		"ftbteams:description": ""
+		"ftbteams:free_to_join": 0b
+		"ftbchunks:allow_fake_players": 1b
+	}
+	message_history: [ ]
+	extra: { }
+}
