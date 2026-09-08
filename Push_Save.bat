@@ -3,7 +3,7 @@ echo Pushing Minecraft save to GitHub...
 echo.
 
 set REPO_URL=https://github.com/tadhanihiren/Minecraft_BMC_1.16_Save.git
-set SAVE_DIR=%appdata%\.minecraft\saves\golida
+set SAVE_DIR=F:\Saves\golida
 
 if not exist "%SAVE_DIR%" (
     echo Error: Minecraft save folder not found!

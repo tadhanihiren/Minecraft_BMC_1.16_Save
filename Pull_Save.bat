@@ -3,7 +3,7 @@ echo Pulling Minecraft save from GitHub...
 echo.
 
 set REPO_URL=https://github.com/tadhanihiren/Minecraft_BMC_1.16_Save.git
-set SAVE_DIR=%appdata%\.minecraft\saves\golida
+set SAVE_DIR=F:\Saves\golida
 
 if exist "%SAVE_DIR%" (
     echo Save folder already exists. Backing up...
@@ -19,12 +19,13 @@ if %errorlevel% neq 0 (
     exit /b 1
 )
 
-echo Copying to Minecraft saves...
+echo Copying to saves...
+mkdir "%SAVE_DIR%"
 xcopy /E /I /Y "%TEMP%\Minecraft_BMC_Save" "%SAVE_DIR%"
 
 echo Cleaning up...
 rmdir /s /q "%TEMP%\Minecraft_BMC_Save"
 
 echo.
-echo Done! Save is ready to play.
+echo Done! Save is ready.
 pause
