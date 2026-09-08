@@ -252,7 +252,24 @@ class MinecraftMap {
     this.clearAllMarkers();
 
     markers.forEach((m) => {
-      if (m.category === "ore") {
+      if (m.category === "ore_cluster") {
+        // Zoomed-out density cluster standing in for many individual ore
+        // veins in this cell (see backend get_markers) — a translucent
+        // cyan cell scaled by how much ore it holds, not a real vein color.
+        const marker = this.exactBboxMarker(m.bbox, {
+          fillColor: "#38bdf8",
+          strokeColor: "#0ea5e9",
+          opacity: Math.min(0.6, 0.15 + m.vein_count / 200),
+          weight: 1
+        });
+        marker.bindTooltip(`💎 <b>${m.name}</b><br>${m.blocks.toLocaleString()} ore blocks in this area<br><i>Zoom in for individual veins</i>`);
+        marker.on("click", (e) => {
+          L.DomEvent.stopPropagation(e);
+          this.jumpTo(m.x, m.z, this.map.getZoom() + 2);
+        });
+        marker.addTo(this.oreLayer);
+
+      } else if (m.category === "ore") {
         const fillColor = this.getOreColor(m.type);
         // Iron/quartz render pale on purpose (their real color), which
         // nearly disappears against a light map background — give those

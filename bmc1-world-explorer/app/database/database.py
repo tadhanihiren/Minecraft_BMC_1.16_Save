@@ -21,6 +21,12 @@ class Database:
         conn.execute("PRAGMA foreign_keys = ON;")
         conn.execute("PRAGMA journal_mode = WAL;")
         conn.execute("PRAGMA synchronous = NORMAL;")
+        # A world with a million-plus ore rows benefits from a bigger page
+        # cache and memory-mapped reads — avoids a disk syscall per page
+        # on repeated bbox queries while panning the map.
+        conn.execute("PRAGMA cache_size = -64000;")  # 64MB page cache
+        conn.execute("PRAGMA temp_store = MEMORY;")
+        conn.execute("PRAGMA mmap_size = 268435456;")  # 256MB
         return conn
 
     def init_db(self) -> None:
@@ -391,31 +397,88 @@ class Database:
                     })
 
             # 4. Ore Veins
+            # This table can be enormous (a heavily-modded world can log
+            # a row per isolated ore block — millions of rows). Individual
+            # veins render fine once zoomed in, but a wide zoomed-out view
+            # can still contain far more veins than the LIMIT allows, so
+            # rendering an arbitrary subset both looks incomplete and does
+            # no favors for perf. Past an area threshold, collapse the
+            # view into density clusters instead: one square per grid
+            # cell with a combined block/vein count, cheap to compute
+            # (one GROUP BY over the indexed bbox range) and cheap to
+            # render (far fewer shapes than raw rows).
             if include_ores:
-                query = "SELECT * FROM ore_veins WHERE world_id = ? AND dimension = ?"
-                params = [world_id, dimension]
+                area = None
                 if min_x is not None:
-                    query += " AND center_x BETWEEN ? AND ? AND center_z BETWEEN ? AND ?"
-                    params.extend([min_x, max_x, min_z, max_z])
-                if ore_filter:
-                    placeholders = ",".join("?" * len(ore_filter))
-                    query += f" AND ore_id IN ({placeholders})"
-                    params.extend(ore_filter)
-                query += f" LIMIT {limit}"
-                for r in conn.execute(query, params):
-                    results.append({
-                        "id": f"vein_{r['id']}",
-                        "category": "ore",
-                        "type": r["ore_id"],
-                        "name": r["display_name"],
-                        "x": r["center_x"],
-                        "y": r["center_y"],
-                        "z": r["center_z"],
-                        "blocks": r["block_count"],
-                        "bbox": [r["min_x"], r["min_y"], r["min_z"], r["max_x"], r["max_y"], r["max_z"]],
-                        "source": "Generated Chunk NBT",
-                        "confidence": "HIGH"
-                    })
+                    area = (max_x - min_x) * (max_z - min_z)
+
+                grid_size = None
+                if area is not None:
+                    if area > 20_000_000:
+                        grid_size = 256
+                    elif area > 6_000_000:
+                        grid_size = 128
+
+                if grid_size:
+                    query = """
+                        SELECT
+                            CAST(center_x / ? AS INT) AS gx,
+                            CAST(center_z / ? AS INT) AS gz,
+                            SUM(block_count) AS total_blocks,
+                            COUNT(*) AS vein_count
+                        FROM ore_veins
+                        WHERE world_id = ? AND dimension = ?
+                          AND center_x BETWEEN ? AND ? AND center_z BETWEEN ? AND ?
+                    """
+                    params: List[Any] = [grid_size, grid_size, world_id, dimension, min_x, max_x, min_z, max_z]
+                    if ore_filter:
+                        placeholders = ",".join("?" * len(ore_filter))
+                        query += f" AND ore_id IN ({placeholders})"
+                        params.extend(ore_filter)
+                    query += " GROUP BY gx, gz LIMIT ?"
+                    params.append(limit)
+
+                    for r in conn.execute(query, params):
+                        cx = r["gx"] * grid_size + grid_size // 2
+                        cz = r["gz"] * grid_size + grid_size // 2
+                        results.append({
+                            "id": f"orecluster_{r['gx']}_{r['gz']}",
+                            "category": "ore_cluster",
+                            "name": f"{r['vein_count']} ore veins",
+                            "x": cx,
+                            "y": 64,
+                            "z": cz,
+                            "blocks": r["total_blocks"],
+                            "vein_count": r["vein_count"],
+                            "bbox": [cx - grid_size // 2, 0, cz - grid_size // 2, cx + grid_size // 2, 255, cz + grid_size // 2],
+                            "source": "Aggregated (zoomed out)",
+                            "confidence": "HIGH"
+                        })
+                else:
+                    query = "SELECT * FROM ore_veins WHERE world_id = ? AND dimension = ?"
+                    params = [world_id, dimension]
+                    if min_x is not None:
+                        query += " AND center_x BETWEEN ? AND ? AND center_z BETWEEN ? AND ?"
+                        params.extend([min_x, max_x, min_z, max_z])
+                    if ore_filter:
+                        placeholders = ",".join("?" * len(ore_filter))
+                        query += f" AND ore_id IN ({placeholders})"
+                        params.extend(ore_filter)
+                    query += f" LIMIT {limit}"
+                    for r in conn.execute(query, params):
+                        results.append({
+                            "id": f"vein_{r['id']}",
+                            "category": "ore",
+                            "type": r["ore_id"],
+                            "name": r["display_name"],
+                            "x": r["center_x"],
+                            "y": r["center_y"],
+                            "z": r["center_z"],
+                            "blocks": r["block_count"],
+                            "bbox": [r["min_x"], r["min_y"], r["min_z"], r["max_x"], r["max_y"], r["max_z"]],
+                            "source": "Generated Chunk NBT",
+                            "confidence": "HIGH"
+                        })
 
         return results
 

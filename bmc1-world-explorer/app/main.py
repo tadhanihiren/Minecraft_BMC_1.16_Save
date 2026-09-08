@@ -3,6 +3,7 @@ import uvicorn
 from fastapi import FastAPI
 from fastapi.staticfiles import StaticFiles
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import ORJSONResponse
 from contextlib import asynccontextmanager
 
 from app.config import PROJECT_ROOT, DEFAULT_WORLD_PATH, HOST, PORT
@@ -27,7 +28,8 @@ app = FastAPI(
     title="BMC1 World Explorer",
     description="Offline Read-Only Minecraft 1.16.5 BMC1 World Analyzer and Visualizer",
     version="1.0.0",
-    lifespan=lifespan
+    lifespan=lifespan,
+    default_response_class=ORJSONResponse
 )
 
 app.add_middleware(
