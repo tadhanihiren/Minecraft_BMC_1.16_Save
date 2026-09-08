@@ -1,5 +1,5 @@
 @echo off
-echo Pushing Minecraft save to GitHub...
+echo Pushing save changes to GitHub...
 echo.
 
 set REPO_URL=https://github.com/tadhanihiren/Minecraft_BMC_1.16_Save.git
@@ -11,27 +11,38 @@ if not exist "%SAVE_DIR%" (
     exit /b 1
 )
 
-set TEMP_REPO=%TEMP%\Minecraft_BMC_Push
+if not exist "%SAVE_DIR%\.git" (
+    echo Converting save folder into a git repo...
+    cd /d "%SAVE_DIR%"
+    git init
+    git remote add origin %REPO_URL%
+    git fetch origin
+    git checkout -b main origin/main 2>nul
+)
 
-if exist "%TEMP_REPO%" rmdir /s /q "%TEMP_REPO%"
+cd /d "%SAVE_DIR%"
 
-echo Cloning repository...
-git clone %REPO_URL% "%TEMP_REPO%"
-
-echo Copying save files...
-xcopy /E /I /Y "%SAVE_DIR%" "%TEMP_REPO%"
-
-echo Adding and committing...
-cd /d "%TEMP_REPO%"
+echo Adding changes...
 git add -A
+
+echo Checking what changed...
+git status
+
+set CHANGED=
+for /f %%i in ('git status --porcelain') do set CHANGED=1
+if not defined CHANGED (
+    echo No changes to push.
+    pause
+    exit /b 0
+)
+
+echo Committing changes...
 git commit -m "Update save %date% %time:~0,5%"
 
 echo Pushing to GitHub...
+git pull --rebase
 git push
 
-echo Cleaning up...
-rmdir /s /q "%TEMP_REPO%"
-
 echo.
-echo Done! Save uploaded to GitHub.
+echo Done! Changes uploaded to GitHub.
 pause
