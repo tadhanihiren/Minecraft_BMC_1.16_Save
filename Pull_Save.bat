@@ -29,8 +29,11 @@ if defined HAS_DIFF (
     echo.
     echo Local save has changes that differ from GitHub.
     echo Backing up local save as ZIP before overwriting...
-    for /f "tokens=2 delims==" %%a in ('wmic os get localdatetime /value ^| find "="') do set DT=%%a
-    set ZIPNAME=golida_backup_%DT:~0,14%.zip
+    set STAMP=%date%_%time:~0,8%
+    set STAMP=%STAMP:/=_%
+    set STAMP=%STAMP::=_%
+    set STAMP=%STAMP: =_%
+    set ZIPNAME=golida_backup_%STAMP%.zip
     powershell -NoProfile -Command "Compress-Archive -Path '%SAVE_DIR%\*' -DestinationPath '%~dp0%ZIPNAME%' -Force"
     echo Backup done: %~dp0%ZIPNAME%
     echo.
