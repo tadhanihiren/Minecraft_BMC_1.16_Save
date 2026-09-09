@@ -1,6 +1,1 @@
-# Ignore virtual environments and python caches in explorer subfolder
-bmc1-world-explorer/.venv/
-bmc1-world-explorer/**/__pycache__/
-bmc1-world-explorer/**/.pytest_cache/
-bmc1-world-explorer/data/*.db-wal
-bmc1-world-explorer/data/*.db-shm
+session.lock
