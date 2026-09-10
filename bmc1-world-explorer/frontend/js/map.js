@@ -427,34 +427,6 @@ class MinecraftMap {
       ctx.stroke();
     }
 
-    // Region grid lines (every 512 blocks) across the visible viewport.
-    if (this.zoomLevel >= -4) {
-      const lineColor = getComputedStyle(document.documentElement).getPropertyValue("--map-line").trim() || "rgba(0, 229, 255, 0.09)";
-      const bounds = this.getBlockBounds();
-      const minX = Math.floor(bounds.minX / 512) * 512;
-      const maxX = Math.ceil(bounds.maxX / 512) * 512;
-      const minZ = Math.floor(bounds.minZ / 512) * 512;
-      const maxZ = Math.ceil(bounds.maxZ / 512) * 512;
-      ctx.strokeStyle = lineColor;
-      ctx.lineWidth = 1;
-      ctx.setLineDash([2, 4]);
-      ctx.beginPath();
-      for (let x = minX; x <= maxX; x += 512) {
-        const [sx1, sy1] = this.worldToScreen(x, minZ);
-        const [sx2, sy2] = this.worldToScreen(x, maxZ);
-        ctx.moveTo(sx1, sy1);
-        ctx.lineTo(sx2, sy2);
-      }
-      for (let z = minZ; z <= maxZ; z += 512) {
-        const [sx1, sy1] = this.worldToScreen(minX, z);
-        const [sx2, sy2] = this.worldToScreen(maxX, z);
-        ctx.moveTo(sx1, sy1);
-        ctx.lineTo(sx2, sy2);
-      }
-      ctx.stroke();
-      ctx.setLineDash([]);
-    }
-
     // Markers.
     this.markers.forEach((m) => {
       if (m.category === "ore_cluster") {

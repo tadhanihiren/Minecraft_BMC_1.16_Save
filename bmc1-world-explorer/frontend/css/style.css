@@ -956,8 +956,6 @@ input:checked + .slider:before {
   position: relative;
   overflow: hidden;
   background-color: var(--void);
-  background-image: repeating-linear-gradient(var(--map-line) 0 1px, transparent 1px 24px),
-    repeating-linear-gradient(90deg, var(--map-line) 0 1px, transparent 1px 24px);
 }
 
 #map {
