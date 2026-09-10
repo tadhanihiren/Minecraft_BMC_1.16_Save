@@ -398,6 +398,35 @@ class MinecraftMap {
     });
     ctx.globalAlpha = 1;
 
+    // Chunk borders (every 16 blocks) — solid dark lines, deliberately
+    // darker than any biome fill color so chunk boundaries stay readable
+    // regardless of theme. Only drawn once zoomed in enough that 16-block
+    // cells are actually legible; otherwise this is thousands of
+    // sub-pixel lines for no visual gain.
+    if (this.scale >= 2) {
+      const bounds = this.getBlockBounds();
+      const minCX = Math.floor(bounds.minX / 16) * 16;
+      const maxCX = Math.ceil(bounds.maxX / 16) * 16;
+      const minCZ = Math.floor(bounds.minZ / 16) * 16;
+      const maxCZ = Math.ceil(bounds.maxZ / 16) * 16;
+      ctx.strokeStyle = "rgba(0, 0, 0, 0.55)";
+      ctx.lineWidth = 1;
+      ctx.beginPath();
+      for (let x = minCX; x <= maxCX; x += 16) {
+        const [sx1, sy1] = this.worldToScreen(x, minCZ);
+        const [sx2, sy2] = this.worldToScreen(x, maxCZ);
+        ctx.moveTo(sx1, sy1);
+        ctx.lineTo(sx2, sy2);
+      }
+      for (let z = minCZ; z <= maxCZ; z += 16) {
+        const [sx1, sy1] = this.worldToScreen(minCX, z);
+        const [sx2, sy2] = this.worldToScreen(maxCX, z);
+        ctx.moveTo(sx1, sy1);
+        ctx.lineTo(sx2, sy2);
+      }
+      ctx.stroke();
+    }
+
     // Region grid lines (every 512 blocks) across the visible viewport.
     if (this.zoomLevel >= -4) {
       const lineColor = getComputedStyle(document.documentElement).getPropertyValue("--map-line").trim() || "rgba(0, 229, 255, 0.09)";
