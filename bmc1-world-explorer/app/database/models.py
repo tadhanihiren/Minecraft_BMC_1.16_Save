@@ -129,6 +129,17 @@ CREATE TABLE IF NOT EXISTS mods (
     UNIQUE(world_id, mod_id)
 );
 
+CREATE TABLE IF NOT EXISTS completed_markers (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    world_id INTEGER NOT NULL,
+    dimension TEXT NOT NULL,
+    category TEXT NOT NULL,
+    ref_id INTEGER NOT NULL,
+    completed_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY(world_id) REFERENCES worlds(id) ON DELETE CASCADE,
+    UNIQUE(world_id, dimension, category, ref_id)
+);
+
 -- Spatial and lookup indexes for sub-millisecond query performance
 CREATE INDEX IF NOT EXISTS idx_scanned_regions_lookup ON scanned_regions(world_id, dimension, region_file);
 CREATE INDEX IF NOT EXISTS idx_chunks_dim_pos ON chunks(world_id, dimension, chunk_x, chunk_z);

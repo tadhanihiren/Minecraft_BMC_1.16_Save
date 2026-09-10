@@ -301,6 +301,33 @@ class Database:
                 "biome_types_count": biomes
             }
 
+    def get_completed_keys(self, world_id: int, dimension: str) -> set:
+        """Set of "{category}_{ref_id}" keys marked completed, for tagging markers."""
+        with self.get_connection() as conn:
+            rows = conn.execute(
+                "SELECT category, ref_id FROM completed_markers WHERE world_id = ? AND dimension = ?",
+                (world_id, dimension)
+            ).fetchall()
+            return {f"{r['category']}_{r['ref_id']}" for r in rows}
+
+    def toggle_completed(self, world_id: int, dimension: str, category: str, ref_id: int) -> bool:
+        """Flip a marker's completed state. Returns the new state (True = now completed)."""
+        with self.get_connection() as conn:
+            existing = conn.execute(
+                "SELECT id FROM completed_markers WHERE world_id = ? AND dimension = ? AND category = ? AND ref_id = ?",
+                (world_id, dimension, category, ref_id)
+            ).fetchone()
+            if existing:
+                conn.execute("DELETE FROM completed_markers WHERE id = ?", (existing["id"],))
+                conn.commit()
+                return False
+            conn.execute(
+                "INSERT INTO completed_markers (world_id, dimension, category, ref_id) VALUES (?, ?, ?, ?)",
+                (world_id, dimension, category, ref_id)
+            )
+            conn.commit()
+            return True
+
     def get_ore_breakdown(self, world_id: int, dimension: str) -> List[Dict[str, Any]]:
         """Distinct ore types with their vein count and total block count,
         for the current dimension, richest first."""
@@ -343,6 +370,7 @@ class Database:
         limit: int = 2000
     ) -> List[Dict[str, Any]]:
         results: List[Dict[str, Any]] = []
+        completed_keys = self.get_completed_keys(world_id, dimension)
 
         with self.get_connection() as conn:
             # 1. Spawners
@@ -360,6 +388,7 @@ class Database:
                 for r in conn.execute(query, params):
                     results.append({
                         "id": f"spawner_{r['id']}",
+                        "ref_id": r["id"],
                         "category": "spawner",
                         "type": r["entity_id"],
                         "name": r["display_name"],
@@ -367,7 +396,8 @@ class Database:
                         "y": r["y"],
                         "z": r["z"],
                         "source": r["source"],
-                        "confidence": r["confidence"]
+                        "confidence": r["confidence"],
+                        "completed": f"spawner_{r['id']}" in completed_keys
                     })
 
             # 2. Structures
@@ -385,6 +415,7 @@ class Database:
                 for r in conn.execute(query, params):
                     results.append({
                         "id": f"structure_{r['id']}",
+                        "ref_id": r["id"],
                         "category": "structure",
                         "type": r["structure_id"],
                         "name": r["name"],
@@ -393,7 +424,8 @@ class Database:
                         "z": r["center_z"],
                         "bbox": [r["min_x"], r["min_y"], r["min_z"], r["max_x"], r["max_y"], r["max_z"]],
                         "source": r["source"],
-                        "confidence": r["confidence"]
+                        "confidence": r["confidence"],
+                        "completed": f"structure_{r['id']}" in completed_keys
                     })
 
             # 3. Chests
@@ -408,6 +440,7 @@ class Database:
                     items = json.loads(r["items_json"]) if r["items_json"] else []
                     results.append({
                         "id": f"chest_{r['id']}",
+                        "ref_id": r["id"],
                         "category": "chest",
                         "type": r["chest_type"],
                         "name": "Chest" if "chest" in r["chest_type"] else "Container",
@@ -417,7 +450,8 @@ class Database:
                         "loot_table": r["loot_table"],
                         "items": items,
                         "source": r["source"],
-                        "confidence": r["confidence"]
+                        "confidence": r["confidence"],
+                        "completed": f"chest_{r['id']}" in completed_keys
                     })
 
             # 4. Ore Veins
@@ -492,6 +526,7 @@ class Database:
                     for r in conn.execute(query, params):
                         results.append({
                             "id": f"vein_{r['id']}",
+                            "ref_id": r["id"],
                             "category": "ore",
                             "type": r["ore_id"],
                             "name": r["display_name"],
@@ -501,7 +536,8 @@ class Database:
                             "blocks": r["block_count"],
                             "bbox": [r["min_x"], r["min_y"], r["min_z"], r["max_x"], r["max_y"], r["max_z"]],
                             "source": "Generated Chunk NBT",
-                            "confidence": "HIGH"
+                            "confidence": "HIGH",
+                            "completed": f"ore_{r['id']}" in completed_keys
                         })
 
         return results

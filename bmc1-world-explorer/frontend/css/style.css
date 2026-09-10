@@ -1267,6 +1267,12 @@ input:checked + .slider:before {
   background-color: var(--slot);
 }
 
+.btn-completed {
+  background-color: #16a34a !important;
+  color: #ffffff !important;
+  border-color: #16a34a !important;
+}
+
 /* Custom scrollbars */
 ::-webkit-scrollbar {
   width: 10px;

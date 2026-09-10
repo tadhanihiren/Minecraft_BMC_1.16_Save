@@ -1,4 +1,4 @@
-from fastapi import APIRouter, Query
+from fastapi import APIRouter, Query, Body
 from typing import Optional, List, Dict, Any
 
 from app.database.database import db
@@ -46,6 +46,19 @@ def get_map_markers(
         structure_filter=structure_filter,
         limit=limit
     )
+
+@router.post("/markers/complete")
+def toggle_marker_completed(
+    dimension: str = Body(...),
+    category: str = Body(...),
+    ref_id: int = Body(...)
+):
+    """Flip a marker's completed (mined/looted/cleared) state."""
+    world_id = active_world_state.get("world_id")
+    if not world_id:
+        return {"completed": False}
+    completed = db.toggle_completed(world_id, dimension, category, ref_id)
+    return {"completed": completed}
 
 @router.get("/biomes")
 def get_map_biomes(

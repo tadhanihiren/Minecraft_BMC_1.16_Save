@@ -64,6 +64,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const selIcon = document.getElementById("selIcon");
   const btnCopyCoords = document.getElementById("btnCopyCoords");
   const btnCopyTp = document.getElementById("btnCopyTp");
+  const btnMarkCompleted = document.getElementById("btnMarkCompleted");
   const searchInput = document.getElementById("searchInput");
   const searchResults = document.getElementById("searchResults");
   const toast = document.getElementById("toast");
@@ -106,7 +107,38 @@ document.addEventListener("DOMContentLoaded", () => {
     else if (loc.category === "structure") selIcon.innerText = "🏰";
     else if (loc.category === "chest") selIcon.innerText = "🎁";
     else selIcon.innerText = "📍";
+
+    const canComplete = loc.ref_id !== undefined && ["ore", "spawner", "structure", "chest"].includes(loc.category);
+    btnMarkCompleted.style.display = canComplete ? "inline-flex" : "none";
+    btnMarkCompleted.classList.toggle("btn-completed", !!loc.completed);
+    btnMarkCompleted.innerText = loc.completed ? "✅ Completed" : "☐ Mark Completed";
   };
+
+  // Toggle a marker's completed (mined/looted/cleared) state, dim it on
+  // the map with a checkmark badge, and persist it in the DB so it
+  // survives reloads/rescans.
+  btnMarkCompleted.addEventListener("click", async () => {
+    if (!selectedLocation || selectedLocation.ref_id === undefined) return;
+    try {
+      const res = await fetch("/api/map/markers/complete", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          dimension: currentDimension,
+          category: selectedLocation.category,
+          ref_id: selectedLocation.ref_id
+        })
+      });
+      const data = await res.json();
+      selectedLocation.completed = data.completed;
+      btnMarkCompleted.classList.toggle("btn-completed", !!data.completed);
+      btnMarkCompleted.innerText = data.completed ? "✅ Completed" : "☐ Mark Completed";
+      mapController.setMarkerCompleted(selectedLocation.category, selectedLocation.ref_id, data.completed);
+      showToast(data.completed ? "Marked completed" : "Marked not completed");
+    } catch (e) {
+      console.error("Error toggling completed:", e);
+    }
+  });
 
   // Toast Helper
   function showToast(msg) {

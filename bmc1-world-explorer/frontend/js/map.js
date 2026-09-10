@@ -190,6 +190,14 @@ class MinecraftMap {
     this.draw();
   }
 
+  setMarkerCompleted(category, refId, completed) {
+    const m = this.markers.find((mk) => mk.category === category && mk.ref_id === refId);
+    if (m) {
+      m.completed = completed;
+      this.draw();
+    }
+  }
+
   clearAllMarkers() {
     this.markers = [];
     this.highlight = null;
@@ -323,23 +331,24 @@ class MinecraftMap {
   }
 
   _tooltipHtml(m) {
+    const doneTag = m.completed ? "<br>✅ <i>Completed</i>" : "";
     if (m.category === "ore_cluster") {
       return `💎 <b>${m.name}</b><br>${m.blocks.toLocaleString()} ore blocks in this area<br><i>Zoom in for individual veins</i>`;
     }
     if (m.category === "ore") {
-      return `💎 <b>${m.name}</b><br>X: ${m.x}, Y: ${m.y}, Z: ${m.z}<br>Vein: ${m.blocks} blocks`;
+      return `💎 <b>${m.name}</b><br>X: ${m.x}, Y: ${m.y}, Z: ${m.z}<br>Vein: ${m.blocks} blocks${doneTag}`;
     }
     if (m.category === "spawner") {
-      return `${m._icon} <b>${m.name}</b><br>X: ${m.x}, Y: ${m.y}, Z: ${m.z}`;
+      return `${m._icon} <b>${m.name}</b><br>X: ${m.x}, Y: ${m.y}, Z: ${m.z}${doneTag}`;
     }
     if (m.category === "structure") {
-      return `${m._icon} <b>${m.name}</b><br>X: ${m.x}, Y: ${m.y}, Z: ${m.z}`;
+      return `${m._icon} <b>${m.name}</b><br>X: ${m.x}, Y: ${m.y}, Z: ${m.z}${doneTag}`;
     }
     if (m.category === "chest") {
       let tip = `🎁 <b>Chest</b><br>X: ${m.x}, Y: ${m.y}, Z: ${m.z}`;
       if (m.loot_table) tip += `<br>Loot: ${m.loot_table}`;
       if (m.items && m.items.length) tip += `<br>Items: ${m.items.length}`;
-      return tip;
+      return tip + doneTag;
     }
     return null;
   }
@@ -438,8 +447,14 @@ class MinecraftMap {
         ctx.textBaseline = "middle";
         ctx.shadowColor = "rgba(0, 0, 0, 0.45)";
         ctx.shadowBlur = 2;
+        ctx.globalAlpha = m.completed ? 0.35 : 1;
         ctx.fillText(m._icon || "❔", sx, sy);
+        ctx.globalAlpha = 1;
         ctx.shadowBlur = 0;
+        if (m.completed) {
+          ctx.font = `${Math.round(size * 0.55)}px sans-serif`;
+          ctx.fillText("✅", sx + size * 0.32, sy + size * 0.32);
+        }
       }
     });
 
