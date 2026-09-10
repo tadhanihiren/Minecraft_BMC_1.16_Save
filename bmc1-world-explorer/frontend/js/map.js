@@ -40,7 +40,7 @@ class MinecraftMap {
     this.zoomLevel = -2;
     this.scale = Math.pow(2, this.zoomLevel);
     this.minZoomLevel = -6;
-    this.maxZoomLevel = 6;
+    this.maxZoomLevel = 4.6;
 
     this.biomeChunks = [];
     this.biomeChunkIndex = new Map();
