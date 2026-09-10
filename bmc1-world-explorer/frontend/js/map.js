@@ -456,16 +456,37 @@ class MinecraftMap {
     // Markers.
     this.markers.forEach((m) => {
       if (m.category === "ore_cluster") {
+        // Dark navy at max zoom-out instead of the old light cyan — reads
+        // clearly against light and dark biome fills alike.
         const [minX, , minZ, maxX, , maxZ] = m.bbox;
         const [sx1, sy1] = this.worldToScreen(minX, minZ);
         const [sx2, sy2] = this.worldToScreen(maxX + 1, maxZ + 1);
-        ctx.fillStyle = "#38bdf8";
-        ctx.globalAlpha = Math.min(0.6, 0.15 + m.vein_count / 200);
+        ctx.fillStyle = "#0c3a52";
+        ctx.globalAlpha = Math.min(0.75, 0.25 + m.vein_count / 200);
         ctx.fillRect(Math.min(sx1, sx2), Math.min(sy1, sy2), Math.abs(sx2 - sx1), Math.abs(sy2 - sy1));
         ctx.globalAlpha = 1;
-        ctx.strokeStyle = "#0ea5e9";
+        ctx.strokeStyle = "#062533";
         ctx.lineWidth = 1;
         ctx.strokeRect(Math.min(sx1, sx2), Math.min(sy1, sy2), Math.abs(sx2 - sx1), Math.abs(sy2 - sy1));
+      } else if (m.category === "ore") {
+        // Plain dark square instead of the diamond emoji — per-ore-type
+        // color still shown via the border, but the fill stays dark so
+        // veins don't visually compete with spawner/structure icons.
+        const [sx, sy] = this.worldToScreen(m.x + 0.5, m.z + 0.5);
+        const size = Math.max(6, (m._size || 26) * 0.6);
+        ctx.globalAlpha = m.completed ? 0.35 : 1;
+        ctx.fillStyle = "#12222b";
+        ctx.fillRect(sx - size / 2, sy - size / 2, size, size);
+        ctx.strokeStyle = this.getOreColor(m.type);
+        ctx.lineWidth = 1.5;
+        ctx.strokeRect(sx - size / 2, sy - size / 2, size, size);
+        ctx.globalAlpha = 1;
+        if (m.completed) {
+          ctx.font = `${Math.round(size * 0.9)}px sans-serif`;
+          ctx.textAlign = "center";
+          ctx.textBaseline = "middle";
+          ctx.fillText("✅", sx + size * 0.4, sy + size * 0.4);
+        }
       } else {
         const [sx, sy] = this.worldToScreen(m.x + 0.5, m.z + 0.5);
         const size = m._size || 26;
@@ -549,6 +570,22 @@ class MinecraftMap {
     if (id.includes("tower")) return "🗼";
     if (id.includes("hut") || id.includes("house") || id.includes("campsite")) return "🛖";
     return "🏰";
+  }
+
+  getOreColor(oreId) {
+    const id = (oreId || "").toLowerCase();
+    if (id.includes("diamond")) return "#00f0ff";
+    if (id.includes("emerald")) return "#10b981";
+    if (id.includes("debris")) return "#a855f7";
+    if (id.includes("gold")) return "#f59e0b";
+    if (id.includes("iron")) return "#cbd5e1";
+    if (id.includes("copper")) return "#f97316";
+    if (id.includes("lapis")) return "#3b82f6";
+    if (id.includes("redstone")) return "#ef4444";
+    if (id.includes("coal")) return "#64748b";
+    if (id.includes("quartz")) return "#f8fafc";
+    if (id.includes("silver")) return "#e5e7eb";
+    return "#38bdf8";
   }
 
   getBiomeColor(biomeId) {
