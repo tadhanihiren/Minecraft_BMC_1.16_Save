@@ -269,6 +269,13 @@ document.addEventListener("DOMContentLoaded", () => {
     items.forEach((item) => {
       const chip = document.createElement("span");
       chip.className = "filter-chip";
+      // Re-rendering chips (dimension switch, rescan) previously wiped
+      // out .active state while activeFilters[activeArrayKey] kept the
+      // old selection — chip highlighting and the actual filter drifted
+      // out of sync. Restore active state from the existing filter list.
+      if (activeFilters[activeArrayKey].includes(item.id)) {
+        chip.classList.add("active");
+      }
       chip.innerText = item.name;
       chip.dataset.id = item.id;
 
