@@ -77,7 +77,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const isCollapsed = sidebar.classList.contains("collapsed");
     btnToggleSidebar.innerText = isCollapsed ? "▶" : "◀";
     setTimeout(() => {
-      mapController.map.invalidateSize();
+      mapController.resize();
     }, 260);
   });
 
@@ -89,10 +89,10 @@ document.addEventListener("DOMContentLoaded", () => {
   // Re-render the visible layers when the viewport settles (pan/zoom), so
   // only on-screen data is ever fetched instead of the whole world at once.
   let viewportRefreshTimer = null;
-  mapController.map.on("moveend zoomend", () => {
+  mapController.onViewportSettled = () => {
     clearTimeout(viewportRefreshTimer);
     viewportRefreshTimer = setTimeout(() => refreshMap(), 200);
-  });
+  };
 
   // Map Click Selection
   mapController.onLocationSelect = (loc) => {
@@ -505,7 +505,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (activeFilters.biomes) {
       mapController.renderBiomes(biomes || []);
     } else {
-      mapController.biomeLayer.clearLayers();
+      mapController.clearBiomes();
     }
 
     if (hasMarkerLayer) {

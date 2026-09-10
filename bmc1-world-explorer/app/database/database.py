@@ -47,10 +47,6 @@ class Database:
         except Exception as e:
             logger.warning(f"Failed to checkpoint SQLite WAL: {e}")
 
-    def close(self) -> None:
-        """Checkpoint and ensure database handles are released."""
-        self.checkpoint()
-
     # --- Worlds ---
     def upsert_world(
         self,
@@ -95,11 +91,6 @@ class Database:
         norm_path = os.path.abspath(path)
         with self.get_connection() as conn:
             row = conn.execute("SELECT * FROM worlds WHERE path = ?", (norm_path,)).fetchone()
-            return dict(row) if row else None
-
-    def get_world_by_id(self, world_id: int) -> Optional[Dict[str, Any]]:
-        with self.get_connection() as conn:
-            row = conn.execute("SELECT * FROM worlds WHERE id = ?", (world_id,)).fetchone()
             return dict(row) if row else None
 
     # --- Scanned Regions & Chunks (Caching) ---

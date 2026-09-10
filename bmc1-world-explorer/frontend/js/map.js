@@ -51,25 +51,8 @@ class MinecraftMap {
     this.onLocationSelect = null;
     this.onMouseMove = null;
 
-    this._moveendHandlers = [];
+    this.onViewportSettled = null;
     this._moveendTimer = null;
-
-    // Shims so app.js's existing Leaflet-flavored calls keep working
-    // unchanged (mapController.map.invalidateSize/.on, .biomeLayer.clearLayers).
-    this.map = {
-      invalidateSize: () => this.resize(),
-      on: (events, cb) => {
-        if (events.includes("moveend") || events.includes("zoomend")) this._moveendHandlers.push(cb);
-      },
-      getZoom: () => this.zoomLevel
-    };
-    this.biomeLayer = {
-      clearLayers: () => {
-        this.biomeChunks = [];
-        this.biomeChunkIndex.clear();
-        this.draw();
-      }
-    };
 
     this._isDragging = false;
     this._dragMoved = 0;
@@ -102,7 +85,7 @@ class MinecraftMap {
   scheduleMoveEnd() {
     clearTimeout(this._moveendTimer);
     this._moveendTimer = setTimeout(() => {
-      this._moveendHandlers.forEach((cb) => cb());
+      if (this.onViewportSettled) this.onViewportSettled();
     }, 60);
   }
 
@@ -201,6 +184,12 @@ class MinecraftMap {
   clearAllMarkers() {
     this.markers = [];
     this.highlight = null;
+    this.draw();
+  }
+
+  clearBiomes() {
+    this.biomeChunks = [];
+    this.biomeChunkIndex.clear();
     this.draw();
   }
 
