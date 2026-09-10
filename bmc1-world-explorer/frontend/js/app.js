@@ -289,12 +289,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // Auto-enable master switch if a sub-filter chip is clicked
         const masterSwitch = document.getElementById(masterSwitchId);
+        const key = masterSwitchId.replace("chk", "").toLowerCase();
         if (selected.length > 0 && !masterSwitch.checked) {
           masterSwitch.checked = true;
-          const key = masterSwitchId.replace("chk", "").toLowerCase();
           activeFilters[key] = true;
-        } else if (selected.length === 0) {
-          // If no chips selected, keep master filter behavior
+        } else if (selected.length === 0 && masterSwitch.checked) {
+          masterSwitch.checked = false;
+          activeFilters[key] = false;
+          const iconBtn = document.querySelector(`.feature-icon-btn[data-for="${masterSwitchId}"]`);
+          if (iconBtn) iconBtn.classList.remove("active");
         }
         refreshMap();
       });
