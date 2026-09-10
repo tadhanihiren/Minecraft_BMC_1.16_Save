@@ -301,6 +301,30 @@ class Database:
                 "biome_types_count": biomes
             }
 
+    def get_ore_breakdown(self, world_id: int, dimension: str) -> List[Dict[str, Any]]:
+        """Distinct ore types with their vein count and total block count,
+        for the current dimension, richest first."""
+        with self.get_connection() as conn:
+            rows = conn.execute(
+                """
+                SELECT ore_id, display_name, COUNT(*) AS vein_count, SUM(block_count) AS block_count
+                FROM ore_veins
+                WHERE world_id = ? AND dimension = ?
+                GROUP BY ore_id
+                ORDER BY block_count DESC
+                """,
+                (world_id, dimension)
+            ).fetchall()
+            return [
+                {
+                    "ore_id": r["ore_id"],
+                    "display_name": r["display_name"],
+                    "vein_count": r["vein_count"],
+                    "block_count": r["block_count"]
+                }
+                for r in rows
+            ]
+
     def get_markers(
         self,
         world_id: int,

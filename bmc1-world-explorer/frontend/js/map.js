@@ -1,357 +1,512 @@
 /**
- * Leaflet Minecraft Map Controller
- * Uses L.CRS.Simple for Minecraft block coordinates (X -> Lng, Z -> -Lat)
+ * Plain Canvas Minecraft Map Controller (no Leaflet).
+ * One <canvas>, direct pan/zoom, biome chunks as flat color rects,
+ * markers drawn as emoji glyphs straight on the canvas. No DOM nodes
+ * per marker/chunk, so thousands of features cost one draw() call
+ * instead of thousands of Leaflet layers.
+ *
+ * World coords: x = east, z = south (matches Minecraft; north is up
+ * on screen since increasing z already maps to increasing screen Y).
  */
 
 class MinecraftMap {
   constructor(elementId) {
-    this.map = L.map(elementId, {
-      crs: L.CRS.Simple,
-      minZoom: -5,
-      maxZoom: 4,
-      zoomSnap: 0.5,
-      zoomDelta: 0.5,
-      attributionControl: false,
-      zoomControl: false,
-      preferCanvas: true
-    });
+    this.container = document.getElementById(elementId);
+    this.container.classList.add("mc-canvas-container");
 
-    L.control.zoom({ position: "bottomright" }).addTo(this.map);
+    this.canvas = document.createElement("canvas");
+    this.canvas.className = "mc-canvas";
+    this.container.appendChild(this.canvas);
+    this.ctx = this.canvas.getContext("2d");
 
-    // Layer Groups
-    this.gridLayer = L.layerGroup().addTo(this.map);
-    this.biomeLayer = L.layerGroup().addTo(this.map);
-    this.oreLayer = L.layerGroup().addTo(this.map);
-    this.spawnerLayer = L.layerGroup().addTo(this.map);
-    this.structureLayer = L.layerGroup().addTo(this.map);
-    this.chestLayer = L.layerGroup().addTo(this.map);
-    this.highlightLayer = L.layerGroup().addTo(this.map);
-    this.playerLayer = L.layerGroup().addTo(this.map);
+    this.tooltip = document.createElement("div");
+    this.tooltip.className = "map-tooltip";
+    this.tooltip.hidden = true;
+    this.container.appendChild(this.tooltip);
 
-    // Initial center at 0, 0 with zoom -2 (covers ~2000 blocks)
-    this.map.setView([0, 0], -2);
+    const zoomControls = document.createElement("div");
+    zoomControls.className = "map-zoom-controls";
+    zoomControls.innerHTML = `
+      <button type="button" class="map-zoom-btn" data-zoom="in" title="Zoom In">+</button>
+      <button type="button" class="map-zoom-btn" data-zoom="out" title="Zoom Out">&minus;</button>
+    `;
+    this.container.appendChild(zoomControls);
+    zoomControls.querySelector('[data-zoom="in"]').addEventListener("click", () => this.zoomBy(1.3));
+    zoomControls.querySelector('[data-zoom="out"]').addEventListener("click", () => this.zoomBy(1 / 1.3));
+
+    // Camera: (camX, camZ) = world coords at screen center. scale = px per block.
+    this.camX = 0;
+    this.camZ = 0;
+    this.zoomLevel = -2;
+    this.scale = Math.pow(2, this.zoomLevel);
+    this.minZoomLevel = -6;
+    this.maxZoomLevel = 6;
+
+    this.biomeChunks = [];
+    this.biomeChunkIndex = new Map();
+    this.markers = [];
+    this.highlight = null;
+    this.player = null;
 
     this.onLocationSelect = null;
     this.onMouseMove = null;
 
-    this.initEvents();
-    this.drawGrid();
+    this._moveendHandlers = [];
+    this._moveendTimer = null;
+
+    // Shims so app.js's existing Leaflet-flavored calls keep working
+    // unchanged (mapController.map.invalidateSize/.on, .biomeLayer.clearLayers).
+    this.map = {
+      invalidateSize: () => this.resize(),
+      on: (events, cb) => {
+        if (events.includes("moveend") || events.includes("zoomend")) this._moveendHandlers.push(cb);
+      },
+      getZoom: () => this.zoomLevel
+    };
+    this.biomeLayer = {
+      clearLayers: () => {
+        this.biomeChunks = [];
+        this.biomeChunkIndex.clear();
+        this.draw();
+      }
+    };
+
+    this._isDragging = false;
+    this._dragMoved = 0;
+    this._dragStartScreen = [0, 0];
+    this._dragStartCam = [0, 0];
+
+    this._resizeObserver = new ResizeObserver(() => this.resize());
+    this._resizeObserver.observe(this.container);
+
+    this._bindEvents();
+    this.resize();
   }
 
-  mcToLatLng(x, z) {
-    // Invert Z so North (-Z) is Up (+lat)
-    return L.latLng(-z, x);
+  // ---- coordinate transforms ----
+
+  worldToScreen(x, z) {
+    return [
+      this.canvas._cssWidth / 2 + (x - this.camX) * this.scale,
+      this.canvas._cssHeight / 2 + (z - this.camZ) * this.scale
+    ];
   }
 
-  latLngToMc(latlng) {
+  screenToWorld(px, py) {
     return {
-      x: Math.round(latlng.lng),
-      z: Math.round(-latlng.lat)
+      x: this.camX + (px - this.canvas._cssWidth / 2) / this.scale,
+      z: this.camZ + (py - this.canvas._cssHeight / 2) / this.scale
     };
   }
 
-  drawGrid() {
-    this.map.on("moveend zoomend", () => {
-      this.renderDynamicGrid();
-    });
-    this.renderDynamicGrid();
+  scheduleMoveEnd() {
+    clearTimeout(this._moveendTimer);
+    this._moveendTimer = setTimeout(() => {
+      this._moveendHandlers.forEach((cb) => cb());
+    }, 60);
+  }
+
+  // ---- sizing ----
+
+  resize() {
+    const rect = this.container.getBoundingClientRect();
+    const dpr = window.devicePixelRatio || 1;
+    this.canvas._cssWidth = rect.width;
+    this.canvas._cssHeight = rect.height;
+    this.canvas.width = Math.max(1, Math.round(rect.width * dpr));
+    this.canvas.height = Math.max(1, Math.round(rect.height * dpr));
+    this.canvas.style.width = rect.width + "px";
+    this.canvas.style.height = rect.height + "px";
+    this.ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    this.draw();
+  }
+
+  // ---- zoom / pan ----
+
+  zoomAt(screenX, screenY, factor) {
+    const before = this.screenToWorld(screenX, screenY);
+    const newZoomLevel = Math.max(this.minZoomLevel, Math.min(this.maxZoomLevel, this.zoomLevel + Math.log2(factor)));
+    this.zoomLevel = newZoomLevel;
+    this.scale = Math.pow(2, this.zoomLevel);
+    const after = this.screenToWorld(screenX, screenY);
+    this.camX += before.x - after.x;
+    this.camZ += before.z - after.z;
+    this.draw();
+    this.scheduleMoveEnd();
+  }
+
+  zoomBy(factor) {
+    this.zoomAt(this.canvas._cssWidth / 2, this.canvas._cssHeight / 2, factor);
+  }
+
+  jumpTo(x, z, zoomLevel) {
+    this.camX = x;
+    this.camZ = z;
+    if (zoomLevel !== undefined) {
+      this.zoomLevel = Math.max(this.minZoomLevel, Math.min(this.maxZoomLevel, zoomLevel));
+      this.scale = Math.pow(2, this.zoomLevel);
+    }
+    this.draw();
+    this.scheduleMoveEnd();
   }
 
   renderDynamicGrid() {
-    this.gridLayer.clearLayers();
-    const bounds = this.map.getBounds();
-    const minX = Math.floor(bounds.getWest() / 512) * 512;
-    const maxX = Math.ceil(bounds.getEast() / 512) * 512;
-    const minZ = Math.floor(-bounds.getNorth() / 512) * 512;
-    const maxZ = Math.ceil(-bounds.getSouth() / 512) * 512;
-
-    // Read the current theme's grid-line color from CSS so this stays in
-    // sync with the dark/light toggle without duplicating color logic here.
-    const lineColor = getComputedStyle(document.documentElement).getPropertyValue("--map-line").trim() || "rgba(0, 229, 255, 0.09)";
-
-    // Draw region lines (512x512 blocks)
-    const zoom = this.map.getZoom();
-    if (zoom >= -4) {
-      for (let x = minX; x <= maxX; x += 512) {
-        const p1 = this.mcToLatLng(x, minZ);
-        const p2 = this.mcToLatLng(x, maxZ);
-        L.polyline([p1, p2], {
-          color: lineColor,
-          weight: 1,
-          dashArray: "2, 4"
-        }).addTo(this.gridLayer);
-      }
-      for (let z = minZ; z <= maxZ; z += 512) {
-        const p1 = this.mcToLatLng(minX, z);
-        const p2 = this.mcToLatLng(maxX, z);
-        L.polyline([p1, p2], {
-          color: lineColor,
-          weight: 1,
-          dashArray: "2, 4"
-        }).addTo(this.gridLayer);
-      }
-    }
+    this.draw();
   }
 
-  initEvents() {
-    this.map.on("mousemove", (e) => {
-      const mc = this.latLngToMc(e.latlng);
-      const cx = mc.x >> 4;
-      const cz = mc.z >> 4;
-      const rx = mc.x >> 9;
-      const rz = mc.z >> 9;
-      if (this.onMouseMove) {
-        this.onMouseMove({ x: mc.x, z: mc.z, cx, cz, rx, rz });
-      }
-    });
+  // ---- viewport bounds (for API bbox queries) ----
 
-    this.map.on("click", (e) => {
-      const mc = this.latLngToMc(e.latlng);
-      if (this.onLocationSelect) {
-        this.onLocationSelect({
-          category: "point",
-          name: "Map Location",
-          x: mc.x,
-          y: 64,
-          z: mc.z,
-          source: "Arbitrary Point",
-          confidence: "HIGH"
-        });
-      }
-    });
-  }
-
-  // Current visible viewport in Minecraft block coordinates, padded a bit
-  // so panning slightly doesn't immediately show empty edges.
   getBlockBounds() {
-    const b = this.map.getBounds().pad(0.25);
-    const p1 = this.latLngToMc(b.getSouthWest());
-    const p2 = this.latLngToMc(b.getNorthEast());
+    const padX = (this.canvas._cssWidth / this.scale) * 0.25;
+    const padZ = (this.canvas._cssHeight / this.scale) * 0.25;
+    const p1 = this.screenToWorld(0, 0);
+    const p2 = this.screenToWorld(this.canvas._cssWidth, this.canvas._cssHeight);
     return {
-      minX: Math.min(p1.x, p2.x),
-      maxX: Math.max(p1.x, p2.x),
-      minZ: Math.min(p1.z, p2.z),
-      maxZ: Math.max(p1.z, p2.z)
+      minX: Math.round(Math.min(p1.x, p2.x) - padX),
+      maxX: Math.round(Math.max(p1.x, p2.x) + padX),
+      minZ: Math.round(Math.min(p1.z, p2.z) - padZ),
+      maxZ: Math.round(Math.max(p1.z, p2.z) + padZ)
     };
   }
 
-  // Exact-footprint markers rendered as canvas L.rectangles (not DOM
-  // divIcons) — thousands of these cost almost nothing to draw or pan.
-  // No invented "small/big" sizing: a single-block feature draws at
-  // exactly 1x1 block, and a multi-block feature (ore vein, structure)
-  // draws its real bounding box. Both are in world (block) units, so on
-  // screen they naturally get bigger when you zoom in and smaller when
-  // you zoom out — that's the map zooming, not the marker being resized.
-
-  // One exact Minecraft block at (x, z). L.latLngBounds normalizes the
-  // two corners itself, so which one is "north/south" doesn't matter.
-  exactBlockMarker(x, z, style) {
-    const p1 = this.mcToLatLng(x, z);
-    const p2 = this.mcToLatLng(x + 1, z + 1);
-    return L.rectangle(L.latLngBounds(p1, p2), this._rectStyle(style));
-  }
-
-  // The feature's real bounding box, e.g. an ore vein's or structure's
-  // [minX, minY, minZ, maxX, maxY, maxZ] from the scanner. +1 on the max
-  // corner so a single-block-wide vein still draws a full block, not a
-  // zero-width line.
-  exactBboxMarker(bbox, style) {
-    const [minX, , minZ, maxX, , maxZ] = bbox;
-    const p1 = this.mcToLatLng(minX, minZ);
-    const p2 = this.mcToLatLng(maxX + 1, maxZ + 1);
-    return L.rectangle(L.latLngBounds(p1, p2), this._rectStyle(style));
-  }
-
-  _rectStyle({ fillColor, strokeColor, opacity = 0.9, weight = 1.5 }) {
-    return { color: strokeColor, weight, fillColor, fillOpacity: opacity };
-  }
-
-  jumpTo(x, z, zoom = 0) {
-    const latlng = this.mcToLatLng(x, z);
-    this.map.setView(latlng, zoom);
-  }
-
-  // Drop (or move) a marker showing the player's current coordinates.
-  setPlayerMarker(x, z, y) {
-    this.playerLayer.clearLayers();
-    const latlng = this.mcToLatLng(x, z);
-    const icon = L.divIcon({
-      className: "player-marker-icon",
-      html: '<div class="player-pin">🧍</div>',
-      iconSize: [28, 28],
-      iconAnchor: [14, 26]
-    });
-    const marker = L.marker(latlng, { icon, zIndexOffset: 1000 });
-    marker.bindTooltip(`📍 <b>You are here</b><br>X: ${x}, Y: ${y !== undefined ? y : 64}, Z: ${z}`);
-    marker.addTo(this.playerLayer);
-  }
-
-  clearPlayerMarker() {
-    this.playerLayer.clearLayers();
-  }
-
-  highlightBBox(bbox) {
-    this.highlightLayer.clearLayers();
-    if (!bbox || bbox.length < 6) return;
-    const [minX, minY, minZ, maxX, maxY, maxZ] = bbox;
-    const p1 = this.mcToLatLng(minX, minZ);
-    const p2 = this.mcToLatLng(maxX, maxZ);
-    const bounds = L.latLngBounds(p1, p2);
-    L.rectangle(bounds, {
-      color: "#f59e0b",
-      weight: 2,
-      dashArray: "4, 4",
-      fillOpacity: 0.12
-    }).addTo(this.highlightLayer);
-  }
-
-  clearAllMarkers() {
-    this.oreLayer.clearLayers();
-    this.spawnerLayer.clearLayers();
-    this.structureLayer.clearLayers();
-    this.chestLayer.clearLayers();
-    this.highlightLayer.clearLayers();
-  }
+  // ---- data in ----
 
   renderBiomes(chunkBiomes) {
-    this.biomeLayer.clearLayers();
-    // Binding a tooltip to every chunk rectangle is what makes a
-    // whole-world (zoomed-out) view feel frozen — thousands of hit-test
-    // targets on top of thousands of shapes. Skip tooltips above a
-    // threshold; the shapes still render instantly either way.
-    const withTooltips = chunkBiomes.length <= 1500;
-
-    chunkBiomes.forEach((chunk) => {
-      const minX = chunk.chunk_x * 16;
-      const minZ = chunk.chunk_z * 16;
-      const p1 = this.mcToLatLng(minX, minZ);
-      const p2 = this.mcToLatLng(minX + 16, minZ + 16);
-      const bounds = L.latLngBounds(p1, p2);
-
-      const color = this.getBiomeColor(chunk.dominant_biome_id);
-      const rect = L.rectangle(bounds, {
-        color: color,
-        weight: 0.5,
-        opacity: 0.35,
-        fillColor: color,
-        fillOpacity: 0.22,
-        interactive: withTooltips
-      });
-
-      if (withTooltips) {
-        rect.bindTooltip(`<b>${chunk.dominant_biome_name}</b><br>Chunk: (${chunk.chunk_x}, ${chunk.chunk_z})`, {
-          sticky: true
-        });
-      }
-
-      rect.addTo(this.biomeLayer);
-    });
+    this.biomeChunks = chunkBiomes || [];
+    this.biomeChunkIndex.clear();
+    this.biomeChunks.forEach((c) => this.biomeChunkIndex.set(`${c.chunk_x},${c.chunk_z}`, c));
+    this.draw();
   }
 
   renderMarkers(markers) {
-    this.clearAllMarkers();
+    this.markers = (markers || []).map((m) => {
+      if (m.category === "spawner") return { ...m, _icon: this.getSpawnerIcon(m.type), _size: 26 };
+      if (m.category === "structure") return { ...m, _icon: this.getStructureIcon(m.type), _size: 28 };
+      if (m.category === "chest") return { ...m, _icon: "🎁", _size: 22 };
+      if (m.category === "ore") return { ...m, _icon: "💎", _size: 26 };
+      return m;
+    });
+    this.highlight = null;
+    this.draw();
+  }
 
-    markers.forEach((m) => {
+  clearAllMarkers() {
+    this.markers = [];
+    this.highlight = null;
+    this.draw();
+  }
+
+  setPlayerMarker(x, z, y) {
+    this.player = { x, z, y };
+    this.draw();
+  }
+
+  clearPlayerMarker() {
+    this.player = null;
+    this.draw();
+  }
+
+  highlightBBox(bbox) {
+    this.highlight = bbox && bbox.length >= 6 ? bbox : null;
+    this.draw();
+  }
+
+  // ---- hit testing ----
+
+  markerAt(px, py) {
+    // Reverse order: topmost-drawn (last) marker wins.
+    for (let i = this.markers.length - 1; i >= 0; i--) {
+      const m = this.markers[i];
       if (m.category === "ore_cluster") {
-        // Zoomed-out density cluster standing in for many individual ore
-        // veins in this cell (see backend get_markers) — a translucent
-        // cyan cell scaled by how much ore it holds, not a real vein color.
-        const marker = this.exactBboxMarker(m.bbox, {
-          fillColor: "#38bdf8",
-          strokeColor: "#0ea5e9",
-          opacity: Math.min(0.6, 0.15 + m.vein_count / 200),
-          weight: 1
-        });
-        marker.bindTooltip(`💎 <b>${m.name}</b><br>${m.blocks.toLocaleString()} ore blocks in this area<br><i>Zoom in for individual veins</i>`);
-        marker.on("click", (e) => {
-          L.DomEvent.stopPropagation(e);
-          this.jumpTo(m.x, m.z, this.map.getZoom() + 2);
-        });
-        marker.addTo(this.oreLayer);
-
-      } else if (m.category === "ore") {
-        const fillColor = this.getOreColor(m.type);
-        // Iron/quartz render pale on purpose (their real color), which
-        // nearly disappears against a light map background — give those
-        // two a fixed mid-tone stroke so the marker stays legible in both
-        // the dark and light theme, while keeping the true fill color.
-        const isPaleOre = /iron|quartz/.test((m.type || "").toLowerCase());
-        const style = {
-          fillColor: fillColor,
-          strokeColor: isPaleOre ? "#64748b" : fillColor,
-          opacity: 0.85,
-          weight: 1.5
-        };
-        const marker = m.bbox ? this.exactBboxMarker(m.bbox, style) : this.exactBlockMarker(m.x, m.z, style);
-
-        marker.bindTooltip(`💎 <b>${m.name}</b><br>X: ${m.x}, Y: ${m.y}, Z: ${m.z}<br>Vein: ${m.blocks} blocks`);
-        marker.on("click", (e) => {
-          L.DomEvent.stopPropagation(e);
-          if (m.bbox) this.highlightBBox(m.bbox);
-          if (this.onLocationSelect) this.onLocationSelect(m);
-        });
-        marker.addTo(this.oreLayer);
-
-      } else if (m.category === "spawner") {
-        const marker = this.exactBlockMarker(m.x, m.z, {
-          fillColor: "#f87171",
-          strokeColor: "#ef4444",
-          weight: 2
-        });
-
-        marker.bindTooltip(`🧟 <b>${m.name}</b><br>X: ${m.x}, Y: ${m.y}, Z: ${m.z}`);
-        marker.on("click", (e) => {
-          L.DomEvent.stopPropagation(e);
-          if (this.onLocationSelect) this.onLocationSelect(m);
-        });
-        marker.addTo(this.spawnerLayer);
-
-      } else if (m.category === "structure") {
-        const style = { fillColor: "#fbbf24", strokeColor: "#f59e0b", weight: 2 };
-        const marker = m.bbox ? this.exactBboxMarker(m.bbox, style) : this.exactBlockMarker(m.x, m.z, style);
-
-        marker.bindTooltip(`🏰 <b>${m.name}</b><br>X: ${m.x}, Y: ${m.y}, Z: ${m.z}`);
-        marker.on("click", (e) => {
-          L.DomEvent.stopPropagation(e);
-          if (m.bbox) this.highlightBBox(m.bbox);
-          if (this.onLocationSelect) this.onLocationSelect(m);
-        });
-        marker.addTo(this.structureLayer);
-
-      } else if (m.category === "chest") {
-        const marker = this.exactBlockMarker(m.x, m.z, {
-          fillColor: "#c084fc",
-          strokeColor: "#a855f7",
-          weight: 1.5
-        });
-
-        let tip = `🎁 <b>Chest</b><br>X: ${m.x}, Y: ${m.y}, Z: ${m.z}`;
-        if (m.loot_table) tip += `<br>Loot: ${m.loot_table}`;
-        if (m.items && m.items.length) tip += `<br>Items: ${m.items.length}`;
-        marker.bindTooltip(tip);
-
-        marker.on("click", (e) => {
-          L.DomEvent.stopPropagation(e);
-          if (this.onLocationSelect) this.onLocationSelect(m);
-        });
-        marker.addTo(this.chestLayer);
+        const [minX, , minZ, maxX, , maxZ] = m.bbox;
+        const [sx1, sy1] = this.worldToScreen(minX, minZ);
+        const [sx2, sy2] = this.worldToScreen(maxX + 1, maxZ + 1);
+        if (px >= Math.min(sx1, sx2) && px <= Math.max(sx1, sx2) && py >= Math.min(sy1, sy2) && py <= Math.max(sy1, sy2)) {
+          return m;
+        }
+      } else {
+        const [sx, sy] = this.worldToScreen(m.x + 0.5, m.z + 0.5);
+        const r = (m._size || 26) / 2;
+        if (Math.abs(px - sx) <= r && Math.abs(py - sy) <= r) return m;
       }
+    }
+    return null;
+  }
+
+  chunkAt(worldX, worldZ) {
+    const cx = Math.floor(worldX / 16);
+    const cz = Math.floor(worldZ / 16);
+    return this.biomeChunkIndex.get(`${cx},${cz}`);
+  }
+
+  // ---- events ----
+
+  _bindEvents() {
+    this.canvas.addEventListener("wheel", (e) => {
+      e.preventDefault();
+      const rect = this.canvas.getBoundingClientRect();
+      const factor = e.deltaY < 0 ? 1.15 : 1 / 1.15;
+      this.zoomAt(e.clientX - rect.left, e.clientY - rect.top, factor);
+    }, { passive: false });
+
+    this.canvas.addEventListener("mousedown", (e) => {
+      this._isDragging = true;
+      this._dragMoved = 0;
+      this._dragStartScreen = [e.clientX, e.clientY];
+      this._dragStartCam = [this.camX, this.camZ];
+      this.canvas.classList.add("grabbing");
+    });
+
+    window.addEventListener("mousemove", (e) => {
+      if (this._isDragging) {
+        const dx = e.clientX - this._dragStartScreen[0];
+        const dz = e.clientY - this._dragStartScreen[1];
+        this._dragMoved = Math.max(this._dragMoved, Math.abs(dx), Math.abs(dz));
+        this.camX = this._dragStartCam[0] - dx / this.scale;
+        this.camZ = this._dragStartCam[1] - dz / this.scale;
+        this.draw();
+        this.tooltip.hidden = true;
+        return;
+      }
+
+      const rect = this.canvas.getBoundingClientRect();
+      if (e.clientX < rect.left || e.clientX > rect.right || e.clientY < rect.top || e.clientY > rect.bottom) {
+        this.tooltip.hidden = true;
+        return;
+      }
+      const px = e.clientX - rect.left;
+      const py = e.clientY - rect.top;
+      const mc = this.screenToWorld(px, py);
+      const x = Math.round(mc.x);
+      const z = Math.round(mc.z);
+      if (this.onMouseMove) {
+        this.onMouseMove({ x, z, cx: x >> 4, cz: z >> 4, rx: x >> 9, rz: z >> 9 });
+      }
+      this._updateTooltip(px, py, mc);
+    });
+
+    window.addEventListener("mouseup", (e) => {
+      if (!this._isDragging) return;
+      this._isDragging = false;
+      this.canvas.classList.remove("grabbing");
+      if (this._dragMoved > 4) {
+        this.scheduleMoveEnd();
+        return;
+      }
+      // Treat as a click.
+      const rect = this.canvas.getBoundingClientRect();
+      const px = e.clientX - rect.left;
+      const py = e.clientY - rect.top;
+      this._handleClick(px, py);
     });
   }
 
-  getOreColor(oreId) {
-    const id = (oreId || "").toLowerCase();
-    if (id.includes("diamond")) return "#00f0ff";
-    if (id.includes("emerald")) return "#10b981";
-    if (id.includes("debris")) return "#a855f7";
-    if (id.includes("gold")) return "#f59e0b";
-    if (id.includes("iron")) return "#cbd5e1";
-    if (id.includes("copper")) return "#f97316";
-    if (id.includes("lapis")) return "#3b82f6";
-    if (id.includes("redstone")) return "#ef4444";
-    if (id.includes("coal")) return "#64748b";
-    if (id.includes("quartz")) return "#f8fafc";
-    return "#38bdf8";
+  _updateTooltip(px, py, mc) {
+    const hit = this.markerAt(px, py);
+    let html = null;
+    if (hit) {
+      html = this._tooltipHtml(hit);
+    } else {
+      const chunk = this.chunkAt(mc.x, mc.z);
+      if (chunk) {
+        html = `<b>${chunk.dominant_biome_name}</b><br>Chunk: (${chunk.chunk_x}, ${chunk.chunk_z})`;
+      }
+    }
+    if (html) {
+      this.tooltip.innerHTML = html;
+      this.tooltip.style.left = px + 14 + "px";
+      this.tooltip.style.top = py + 14 + "px";
+      this.tooltip.hidden = false;
+    } else {
+      this.tooltip.hidden = true;
+    }
+  }
+
+  _tooltipHtml(m) {
+    if (m.category === "ore_cluster") {
+      return `💎 <b>${m.name}</b><br>${m.blocks.toLocaleString()} ore blocks in this area<br><i>Zoom in for individual veins</i>`;
+    }
+    if (m.category === "ore") {
+      return `💎 <b>${m.name}</b><br>X: ${m.x}, Y: ${m.y}, Z: ${m.z}<br>Vein: ${m.blocks} blocks`;
+    }
+    if (m.category === "spawner") {
+      return `${m._icon} <b>${m.name}</b><br>X: ${m.x}, Y: ${m.y}, Z: ${m.z}`;
+    }
+    if (m.category === "structure") {
+      return `${m._icon} <b>${m.name}</b><br>X: ${m.x}, Y: ${m.y}, Z: ${m.z}`;
+    }
+    if (m.category === "chest") {
+      let tip = `🎁 <b>Chest</b><br>X: ${m.x}, Y: ${m.y}, Z: ${m.z}`;
+      if (m.loot_table) tip += `<br>Loot: ${m.loot_table}`;
+      if (m.items && m.items.length) tip += `<br>Items: ${m.items.length}`;
+      return tip;
+    }
+    return null;
+  }
+
+  _handleClick(px, py) {
+    const hit = this.markerAt(px, py);
+    if (hit) {
+      if (hit.category === "ore_cluster") {
+        this.jumpTo(hit.x, hit.z, this.zoomLevel + 2);
+        return;
+      }
+      if (hit.bbox) this.highlightBBox(hit.bbox);
+      if (this.onLocationSelect) this.onLocationSelect(hit);
+      return;
+    }
+    const mc = this.screenToWorld(px, py);
+    if (this.onLocationSelect) {
+      this.onLocationSelect({
+        category: "point",
+        name: "Map Location",
+        x: Math.round(mc.x),
+        y: 64,
+        z: Math.round(mc.z),
+        source: "Arbitrary Point",
+        confidence: "HIGH"
+      });
+    }
+  }
+
+  // ---- drawing ----
+
+  draw() {
+    const ctx = this.ctx;
+    const w = this.canvas._cssWidth;
+    const h = this.canvas._cssHeight;
+    ctx.clearRect(0, 0, w, h);
+
+    // Biome chunks (flat color squares).
+    this.biomeChunks.forEach((chunk) => {
+      const minX = chunk.chunk_x * 16;
+      const minZ = chunk.chunk_z * 16;
+      const [sx, sy] = this.worldToScreen(minX, minZ);
+      const size = 16 * this.scale;
+      ctx.fillStyle = this.getBiomeColor(chunk.dominant_biome_id);
+      ctx.globalAlpha = 0.35;
+      ctx.fillRect(sx, sy, size, size);
+    });
+    ctx.globalAlpha = 1;
+
+    // Region grid lines (every 512 blocks) across the visible viewport.
+    if (this.zoomLevel >= -4) {
+      const lineColor = getComputedStyle(document.documentElement).getPropertyValue("--map-line").trim() || "rgba(0, 229, 255, 0.09)";
+      const bounds = this.getBlockBounds();
+      const minX = Math.floor(bounds.minX / 512) * 512;
+      const maxX = Math.ceil(bounds.maxX / 512) * 512;
+      const minZ = Math.floor(bounds.minZ / 512) * 512;
+      const maxZ = Math.ceil(bounds.maxZ / 512) * 512;
+      ctx.strokeStyle = lineColor;
+      ctx.lineWidth = 1;
+      ctx.setLineDash([2, 4]);
+      ctx.beginPath();
+      for (let x = minX; x <= maxX; x += 512) {
+        const [sx1, sy1] = this.worldToScreen(x, minZ);
+        const [sx2, sy2] = this.worldToScreen(x, maxZ);
+        ctx.moveTo(sx1, sy1);
+        ctx.lineTo(sx2, sy2);
+      }
+      for (let z = minZ; z <= maxZ; z += 512) {
+        const [sx1, sy1] = this.worldToScreen(minX, z);
+        const [sx2, sy2] = this.worldToScreen(maxX, z);
+        ctx.moveTo(sx1, sy1);
+        ctx.lineTo(sx2, sy2);
+      }
+      ctx.stroke();
+      ctx.setLineDash([]);
+    }
+
+    // Markers.
+    this.markers.forEach((m) => {
+      if (m.category === "ore_cluster") {
+        const [minX, , minZ, maxX, , maxZ] = m.bbox;
+        const [sx1, sy1] = this.worldToScreen(minX, minZ);
+        const [sx2, sy2] = this.worldToScreen(maxX + 1, maxZ + 1);
+        ctx.fillStyle = "#38bdf8";
+        ctx.globalAlpha = Math.min(0.6, 0.15 + m.vein_count / 200);
+        ctx.fillRect(Math.min(sx1, sx2), Math.min(sy1, sy2), Math.abs(sx2 - sx1), Math.abs(sy2 - sy1));
+        ctx.globalAlpha = 1;
+        ctx.strokeStyle = "#0ea5e9";
+        ctx.lineWidth = 1;
+        ctx.strokeRect(Math.min(sx1, sx2), Math.min(sy1, sy2), Math.abs(sx2 - sx1), Math.abs(sy2 - sy1));
+      } else {
+        const [sx, sy] = this.worldToScreen(m.x + 0.5, m.z + 0.5);
+        const size = m._size || 26;
+        ctx.font = `${size}px "Segoe UI Emoji", "Noto Color Emoji", sans-serif`;
+        ctx.textAlign = "center";
+        ctx.textBaseline = "middle";
+        ctx.shadowColor = "rgba(0, 0, 0, 0.45)";
+        ctx.shadowBlur = 2;
+        ctx.fillText(m._icon || "❔", sx, sy);
+        ctx.shadowBlur = 0;
+      }
+    });
+
+    // Highlight bbox for the selected feature.
+    if (this.highlight) {
+      const [minX, , minZ, maxX, , maxZ] = this.highlight;
+      const [sx1, sy1] = this.worldToScreen(minX, minZ);
+      const [sx2, sy2] = this.worldToScreen(maxX, maxZ);
+      ctx.strokeStyle = "#f59e0b";
+      ctx.lineWidth = 2;
+      ctx.setLineDash([4, 4]);
+      ctx.strokeRect(Math.min(sx1, sx2), Math.min(sy1, sy2), Math.abs(sx2 - sx1), Math.abs(sy2 - sy1));
+      ctx.setLineDash([]);
+    }
+
+    // Player marker.
+    if (this.player) {
+      const [sx, sy] = this.worldToScreen(this.player.x, this.player.z);
+      ctx.font = `28px "Segoe UI Emoji", "Noto Color Emoji", sans-serif`;
+      ctx.textAlign = "center";
+      ctx.textBaseline = "middle";
+      ctx.shadowColor = "rgba(0, 0, 0, 0.45)";
+      ctx.shadowBlur = 3;
+      ctx.fillText("🧍", sx, sy - 12);
+      ctx.shadowBlur = 0;
+    }
+  }
+
+  // ---- icon / color lookups (unchanged from the previous Leaflet build) ----
+
+  getSpawnerIcon(entityId) {
+    const id = (entityId || "").replace("minecraft:", "").toLowerCase();
+    const icons = {
+      zombie: "🧟", zombie_villager: "🧟", husk: "🧟", drowned: "🌊",
+      skeleton: "💀", wither_skeleton: "☠️", stray: "💀",
+      spider: "🕷️", cave_spider: "🕸️", silverfish: "🐛",
+      vex: "👻", vindicator: "🪓", pillager: "🏹", witch: "🧙",
+      piglin_brute: "🐷", creeper: "💥", enderman: "👤",
+      slime: "🟩", magma_cube: "🟧", blaze: "🔥", ghast: "😱",
+      guardian: "🐟", elder_guardian: "🐟", snow_golem: "⛄",
+      chicken: "🐔", cow: "🐄", pig: "🐖", sheep: "🐑",
+      cod: "🐟", salmon: "🐟", pufferfish: "🐡", dolphin: "🐬",
+      squid: "🦑", parrot: "🦜"
+    };
+    return icons[id] || "👾";
+  }
+
+  getStructureIcon(structureId) {
+    const id = (structureId || "").toLowerCase();
+    if (id.includes("village")) return "🏘️";
+    if (id.includes("stronghold")) return "🏛️";
+    if (id.includes("monument")) return "🌊";
+    if (id.includes("mansion")) return "🏚️";
+    if (id.includes("outpost")) return "🏹";
+    if (id.includes("mineshaft")) return "⛏️";
+    if (id.includes("dungeon")) return "⚔️";
+    if (id.includes("portal")) return "🌀";
+    if (id.includes("pyramid") || id.includes("temple")) return "⛩️";
+    if (id.includes("shipwreck") || id.includes("ship") || id.includes("galley") || id.includes("corsair")) return "🚢";
+    if (id.includes("igloo")) return "🧊";
+    if (id.includes("ruin")) return "🗿";
+    if (id.includes("treasure")) return "💰";
+    if (id.includes("well")) return "🪣";
+    if (id.includes("windmill")) return "🎡";
+    if (id.includes("tower")) return "🗼";
+    if (id.includes("hut") || id.includes("house") || id.includes("campsite")) return "🛖";
+    return "🏰";
   }
 
   getBiomeColor(biomeId) {

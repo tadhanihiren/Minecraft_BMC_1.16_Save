@@ -1,11 +1,22 @@
 from typing import List, Dict, Any, Tuple, Generator
 
+ALLOWED_ORE_IDS = {
+    "minecraft:lapis_ore",
+    "minecraft:diamond_ore",
+    "cavesandcliffs:deepslate_diamond_ore",
+    "darkerdepths:silver_ore",
+    "minecraft:nether_gold_ore",
+    "cavesandcliffs:spore_blossom",
+    "savageandravage:spore_bomb",
+    "morevillagers:woodworking_table",
+    "morevillagers:gardening_table",
+    "morevillagers:oceanography_table",
+    "morevillagers:hunting_post",
+}
+
 def is_ore_block(block_name: str) -> bool:
-    """Determine if a block identifier is an ore or valuable mining resource."""
-    lower = block_name.lower()
-    if "ore" in lower or "ancient_debris" in lower:
-        return True
-    return False
+    """Determine if a block identifier is in the tracked allow-list."""
+    return block_name in ALLOWED_ORE_IDS
 
 def find_ores_in_section(
     section: Dict[str, Any],

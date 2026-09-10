@@ -4,10 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BMC1 World Explorer</title>
-  <!-- Bundled Offline Leaflet CSS -->
-  <link rel="stylesheet" href="css/leaflet.css">
   <!-- Modern Clean Dark Theme -->
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css?v=4">
   <!-- Apply saved theme before first paint, so there's no flash of the wrong theme -->
   <script>
     (function () {
@@ -59,6 +57,17 @@
           <div class="deck-card-body">
 
         <!-- Search Bar -->
+        <!-- Chunkbase-style Features icon strip: flat icon-only toggle
+             buttons, active = blue border. Each just clicks the real
+             checkbox below, so all existing filter logic is untouched. -->
+        <div class="feature-icon-strip">
+          <button type="button" class="feature-icon-btn" data-for="chkOres" title="Ore Veins">💎</button>
+          <button type="button" class="feature-icon-btn" data-for="chkSpawners" title="Mob Spawners">🧟</button>
+          <button type="button" class="feature-icon-btn" data-for="chkStructures" title="Structures">🏰</button>
+          <button type="button" class="feature-icon-btn" data-for="chkChests" title="Chests &amp; Containers">🎁</button>
+          <button type="button" class="feature-icon-btn" data-for="chkBiomes" title="Biome Overlays">🌳</button>
+        </div>
+
         <div class="search-wrapper">
           <span class="search-icon">🔍</span>
           <input type="text" id="searchInput" class="search-input hud-slot" placeholder="Search feature name, spawner, or X,Z...">
@@ -285,6 +294,22 @@
           <div class="tile-lbl">Distinct Biome Types</div>
         </div>
 
+        <div class="table-toolbar" style="margin-top: 8px;">
+          <span class="table-toolbar-label" id="oreBreakdownCount">Distinct Ore Types</span>
+        </div>
+        <div class="table-scroll" style="max-height: 260px;">
+          <table class="clean-table">
+            <thead>
+              <tr>
+                <th>Ore Type</th>
+                <th>Veins</th>
+                <th>Blocks</th>
+              </tr>
+            </thead>
+            <tbody id="oreBreakdownBody"></tbody>
+          </table>
+        </div>
+
         <div style="margin-top: 8px;">
           Indexed data is stored in a single file (<code>data/world_explorer.db</code>).
           The original Minecraft world files are strictly protected read-only.
@@ -403,10 +428,8 @@
   <!-- Toast Notification -->
   <div class="toast-msg hud-frame" id="toast">Copied to clipboard!</div>
 
-  <!-- Bundled Offline Leaflet JS -->
-  <script src="js/leaflet.js"></script>
   <!-- Application JS -->
-  <script src="js/map.js"></script>
-  <script src="js/app.js"></script>
+  <script src="js/map.js?v=4"></script>
+  <script src="js/app.js?v=4"></script>
 </body>
 </html>

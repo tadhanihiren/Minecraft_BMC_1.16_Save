@@ -4,8 +4,7 @@
  */
 
 document.addEventListener("DOMContentLoaded", () => {
-  // Theme toggle (dark HUD <-> light HUD, map included: a radar screen in
-  // dark, a blueprint/plotter sheet in light).
+  // Theme toggle (light Atlas look by default, dark variant on request).
   const btnThemeToggle = document.getElementById("btnThemeToggle");
   function applyTheme(theme) {
     document.documentElement.setAttribute("data-theme", theme);
@@ -16,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (typeof mapController !== "undefined") mapController.renderDynamicGrid();
   }
   const savedTheme = document.documentElement.getAttribute("data-theme")
-    || (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark");
+    || (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
   document.documentElement.setAttribute("data-theme", savedTheme);
   btnThemeToggle.innerText = savedTheme === "light" ? "☀️" : "🌙";
   btnThemeToggle.addEventListener("click", () => {
@@ -310,14 +309,36 @@ document.addEventListener("DOMContentLoaded", () => {
       if (key === "spawners" && e.target.checked) document.getElementById("subSpawners").classList.add("open");
       if (key === "structures" && e.target.checked) document.getElementById("subStructures").classList.add("open");
 
+      // Keep the Chunkbase-style icon strip's active border in sync,
+      // whichever way the underlying checkbox got toggled.
+      const iconBtn = document.querySelector(`.feature-icon-btn[data-for="${id}"]`);
+      if (iconBtn) iconBtn.classList.toggle("active", e.target.checked);
+
       refreshMap();
     });
   });
+
+  // Feature icon strip: clicking an icon just clicks its real checkbox,
+  // so every existing filter/refresh behavior above fires unchanged.
+  document.querySelectorAll(".feature-icon-btn").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const checkbox = document.getElementById(btn.dataset.for);
+      if (checkbox) checkbox.click();
+    });
+  });
+
+  // Keep the Chunkbase-style icon strip's active border synced whenever a
+  // checkbox is toggled programmatically instead of via a real click.
+  function syncFeatureIcon(chkId) {
+    const iconBtn = document.querySelector(`.feature-icon-btn[data-for="${chkId}"]`);
+    if (iconBtn) iconBtn.classList.toggle("active", document.getElementById(chkId).checked);
+  }
 
   // Quick Preset Chips
   document.getElementById("presetDiamonds").addEventListener("click", () => {
     // Turn on Ores
     document.getElementById("chkOres").checked = true;
+    syncFeatureIcon("chkOres");
     activeFilters.ores = true;
     document.getElementById("subOres").classList.add("open");
 
@@ -338,6 +359,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   document.getElementById("presetSpawners").addEventListener("click", () => {
     document.getElementById("chkSpawners").checked = true;
+    syncFeatureIcon("chkSpawners");
     activeFilters.spawners = true;
     document.getElementById("subSpawners").classList.add("open");
     // Clear sub-filters so all spawners show
@@ -350,6 +372,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   document.getElementById("presetStructures").addEventListener("click", () => {
     document.getElementById("chkStructures").checked = true;
+    syncFeatureIcon("chkStructures");
     activeFilters.structures = true;
     document.getElementById("subStructures").classList.add("open");
     const container = document.getElementById("structureChipsContainer");
@@ -363,6 +386,8 @@ document.addEventListener("DOMContentLoaded", () => {
     ["chkBiomes", "chkOres", "chkSpawners", "chkStructures", "chkChests"].forEach((id) => {
       const el = document.getElementById(id);
       if (el) el.checked = false;
+      const iconBtn = document.querySelector(`.feature-icon-btn[data-for="${id}"]`);
+      if (iconBtn) iconBtn.classList.remove("active");
     });
     activeFilters.biomes = false;
     activeFilters.ores = false;
@@ -519,6 +544,34 @@ document.addEventListener("DOMContentLoaded", () => {
       document.getElementById("countBiomes").innerText = stats.chunks_count || 0;
     } catch (e) {
       console.error("Error updating stats:", e);
+    }
+
+    await updateOreBreakdown();
+  }
+
+  // Distinct ore types with their vein/block counts, richest first.
+  async function updateOreBreakdown() {
+    try {
+      const res = await fetch(`/api/stats/ore_breakdown?dimension=${encodeURIComponent(currentDimension)}`);
+      const rows = await res.json();
+      const tbody = document.getElementById("oreBreakdownBody");
+      document.getElementById("oreBreakdownCount").innerText = `Distinct Ore Types (${rows.length})`;
+      tbody.innerHTML = "";
+      if (!rows.length) {
+        tbody.innerHTML = `<tr><td colspan="3" style="text-align: center; color: var(--ink-faint); padding: 16px;">No ore data indexed for this dimension yet.</td></tr>`;
+        return;
+      }
+      rows.forEach((r) => {
+        const tr = document.createElement("tr");
+        tr.innerHTML = `
+          <td>${r.display_name}</td>
+          <td style="font-family: var(--font-mono);">${r.vein_count.toLocaleString()}</td>
+          <td style="font-family: var(--font-mono);">${r.block_count.toLocaleString()}</td>
+        `;
+        tbody.appendChild(tr);
+      });
+    } catch (e) {
+      console.error("Error loading ore breakdown:", e);
     }
   }
 
