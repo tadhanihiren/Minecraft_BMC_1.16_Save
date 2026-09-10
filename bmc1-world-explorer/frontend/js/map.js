@@ -398,6 +398,32 @@ class MinecraftMap {
     });
     ctx.globalAlpha = 1;
 
+    // Block grid (every 1 block) — faint, lighter than chunk borders, only
+    // once individual blocks are actually big enough on screen to matter.
+    if (this.scale >= 12) {
+      const bounds = this.getBlockBounds();
+      const minX = Math.floor(bounds.minX);
+      const maxX = Math.ceil(bounds.maxX);
+      const minZ = Math.floor(bounds.minZ);
+      const maxZ = Math.ceil(bounds.maxZ);
+      ctx.strokeStyle = "rgba(0, 0, 0, 0.18)";
+      ctx.lineWidth = 1;
+      ctx.beginPath();
+      for (let x = minX; x <= maxX; x += 1) {
+        const [sx1, sy1] = this.worldToScreen(x, minZ);
+        const [sx2, sy2] = this.worldToScreen(x, maxZ);
+        ctx.moveTo(sx1, sy1);
+        ctx.lineTo(sx2, sy2);
+      }
+      for (let z = minZ; z <= maxZ; z += 1) {
+        const [sx1, sy1] = this.worldToScreen(minX, z);
+        const [sx2, sy2] = this.worldToScreen(maxX, z);
+        ctx.moveTo(sx1, sy1);
+        ctx.lineTo(sx2, sy2);
+      }
+      ctx.stroke();
+    }
+
     // Chunk borders (every 16 blocks) — solid dark lines, deliberately
     // darker than any biome fill color so chunk boundaries stay readable
     // regardless of theme. Only drawn once zoomed in enough that 16-block
