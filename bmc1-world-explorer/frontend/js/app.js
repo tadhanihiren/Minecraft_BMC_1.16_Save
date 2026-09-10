@@ -510,10 +510,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (hasMarkerLayer) {
       mapController.renderMarkers(markers);
-      renderTable(markers);
     } else {
       mapController.clearAllMarkers();
-      renderTable([]);
     }
   }
 
@@ -577,22 +575,13 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 800);
   }
 
-  // Update Stats & Badges
+  // Update category badge counts on the Layers card.
   async function updateStats() {
     try {
       const res = await fetch("/api/stats");
       const stats = await res.json();
       if (!stats) return;
 
-      document.getElementById("statRegions").innerText = stats.regions_count || 0;
-      document.getElementById("statChunks").innerText = (stats.chunks_count || 0).toLocaleString();
-      document.getElementById("statStructures").innerText = stats.structures_count || 0;
-      document.getElementById("statSpawners").innerText = stats.spawners_count || 0;
-      document.getElementById("statChests").innerText = stats.chests_count || 0;
-      document.getElementById("statOreBlocks").innerText = (stats.ore_blocks_count || 0).toLocaleString();
-      document.getElementById("statBiomeTypes").innerText = stats.biome_types_count || 0;
-
-      // Update card badges
       document.getElementById("countOres").innerText = stats.ore_veins_count || 0;
       document.getElementById("countSpawners").innerText = stats.spawners_count || 0;
       document.getElementById("countStructures").innerText = stats.structures_count || 0;
@@ -600,34 +589,6 @@ document.addEventListener("DOMContentLoaded", () => {
       document.getElementById("countBiomes").innerText = stats.chunks_count || 0;
     } catch (e) {
       console.error("Error updating stats:", e);
-    }
-
-    await updateOreBreakdown();
-  }
-
-  // Distinct ore types with their vein/block counts, richest first.
-  async function updateOreBreakdown() {
-    try {
-      const res = await fetch(`/api/stats/ore_breakdown?dimension=${encodeURIComponent(currentDimension)}`);
-      const rows = await res.json();
-      const tbody = document.getElementById("oreBreakdownBody");
-      document.getElementById("oreBreakdownCount").innerText = `Distinct Ore Types (${rows.length})`;
-      tbody.innerHTML = "";
-      if (!rows.length) {
-        tbody.innerHTML = `<tr><td colspan="3" style="text-align: center; color: var(--ink-faint); padding: 16px;">No ore data indexed for this dimension yet.</td></tr>`;
-        return;
-      }
-      rows.forEach((r) => {
-        const tr = document.createElement("tr");
-        tr.innerHTML = `
-          <td>${r.display_name}</td>
-          <td style="font-family: var(--font-mono);">${r.vein_count.toLocaleString()}</td>
-          <td style="font-family: var(--font-mono);">${r.block_count.toLocaleString()}</td>
-        `;
-        tbody.appendChild(tr);
-      });
-    } catch (e) {
-      console.error("Error loading ore breakdown:", e);
     }
   }
 
@@ -737,32 +698,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // Table View
-  function renderTable(markers) {
-    const tbody = document.getElementById("tableBody");
-    tbody.innerHTML = "";
-    if (!markers.length) {
-      tbody.innerHTML = `<tr><td colspan="6" style="text-align: center; color: var(--text-muted); padding: 20px;">No features selected. Enable layers in the sidebar.</td></tr>`;
-      return;
-    }
-    markers.slice(0, 300).forEach((m) => {
-      const tr = document.createElement("tr");
-      tr.innerHTML = `
-        <td><span class="version-tag">${(m.category || "").toUpperCase()}</span></td>
-        <td style="font-weight: 600; color: #fff;">${m.name}</td>
-        <td style="font-family: var(--font-mono);">${m.x}</td>
-        <td style="font-family: var(--font-mono);">${m.y !== undefined ? m.y : 64}</td>
-        <td style="font-family: var(--font-mono);">${m.z}</td>
-        <td><button class="btn btn-sm btn-ghost btn-jump">Jump</button></td>
-      `;
-      tr.querySelector(".btn-jump").addEventListener("click", () => {
-        mapController.jumpTo(m.x, m.z, 0);
-        mapController.onLocationSelect(m);
-      });
-      tbody.appendChild(tr);
-    });
-  }
-
   // Command Deck: exclusive accordion. Clicking a card's header opens it
   // and closes the others; clicking an already-open card's header closes it.
   document.querySelectorAll(".deck-card-header").forEach((header) => {
@@ -772,15 +707,6 @@ document.addEventListener("DOMContentLoaded", () => {
       document.querySelectorAll(".deck-card").forEach((c) => c.classList.remove("open"));
       if (!wasOpen) card.classList.add("open");
     });
-  });
-
-  // Exports
-  document.getElementById("btnExportCsv").addEventListener("click", () => {
-    window.location.href = `/api/export/csv?category=all&dimension=${encodeURIComponent(currentDimension)}`;
-  });
-
-  document.getElementById("btnExportJson").addEventListener("click", () => {
-    window.location.href = `/api/export/json?dimension=${encodeURIComponent(currentDimension)}`;
   });
 
   document.getElementById("btnGitDump").addEventListener("click", async () => {

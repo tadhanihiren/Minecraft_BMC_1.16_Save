@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BMC1 World Explorer</title>
   <!-- Modern Clean Dark Theme -->
-  <link rel="stylesheet" href="css/style.css?v=14">
+  <link rel="stylesheet" href="css/style.css?v=15">
   <!-- Apply saved theme before first paint, so there's no flash of the wrong theme -->
   <script>
     (function () {
@@ -254,107 +254,6 @@
           </div>
         </section>
 
-        <section class="deck-card" id="cardStats">
-          <button class="deck-card-header">
-            <span class="deck-card-icon">📊</span>
-            <span class="deck-card-label">Stats</span>
-            <span class="deck-card-chevron">⌄</span>
-          </button>
-          <div class="deck-card-collapse">
-          <div class="deck-card-body">
-        <div class="stats-tiles">
-          <div class="tile">
-            <div class="tile-val" id="statRegions">0</div>
-            <div class="tile-lbl">Regions</div>
-          </div>
-          <div class="tile">
-            <div class="tile-val" id="statChunks">0</div>
-            <div class="tile-lbl">Chunks</div>
-          </div>
-          <div class="tile">
-            <div class="tile-val" id="statStructures">0</div>
-            <div class="tile-lbl">Structures</div>
-          </div>
-          <div class="tile">
-            <div class="tile-val" id="statSpawners">0</div>
-            <div class="tile-lbl">Spawners</div>
-          </div>
-          <div class="tile">
-            <div class="tile-val" id="statChests">0</div>
-            <div class="tile-lbl">Chests</div>
-          </div>
-          <div class="tile">
-            <div class="tile-val" id="statOreBlocks">0</div>
-            <div class="tile-lbl">Ore Blocks</div>
-          </div>
-        </div>
-
-        <div class="tile" style="margin-top: 8px;">
-          <div class="tile-val" id="statBiomeTypes">0</div>
-          <div class="tile-lbl">Distinct Biome Types</div>
-        </div>
-
-        <div class="table-toolbar" style="margin-top: 8px;">
-          <span class="table-toolbar-label" id="oreBreakdownCount">Distinct Ore Types</span>
-        </div>
-        <div class="table-scroll" style="max-height: 260px;">
-          <table class="clean-table">
-            <thead>
-              <tr>
-                <th>Ore Type</th>
-                <th>Veins</th>
-                <th>Blocks</th>
-              </tr>
-            </thead>
-            <tbody id="oreBreakdownBody"></tbody>
-          </table>
-        </div>
-
-        <div style="margin-top: 8px;">
-          Indexed data is stored in a single file (<code>data/world_explorer.db</code>).
-          The original Minecraft world files are strictly protected read-only.
-        </div>
-
-          </div>
-          </div>
-        </section>
-
-        <section class="deck-card" id="cardTable">
-          <button class="deck-card-header">
-            <span class="deck-card-icon">📋</span>
-            <span class="deck-card-label">Table</span>
-            <span class="deck-card-chevron">⌄</span>
-          </button>
-          <div class="deck-card-collapse">
-          <div class="deck-card-body">
-        <div class="table-toolbar">
-          <span class="table-toolbar-label">Active Features</span>
-          <div class="table-toolbar-actions">
-            <button id="btnExportCsv" class="btn btn-sm btn-ghost">CSV</button>
-            <button id="btnExportJson" class="btn btn-sm btn-ghost">JSON</button>
-          </div>
-        </div>
-
-        <div class="table-scroll">
-          <table class="clean-table">
-            <thead>
-              <tr>
-                <th>Type</th>
-                <th>Name</th>
-                <th>X</th>
-                <th>Y</th>
-                <th>Z</th>
-                <th>Action</th>
-              </tr>
-            </thead>
-            <tbody id="tableBody"></tbody>
-          </table>
-        </div>
-
-          </div>
-          </div>
-        </section>
-
       </div>
 
       <!-- World Tools footer: pinned below the deck, plain direct-click
@@ -430,7 +329,7 @@
   <div class="toast-msg hud-frame" id="toast">Copied to clipboard!</div>
 
   <!-- Application JS -->
-  <script src="js/map.js?v=14"></script>
-  <script src="js/app.js?v=14"></script>
+  <script src="js/map.js?v=15"></script>
+  <script src="js/app.js?v=15"></script>
 </body>
 </html>

@@ -905,48 +905,6 @@ input:checked + .slider:before {
   margin-bottom: 10px;
 }
 
-/* Stats Tab Grid */
-.stats-tiles {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 8px;
-}
-
-.tile {
-  background-color: var(--panel);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 12px;
-  text-align: center;
-}
-
-.tile-val {
-  font-size: 19px;
-  font-weight: 700;
-  color: var(--cyan);
-  font-family: var(--font-mono);
-}
-
-.tile-lbl {
-  font-size: 10px;
-  color: var(--ink-faint);
-  margin-top: 3px;
-}
-
-#cardStats .deck-card-body > div:last-child {
-  font-size: 11px;
-  color: var(--ink-faint);
-  line-height: 1.6;
-}
-
-#cardStats code {
-  background: var(--slot);
-  padding: 1px 4px;
-  border-radius: 4px;
-  font-family: var(--font-mono);
-  color: var(--cyan-bright);
-}
-
 /* ==========================================================================
    Map Area
    ========================================================================== */
@@ -1098,61 +1056,6 @@ input:checked + .slider:before {
   display: flex;
   gap: 8px;
   flex-shrink: 0;
-}
-
-/* Table View */
-.table-scroll {
-  max-height: 460px;
-  overflow-y: auto;
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-}
-
-.clean-table {
-  width: 100%;
-  border-collapse: collapse;
-  font-size: 12px;
-  background-color: var(--panel);
-}
-
-.clean-table th {
-  background-color: var(--panel-alt);
-  padding: 8px 10px;
-  text-align: left;
-  color: var(--ink-faint);
-  font-weight: 600;
-  border-bottom: 1px solid var(--border);
-  position: sticky;
-  top: 0;
-}
-
-.clean-table td {
-  padding: 7px 10px;
-  border-bottom: 1px solid var(--border-dim);
-  color: var(--ink-dim);
-  font-family: var(--font-mono);
-}
-
-.clean-table tr:hover td {
-  background-color: var(--slot-alt);
-}
-
-.table-toolbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 4px;
-}
-
-.table-toolbar-label {
-  font-size: 11px;
-  font-weight: 600;
-  color: var(--ink-faint);
-}
-
-.table-toolbar-actions {
-  display: flex;
-  gap: 4px;
 }
 
 /* Toast */
