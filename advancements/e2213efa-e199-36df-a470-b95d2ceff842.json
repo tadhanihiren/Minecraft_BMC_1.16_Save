@@ -107,6 +107,12 @@
     },
     "done": true
   },
+  "adorn:recipes/birch_post": {
+    "criteria": {
+      "has_key_item_0": "2026-09-10 01:05:04 +0530"
+    },
+    "done": true
+  },
   "minecraft:recipes/building_blocks/chiseled_stone_bricks": {
     "criteria": {
       "has_stone_bricks": "2026-09-07 00:07:09 +0530"
@@ -152,6 +158,12 @@
   "extendedmushrooms:recipes/building_blocks/mushroom_wood/poisonous_mushroom/poisonous_mushroom_bookshelf": {
     "criteria": {
       "has_book": "2026-09-06 17:19:50 +0530"
+    },
+    "done": true
+  },
+  "adorn:recipes/oak_step": {
+    "criteria": {
+      "has_key_item_0": "2026-09-10 01:05:02 +0530"
     },
     "done": true
   },
@@ -245,6 +257,12 @@
     },
     "done": true
   },
+  "farmersdelight:recipes/misc/iron_nugget_from_blasting_knife": {
+    "criteria": {
+      "has_iron_knife": "2026-09-10 01:30:02 +0530"
+    },
+    "done": true
+  },
   "minecraft:recipes/tools/shears": {
     "criteria": {
       "has_iron_ingot": "2026-09-06 14:42:08 +0530"
@@ -335,6 +353,12 @@
     },
     "done": true
   },
+  "minecraft:recipes/transportation/detector_rail": {
+    "criteria": {
+      "has_rail": "2026-09-10 01:55:51 +0530"
+    },
+    "done": true
+  },
   "farmersdelight:recipes/farmersdelight/sweet_berry_cookie": {
     "criteria": {
       "has_sweet_berries": "2026-09-06 17:54:22 +0530"
@@ -398,6 +422,12 @@
   "comforts:sleeping_bag_light_blue_from_white": {
     "criteria": {
       "has_sleeping_bag": "2026-09-06 15:01:59 +0530"
+    },
+    "done": true
+  },
+  "environmental:adventure/obtain_explorer_gear": {
+    "criteria": {
+      "thief_hood": "2026-09-10 01:29:17 +0530"
     },
     "done": true
   },
@@ -536,6 +566,12 @@
   "cavesandcliffs:recipes/decorations/polished_deepslate_wall_from_cobbled_deepslate_stonecutting": {
     "criteria": {
       "has_cobbled_deepslate": "2026-09-06 18:33:26 +0530"
+    },
+    "done": true
+  },
+  "farmersdelight:recipes/tools/lead_from_rope": {
+    "criteria": {
+      "has_rope": "2026-09-10 01:56:06 +0530"
     },
     "done": true
   },
@@ -695,6 +731,12 @@
     },
     "done": true
   },
+  "minecraft:recipes/decorations/birch_sign": {
+    "criteria": {
+      "has_birch_planks": "2026-09-10 01:05:04 +0530"
+    },
+    "done": true
+  },
   "minecraft:adventure/root": {
     "criteria": {
       "killed_by_something": "2026-09-06 14:28:00 +0530"
@@ -722,6 +764,12 @@
   "extendedmushrooms:recipes/transportation/mushroom_wood/honey_fungus/honey_fungus_boat": {
     "criteria": {
       "in_water": "2026-09-06 14:35:26 +0530"
+    },
+    "done": true
+  },
+  "supplementaries:recipes/hanging_sign_birch": {
+    "criteria": {
+      "has_plank": "2026-09-10 01:05:04 +0530"
     },
     "done": true
   },
@@ -853,6 +901,12 @@
   "minecraft:recipes/decorations/stone_brick_wall": {
     "criteria": {
       "has_stone_bricks": "2026-09-07 00:07:09 +0530"
+    },
+    "done": true
+  },
+  "decorative_blocks:recipes/decorations/birch_seat": {
+    "criteria": {
+      "has_plank": "2026-09-10 01:05:04 +0530"
     },
     "done": true
   },
@@ -1114,6 +1168,12 @@
     },
     "done": true
   },
+  "minecraft:recipes/misc/leather": {
+    "criteria": {
+      "has_rabbit_hide": "2026-09-10 01:31:37 +0530"
+    },
+    "done": true
+  },
   "minecraft:recipes/decorations/light_gray_bed": {
     "criteria": {
       "has_light_gray_wool": "2026-09-06 14:34:59 +0530"
@@ -1132,6 +1192,12 @@
     },
     "done": true
   },
+  "minecraft:recipes/redstone/birch_button": {
+    "criteria": {
+      "has_planks": "2026-09-10 01:05:04 +0530"
+    },
+    "done": true
+  },
   "upgradednetherite_ultimate:recipes/upgraded_netherite_ingot": {
     "criteria": {
       "has_netherite_ingot": "2026-09-08 00:31:27 +0530"
@@ -1147,6 +1213,12 @@
   "minecraft:recipes/misc/red_dye_from_poppy": {
     "criteria": {
       "has_red_flower": "2026-09-06 19:12:51 +0530"
+    },
+    "done": true
+  },
+  "backpacked:recipes/backpacked/backpack": {
+    "criteria": {
+      "has_hide": "2026-09-10 01:31:37 +0530"
     },
     "done": true
   },
@@ -1171,6 +1243,12 @@
   "dungeons_arise:find_illager_corsair_or_illager_galley": {
     "criteria": {
       "location1": "2026-09-06 14:55:05 +0530"
+    },
+    "done": true
+  },
+  "farmersdelight:recipes/misc/gold_nugget_from_smelting_knife": {
+    "criteria": {
+      "has_golden_knife": "2026-09-10 01:30:02 +0530"
     },
     "done": true
   },
@@ -1306,6 +1384,12 @@
     },
     "done": true
   },
+  "adorn:recipes/oak_drawer": {
+    "criteria": {
+      "has_key_item_0": "2026-09-10 01:05:02 +0530"
+    },
+    "done": true
+  },
   "adorn:recipes/iron_shelf": {
     "criteria": {
       "has_key_item_0": "2026-09-06 14:42:08 +0530"
@@ -1366,6 +1450,12 @@
     },
     "done": true
   },
+  "adorn:recipes/birch_kitchen_counter": {
+    "criteria": {
+      "has_key_item_0": "2026-09-10 01:05:04 +0530"
+    },
+    "done": true
+  },
   "comforts:sleeping_bag_brown_from_white": {
     "criteria": {
       "has_sleeping_bag": "2026-09-06 15:01:59 +0530"
@@ -1381,6 +1471,12 @@
   "supplementaries:recipes/key": {
     "criteria": {
       "has_plank": "2026-09-06 19:45:36 +0530"
+    },
+    "done": true
+  },
+  "decorative_blocks:recipes/decorations/birch_support": {
+    "criteria": {
+      "has_plank": "2026-09-10 01:05:04 +0530"
     },
     "done": true
   },
@@ -1405,6 +1501,12 @@
   "farmersdelight:recipes/farmersdelight/iron_knife": {
     "criteria": {
       "has_iron_ingot": "2026-09-06 14:42:08 +0530"
+    },
+    "done": true
+  },
+  "minecraft:recipes/redstone/birch_fence_gate": {
+    "criteria": {
+      "has_planks": "2026-09-10 01:05:04 +0530"
     },
     "done": true
   },
@@ -1630,6 +1732,7 @@
       "minecraft:snowy_tundra": "2026-09-08 01:16:47 +0530",
       "minecraft:birch_forest": "2026-09-06 15:24:10 +0530",
       "minecraft:beach": "2026-09-06 14:52:03 +0530",
+      "minecraft:dark_forest": "2026-09-10 02:00:02 +0530",
       "minecraft:river": "2026-09-06 14:35:28 +0530",
       "minecraft:lukewarm_ocean": "2026-09-08 01:16:34 +0530",
       "minecraft:snowy_taiga": "2026-09-08 01:15:52 +0530",
@@ -1638,6 +1741,7 @@
       "minecraft:deep_cold_ocean": "2026-09-06 15:30:29 +0530",
       "minecraft:snowy_beach": "2026-09-08 01:16:40 +0530",
       "minecraft:deep_lukewarm_ocean": "2026-09-08 01:16:36 +0530",
+      "minecraft:wooded_hills": "2026-09-10 01:55:00 +0530",
       "minecraft:plains": "2026-09-06 14:33:57 +0530"
     },
     "done": false
@@ -1841,6 +1945,12 @@
     },
     "done": true
   },
+  "adorn:recipes/oak_shelf": {
+    "criteria": {
+      "has_key_item_0": "2026-09-10 01:05:02 +0530"
+    },
+    "done": true
+  },
   "minecraft:recipes/building_blocks/dried_kelp_block": {
     "criteria": {
       "has_dried_kelp": "2026-09-06 15:32:13 +0530"
@@ -1910,6 +2020,18 @@
   "extendedmushrooms:recipes/decorations/mushroom_wood/glowshroom/glowshroom_ladder": {
     "criteria": {
       "has_stick": "2026-09-06 14:30:51 +0530"
+    },
+    "done": true
+  },
+  "farmersdelight:main/craft_knife": {
+    "criteria": {
+      "diamond_knife": "2026-09-10 01:29:23 +0530"
+    },
+    "done": true
+  },
+  "adorn:recipes/oak_chair": {
+    "criteria": {
+      "has_key_item_0": "2026-09-10 01:05:02 +0530"
     },
     "done": true
   },
@@ -2118,9 +2240,21 @@
     },
     "done": true
   },
+  "adorn:recipes/birch_kitchen_sink": {
+    "criteria": {
+      "has_key_item_0": "2026-09-10 01:05:04 +0530"
+    },
+    "done": true
+  },
   "immersivecooking:recipes/immersivecooking/stove_hood": {
     "criteria": {
       "has_iron": "2026-09-06 14:42:08 +0530"
+    },
+    "done": true
+  },
+  "minecraft:recipes/redstone/birch_pressure_plate": {
+    "criteria": {
+      "has_planks": "2026-09-10 01:05:04 +0530"
     },
     "done": true
   },
@@ -2238,6 +2372,12 @@
     },
     "done": true
   },
+  "minecraft:recipes/misc/white_dye": {
+    "criteria": {
+      "has_bone_meal": "2026-09-10 01:12:22 +0530"
+    },
+    "done": true
+  },
   "adorn:recipes/light_gray_sofa": {
     "criteria": {
       "has_key_item_0": "2026-09-06 14:34:59 +0530"
@@ -2289,6 +2429,12 @@
   "cavesandcliffs:recipes/building_blocks/deepslate_tile_slab_from_cobbled_deepslate_stonecutting": {
     "criteria": {
       "has_cobbled_deepslate": "2026-09-06 18:33:26 +0530"
+    },
+    "done": true
+  },
+  "farmersdelight:recipes/farmersdelight/safety_net": {
+    "criteria": {
+      "has_rope": "2026-09-10 01:56:06 +0530"
     },
     "done": true
   },
@@ -2438,6 +2584,12 @@
   "minecraft:recipes/building_blocks/stone_brick_stairs_from_stone_bricks_stonecutting": {
     "criteria": {
       "has_stone_bricks": "2026-09-07 00:07:09 +0530"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/birch_slab": {
+    "criteria": {
+      "has_planks": "2026-09-10 01:05:04 +0530"
     },
     "done": true
   },
@@ -2591,6 +2743,12 @@
     },
     "done": true
   },
+  "minecraft:husbandry/bred_all_animals": {
+    "criteria": {
+      "minecraft:pig": "2026-09-10 01:40:49 +0530"
+    },
+    "done": false
+  },
   "extendedmushrooms:recipes/decorations/mushroom_wood/honey_fungus/honey_fungus_ladder": {
     "criteria": {
       "has_stick": "2026-09-06 14:30:51 +0530"
@@ -2735,6 +2893,18 @@
     },
     "done": true
   },
+  "farmersdelight:recipes/misc/iron_nugget_from_smelting_knife": {
+    "criteria": {
+      "has_iron_knife": "2026-09-10 01:30:02 +0530"
+    },
+    "done": true
+  },
+  "adorn:recipes/oak_bench": {
+    "criteria": {
+      "has_key_item_0": "2026-09-10 01:05:02 +0530"
+    },
+    "done": true
+  },
   "aquaculture:recipes/tools/diamond_fishing_rod": {
     "criteria": {
       "has_diamond": "2026-09-06 14:56:21 +0530"
@@ -2867,6 +3037,12 @@
     },
     "done": true
   },
+  "minecraft:recipes/transportation/activator_rail": {
+    "criteria": {
+      "has_rail": "2026-09-10 01:55:51 +0530"
+    },
+    "done": true
+  },
   "architects_palette:main/root": {
     "criteria": {
       "craftingtable": "2026-09-06 14:27:33 +0530"
@@ -2924,6 +3100,12 @@
   "immersivecooking:recipes/immersivecooking/fried_potato_slice": {
     "criteria": {
       "has_potato": "2026-09-06 17:20:34 +0530"
+    },
+    "done": true
+  },
+  "minecraft:recipes/redstone/birch_door": {
+    "criteria": {
+      "has_planks": "2026-09-10 01:05:04 +0530"
     },
     "done": true
   },
@@ -2999,6 +3181,12 @@
     },
     "done": true
   },
+  "minecraft:recipes/decorations/snow": {
+    "criteria": {
+      "has_snowball": "2026-09-10 01:12:22 +0530"
+    },
+    "done": true
+  },
   "minecraft:recipes/transportation/oak_boat": {
     "criteria": {
       "in_water": "2026-09-06 14:35:26 +0530"
@@ -3029,9 +3217,21 @@
     },
     "done": true
   },
+  "minecraft:recipes/decorations/anvil": {
+    "criteria": {
+      "has_iron_block": "2026-09-10 02:14:16 +0530"
+    },
+    "done": true
+  },
   "minecraft:recipes/decorations/blue_bed_from_white_bed": {
     "criteria": {
       "has_bed": "2026-09-06 14:42:45 +0530"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/birch_fence": {
+    "criteria": {
+      "has_planks": "2026-09-10 01:05:04 +0530"
     },
     "done": true
   },
@@ -3366,6 +3566,18 @@
     },
     "done": true
   },
+  "adorn:recipes/birch_kitchen_cupboard": {
+    "criteria": {
+      "has_key_item_0": "2026-09-10 01:05:04 +0530"
+    },
+    "done": true
+  },
+  "farmersdelight:recipes/misc/gold_nugget_from_blasting_knife": {
+    "criteria": {
+      "has_golden_knife": "2026-09-10 01:30:02 +0530"
+    },
+    "done": true
+  },
   "minecraft:recipes/building_blocks/spruce_slab": {
     "criteria": {
       "has_planks": "2026-09-06 14:30:51 +0530"
@@ -3483,6 +3695,12 @@
   "betterendforge:recipes/betterendforge/terminite_axe_smithing": {
     "criteria": {
       "has_stick": "2026-09-06 14:30:51 +0530"
+    },
+    "done": true
+  },
+  "adorn:recipes/oak_platform": {
+    "criteria": {
+      "has_key_item_0": "2026-09-10 01:05:02 +0530"
     },
     "done": true
   },
@@ -3672,6 +3890,12 @@
     },
     "done": true
   },
+  "adorn:recipes/oak_coffee_table": {
+    "criteria": {
+      "has_key_item_0": "2026-09-10 01:05:02 +0530"
+    },
+    "done": true
+  },
   "minecraft:recipes/decorations/composter": {
     "criteria": {
       "has_wood_slab": "2026-09-06 15:04:57 +0530"
@@ -3687,6 +3911,18 @@
   "cavesandcliffs:recipes/building_blocks/deepslate_brick_stairs_from_cobbled_deepslate_stonecutting": {
     "criteria": {
       "has_cobbled_deepslate": "2026-09-06 18:33:26 +0530"
+    },
+    "done": true
+  },
+  "minecraft:recipes/transportation/powered_rail": {
+    "criteria": {
+      "has_rail": "2026-09-10 01:55:51 +0530"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/snow_block": {
+    "criteria": {
+      "has_snowball": "2026-09-10 01:12:22 +0530"
     },
     "done": true
   },
@@ -3744,6 +3980,12 @@
     },
     "done": true
   },
+  "minecraft:adventure/shoot_arrow": {
+    "criteria": {
+      "shot_arrow": "2026-09-10 02:06:46 +0530"
+    },
+    "done": true
+  },
   "supplementaries:recipes/hourglass": {
     "criteria": {
       "has_item": "2026-09-06 19:45:36 +0530"
@@ -3759,6 +4001,18 @@
   "minecraft:recipes/decorations/stone_brick_walls_from_stone_stonecutting": {
     "criteria": {
       "has_stone": "2026-09-06 19:46:53 +0530"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/birch_stairs": {
+    "criteria": {
+      "has_planks": "2026-09-10 01:05:04 +0530"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/iron_ingot_from_iron_block": {
+    "criteria": {
+      "has_iron_block": "2026-09-10 02:14:16 +0530"
     },
     "done": true
   },
@@ -3819,6 +4073,24 @@
   "cavesandcliffs:recipes/misc/iron_ingot_from_blasting_raw_iron": {
     "criteria": {
       "has_raw_iron": "2026-09-06 17:28:51 +0530"
+    },
+    "done": true
+  },
+  "minecraft:husbandry/breed_an_animal": {
+    "criteria": {
+      "bred": "2026-09-10 01:40:49 +0530"
+    },
+    "done": true
+  },
+  "adorn:recipes/oak_table": {
+    "criteria": {
+      "has_key_item_0": "2026-09-10 01:05:02 +0530"
+    },
+    "done": true
+  },
+  "minecraft:recipes/redstone/birch_trapdoor": {
+    "criteria": {
+      "has_planks": "2026-09-10 01:05:04 +0530"
     },
     "done": true
   },
@@ -3912,6 +4184,12 @@
     },
     "done": true
   },
+  "supplementaries:recipes/sign_post_birch": {
+    "criteria": {
+      "has_plank": "2026-09-10 01:05:04 +0530"
+    },
+    "done": true
+  },
   "decorative_blocks:recipes/decorations/lattice": {
     "criteria": {
       "has_stick": "2026-09-06 14:30:51 +0530"
@@ -3933,6 +4211,12 @@
   "repurposed_structures:root": {
     "criteria": {
       "always": "2026-09-06 14:27:33 +0530"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/bone_block": {
+    "criteria": {
+      "has_bonemeal": "2026-09-10 01:12:22 +0530"
     },
     "done": true
   },

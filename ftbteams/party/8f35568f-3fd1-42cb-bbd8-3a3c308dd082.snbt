@@ -1,12 +1,12 @@
 {
 	id: "8f35568f-3fd1-42cb-bbd8-3a3c308dd082"
 	type: "party"
-	owner: "b5be052b-5a5f-4144-a50d-46cf03d1878e"
+	owner: "b4e4a086-8eec-3b32-a2fb-efa65940a15e"
 	ranks: {
-		b5be052b-5a5f-4144-a50d-46cf03d1878e: "owner"
 		fe121e0d-089a-3d1a-be27-b4aca54cdece: "member"
 		e55e98e5-78bd-310e-a5b0-2d071a315912: "member"
 		e2213efa-e199-36df-a470-b95d2ceff842: "member"
+		b4e4a086-8eec-3b32-a2fb-efa65940a15e: "owner"
 	}
 	properties: {
 		"ftbchunks:allow_explosions": 0b
@@ -20,8 +20,8 @@
 	}
 	message_history: [
 		{ from: "00000000-0000-0000-0000-000000000000", date: 1788672890303L, text: "{\"color\":\"yellow\",\"extra\":[{\"text\":\"moonvil\"},{\"text\":\" joined your party!\"}],\"text\":\"\"}" }
-		{ from: "b5be052b-5a5f-4144-a50d-46cf03d1878e", date: 1788672890426L, text: "{\"color\":\"green\",\"text\":\"Invited zadio\"}" }
-		{ from: "b5be052b-5a5f-4144-a50d-46cf03d1878e", date: 1788672890427L, text: "{\"color\":\"green\",\"text\":\"Invited R0-bin-H00D\"}" }
+		{ from: "b4e4a086-8eec-3b32-a2fb-efa65940a15e", date: 1788672890426L, text: "{\"color\":\"green\",\"text\":\"Invited zadio\"}" }
+		{ from: "b4e4a086-8eec-3b32-a2fb-efa65940a15e", date: 1788672890427L, text: "{\"color\":\"green\",\"text\":\"Invited R0-bin-H00D\"}" }
 		{ from: "00000000-0000-0000-0000-000000000000", date: 1788672901005L, text: "{\"color\":\"green\",\"extra\":[{\"text\":\"zadio\"},{\"text\":\" joined your party!\"}],\"text\":\"\"}" }
 		{ from: "00000000-0000-0000-0000-000000000000", date: 1788672902415L, text: "{\"color\":\"green\",\"extra\":[{\"text\":\"R0-bin-H00D\"},{\"text\":\" joined your party!\"}],\"text\":\"\"}" }
 		{ from: "00000000-0000-0000-0000-000000000000", date: 1788685868724L, text: "{\"color\":\"green\",\"extra\":[{\"text\":\"StrangerKnight\"},{\"text\":\" joined your party!\"}],\"text\":\"\"}" }

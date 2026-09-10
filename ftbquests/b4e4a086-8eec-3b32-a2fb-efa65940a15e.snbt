@@ -1,0 +1,13 @@
+{
+	version: 1
+	uuid: "b4e4a0868eec3b32a2fbefa65940a15e"
+	name: "moonvil"
+	can_edit: false
+	lock: false
+	auto_pin: false
+	task_progress: { }
+	started: { }
+	completed: { }
+	claimed_rewards: { }
+	pinned_quests: [ ]
+}
