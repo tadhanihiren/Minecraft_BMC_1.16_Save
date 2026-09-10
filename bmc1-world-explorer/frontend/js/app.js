@@ -335,6 +335,15 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
+  // Master toggle <-> sub-filter chips: turning a category off clears
+  // every chip in it, turning it on selects every chip — the master
+  // switch always reflects "all" or "none", never a stale partial state.
+  const CHIP_GROUPS = {
+    chkOres: { containerId: "oreChipsContainer", typesKey: "oreTypes" },
+    chkSpawners: { containerId: "spawnerChipsContainer", typesKey: "spawnerTypes" },
+    chkStructures: { containerId: "structureChipsContainer", typesKey: "structureTypes" }
+  };
+
   // Master Category Toggles (Ores, Spawners, Structures, Chests, Biomes)
   ["chkBiomes", "chkOres", "chkSpawners", "chkStructures", "chkChests"].forEach((id) => {
     const el = document.getElementById(id);
@@ -342,6 +351,14 @@ document.addEventListener("DOMContentLoaded", () => {
     el.addEventListener("change", (e) => {
       const key = id.replace("chk", "").toLowerCase();
       activeFilters[key] = e.target.checked;
+
+      const group = CHIP_GROUPS[id];
+      if (group) {
+        const container = document.getElementById(group.containerId);
+        const chips = Array.from(container.querySelectorAll(".filter-chip"));
+        chips.forEach((c) => c.classList.toggle("active", e.target.checked));
+        activeFilters[group.typesKey] = e.target.checked ? chips.map((c) => c.dataset.id) : [];
+      }
 
       // Also open corresponding subfilter drawer when enabled
       if (key === "ores" && e.target.checked) document.getElementById("subOres").classList.add("open");
