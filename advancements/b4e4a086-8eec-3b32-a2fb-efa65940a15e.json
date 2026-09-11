@@ -95,6 +95,12 @@
     },
     "done": true
   },
+  "minecraft:recipes/misc/melon_seeds": {
+    "criteria": {
+      "has_melon": "2026-09-10 23:19:26 +0530"
+    },
+    "done": true
+  },
   "minecraft:recipes/building_blocks/magma_block": {
     "criteria": {
       "has_magma_cream": "2026-09-06 23:48:52 +0530"
@@ -191,6 +197,12 @@
     },
     "done": true
   },
+  "minecraft:recipes/building_blocks/smooth_quartz_slab_from_smooth_quartz_stonecutting": {
+    "criteria": {
+      "has_smooth_quartz": "2026-09-11 01:10:34 +0530"
+    },
+    "done": true
+  },
   "supplementaries:recipes/sign_post_spruce": {
     "criteria": {
       "has_plank": "2026-09-06 14:53:30 +0530"
@@ -212,6 +224,12 @@
   "minecraft:recipes/combat/iron_leggings": {
     "criteria": {
       "has_iron_ingot": "2026-09-06 11:07:20 +0530"
+    },
+    "done": true
+  },
+  "adorn:recipes/cyan_table_lamp": {
+    "criteria": {
+      "has_key_item_0": "2026-09-10 23:02:03 +0530"
     },
     "done": true
   },
@@ -479,6 +497,12 @@
     },
     "done": true
   },
+  "minecraft:recipes/building_blocks/smooth_quartz_slab": {
+    "criteria": {
+      "has_smooth_quartz": "2026-09-11 01:10:34 +0530"
+    },
+    "done": true
+  },
   "supplementaries:recipes/candle_holder": {
     "criteria": {
       "has_item": "2026-09-06 12:50:26 +0530"
@@ -563,6 +587,12 @@
     },
     "done": true
   },
+  "minecraft:recipes/brewing/glistering_melon_slice": {
+    "criteria": {
+      "has_melon": "2026-09-10 23:19:26 +0530"
+    },
+    "done": true
+  },
   "minecraft:recipes/redstone/dark_oak_fence_gate": {
     "criteria": {
       "has_planks": "2026-09-06 15:16:23 +0530"
@@ -610,6 +640,12 @@
       "fisherman": "2026-09-08 00:19:32 +0530"
     },
     "done": false
+  },
+  "adorn:recipes/byg/aspen_post": {
+    "criteria": {
+      "has_key_item_0": "2026-09-11 00:46:57 +0530"
+    },
+    "done": true
   },
   "minecraft:recipes/combat/netherite_boots_smithing": {
     "criteria": {
@@ -722,6 +758,12 @@
   "adorn:recipes/byg/pine_kitchen_sink": {
     "criteria": {
       "has_key_item_0": "2026-09-06 11:45:11 +0530"
+    },
+    "done": true
+  },
+  "supplementaries:recipes/flute": {
+    "criteria": {
+      "has_item": "2026-09-11 00:05:08 +0530"
     },
     "done": true
   },
@@ -896,6 +938,12 @@
   "minecraft:recipes/building_blocks/blackstone_slab_from_blackstone_stonecutting": {
     "criteria": {
       "has_blackstone": "2026-09-07 22:56:56 +0530"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/yellow_glazed_terracotta": {
+    "criteria": {
+      "has_yellow_terracotta": "2026-09-11 01:44:21 +0530"
     },
     "done": true
   },
@@ -1121,6 +1169,12 @@
     },
     "done": true
   },
+  "minecraft:recipes/decorations/light_blue_bed_from_white_bed": {
+    "criteria": {
+      "has_bed": "2026-09-10 20:36:03 +0530"
+    },
+    "done": true
+  },
   "supplementaries:recipes/magma_cream": {
     "criteria": {
       "has_plank": "2026-09-06 23:48:52 +0530"
@@ -1172,6 +1226,12 @@
   "minecraft:recipes/misc/book": {
     "criteria": {
       "has_paper": "2026-09-08 00:22:16 +0530"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/purple_bed_from_white_bed": {
+    "criteria": {
+      "has_bed": "2026-09-10 20:36:03 +0530"
     },
     "done": true
   },
@@ -1723,9 +1783,21 @@
     },
     "done": true
   },
+  "minecraft:recipes/decorations/yellow_bed_from_white_bed": {
+    "criteria": {
+      "has_bed": "2026-09-10 20:36:03 +0530"
+    },
+    "done": true
+  },
   "aquaculture:recipes/tools/diamond_fillet_knife": {
     "criteria": {
       "has_items": "2026-09-06 13:31:12 +0530"
+    },
+    "done": true
+  },
+  "adorn:recipes/stone_platform": {
+    "criteria": {
+      "has_key_item_0": "2026-09-11 01:35:05 +0530"
     },
     "done": true
   },
@@ -1756,6 +1828,12 @@
   "aquaculture:recipes/food/cooked_fish_fillet_from_smoking": {
     "criteria": {
       "has_items": "2026-09-07 22:12:55 +0530"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/mossy_cobblestone_wall": {
+    "criteria": {
+      "has_mossy_cobblestone": "2026-09-11 00:53:31 +0530"
     },
     "done": true
   },
@@ -1807,6 +1885,12 @@
     },
     "done": true
   },
+  "minecraft:nether/get_wither_skull": {
+    "criteria": {
+      "wither_skull": "2026-09-10 23:00:01 +0530"
+    },
+    "done": true
+  },
   "minecraft:recipes/building_blocks/acacia_slab": {
     "criteria": {
       "has_planks": "2026-09-07 01:33:50 +0530"
@@ -1830,6 +1914,12 @@
   "adorn:root": {
     "criteria": {
       "has_wool": "2026-09-06 11:17:49 +0530"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/orange_bed_from_white_bed": {
+    "criteria": {
+      "has_bed": "2026-09-10 20:36:03 +0530"
     },
     "done": true
   },
@@ -1884,6 +1974,12 @@
   "minecraft:recipes/misc/charcoal": {
     "criteria": {
       "has_log": "2026-09-06 11:03:16 +0530"
+    },
+    "done": true
+  },
+  "adorn:recipes/mossy_cobblestone_post": {
+    "criteria": {
+      "has_key_item_0": "2026-09-11 00:53:31 +0530"
     },
     "done": true
   },
@@ -1983,6 +2079,12 @@
     },
     "done": true
   },
+  "minecraft:recipes/decorations/cyan_bed_from_white_bed": {
+    "criteria": {
+      "has_bed": "2026-09-10 20:36:03 +0530"
+    },
+    "done": true
+  },
   "adorn:recipes/crate": {
     "criteria": {
       "has_key_item_0": "2026-09-06 11:04:09 +0530"
@@ -2013,6 +2115,12 @@
     },
     "done": true
   },
+  "minecraft:recipes/decorations/lime_bed_from_white_bed": {
+    "criteria": {
+      "has_bed": "2026-09-10 20:36:03 +0530"
+    },
+    "done": true
+  },
   "minecraft:recipes/tools/clock": {
     "criteria": {
       "has_redstone": "2026-09-06 13:11:55 +0530"
@@ -2040,6 +2148,12 @@
   "minecraft:story/enter_the_nether": {
     "criteria": {
       "entered_nether": "2026-09-06 23:25:32 +0530"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/green_bed_from_white_bed": {
+    "criteria": {
+      "has_bed": "2026-09-10 20:36:03 +0530"
     },
     "done": true
   },
@@ -2138,6 +2252,12 @@
     },
     "done": true
   },
+  "minecraft:recipes/decorations/blue_bed_from_white_bed": {
+    "criteria": {
+      "has_bed": "2026-09-10 20:36:03 +0530"
+    },
+    "done": true
+  },
   "betterendforge:recipes/betterendforge/gold_chandelier": {
     "criteria": {
       "has_gold_ingot": "2026-09-06 11:52:49 +0530"
@@ -2186,6 +2306,12 @@
     },
     "done": false
   },
+  "minecraft:recipes/building_blocks/mossy_stone_bricks": {
+    "criteria": {
+      "has_mossy_cobblestone": "2026-09-11 00:53:31 +0530"
+    },
+    "done": true
+  },
   "cavesandcliffs:recipes/building_blocks/raw_gold_block": {
     "criteria": {
       "has_raw_gold": "2026-09-06 13:36:56 +0530"
@@ -2228,6 +2354,12 @@
     },
     "done": true
   },
+  "farmersdelight:recipes/farmersdelight/horse_feed": {
+    "criteria": {
+      "has_golden_carrot": "2026-09-10 23:29:55 +0530"
+    },
+    "done": true
+  },
   "minecraft:recipes/building_blocks/bricks": {
     "criteria": {
       "has_brick": "2026-09-07 23:06:08 +0530"
@@ -2249,6 +2381,12 @@
   "aquaculture:recipes/food/cooked_fish_fillet": {
     "criteria": {
       "has_items": "2026-09-07 22:12:55 +0530"
+    },
+    "done": true
+  },
+  "adorn:recipes/byg/aspen_kitchen_cupboard": {
+    "criteria": {
+      "has_key_item_0": "2026-09-11 00:46:57 +0530"
     },
     "done": true
   },
@@ -2606,6 +2744,12 @@
     },
     "done": true
   },
+  "adorn:recipes/byg/aspen_kitchen_sink": {
+    "criteria": {
+      "has_key_item_0": "2026-09-11 00:46:57 +0530"
+    },
+    "done": true
+  },
   "farmersdelight:recipes/farmersdelight/stuffed_potato": {
     "criteria": {
       "has_baked_potato": "2026-09-08 03:05:35 +0530"
@@ -2777,6 +2921,12 @@
   "minecraft:story/smelt_iron": {
     "criteria": {
       "iron": "2026-09-06 11:07:20 +0530"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/melon": {
+    "criteria": {
+      "has_melon": "2026-09-10 23:19:26 +0530"
     },
     "done": true
   },
@@ -3044,6 +3194,12 @@
     },
     "done": true
   },
+  "minecraft:recipes/building_blocks/mossy_cobblestone_slab_from_mossy_cobblestone_stonecutting": {
+    "criteria": {
+      "has_mossy_cobblestone": "2026-09-11 00:53:31 +0530"
+    },
+    "done": true
+  },
   "morevillagers:all_villages": {
     "criteria": {
       "plains_village": "2026-09-06 12:05:41 +0530"
@@ -3154,6 +3310,12 @@
     },
     "done": true
   },
+  "minecraft:recipes/building_blocks/mossy_cobblestone_stairs_from_mossy_cobblestone_stonecutting": {
+    "criteria": {
+      "has_mossy_cobblestone": "2026-09-11 00:53:31 +0530"
+    },
+    "done": true
+  },
   "naturescompass:natures_compass_sapling": {
     "criteria": {
       "has_recipe": "2026-09-06 11:03:16 +0530"
@@ -3163,6 +3325,12 @@
   "environmental:adventure/obtain_explorer_gear": {
     "criteria": {
       "thief_hood": "2026-09-08 00:43:31 +0530"
+    },
+    "done": true
+  },
+  "supplementaries:recipes/bamboo_spikes": {
+    "criteria": {
+      "has_plank": "2026-09-11 00:05:08 +0530"
     },
     "done": true
   },
@@ -3211,6 +3379,12 @@
   "minecraft:recipes/decorations/acacia_fence": {
     "criteria": {
       "has_planks": "2026-09-07 01:33:50 +0530"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/magenta_bed_from_white_bed": {
+    "criteria": {
+      "has_bed": "2026-09-10 20:36:03 +0530"
     },
     "done": true
   },
@@ -3376,6 +3550,12 @@
     },
     "done": true
   },
+  "minecraft:recipes/decorations/gray_bed_from_white_bed": {
+    "criteria": {
+      "has_bed": "2026-09-10 20:36:03 +0530"
+    },
+    "done": true
+  },
   "minecraft:recipes/building_blocks/white_concrete_powder": {
     "criteria": {
       "has_gravel": "2026-09-06 12:35:18 +0530"
@@ -3400,6 +3580,12 @@
     },
     "done": true
   },
+  "farmersdelight:recipes/farmersdelight/melon_popsicle": {
+    "criteria": {
+      "has_melon": "2026-09-10 23:19:26 +0530"
+    },
+    "done": true
+  },
   "minecraft:adventure/kill_all_mobs": {
     "criteria": {
       "minecraft:pillager": "2026-09-06 15:20:14 +0530",
@@ -3419,6 +3605,8 @@
       "savageandravage:trickster": "2026-09-06 17:34:49 +0530",
       "minecraft:phantom": "2026-09-06 14:00:27 +0530",
       "minecraft:witch": "2026-09-06 17:04:59 +0530",
+      "minecraft:wither_skeleton": "2026-09-10 22:54:41 +0530",
+      "minecraft:cave_spider": "2026-09-10 22:57:21 +0530",
       "minecraft:piglin": "2026-09-06 23:04:09 +0530",
       "minecraft:enderman": "2026-09-06 13:59:24 +0530",
       "minecraft:silverfish": "2026-09-10 00:31:09 +0530",
@@ -3458,6 +3646,12 @@
     },
     "done": true
   },
+  "minecraft:story/enchant_item": {
+    "criteria": {
+      "enchanted_item": "2026-09-10 22:44:42 +0530"
+    },
+    "done": true
+  },
   "farmersdelight:recipes/farmersdelight/cooking_pot": {
     "criteria": {
       "has_iron_ingot": "2026-09-06 11:07:20 +0530"
@@ -3491,6 +3685,12 @@
   "adorn:recipes/byg/palm_post": {
     "criteria": {
       "has_key_item_0": "2026-09-10 00:13:32 +0530"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/pink_bed_from_white_bed": {
+    "criteria": {
+      "has_bed": "2026-09-10 20:36:03 +0530"
     },
     "done": true
   },
@@ -3608,6 +3808,12 @@
     },
     "done": true
   },
+  "minecraft:recipes/misc/blue_dye_from_cornflower": {
+    "criteria": {
+      "has_blue_flower": "2026-09-11 00:02:08 +0530"
+    },
+    "done": true
+  },
   "bygonenether:root": {
     "criteria": {
       "entered_nether": "2026-09-06 23:25:32 +0530"
@@ -3647,6 +3853,12 @@
   "minecraft:recipes/decorations/blackstone_wall_from_blackstone_stonecutting": {
     "criteria": {
       "has_blackstone": "2026-09-07 22:56:56 +0530"
+    },
+    "done": true
+  },
+  "adorn:recipes/byg/aspen_kitchen_counter": {
+    "criteria": {
+      "has_key_item_0": "2026-09-11 00:46:57 +0530"
     },
     "done": true
   },
@@ -3755,6 +3967,12 @@
   "minecraft:recipes/tools/iron_axe": {
     "criteria": {
       "has_iron_ingot": "2026-09-06 11:07:20 +0530"
+    },
+    "done": true
+  },
+  "adorn:recipes/stone_step": {
+    "criteria": {
+      "has_key_item_0": "2026-09-11 01:35:05 +0530"
     },
     "done": true
   },
@@ -4061,6 +4279,12 @@
     },
     "done": true
   },
+  "minecraft:recipes/decorations/grindstone": {
+    "criteria": {
+      "has_stone_slab": "2026-09-11 01:35:05 +0530"
+    },
+    "done": true
+  },
   "supplementaries:recipes/sign_post_maple_aut": {
     "criteria": {
       "has_plank": "2026-09-06 11:23:00 +0530"
@@ -4085,6 +4309,12 @@
     },
     "done": true
   },
+  "supplementaries:recipes/hanging_sign_aspen": {
+    "criteria": {
+      "has_plank": "2026-09-11 00:46:57 +0530"
+    },
+    "done": true
+  },
   "extendedmushrooms:recipes/decorations/mushroom_wood/glowshroom/glowshroom_ladder": {
     "criteria": {
       "has_stick": "2026-09-06 11:02:37 +0530"
@@ -4100,6 +4330,12 @@
   "supplementaries:recipes/bellows": {
     "criteria": {
       "has_item": "2026-09-06 11:09:48 +0530"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/stick_from_bamboo_item": {
+    "criteria": {
+      "has_bamboo": "2026-09-11 00:05:08 +0530"
     },
     "done": true
   },
@@ -4124,6 +4360,12 @@
   "adorn:recipes/dark_oak_bench": {
     "criteria": {
       "has_key_item_0": "2026-09-06 15:16:25 +0530"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/red_bed_from_white_bed": {
+    "criteria": {
+      "has_bed": "2026-09-10 20:36:03 +0530"
     },
     "done": true
   },
@@ -4271,6 +4513,12 @@
     },
     "done": true
   },
+  "minecraft:recipes/decorations/black_bed_from_white_bed": {
+    "criteria": {
+      "has_bed": "2026-09-10 20:36:03 +0530"
+    },
+    "done": true
+  },
   "minecraft:recipes/misc/bone_meal_from_bone_block": {
     "criteria": {
       "has_bone_block": "2026-09-06 23:35:28 +0530"
@@ -4360,6 +4608,7 @@
       "neapolitan:strawberry_scones": "2026-09-06 23:24:49 +0530",
       "potato": "2026-09-06 15:39:27 +0530",
       "bread": "2026-09-06 12:39:28 +0530",
+      "melon_slice": "2026-09-10 23:19:56 +0530",
       "cooked_rabbit": "2026-09-08 02:24:21 +0530",
       "cooked_salmon": "2026-09-06 20:28:37 +0530",
       "cooked_porkchop": "2026-09-06 12:00:18 +0530",
@@ -4370,6 +4619,7 @@
       "apple": "2026-09-06 14:42:55 +0530",
       "cooked_cod": "2026-09-06 14:59:24 +0530",
       "beetroot": "2026-09-07 23:26:22 +0530",
+      "golden_carrot": "2026-09-10 23:30:02 +0530",
       "carrot": "2026-09-07 00:57:37 +0530"
     },
     "done": false
@@ -4494,6 +4744,12 @@
     },
     "done": true
   },
+  "minecraft:recipes/decorations/mossy_cobblestone_wall_from_mossy_cobblestone_stonecutting": {
+    "criteria": {
+      "has_mossy_cobblestone": "2026-09-11 00:53:31 +0530"
+    },
+    "done": true
+  },
   "blue_skies:recipes/blue_skies_everdawn_blocks/dusk_bookshelf": {
     "criteria": {
       "has_item": "2026-09-06 16:09:13 +0530"
@@ -4521,6 +4777,12 @@
   "extendedmushrooms:recipes/decorations/mushroom_wood/honey_fungus/honey_fungus_ladder": {
     "criteria": {
       "has_stick": "2026-09-06 11:02:37 +0530"
+    },
+    "done": true
+  },
+  "decorative_blocks_abnormals:recipes/rosewood_palisade": {
+    "criteria": {
+      "has_log": "2026-09-10 21:10:54 +0530"
     },
     "done": true
   },
@@ -4819,6 +5081,12 @@
     },
     "done": true
   },
+  "supplementaries:recipes/sign_post_aspen": {
+    "criteria": {
+      "has_plank": "2026-09-11 00:46:57 +0530"
+    },
+    "done": true
+  },
   "betterdungeons:spider_dungeon": {
     "criteria": {
       "in_better_spider_dungeon": "2026-09-06 16:01:58 +0530"
@@ -4853,6 +5121,7 @@
     "criteria": {
       "cabbage": "2026-09-07 20:26:51 +0530",
       "onion": "2026-09-08 00:51:28 +0530",
+      "sweet_berries": "2026-09-11 02:02:04 +0530",
       "sugar_cane": "2026-09-06 11:34:44 +0530",
       "potato": "2026-09-08 00:52:11 +0530",
       "wheat": "2026-09-06 20:23:10 +0530",
@@ -4935,6 +5204,12 @@
   "cavesandcliffs:recipes/building_blocks/raw_copper_block": {
     "criteria": {
       "has_raw_copper": "2026-09-06 12:35:30 +0530"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/scaffolding": {
+    "criteria": {
+      "has_bamboo": "2026-09-11 00:05:08 +0530"
     },
     "done": true
   },
@@ -5034,6 +5309,12 @@
     },
     "done": true
   },
+  "minecraft:recipes/building_blocks/mossy_cobblestone_slab": {
+    "criteria": {
+      "has_mossy_cobblestone": "2026-09-11 00:53:31 +0530"
+    },
+    "done": true
+  },
   "decorative_blocks:recipes/decorations/oak_palisade": {
     "criteria": {
       "has_log": "2026-09-06 11:03:16 +0530"
@@ -5106,6 +5387,12 @@
     },
     "done": true
   },
+  "minecraft:recipes/misc/skull_banner_pattern": {
+    "criteria": {
+      "has_wither_skeleton_skull": "2026-09-10 23:00:01 +0530"
+    },
+    "done": true
+  },
   "minecraft:recipes/building_blocks/polished_basalt": {
     "criteria": {
       "has_basalt": "2026-09-06 23:50:35 +0530"
@@ -5121,6 +5408,12 @@
   "minecraft:story/root": {
     "criteria": {
       "crafting_table": "2026-09-06 11:04:12 +0530"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/smooth_quartz_stairs": {
+    "criteria": {
+      "has_smooth_quartz": "2026-09-11 01:10:34 +0530"
     },
     "done": true
   },
@@ -5190,6 +5483,18 @@
     },
     "done": true
   },
+  "farmersdelight:recipes/farmersdelight/melon_juice": {
+    "criteria": {
+      "has_melon_slice": "2026-09-10 23:19:26 +0530"
+    },
+    "done": true
+  },
+  "minecraft:adventure/ol_betsy": {
+    "criteria": {
+      "shot_crossbow": "2026-09-10 23:55:23 +0530"
+    },
+    "done": true
+  },
   "minecraft:recipes/building_blocks/quartz_block": {
     "criteria": {
       "has_quartz": "2026-09-06 14:56:24 +0530"
@@ -5205,6 +5510,12 @@
   "minecraft:recipes/food/cooked_beef": {
     "criteria": {
       "has_beef": "2026-09-06 12:41:15 +0530"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/smooth_quartz_stairs_from_smooth_quartz_stonecutting": {
+    "criteria": {
+      "has_smooth_quartz": "2026-09-11 01:10:34 +0530"
     },
     "done": true
   },
@@ -5376,6 +5687,12 @@
     },
     "done": true
   },
+  "minecraft:recipes/decorations/brown_bed_from_white_bed": {
+    "criteria": {
+      "has_bed": "2026-09-10 20:36:03 +0530"
+    },
+    "done": true
+  },
   "minecraft:husbandry/breed_an_animal": {
     "criteria": {
       "bred": "2026-09-06 11:03:57 +0530"
@@ -5463,6 +5780,18 @@
   "morevillagers:first_workstation_get": {
     "criteria": {
       "barrel": "2026-09-06 14:56:40 +0530"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/mossy_cobblestone_stairs": {
+    "criteria": {
+      "has_mossy_cobblestone": "2026-09-11 00:53:31 +0530"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/light_gray_bed_from_white_bed": {
+    "criteria": {
+      "has_bed": "2026-09-10 20:36:03 +0530"
     },
     "done": true
   },

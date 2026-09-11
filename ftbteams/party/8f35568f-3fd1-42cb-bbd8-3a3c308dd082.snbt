@@ -3,6 +3,7 @@
 	type: "party"
 	owner: "b4e4a086-8eec-3b32-a2fb-efa65940a15e"
 	ranks: {
+		7e17562e-c4f8-3877-a371-75d0531a532c: "member"
 		fe121e0d-089a-3d1a-be27-b4aca54cdece: "member"
 		e55e98e5-78bd-310e-a5b0-2d071a315912: "member"
 		e2213efa-e199-36df-a470-b95d2ceff842: "member"
@@ -25,6 +26,9 @@
 		{ from: "00000000-0000-0000-0000-000000000000", date: 1788672901005L, text: "{\"color\":\"green\",\"extra\":[{\"text\":\"zadio\"},{\"text\":\" joined your party!\"}],\"text\":\"\"}" }
 		{ from: "00000000-0000-0000-0000-000000000000", date: 1788672902415L, text: "{\"color\":\"green\",\"extra\":[{\"text\":\"R0-bin-H00D\"},{\"text\":\" joined your party!\"}],\"text\":\"\"}" }
 		{ from: "00000000-0000-0000-0000-000000000000", date: 1788685868724L, text: "{\"color\":\"green\",\"extra\":[{\"text\":\"StrangerKnight\"},{\"text\":\" joined your party!\"}],\"text\":\"\"}" }
+		{ from: "00000000-0000-0000-0000-000000000000", date: 1789057540983L, text: "{\"color\":\"yellow\",\"extra\":[{\"text\":\"R0-bin-H00D\"},{\"text\":\" left your party!\"}],\"text\":\"\"}" }
+		{ from: "00000000-0000-0000-0000-000000000000", date: 1789057556174L, text: "{\"color\":\"green\",\"extra\":[{\"text\":\"R0-bin-H00D\"},{\"text\":\" joined your party!\"}],\"text\":\"\"}" }
+		{ from: "00000000-0000-0000-0000-000000000000", date: 1789057664828L, text: "{\"color\":\"green\",\"extra\":[{\"text\":\"Seryx\"},{\"text\":\" joined your party!\"}],\"text\":\"\"}" }
 	]
 	extra: { }
 }

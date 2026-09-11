@@ -125,6 +125,12 @@
     },
     "done": true
   },
+  "minecraft:recipes/misc/melon_seeds": {
+    "criteria": {
+      "has_melon": "2026-09-10 23:20:43 +0530"
+    },
+    "done": true
+  },
   "minecraft:recipes/building_blocks/magma_block": {
     "criteria": {
       "has_magma_cream": "2026-09-07 21:27:02 +0530"
@@ -221,6 +227,12 @@
     },
     "done": true
   },
+  "minecraft:recipes/building_blocks/smooth_quartz_slab_from_smooth_quartz_stonecutting": {
+    "criteria": {
+      "has_smooth_quartz": "2026-09-10 22:48:59 +0530"
+    },
+    "done": true
+  },
   "supplementaries:recipes/sign_post_spruce": {
     "criteria": {
       "has_plank": "2026-09-06 11:02:57 +0530"
@@ -242,6 +254,12 @@
   "minecraft:recipes/combat/iron_leggings": {
     "criteria": {
       "has_iron_ingot": "2026-09-06 11:07:29 +0530"
+    },
+    "done": true
+  },
+  "adorn:recipes/cyan_table_lamp": {
+    "criteria": {
+      "has_key_item_0": "2026-09-10 23:10:24 +0530"
     },
     "done": true
   },
@@ -521,6 +539,12 @@
     },
     "done": true
   },
+  "minecraft:recipes/building_blocks/smooth_quartz_slab": {
+    "criteria": {
+      "has_smooth_quartz": "2026-09-10 22:48:59 +0530"
+    },
+    "done": true
+  },
   "supplementaries:recipes/candle_holder": {
     "criteria": {
       "has_item": "2026-09-06 17:43:14 +0530"
@@ -638,6 +662,12 @@
   "minecraft:recipes/food/cooked_chicken_from_campfire_cooking": {
     "criteria": {
       "has_chicken": "2026-09-06 11:10:10 +0530"
+    },
+    "done": true
+  },
+  "minecraft:recipes/brewing/glistering_melon_slice": {
+    "criteria": {
+      "has_melon": "2026-09-10 23:20:43 +0530"
     },
     "done": true
   },
@@ -804,6 +834,12 @@
   "adorn:recipes/dark_prismarine_step": {
     "criteria": {
       "has_key_item_0": "2026-09-09 22:59:27 +0530"
+    },
+    "done": true
+  },
+  "supplementaries:recipes/flute": {
+    "criteria": {
+      "has_item": "2026-09-10 22:50:32 +0530"
     },
     "done": true
   },
@@ -1057,6 +1093,12 @@
   "adorn:recipes/cobblestone_step": {
     "criteria": {
       "has_key_item_0": "2026-09-06 23:29:02 +0530"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/birch_planks": {
+    "criteria": {
+      "has_logs": "2026-09-10 22:48:32 +0530"
     },
     "done": true
   },
@@ -1476,6 +1518,12 @@
     },
     "done": false
   },
+  "minecraft:recipes/misc/diamond": {
+    "criteria": {
+      "has_diamond_block": "2026-09-11 00:41:19 +0530"
+    },
+    "done": true
+  },
   "minecraft:recipes/misc/gold_nugget_from_smelting": {
     "criteria": {
       "has_golden_hoe": "2026-09-06 22:29:50 +0530"
@@ -1746,6 +1794,12 @@
     },
     "done": true
   },
+  "minecraft:recipes/misc/red_dye_from_beetroot": {
+    "criteria": {
+      "has_beetroot": "2026-09-10 22:50:32 +0530"
+    },
+    "done": true
+  },
   "adorn:recipes/picket_fence": {
     "criteria": {
       "has_key_item_0": "2026-09-06 11:02:57 +0530"
@@ -1956,6 +2010,12 @@
     },
     "done": true
   },
+  "minecraft:nether/get_wither_skull": {
+    "criteria": {
+      "wither_skull": "2026-09-10 23:08:39 +0530"
+    },
+    "done": true
+  },
   "minecraft:recipes/building_blocks/acacia_slab": {
     "criteria": {
       "has_planks": "2026-09-07 21:19:35 +0530"
@@ -2007,6 +2067,12 @@
   "minecraft:recipes/transportation/minecart": {
     "criteria": {
       "has_iron_ingot": "2026-09-06 11:07:29 +0530"
+    },
+    "done": true
+  },
+  "minecraft:recipes/food/beetroot_soup": {
+    "criteria": {
+      "has_beetroot": "2026-09-10 22:50:32 +0530"
     },
     "done": true
   },
@@ -2372,6 +2438,8 @@
   },
   "farmersdelight:main/master_chef": {
     "criteria": {
+      "pasta_with_meatballs": "2026-09-11 00:25:38 +0530",
+      "beef_stew": "2026-09-11 00:01:28 +0530",
       "pasta_with_mutton_chop": "2026-09-06 22:10:08 +0530"
     },
     "done": false
@@ -3060,6 +3128,12 @@
     },
     "done": true
   },
+  "minecraft:recipes/building_blocks/melon": {
+    "criteria": {
+      "has_melon": "2026-09-10 23:20:43 +0530"
+    },
+    "done": true
+  },
   "decorative_blocks:recipes/decorations/lattice": {
     "criteria": {
       "has_stick": "2026-09-06 11:03:29 +0530"
@@ -3469,6 +3543,12 @@
     },
     "done": true
   },
+  "supplementaries:recipes/bamboo_spikes": {
+    "criteria": {
+      "has_plank": "2026-09-10 22:50:32 +0530"
+    },
+    "done": true
+  },
   "minecraft:recipes/misc/brick": {
     "criteria": {
       "has_clay_ball": "2026-09-06 17:53:03 +0530"
@@ -3721,6 +3801,12 @@
     },
     "done": true
   },
+  "farmersdelight:recipes/farmersdelight/melon_popsicle": {
+    "criteria": {
+      "has_melon": "2026-09-10 23:20:43 +0530"
+    },
+    "done": true
+  },
   "minecraft:adventure/kill_all_mobs": {
     "criteria": {
       "minecraft:pillager": "2026-09-06 14:55:47 +0530",
@@ -3734,6 +3820,8 @@
       "minecraft:spider": "2026-09-06 11:18:10 +0530",
       "minecraft:piglin_brute": "2026-09-06 23:01:18 +0530",
       "minecraft:creeper": "2026-09-06 13:11:28 +0530",
+      "minecraft:wither_skeleton": "2026-09-10 22:50:17 +0530",
+      "minecraft:cave_spider": "2026-09-10 22:58:48 +0530",
       "minecraft:piglin": "2026-09-06 23:02:38 +0530",
       "minecraft:enderman": "2026-09-06 12:40:32 +0530",
       "minecraft:silverfish": "2026-09-09 23:35:51 +0530",
@@ -3757,6 +3845,18 @@
   "cavesandcliffs:recipes/misc/copper_ingot_from_blasting_raw_copper": {
     "criteria": {
       "has_raw_copper": "2026-09-06 13:11:02 +0530"
+    },
+    "done": true
+  },
+  "minecraft:story/enchant_item": {
+    "criteria": {
+      "enchanted_item": "2026-09-10 22:10:26 +0530"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/birch_wood": {
+    "criteria": {
+      "has_log": "2026-09-10 22:48:32 +0530"
     },
     "done": true
   },
@@ -3859,6 +3959,12 @@
   "minecraft:recipes/decorations/red_stained_glass_pane_from_glass_pane": {
     "criteria": {
       "has_red_dye": "2026-09-07 21:34:23 +0530"
+    },
+    "done": true
+  },
+  "decorative_blocks:recipes/decorations/birch_palisade": {
+    "criteria": {
+      "has_log": "2026-09-10 22:48:32 +0530"
     },
     "done": true
   },
@@ -4565,6 +4671,12 @@
   "supplementaries:recipes/bellows": {
     "criteria": {
       "has_item": "2026-09-06 12:10:46 +0530"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/stick_from_bamboo_item": {
+    "criteria": {
+      "has_bamboo": "2026-09-10 22:50:32 +0530"
     },
     "done": true
   },
@@ -5365,6 +5477,12 @@
     },
     "done": true
   },
+  "farmersdelight:main/eat_comfort_food": {
+    "criteria": {
+      "comfort": "2026-09-11 00:01:28 +0530"
+    },
+    "done": true
+  },
   "supplementaries:recipes/sign_post_aspen": {
     "criteria": {
       "has_plank": "2026-09-06 11:46:07 +0530"
@@ -5484,6 +5602,12 @@
   "decorative_blocks:recipes/decorations/crimson_seat": {
     "criteria": {
       "has_plank": "2026-09-06 23:45:00 +0530"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/scaffolding": {
+    "criteria": {
+      "has_bamboo": "2026-09-10 22:50:32 +0530"
     },
     "done": true
   },
@@ -5673,6 +5797,12 @@
     },
     "done": true
   },
+  "minecraft:recipes/misc/skull_banner_pattern": {
+    "criteria": {
+      "has_wither_skeleton_skull": "2026-09-10 23:08:39 +0530"
+    },
+    "done": true
+  },
   "minecraft:recipes/building_blocks/polished_basalt": {
     "criteria": {
       "has_basalt": "2026-09-06 23:49:36 +0530"
@@ -5688,6 +5818,12 @@
   "minecraft:story/root": {
     "criteria": {
       "crafting_table": "2026-09-06 11:22:59 +0530"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/smooth_quartz_stairs": {
+    "criteria": {
+      "has_smooth_quartz": "2026-09-10 22:48:59 +0530"
     },
     "done": true
   },
@@ -5739,6 +5875,12 @@
     },
     "done": true
   },
+  "farmersdelight:recipes/farmersdelight/melon_juice": {
+    "criteria": {
+      "has_melon_slice": "2026-09-10 23:20:43 +0530"
+    },
+    "done": true
+  },
   "minecraft:adventure/ol_betsy": {
     "criteria": {
       "shot_crossbow": "2026-09-06 15:49:30 +0530"
@@ -5760,6 +5902,12 @@
   "minecraft:recipes/food/cooked_beef": {
     "criteria": {
       "has_beef": "2026-09-06 12:10:39 +0530"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/smooth_quartz_stairs_from_smooth_quartz_stonecutting": {
+    "criteria": {
+      "has_smooth_quartz": "2026-09-10 22:48:59 +0530"
     },
     "done": true
   },
@@ -5976,6 +6124,12 @@
   "adorn:recipes/oak_table": {
     "criteria": {
       "has_key_item_0": "2026-09-09 21:17:19 +0530"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/mojang_banner_pattern": {
+    "criteria": {
+      "has_enchanted_golden_apple": "2026-09-11 00:07:46 +0530"
     },
     "done": true
   },
