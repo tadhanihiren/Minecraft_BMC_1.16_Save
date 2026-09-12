@@ -197,6 +197,12 @@
     },
     "done": true
   },
+  "minecraft:recipes/building_blocks/smooth_sandstone_stairs_from_smooth_sandstone_stonecutting": {
+    "criteria": {
+      "has_mossy_cobblestone": "2026-09-11 23:52:45 +0530"
+    },
+    "done": true
+  },
   "minecraft:recipes/building_blocks/smooth_quartz_slab_from_smooth_quartz_stonecutting": {
     "criteria": {
       "has_smooth_quartz": "2026-09-11 01:10:34 +0530"
@@ -1326,6 +1332,12 @@
     },
     "done": true
   },
+  "adorn:recipes/jungle_post": {
+    "criteria": {
+      "has_key_item_0": "2026-09-11 23:04:59 +0530"
+    },
+    "done": true
+  },
   "comforts:sleeping_bag_yellow_from_white": {
     "criteria": {
       "has_sleeping_bag": "2026-09-06 11:48:05 +0530"
@@ -1447,6 +1459,12 @@
     },
     "done": true
   },
+  "minecraft:recipes/misc/orange_dye_from_red_yellow": {
+    "criteria": {
+      "has_yellow_dye": "2026-09-11 23:38:40 +0530"
+    },
+    "done": true
+  },
   "minecraft:recipes/tools/stone_axe": {
     "criteria": {
       "has_cobblestone": "2026-09-06 11:05:40 +0530"
@@ -1488,6 +1506,12 @@
       "has_cooked_rabbit": "2026-09-08 01:24:33 +0530"
     },
     "done": true
+  },
+  "repurposed_structures:pyramids": {
+    "criteria": {
+      "in_pyramid_ocean": "2026-09-12 01:18:50 +0530"
+    },
+    "done": false
   },
   "minecraft:recipes/building_blocks/magenta_concrete_powder": {
     "criteria": {
@@ -1537,6 +1561,12 @@
     },
     "done": true
   },
+  "adorn:recipes/jungle_kitchen_sink": {
+    "criteria": {
+      "has_key_item_0": "2026-09-11 23:04:59 +0530"
+    },
+    "done": true
+  },
   "adorn:recipes/oak_post": {
     "criteria": {
       "has_key_item_0": "2026-09-06 11:04:09 +0530"
@@ -1546,6 +1576,12 @@
   "minecraft:recipes/misc/iron_nugget": {
     "criteria": {
       "has_iron_ingot": "2026-09-06 11:07:20 +0530"
+    },
+    "done": true
+  },
+  "supplementaries:recipes/sign_post_jungle": {
+    "criteria": {
+      "has_plank": "2026-09-11 23:04:59 +0530"
     },
     "done": true
   },
@@ -1747,6 +1783,18 @@
     },
     "done": true
   },
+  "minecraft:recipes/redstone/jungle_trapdoor": {
+    "criteria": {
+      "has_planks": "2026-09-11 23:04:59 +0530"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/smooth_sandstone_slab_from_smooth_sandstone_stonecutting": {
+    "criteria": {
+      "has_smooth_sandstone": "2026-09-11 23:52:45 +0530"
+    },
+    "done": true
+  },
   "minecraft:recipes/misc/bucket": {
     "criteria": {
       "has_iron_ingot": "2026-09-06 11:07:20 +0530"
@@ -1798,6 +1846,12 @@
   "adorn:recipes/stone_platform": {
     "criteria": {
       "has_key_item_0": "2026-09-11 01:35:05 +0530"
+    },
+    "done": true
+  },
+  "alexsmobs:alexsmobs/rattlesnake": {
+    "criteria": {
+      "killed": "2026-09-12 00:13:40 +0530"
     },
     "done": true
   },
@@ -1926,6 +1980,12 @@
   "minecraft:recipes/combat/diamond_chestplate": {
     "criteria": {
       "has_diamond": "2026-09-06 13:31:12 +0530"
+    },
+    "done": true
+  },
+  "adorn:recipes/smooth_sandstone_post": {
+    "criteria": {
+      "has_key_item_0": "2026-09-11 23:52:45 +0530"
     },
     "done": true
   },
@@ -2175,9 +2235,21 @@
     },
     "done": true
   },
+  "minecraft:recipes/building_blocks/smooth_sandstone_stairs": {
+    "criteria": {
+      "has_smooth_sandstone": "2026-09-11 23:52:45 +0530"
+    },
+    "done": true
+  },
   "farmersdelight:recipes/farmersdelight/mixed_salad": {
     "criteria": {
       "has_bowl": "2026-09-06 21:57:05 +0530"
+    },
+    "done": true
+  },
+  "cavesandcliffs:recipes/decorations/yellow_candle": {
+    "criteria": {
+      "has_yellow_dye": "2026-09-11 23:38:40 +0530"
     },
     "done": true
   },
@@ -2315,6 +2387,12 @@
   "cavesandcliffs:recipes/building_blocks/raw_gold_block": {
     "criteria": {
       "has_raw_gold": "2026-09-06 13:36:56 +0530"
+    },
+    "done": true
+  },
+  "farmersdelight:recipes/farmersdelight/spruce_pantry": {
+    "criteria": {
+      "has_spruce_trapdoor": "2026-09-11 22:59:55 +0530"
     },
     "done": true
   },
@@ -2516,6 +2594,12 @@
     },
     "done": true
   },
+  "minecraft:recipes/decorations/jungle_sign": {
+    "criteria": {
+      "has_jungle_planks": "2026-09-11 23:04:59 +0530"
+    },
+    "done": true
+  },
   "morevillagers:master_trade": {
     "criteria": {
       "villagertrade": "2026-09-10 01:05:57 +0530"
@@ -2633,6 +2717,12 @@
   "minecraft:recipes/redstone/dropper": {
     "criteria": {
       "has_redstone": "2026-09-06 13:11:55 +0530"
+    },
+    "done": true
+  },
+  "decorative_blocks:recipes/decorations/jungle_seat": {
+    "criteria": {
+      "has_plank": "2026-09-11 23:04:59 +0530"
     },
     "done": true
   },
@@ -2786,6 +2876,12 @@
     },
     "done": true
   },
+  "repurposed_structures:outposts": {
+    "criteria": {
+      "in_outpost_taiga": "2026-09-12 02:04:50 +0530"
+    },
+    "done": false
+  },
   "adorn:recipes/cobblestone_post": {
     "criteria": {
       "has_key_item_0": "2026-09-06 11:05:40 +0530"
@@ -2849,6 +2945,12 @@
   "minecraft:recipes/building_blocks/pink_wool": {
     "criteria": {
       "has_white_wool": "2026-09-06 11:17:49 +0530"
+    },
+    "done": true
+  },
+  "minecraft:recipes/redstone/jungle_door": {
+    "criteria": {
+      "has_planks": "2026-09-11 23:04:59 +0530"
     },
     "done": true
   },
@@ -3050,6 +3152,12 @@
     },
     "done": true
   },
+  "minecraft:recipes/decorations/yellow_stained_glass_pane_from_glass_pane": {
+    "criteria": {
+      "has_yellow_dye": "2026-09-11 23:38:40 +0530"
+    },
+    "done": true
+  },
   "minecraft:recipes/building_blocks/chiseled_stone_bricks": {
     "criteria": {
       "has_stone_bricks": "2026-09-06 11:52:12 +0530"
@@ -3202,6 +3310,7 @@
   },
   "morevillagers:all_villages": {
     "criteria": {
+      "savanna_village": "2026-09-11 23:35:38 +0530",
       "plains_village": "2026-09-06 12:05:41 +0530"
     },
     "done": false
@@ -3340,6 +3449,12 @@
     },
     "done": true
   },
+  "farmersdelight:recipes/farmersdelight/milk_bottle": {
+    "criteria": {
+      "has_milk_bucket": "2026-09-12 01:37:50 +0530"
+    },
+    "done": true
+  },
   "adorn:recipes/brick_post": {
     "criteria": {
       "has_key_item_0": "2026-09-07 23:06:08 +0530"
@@ -3472,6 +3587,12 @@
     },
     "done": true
   },
+  "alexsmobs:alexsmobs/tarantula_hawk": {
+    "criteria": {
+      "killed_by": "2026-09-12 00:14:13 +0530"
+    },
+    "done": true
+  },
   "minecraft:recipes/building_blocks/oak_stairs": {
     "criteria": {
       "has_planks": "2026-09-06 11:04:09 +0530"
@@ -3568,6 +3689,12 @@
     },
     "done": true
   },
+  "minecraft:recipes/decorations/jungle_fence": {
+    "criteria": {
+      "has_planks": "2026-09-11 23:04:59 +0530"
+    },
+    "done": true
+  },
   "minecraft:recipes/building_blocks/white_wool_from_string": {
     "criteria": {
       "has_string": "2026-09-06 11:17:59 +0530"
@@ -3591,6 +3718,7 @@
       "minecraft:pillager": "2026-09-06 15:20:14 +0530",
       "minecraft:skeleton": "2026-09-06 11:50:30 +0530",
       "savageandravage:executioner": "2026-09-06 16:59:26 +0530",
+      "savageandravage:skeleton_villager": "2026-09-11 23:37:36 +0530",
       "minecraft:ravager": "2026-09-06 17:01:19 +0530",
       "savageandravage:griefer": "2026-09-06 15:41:39 +0530",
       "savageandravage:creepie": "2026-09-06 16:59:54 +0530",
@@ -3606,13 +3734,15 @@
       "minecraft:phantom": "2026-09-06 14:00:27 +0530",
       "minecraft:witch": "2026-09-06 17:04:59 +0530",
       "minecraft:wither_skeleton": "2026-09-10 22:54:41 +0530",
+      "minecraft:husk": "2026-09-11 23:59:56 +0530",
       "minecraft:cave_spider": "2026-09-10 22:57:21 +0530",
       "minecraft:piglin": "2026-09-06 23:04:09 +0530",
       "minecraft:enderman": "2026-09-06 13:59:24 +0530",
       "minecraft:silverfish": "2026-09-10 00:31:09 +0530",
       "minecraft:vex": "2026-09-06 17:30:43 +0530",
       "minecraft:zombie": "2026-09-06 11:12:38 +0530",
-      "minecraft:drowned": "2026-09-06 16:17:45 +0530"
+      "minecraft:drowned": "2026-09-06 16:17:45 +0530",
+      "minecraft:zombie_villager": "2026-09-12 00:52:50 +0530"
     },
     "done": false
   },
@@ -3673,6 +3803,12 @@
   "supplementaries:recipes/clock_block": {
     "criteria": {
       "has_item": "2026-09-08 01:04:07 +0530"
+    },
+    "done": true
+  },
+  "supplementaries:recipes/hanging_sign_jungle": {
+    "criteria": {
+      "has_plank": "2026-09-11 23:04:59 +0530"
     },
     "done": true
   },
@@ -3787,6 +3923,12 @@
   "comforts:sleeping_bag_green_from_white": {
     "criteria": {
       "has_sleeping_bag": "2026-09-06 11:48:05 +0530"
+    },
+    "done": true
+  },
+  "minecraft:recipes/redstone/jungle_pressure_plate": {
+    "criteria": {
+      "has_planks": "2026-09-11 23:04:59 +0530"
     },
     "done": true
   },
@@ -4121,6 +4263,12 @@
     },
     "done": true
   },
+  "minecraft:recipes/building_blocks/smooth_sandstone_slab": {
+    "criteria": {
+      "has_smooth_sandstone": "2026-09-11 23:52:45 +0530"
+    },
+    "done": true
+  },
   "minecraft:adventure/kill_a_mob": {
     "criteria": {
       "minecraft:zombie": "2026-09-06 11:12:38 +0530"
@@ -4171,21 +4319,32 @@
       "minecraft:snowy_tundra": "2026-09-07 23:21:17 +0530",
       "minecraft:frozen_river": "2026-09-07 23:27:45 +0530",
       "autumnity:maple_forest_hills": "2026-09-06 11:15:21 +0530",
+      "minecraft:birch_forest": "2026-09-12 00:29:07 +0530",
+      "minecraft:savanna_plateau": "2026-09-11 23:33:49 +0530",
       "minecraft:beach": "2026-09-06 11:28:58 +0530",
+      "minecraft:dark_forest": "2026-09-11 23:21:40 +0530",
       "minecraft:river": "2026-09-06 11:13:05 +0530",
       "minecraft:lukewarm_ocean": "2026-09-07 23:19:42 +0530",
       "minecraft:snowy_taiga": "2026-09-08 02:07:33 +0530",
       "minecraft:wooded_mountains": "2026-09-07 23:52:43 +0530",
       "minecraft:stone_shore": "2026-09-06 12:26:25 +0530",
+      "minecraft:swamp": "2026-09-11 23:43:06 +0530",
+      "environmental:blossom_woods": "2026-09-12 00:27:55 +0530",
       "minecraft:snowy_taiga_hills": "2026-09-08 02:07:34 +0530",
       "autumnity:pumpkin_fields": "2026-09-06 11:14:56 +0530",
       "minecraft:cold_ocean": "2026-09-06 12:25:04 +0530",
       "minecraft:forest": "2026-09-06 11:27:50 +0530",
+      "minecraft:desert_hills": "2026-09-12 00:13:01 +0530",
       "minecraft:deep_cold_ocean": "2026-09-06 12:25:11 +0530",
+      "minecraft:desert": "2026-09-11 23:31:04 +0530",
+      "minecraft:deep_frozen_ocean": "2026-09-12 00:48:46 +0530",
       "minecraft:snowy_beach": "2026-09-07 23:30:47 +0530",
       "minecraft:warm_ocean": "2026-09-07 23:19:44 +0530",
       "minecraft:deep_lukewarm_ocean": "2026-09-07 23:20:59 +0530",
-      "minecraft:plains": "2026-09-06 11:42:23 +0530"
+      "minecraft:wooded_hills": "2026-09-11 23:31:00 +0530",
+      "minecraft:savanna": "2026-09-11 23:35:22 +0530",
+      "minecraft:plains": "2026-09-06 11:42:23 +0530",
+      "atmospheric:rainforest_mountains": "2026-09-12 00:18:27 +0530"
     },
     "done": false
   },
@@ -4597,6 +4756,12 @@
     },
     "done": true
   },
+  "alexsmobs:alexsmobs/kangaroo": {
+    "criteria": {
+      "killed_by": "2026-09-11 23:34:22 +0530"
+    },
+    "done": true
+  },
   "adorn:recipes/warped_kitchen_cupboard": {
     "criteria": {
       "has_key_item_0": "2026-09-06 23:08:27 +0530"
@@ -4651,6 +4816,12 @@
   "supplementaries:recipes/gold_door": {
     "criteria": {
       "has_plank": "2026-09-06 11:52:49 +0530"
+    },
+    "done": true
+  },
+  "minecraft:recipes/redstone/jungle_button": {
+    "criteria": {
+      "has_planks": "2026-09-11 23:04:59 +0530"
     },
     "done": true
   },
@@ -4771,6 +4942,12 @@
   "minecraft:recipes/building_blocks/purple_concrete_powder": {
     "criteria": {
       "has_gravel": "2026-09-06 12:35:18 +0530"
+    },
+    "done": true
+  },
+  "dungeons_arise:find_illager_windmill": {
+    "criteria": {
+      "location0": "2026-09-12 00:34:44 +0530"
     },
     "done": true
   },
@@ -4954,6 +5131,12 @@
     },
     "done": true
   },
+  "adorn:recipes/jungle_kitchen_counter": {
+    "criteria": {
+      "has_key_item_0": "2026-09-11 23:04:59 +0530"
+    },
+    "done": true
+  },
   "minecraft:recipes/tools/diamond_shovel": {
     "criteria": {
       "has_diamond": "2026-09-06 13:31:12 +0530"
@@ -5023,6 +5206,12 @@
   "supplementaries:recipes/crimson_lantern": {
     "criteria": {
       "has_plank": "2026-09-06 23:31:19 +0530"
+    },
+    "done": true
+  },
+  "adorn:recipes/jungle_kitchen_cupboard": {
+    "criteria": {
+      "has_key_item_0": "2026-09-11 23:04:59 +0530"
     },
     "done": true
   },
@@ -5447,6 +5636,12 @@
     },
     "done": true
   },
+  "minecraft:recipes/building_blocks/jungle_slab": {
+    "criteria": {
+      "has_planks": "2026-09-11 23:04:59 +0530"
+    },
+    "done": true
+  },
   "adorn:recipes/spruce_platform": {
     "criteria": {
       "has_key_item_0": "2026-09-07 23:31:02 +0530"
@@ -5579,6 +5774,12 @@
     },
     "done": true
   },
+  "repurposed_structures:ruins": {
+    "criteria": {
+      "in_ruins_land_warm": "2026-09-11 23:43:05 +0530"
+    },
+    "done": false
+  },
   "extendedmushrooms:recipes/misc/mushroom_spores": {
     "criteria": {
       "has_mushroom": "2026-09-06 11:39:44 +0530"
@@ -5621,6 +5822,12 @@
     },
     "done": true
   },
+  "decorative_blocks:recipes/decorations/jungle_support": {
+    "criteria": {
+      "has_plank": "2026-09-11 23:04:59 +0530"
+    },
+    "done": true
+  },
   "minecraft:recipes/transportation/jungle_boat": {
     "criteria": {
       "in_water": "2026-09-06 11:11:48 +0530"
@@ -5648,6 +5855,12 @@
   "supplementaries:recipes/hanging_sign_pine": {
     "criteria": {
       "has_plank": "2026-09-06 11:45:11 +0530"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/jungle_stairs": {
+    "criteria": {
+      "has_planks": "2026-09-11 23:04:59 +0530"
     },
     "done": true
   },
@@ -5705,6 +5918,18 @@
     },
     "done": true
   },
+  "minecraft:recipes/redstone/jungle_fence_gate": {
+    "criteria": {
+      "has_planks": "2026-09-11 23:04:59 +0530"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/mojang_banner_pattern": {
+    "criteria": {
+      "has_enchanted_golden_apple": "2026-09-11 23:40:48 +0530"
+    },
+    "done": true
+  },
   "minecraft:recipes/combat/golden_leggings": {
     "criteria": {
       "has_gold_ingot": "2026-09-06 11:52:49 +0530"
@@ -5738,6 +5963,12 @@
   "minecraft:recipes/redstone/warped_door": {
     "criteria": {
       "has_planks": "2026-09-06 23:08:27 +0530"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/yellow_carpet_from_white_carpet": {
+    "criteria": {
+      "has_yellow_dye": "2026-09-11 23:38:40 +0530"
     },
     "done": true
   },
