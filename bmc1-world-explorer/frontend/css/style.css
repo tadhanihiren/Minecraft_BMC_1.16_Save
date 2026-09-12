@@ -1,0 +1,1163 @@
+/* ==========================================================================
+   BMC1 World Explorer — "Atlas" theme
+   Direction: a clean, flat seed-map-viewer look (Chunkbase-style) — plain
+   rounded cards, neutral light chrome, a soft blue accent, normal sans-
+   serif type. No glow, no scanlines, no angular sci-fi chrome. Data still
+   comes from our own scanned world DB, not seed math — this only changes
+   how it's presented. Pure CSS, zero external assets.
+   ========================================================================== */
+
+:root {
+  /* Map viewport background (behind the tiles/overlays) */
+  --void: #dde2e8;
+  --void-deep: #eef1f4;
+  --map-line: rgba(100, 116, 139, 0.12);
+  --map-glow: transparent;
+
+  /* Chrome panels */
+  --panel: #ffffff;
+  --panel-alt: #f6f7f9;
+  --panel-raised: #ffffff;
+  --slot: #f3f4f6;
+  --slot-alt: #eceef1;
+  --chrome-deep: #e9ebef;
+
+  --border: #e2e5ea;
+  --border-dim: #edeef1;
+  --border-strong: #2563eb;
+
+  /* Text */
+  --ink: #1f2733;
+  --ink-dim: #667085;
+  --ink-faint: #98a2b3;
+
+  /* Accents */
+  --amber: #f59e0b;
+  --amber-bright: #b45309;
+  --amber-dim: rgba(245, 158, 11, 0.12);
+  --cyan: #2563eb;
+  --cyan-bright: #1d4ed8;
+  --cyan-dim: rgba(37, 99, 235, 0.08);
+  --green: #16a34a;
+  --green-dim: rgba(22, 163, 74, 0.12);
+  --red: #dc2626;
+  --red-bright: #b91c1c;
+
+  --font-hud: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  --font-body: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  --font-mono: Consolas, "JetBrains Mono", Menlo, Monaco, monospace;
+
+  --radius: 8px;
+  --radius-sm: 6px;
+  --shadow-card: 0 1px 2px rgba(16, 24, 40, 0.06), 0 1px 3px rgba(16, 24, 40, 0.06);
+  --shadow-float: 0 4px 12px rgba(16, 24, 40, 0.1), 0 2px 6px rgba(16, 24, 40, 0.08);
+}
+
+/* Dark variant — same flat/rounded language, just inverted neutrals.
+   Applied via [data-theme="dark"], set by the toggle button and persisted
+   to localStorage (see js/app.js); falls back to system preference only
+   when the user has never chosen one. */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --void: #1a1d23;
+    --void-deep: #14161b;
+    --map-line: rgba(148, 163, 184, 0.1);
+
+    --panel: #20242c;
+    --panel-alt: #262b34;
+    --panel-raised: #2b303a;
+    --slot: #1a1d23;
+    --slot-alt: #1e2128;
+    --chrome-deep: #191c22;
+
+    --border: #333944;
+    --border-dim: #2a2f38;
+    --border-strong: #3b82f6;
+
+    --ink: #e5e7eb;
+    --ink-dim: #9aa3b2;
+    --ink-faint: #6b7280;
+
+    --amber: #f59e0b;
+    --amber-bright: #fbbf24;
+    --amber-dim: rgba(245, 158, 11, 0.18);
+    --cyan: #3b82f6;
+    --cyan-bright: #60a5fa;
+    --cyan-dim: rgba(59, 130, 246, 0.16);
+    --green: #22c55e;
+    --green-dim: rgba(34, 197, 94, 0.18);
+    --red: #ef4444;
+    --red-bright: #f87171;
+
+    --shadow-card: 0 1px 2px rgba(0, 0, 0, 0.3);
+    --shadow-float: 0 8px 20px rgba(0, 0, 0, 0.45);
+  }
+}
+
+:root[data-theme="dark"] {
+  --void: #1a1d23;
+  --void-deep: #14161b;
+  --map-line: rgba(148, 163, 184, 0.1);
+
+  --panel: #20242c;
+  --panel-alt: #262b34;
+  --panel-raised: #2b303a;
+  --slot: #1a1d23;
+  --slot-alt: #1e2128;
+  --chrome-deep: #191c22;
+
+  --border: #333944;
+  --border-dim: #2a2f38;
+  --border-strong: #3b82f6;
+
+  --ink: #e5e7eb;
+  --ink-dim: #9aa3b2;
+  --ink-faint: #6b7280;
+
+  --amber: #f59e0b;
+  --amber-bright: #fbbf24;
+  --amber-dim: rgba(245, 158, 11, 0.18);
+  --cyan: #3b82f6;
+  --cyan-bright: #60a5fa;
+  --cyan-dim: rgba(59, 130, 246, 0.16);
+  --green: #22c55e;
+  --green-dim: rgba(34, 197, 94, 0.18);
+  --red: #ef4444;
+  --red-bright: #f87171;
+
+  --shadow-card: 0 1px 2px rgba(0, 0, 0, 0.3);
+  --shadow-float: 0 8px 20px rgba(0, 0, 0, 0.45);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--chrome-deep);
+  color: var(--ink);
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ==========================================================================
+   Shared primitives
+   ========================================================================== */
+
+.hud-title {
+  font-family: var(--font-hud);
+  font-weight: 700;
+}
+
+.hud-frame {
+  background-color: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-card);
+}
+
+.hud-slot {
+  background-color: var(--slot);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+}
+
+/* ==========================================================================
+   Sidebar Mission Control block (brand, theme toggle, world identity)
+   ========================================================================== */
+
+.sidebar-mission {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 12px;
+  background-color: var(--panel);
+  border-bottom: 1px solid var(--border);
+}
+
+.mission-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.brand-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+}
+
+.brand-logo {
+  width: 32px;
+  height: 32px;
+  background: var(--cyan);
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  flex-shrink: 0;
+}
+
+.brand-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink);
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  white-space: nowrap;
+}
+
+.version-tag {
+  background-color: var(--slot);
+  color: var(--ink-dim);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  font-size: 9px;
+  font-weight: 600;
+  padding: 2px 6px;
+  font-family: var(--font-mono);
+  width: fit-content;
+}
+
+.theme-toggle-btn {
+  width: 30px;
+  height: 30px;
+  flex-shrink: 0;
+  background-color: var(--panel-alt);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  color: var(--ink);
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.12s;
+}
+
+.theme-toggle-btn:hover {
+  background-color: var(--slot);
+}
+
+.world-pill {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 7px 12px;
+  font-size: 12px;
+}
+
+.world-name-badge {
+  font-weight: 600;
+  color: var(--ink);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.world-seed-badge {
+  font-family: var(--font-mono);
+  color: var(--ink-dim);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  transition: color 0.1s;
+  flex-shrink: 0;
+}
+
+.world-seed-badge:hover {
+  color: var(--cyan);
+}
+
+.dim-select-wrapper {
+  position: relative;
+}
+
+.select-clean {
+  background-color: var(--panel);
+  color: var(--ink);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 7px 12px;
+  width: 100%;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  outline: none;
+  transition: border-color 0.12s;
+}
+
+.select-clean:hover {
+  border-color: var(--ink-faint);
+}
+
+.select-clean:focus {
+  border-color: var(--cyan);
+}
+
+/* Action Buttons */
+.btn {
+  background-color: var(--panel);
+  color: var(--ink);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 8px 14px;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  transition: background-color 0.1s, border-color 0.1s, transform 0.06s;
+}
+
+.btn:hover {
+  background-color: var(--slot);
+  border-color: var(--ink-faint);
+}
+
+.btn:active {
+  transform: translateY(1px);
+}
+
+.btn-primary {
+  background-color: var(--cyan);
+  border-color: var(--cyan);
+  color: #ffffff;
+}
+
+.btn-primary:hover {
+  background-color: var(--cyan-bright);
+  border-color: var(--cyan-bright);
+}
+
+.btn-ghost {
+  background: transparent;
+  border-color: transparent;
+  color: var(--ink-dim);
+}
+
+.btn-ghost:hover {
+  background: var(--slot);
+  color: var(--ink);
+  border-color: transparent;
+}
+
+.btn-sm {
+  padding: 5px 10px;
+  font-size: 11px;
+}
+
+/* Scan Progress */
+.scan-bar-container {
+  display: none;
+  align-items: center;
+  gap: 10px;
+  padding: 7px 12px;
+  font-size: 11px;
+  flex-wrap: wrap;
+}
+
+.progress-track {
+  width: 120px;
+  height: 6px;
+  background-color: var(--slot);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  width: 0%;
+  background: var(--cyan);
+  transition: width 0.2s ease;
+}
+
+/* ==========================================================================
+   Workspace
+   ========================================================================== */
+
+.app-workspace {
+  flex: 1;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 340px;
+  background-color: var(--panel);
+  border-right: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  z-index: 500;
+  transition: width 0.2s ease;
+}
+
+.sidebar.collapsed {
+  width: 0px;
+  border-right: none;
+  overflow: hidden;
+}
+
+/* ==========================================================================
+   Command Deck — a single stacked column of expandable cards, exclusive
+   accordion behavior (opening one closes the others).
+   ========================================================================== */
+
+.deck {
+  flex: 1;
+  overflow-y: auto;
+  background-color: var(--panel);
+}
+
+.deck-card {
+  border-bottom: 1px solid var(--border-dim);
+}
+
+.deck-card-header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 14px;
+  background: transparent;
+  border: none;
+  color: var(--ink);
+  font-family: var(--font-hud);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: left;
+  transition: background-color 0.1s;
+}
+
+.deck-card-header:hover {
+  background-color: var(--slot-alt);
+}
+
+.deck-card.open > .deck-card-header {
+  background-color: var(--cyan-dim);
+  box-shadow: inset 3px 0 0 var(--cyan);
+}
+
+.deck-card-icon {
+  font-size: 15px;
+}
+
+.deck-card-label {
+  flex: 1;
+}
+
+.deck-card-chevron {
+  font-size: 12px;
+  color: var(--ink-faint);
+  transition: transform 0.2s ease;
+}
+
+.deck-card.open > .deck-card-header .deck-card-chevron {
+  transform: rotate(180deg);
+  color: var(--cyan);
+}
+
+/* Height-animated collapse without touching layout-thrashing properties:
+   the grid track itself animates (0fr -> 1fr), not height/padding. */
+.deck-card-collapse {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.2s ease;
+}
+
+.deck-card.open > .deck-card-collapse {
+  grid-template-rows: 1fr;
+}
+
+.deck-card-body {
+  min-height: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 0 14px;
+}
+
+.deck-card.open > .deck-card-collapse > .deck-card-body {
+  padding: 4px 14px 16px;
+}
+
+/* World Tools footer — pinned below the deck, plain direct-click buttons */
+.sidebar-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 10px;
+  background-color: var(--panel-alt);
+  border-top: 1px solid var(--border);
+  flex-shrink: 0;
+}
+
+.footer-path-row {
+  display: flex;
+  gap: 6px;
+}
+
+.footer-path-row .input-clean {
+  flex: 1;
+  min-width: 0;
+}
+
+.footer-actions-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 6px;
+}
+
+.footer-actions-row .btn {
+  justify-content: center;
+  width: 100%;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+/* Search Box */
+.search-wrapper {
+  position: relative;
+}
+
+.search-input {
+  width: 100%;
+  padding: 9px 12px 9px 32px;
+  color: var(--ink);
+  font-size: 13px;
+  outline: none;
+}
+
+.search-input:focus {
+  border-color: var(--cyan);
+}
+
+.search-icon {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 12px;
+  z-index: 2;
+  opacity: 0.6;
+}
+
+.search-dropdown {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  right: 0;
+  max-height: 240px;
+  overflow-y: auto;
+  z-index: 600;
+  display: none;
+  flex-direction: column;
+  box-shadow: var(--shadow-float);
+}
+
+.search-item {
+  padding: 8px 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--border-dim);
+  cursor: pointer;
+  font-size: 12px;
+  transition: background-color 0.1s;
+}
+
+.search-item:hover {
+  background-color: var(--slot-alt);
+}
+
+.search-item-coords {
+  font-family: var(--font-mono);
+  color: var(--ink-dim);
+  font-size: 11px;
+}
+
+/* Master Category Card */
+.category-card {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background-color: var(--panel);
+  overflow: hidden;
+  transition: border-color 0.15s;
+}
+
+.category-card:hover {
+  border-color: var(--ink-faint);
+}
+
+.category-card:has(input:checked) {
+  border-color: var(--cyan);
+  box-shadow: inset 0 0 0 1px var(--cyan-dim);
+}
+
+.category-header {
+  padding: 10px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  user-select: none;
+}
+
+.category-header:hover {
+  background-color: var(--slot-alt);
+}
+
+.category-title {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--ink);
+}
+
+.category-title span:first-child {
+  width: 22px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--slot);
+  border-radius: 6px;
+  font-size: 13px;
+}
+
+.category-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.badge-count {
+  background-color: var(--slot);
+  color: var(--ink-dim);
+  font-size: 10px;
+  font-weight: 600;
+  padding: 2px 7px;
+  border-radius: 999px;
+  font-family: var(--font-mono);
+}
+
+/* Toggle switch — a plain flat pill, blue when on */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 36px;
+  height: 20px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--border);
+  border-radius: 999px;
+  transition: background-color 0.15s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 2px;
+  top: 2px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+  transition: transform 0.15s;
+}
+
+input:checked + .slider {
+  background-color: var(--cyan);
+}
+
+input:checked + .slider:before {
+  transform: translateX(16px);
+}
+
+/* Sub-filter chips container */
+.subfilter-body {
+  padding: 10px 12px 12px;
+  border-top: 1px solid var(--border-dim);
+  background-color: var(--slot-alt);
+  display: none;
+}
+
+.subfilter-body.open {
+  display: block;
+}
+
+.subfilter-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+  font-size: 11px;
+  color: var(--ink-faint);
+}
+
+.btn-link {
+  background: none;
+  border: none;
+  color: var(--cyan);
+  font-size: 11px;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 0 4px;
+}
+
+.btn-link:hover {
+  text-decoration: underline;
+}
+
+.chips-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  max-height: 160px;
+  overflow-y: auto;
+}
+
+.filter-chip {
+  background-color: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  color: var(--ink-dim);
+  padding: 4px 10px;
+  font-size: 11px;
+  cursor: pointer;
+  user-select: none;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.1s;
+}
+
+.filter-chip:hover {
+  color: var(--ink);
+  border-color: var(--ink-faint);
+}
+
+.filter-chip.active {
+  background-color: var(--cyan-dim);
+  border-color: var(--cyan);
+  color: var(--cyan-bright);
+  font-weight: 600;
+}
+
+/* Nearest Tab */
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.field-label {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--ink-faint);
+}
+
+.input-clean {
+  background-color: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 8px 12px;
+  color: var(--ink);
+  font-size: 12px;
+  font-family: var(--font-mono);
+  outline: none;
+  transition: border-color 0.12s;
+}
+
+.input-clean:focus {
+  border-color: var(--cyan);
+}
+
+/* Footer Player Coordinates Section */
+.footer-player-section {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.footer-player-label {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--ink-faint);
+}
+
+.footer-player-row {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.coord-input-wrapper {
+  flex: 1;
+  min-width: 0;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.coord-prefix {
+  position: absolute;
+  left: 6px;
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--cyan);
+  pointer-events: none;
+  font-family: var(--font-mono);
+  opacity: 0.85;
+}
+
+.coord-input-wrapper input.coord-input {
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  padding: 7px 4px 7px 18px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  text-align: center;
+  border-radius: var(--radius-sm);
+  background-color: var(--panel);
+  border: 1px solid var(--border);
+  color: var(--ink);
+  outline: none;
+  -moz-appearance: textfield;
+}
+
+.coord-input-wrapper input.coord-input::-webkit-outer-spin-button,
+.coord-input-wrapper input.coord-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.coord-input-wrapper input.coord-input:focus {
+  border-color: var(--cyan);
+}
+
+.footer-player-row #btnShowPlayer {
+  white-space: nowrap;
+  padding: 6px 12px;
+  font-size: 11px;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+/* ==========================================================================
+   Map Area
+   ========================================================================== */
+
+.map-container {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+  background-color: var(--void);
+}
+
+#map {
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  position: relative;
+  z-index: 2;
+}
+
+/* Sidebar Toggle Button on Map */
+.sidebar-toggle-btn {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  z-index: 450;
+  width: 32px;
+  height: 32px;
+  background-color: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  color: var(--ink);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 600;
+  box-shadow: var(--shadow-card);
+  transition: background-color 0.12s;
+}
+
+.sidebar-toggle-btn:hover {
+  background-color: var(--slot);
+}
+
+.sidebar-toggle-btn:active {
+  transform: translateY(1px);
+}
+
+/* Floating HUD on Map — coordinate readout */
+.hud-coords {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  padding: 7px 14px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--ink-dim);
+  background-color: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-card);
+  z-index: 400;
+  pointer-events: none;
+  line-height: 1.5;
+}
+
+.hud-coords span {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+/* Empty State / Map Hint */
+.map-hint-banner {
+  position: absolute;
+  top: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  box-shadow: var(--shadow-card);
+  padding: 8px 18px;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--ink-dim);
+  z-index: 400;
+  pointer-events: none;
+  transition: opacity 0.3s;
+  white-space: nowrap;
+}
+
+.map-hint-banner b {
+  color: var(--ink);
+}
+
+/* Floating Selected Location Card */
+.selection-card {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 12px 20px;
+  z-index: 400;
+  display: none;
+  align-items: center;
+  gap: 20px;
+  min-width: 480px;
+  justify-content: space-between;
+  box-shadow: var(--shadow-float);
+}
+
+.sel-icon {
+  font-size: 20px;
+  width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--slot);
+  border-radius: var(--radius-sm);
+  flex-shrink: 0;
+}
+
+.sel-body {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.sel-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.sel-coords {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--ink-dim);
+}
+
+.sel-sub {
+  font-size: 11px;
+  color: var(--ink-faint);
+}
+
+.sel-actions {
+  display: flex;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+/* Toast */
+.toast-msg {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  background-color: var(--panel);
+  color: var(--ink);
+  padding: 10px 18px 10px 14px;
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--cyan);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-float);
+  font-size: 12px;
+  font-weight: 500;
+  z-index: 9999;
+  display: none;
+  animation: toastIn 0.2s ease;
+}
+
+@keyframes toastIn {
+  from { opacity: 0; transform: translateX(20px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+/* Plain-canvas map container */
+.mc-canvas-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.mc-canvas {
+  display: block;
+  cursor: grab;
+}
+
+.mc-canvas.grabbing {
+  cursor: grabbing;
+}
+
+.map-tooltip {
+  position: absolute;
+  z-index: 60;
+  pointer-events: none;
+  background-color: var(--panel);
+  color: var(--ink);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 6px 10px;
+  font-size: 12px;
+  line-height: 1.4;
+  box-shadow: var(--shadow-card);
+  max-width: 240px;
+}
+
+.map-zoom-controls {
+  position: absolute;
+  right: 14px;
+  bottom: 14px;
+  z-index: 55;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.map-zoom-btn {
+  width: 32px;
+  height: 32px;
+  line-height: 30px;
+  background-color: var(--panel);
+  color: var(--ink);
+  font-size: 17px;
+  font-weight: 600;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-card);
+  cursor: pointer;
+}
+
+.map-zoom-btn:hover {
+  background-color: var(--slot);
+}
+
+.btn-completed {
+  background-color: #16a34a !important;
+  color: #ffffff !important;
+  border-color: #16a34a !important;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--border);
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--ink-faint);
+}
+
+/* ==========================================================================
+   Responsive — smaller windows collapse the sidebar to an overlay
+   ========================================================================== */
+
+@media (max-width: 900px) {
+  .sidebar {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+  }
+
+  .sidebar.collapsed {
+    width: 0;
+  }
+
+  .selection-card {
+    min-width: calc(100% - 32px);
+    width: calc(100% - 32px);
+    flex-wrap: wrap;
+  }
+}

@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BMC1 World Explorer</title>
+  <!-- Modern Clean Dark Theme -->
+  <link rel="stylesheet" href="css/style.css?v=21">
+  <!-- Apply saved theme before first paint, so there's no flash of the wrong theme -->
+  <script>
+    (function () {
+      var saved = localStorage.getItem("bmc1_theme");
+      if (saved === "light" || saved === "dark") {
+        document.documentElement.setAttribute("data-theme", saved);
+      }
+    })();
+  </script>
+</head>
+<body>
+
+  <!-- Main Workspace (no top header — everything lives in the sidebar) -->
+  <div class="app-workspace">
+
+    <!-- Collapsible Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <!-- Mission Control block: brand, theme toggle, world identity, dimension, scan status -->
+      <div class="sidebar-mission">
+        <div class="mission-row">
+          <div class="brand-section">
+            <div class="brand-logo">🧭</div>
+            <div class="brand-title hud-title">
+              BMC1 Explorer
+              <span class="version-tag">v62 • 1.16.5</span>
+            </div>
+          </div>
+          <button id="btnThemeToggle" class="theme-toggle-btn" title="Toggle light / dark theme">🌙</button>
+        </div>
+
+        <div class="world-pill hud-slot">
+          <span class="world-name-badge" id="worldName">Loading World...</span>
+          <span class="world-seed-badge" id="worldSeed" title="Click to copy seed"></span>
+        </div>
+      </div>
+
+      <!-- Command Deck: a single stacked column of expandable cards.
+           Each card owns its own scroll space when open — no separate
+           rail, no floating popup, just one continuous panel. -->
+      <div class="deck" id="sidebarDeck">
+
+        <section class="deck-card open" id="cardFilters">
+          <button class="deck-card-header">
+            <span class="deck-card-icon">🎯</span>
+            <span class="deck-card-label">Layers</span>
+            <span class="deck-card-chevron">⌄</span>
+          </button>
+          <div class="deck-card-collapse">
+          <div class="deck-card-body">
+
+        <!-- Search Bar -->
+        <div class="search-wrapper">
+          <span class="search-icon">🔍</span>
+          <input type="text" id="searchInput" class="search-input hud-slot" placeholder="Search feature name, spawner, or X,Z...">
+          <div class="search-dropdown hud-frame" id="searchResults"></div>
+        </div>
+
+        <!-- Master Categories (Unchecked by default) -->
+        <div class="category-card">
+          <div class="category-header" data-toggle="subOres">
+            <div class="category-title">
+              <span>💎</span>
+              <span>Ore Veins</span>
+            </div>
+            <div class="category-controls">
+              <span class="badge-count" id="countOres">0</span>
+              <label class="switch" onclick="event.stopPropagation()">
+                <input type="checkbox" id="chkOres">
+                <span class="slider"></span>
+              </label>
+            </div>
+          </div>
+          <div class="subfilter-body" id="subOres">
+            <div class="subfilter-toolbar">
+              <span>Filter by ore type</span>
+              <div>
+                <button class="btn-link" id="btnSelectAllOres">All</button>
+                <span>•</span>
+                <button class="btn-link" id="btnClearAllOres">None</button>
+              </div>
+            </div>
+            <div class="chips-grid" id="oreChipsContainer"></div>
+          </div>
+        </div>
+
+        <div class="category-card">
+          <div class="category-header" data-toggle="subSpawners">
+            <div class="category-title">
+              <span>🧟</span>
+              <span>Mob Spawners</span>
+            </div>
+            <div class="category-controls">
+              <span class="badge-count" id="countSpawners">0</span>
+              <label class="switch" onclick="event.stopPropagation()">
+                <input type="checkbox" id="chkSpawners">
+                <span class="slider"></span>
+              </label>
+            </div>
+          </div>
+          <div class="subfilter-body" id="subSpawners">
+            <div class="subfilter-toolbar">
+              <span>Filter by entity</span>
+              <div>
+                <button class="btn-link" id="btnSelectAllSpawners">All</button>
+                <span>•</span>
+                <button class="btn-link" id="btnClearAllSpawners">None</button>
+              </div>
+            </div>
+            <div class="chips-grid" id="spawnerChipsContainer"></div>
+          </div>
+        </div>
+
+        <div class="category-card">
+          <div class="category-header" data-toggle="subStructures">
+            <div class="category-title">
+              <span>🏰</span>
+              <span>Structures</span>
+            </div>
+            <div class="category-controls">
+              <span class="badge-count" id="countStructures">0</span>
+              <label class="switch" onclick="event.stopPropagation()">
+                <input type="checkbox" id="chkStructures">
+                <span class="slider"></span>
+              </label>
+            </div>
+          </div>
+          <div class="subfilter-body" id="subStructures">
+            <div class="subfilter-toolbar">
+              <span>Filter by structure</span>
+              <div>
+                <button class="btn-link" id="btnSelectAllStructures">All</button>
+                <span>•</span>
+                <button class="btn-link" id="btnClearAllStructures">None</button>
+              </div>
+            </div>
+            <div class="chips-grid" id="structureChipsContainer"></div>
+          </div>
+        </div>
+
+        <div class="category-card">
+          <div class="category-header">
+            <div class="category-title">
+              <span>🎁</span>
+              <span>Chests & Containers</span>
+            </div>
+            <div class="category-controls">
+              <span class="badge-count" id="countChests">0</span>
+              <label class="switch" onclick="event.stopPropagation()">
+                <input type="checkbox" id="chkChests">
+                <span class="slider"></span>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div class="category-card">
+          <div class="category-header">
+            <div class="category-title">
+              <span>🌳</span>
+              <span>Biome Overlays</span>
+            </div>
+            <div class="category-controls">
+              <span class="badge-count" id="countBiomes">0</span>
+              <label class="switch" onclick="event.stopPropagation()">
+                <input type="checkbox" id="chkBiomes">
+                <span class="slider"></span>
+              </label>
+            </div>
+          </div>
+        </div>
+
+          </div>
+          </div>
+        </section>
+
+      </div>
+
+      <!-- World Tools footer: pinned below the deck, plain direct-click
+           buttons — no accordion, no dropdown. -->
+      <div class="sidebar-footer">
+        <!-- Player Coordinates -->
+        <div class="footer-player-section">
+          <div class="footer-player-label">Current Player Coordinates (X, Z)</div>
+          <div class="footer-player-row">
+            <div class="coord-input-wrapper">
+              <span class="coord-prefix">X</span>
+              <input type="number" id="nearX" class="input-clean coord-input" placeholder="0" value="0">
+            </div>
+            <div class="coord-input-wrapper">
+              <span class="coord-prefix">Z</span>
+              <input type="number" id="nearZ" class="input-clean coord-input" placeholder="0" value="0">
+            </div>
+            <button id="btnShowPlayer" class="btn btn-sm btn-primary" title="Drop a marker at these coordinates">📍 Show Me</button>
+          </div>
+        </div>
+
+        <div class="dim-select-wrapper">
+          <select id="dimensionSelect" class="select-clean">
+            <option value="minecraft:overworld">🌲 Overworld</option>
+          </select>
+        </div>
+
+        <div class="footer-path-row">
+          <input type="text" id="worldPathInput" class="input-clean" placeholder="F:\Saves\golida" title="Minecraft save folder path">
+          <button id="btnSelectWorld" class="btn btn-sm" title="Open a different Minecraft save folder">📁 Load</button>
+        </div>
+
+        <!-- Scan Progress HUD -->
+        <div class="scan-bar-container hud-slot" id="scanBar">
+          <span id="scanStatus" style="color: var(--ink); font-weight: 700;">Scanning...</span>
+          <div class="progress-track">
+            <div class="progress-fill" id="scanProgressFill"></div>
+          </div>
+          <span id="scanPercent" style="font-family: var(--font-mono); color: var(--cyan); font-weight: 700;">0%</span>
+          <button id="btnCancelScan" class="btn btn-sm btn-ghost" style="color: var(--red-bright);">Cancel</button>
+        </div>
+
+        <div class="footer-actions-row">
+          <button id="btnScan" class="btn btn-sm btn-primary" title="Scan new and modified chunks (instant cache skip)">⚡ Scan</button>
+          <button id="btnForceRescan" class="btn btn-sm" title="Clear and rescan the whole dimension">🔄 Rescan</button>
+          <button id="btnGitDump" class="btn btn-sm" title="Save world_data.json and flush single SQLite file for Git">💾 Save</button>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Map Canvas -->
+    <main class="map-container">
+      <!-- Collapse Sidebar Button -->
+      <button class="sidebar-toggle-btn" id="btnToggleSidebar" title="Toggle Sidebar">◀</button>
+
+      <div id="map"></div>
+
+      <!-- Live Coordinates HUD -->
+      <div class="hud-coords" id="hudCoords">
+        X: <span>0</span>  Z: <span>0</span>  •  Chunk: <span>(0, 0)</span>  •  Region: <span>r.0.0.mca</span>
+      </div>
+
+      <!-- Empty State / Hint Banner -->
+      <div class="map-hint-banner" id="mapHintBanner">
+        💡 Select a layer on the left (e.g. <b>💎 Ores</b> or <b>🧟 Spawners</b>) to view on the map
+      </div>
+
+      <!-- Floating Selected Location Card -->
+      <div class="selection-card hud-frame" id="selectedPanel">
+        <div style="display: flex; align-items: center; gap: 14px;">
+          <div class="sel-icon" id="selIcon">📍</div>
+          <div class="sel-body">
+            <div class="sel-title" id="selectedTitle">Selected Location</div>
+            <div class="sel-coords" id="selectedCoords">X: 0  Y: 64  Z: 0</div>
+            <div class="sel-sub" id="selectedMeta">Generated Chunk NBT • HIGH</div>
+          </div>
+        </div>
+        <div class="sel-actions">
+          <button id="btnSetAsPlayer" class="btn btn-sm" title="Set player coordinates to this location">📍 Set as My Coords</button>
+          <button id="btnCopyCoords" class="btn btn-sm" title="Copy raw coordinates">📋 Coords</button>
+          <button id="btnCopyTp" class="btn btn-sm btn-primary" title="Copy Minecraft teleport command">⚡ /tp @s</button>
+          <button id="btnMarkCompleted" class="btn btn-sm" title="Mark this resource as done (mined/looted/cleared)">✅ Mark Completed</button>
+        </div>
+      </div>
+    </main>
+
+  </div>
+
+  <!-- Toast Notification -->
+  <div class="toast-msg hud-frame" id="toast">Copied to clipboard!</div>
+
+  <!-- Application JS -->
+  <script src="js/map.js?v=21"></script>
+  <script src="js/app.js?v=21"></script>
+</body>
+</html>
