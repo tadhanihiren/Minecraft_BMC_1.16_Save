@@ -581,6 +581,12 @@
     },
     "done": true
   },
+  "farmersdelight:main/get_rich_soil": {
+    "criteria": {
+      "get_rich_soil": "2026-09-13 18:01:34 +0530"
+    },
+    "done": true
+  },
   "aquaculture:recipes/tools/iron_fishing_rod": {
     "criteria": {
       "has_iron": "2026-09-06 11:07:29 +0530"
@@ -1590,6 +1596,12 @@
     },
     "done": true
   },
+  "minecraft:recipes/misc/black_dye": {
+    "criteria": {
+      "has_ink_sac": "2026-09-13 13:07:36 +0530"
+    },
+    "done": true
+  },
   "cavesandcliffs:recipes/building_blocks/mossy_stone_bricks_from_moss_block": {
     "criteria": {
       "has_moss_block": "2026-09-06 12:47:24 +0530"
@@ -1748,6 +1760,12 @@
     },
     "done": false
   },
+  "dungeons_arise:find_mushroom_mines": {
+    "criteria": {
+      "location0": "2026-09-14 09:04:00 +0530"
+    },
+    "done": true
+  },
   "minecraft:recipes/misc/diamond": {
     "criteria": {
       "has_diamond_block": "2026-09-11 00:41:19 +0530"
@@ -1841,6 +1859,12 @@
   "adorn:recipes/warped_chair": {
     "criteria": {
       "has_key_item_0": "2026-09-13 01:00:05 +0530"
+    },
+    "done": true
+  },
+  "adorn:trading_station": {
+    "criteria": {
+      "has_trading_station": "2026-09-13 12:42:50 +0530"
     },
     "done": true
   },
@@ -2156,6 +2180,12 @@
     },
     "done": true
   },
+  "farmersdelight:main/plant_rice": {
+    "criteria": {
+      "plant_rice": "2026-09-13 13:21:34 +0530"
+    },
+    "done": true
+  },
   "farmersdelight:recipes/farmersdelight/netherite_knife_smithing": {
     "criteria": {
       "has_netherite_ingot": "2026-09-06 17:35:47 +0530"
@@ -2420,6 +2450,12 @@
     },
     "done": true
   },
+  "farmersdelight:recipes/farmersdelight/rice": {
+    "criteria": {
+      "has_rice_panicle": "2026-09-13 17:58:01 +0530"
+    },
+    "done": true
+  },
   "minecraft:recipes/decorations/orange_bed_from_white_bed": {
     "criteria": {
       "has_bed": "2026-09-06 11:43:51 +0530"
@@ -2537,6 +2573,12 @@
   "minecraft:recipes/food/golden_apple": {
     "criteria": {
       "has_gold_ingot": "2026-09-06 13:20:35 +0530"
+    },
+    "done": true
+  },
+  "alexsmobs:alexsmobs/soul_vulture": {
+    "criteria": {
+      "killed_by": "2026-09-13 20:34:06 +0530"
     },
     "done": true
   },
@@ -2743,8 +2785,10 @@
       "barrel": "2026-09-06 11:58:10 +0530",
       "fletchingtable": "2026-09-08 00:18:39 +0530",
       "brewingstand": "2026-09-08 00:19:26 +0530",
+      "grindstone": "2026-09-14 10:31:23 +0530",
       "gardeningtable": "2026-09-07 21:15:02 +0530",
       "smithingtable": "2026-09-12 15:03:55 +0530",
+      "blastfurnace": "2026-09-14 10:31:16 +0530",
       "lectern": "2026-09-08 00:39:32 +0530",
       "woodworkingtable": "2026-09-07 21:15:02 +0530",
       "stonecutter": "2026-09-06 14:47:59 +0530",
@@ -3330,6 +3374,12 @@
     },
     "done": true
   },
+  "adorn:recipes/stone_brick_step": {
+    "criteria": {
+      "has_key_item_0": "2026-09-14 10:30:07 +0530"
+    },
+    "done": true
+  },
   "extendedmushrooms:recipes/building_blocks/mushroom_wood/honey_fungus/honey_fungus_bookshelf": {
     "criteria": {
       "has_book": "2026-09-06 12:09:45 +0530"
@@ -3459,6 +3509,12 @@
   "adorn:recipes/byg/aspen_kitchen_sink": {
     "criteria": {
       "has_key_item_0": "2026-09-06 11:46:07 +0530"
+    },
+    "done": true
+  },
+  "minecraft:nether/obtain_blaze_rod": {
+    "criteria": {
+      "blaze_rod": "2026-09-14 17:33:11 +0530"
     },
     "done": true
   },
@@ -4635,6 +4691,7 @@
       "savageandravage:skeleton_villager": "2026-09-06 17:38:06 +0530",
       "minecraft:ravager": "2026-09-06 17:18:02 +0530",
       "savageandravage:creepie": "2026-09-06 17:09:36 +0530",
+      "minecraft:ghast": "2026-09-13 11:09:36 +0530",
       "minecraft:hoglin": "2026-09-06 23:52:43 +0530",
       "minecraft:vindicator": "2026-09-06 15:42:34 +0530",
       "minecraft:magma_cube": "2026-09-07 22:20:15 +0530",
@@ -4853,6 +4910,12 @@
     },
     "done": true
   },
+  "sereneseasons:recipes/redstone/season_sensor": {
+    "criteria": {
+      "has_calendar": "2026-09-13 13:15:36 +0530"
+    },
+    "done": true
+  },
   "minecraft:recipes/decorations/light_gray_carpet_from_white_carpet": {
     "criteria": {
       "has_light_gray_dye": "2026-09-07 21:34:29 +0530"
@@ -4910,6 +4973,12 @@
   "minecraft:recipes/redstone/jungle_pressure_plate": {
     "criteria": {
       "has_planks": "2026-09-06 14:26:10 +0530"
+    },
+    "done": true
+  },
+  "minecraft:recipes/brewing/blaze_powder": {
+    "criteria": {
+      "has_blaze_rod": "2026-09-14 17:33:11 +0530"
     },
     "done": true
   },
@@ -5482,6 +5551,7 @@
       "minecraft:desert": "2026-09-11 23:31:48 +0530",
       "minecraft:snowy_beach": "2026-09-07 23:55:38 +0530",
       "minecraft:warm_ocean": "2026-09-07 23:19:40 +0530",
+      "minecraft:deep_lukewarm_ocean": "2026-09-14 09:01:14 +0530",
       "minecraft:birch_forest_hills": "2026-09-12 17:48:39 +0530",
       "minecraft:wooded_hills": "2026-09-11 23:13:32 +0530",
       "minecraft:savanna": "2026-09-11 23:33:10 +0530",
@@ -5880,6 +5950,12 @@
     },
     "done": true
   },
+  "adorn:recipes/stone_brick_platform": {
+    "criteria": {
+      "has_key_item_0": "2026-09-14 10:30:07 +0530"
+    },
+    "done": true
+  },
   "minecraft:recipes/redstone/birch_pressure_plate": {
     "criteria": {
       "has_planks": "2026-09-12 23:09:30 +0530"
@@ -6056,6 +6132,7 @@
   },
   "minecraft:husbandry/balanced_diet": {
     "criteria": {
+      "neapolitan:vanilla_fudge": "2026-09-13 12:54:19 +0530",
       "neapolitan:strawberry_scones": "2026-09-06 15:23:23 +0530",
       "potato": "2026-09-06 15:52:52 +0530",
       "bread": "2026-09-06 11:27:34 +0530",
@@ -6395,6 +6472,12 @@
     },
     "done": true
   },
+  "farmersdelight:recipes/farmersdelight/rice_bale": {
+    "criteria": {
+      "has_rice_panicle": "2026-09-13 17:58:01 +0530"
+    },
+    "done": true
+  },
   "decorative_blocks:recipes/decorations/dark_oak_seat": {
     "criteria": {
       "has_plank": "2026-09-06 17:01:35 +0530"
@@ -6690,8 +6773,10 @@
       "onion": "2026-09-06 18:02:27 +0530",
       "sweet_berries": "2026-09-06 15:15:19 +0530",
       "tomato": "2026-09-06 18:01:37 +0530",
+      "rice": "2026-09-13 13:21:34 +0530",
       "sugar_cane": "2026-09-06 18:17:36 +0530",
       "potato": "2026-09-06 18:02:04 +0530",
+      "red_mushroom": "2026-09-13 12:35:13 +0530",
       "nether_wart": "2026-09-12 14:56:21 +0530",
       "wheat": "2026-09-06 18:01:49 +0530",
       "pumpkin": "2026-09-06 18:21:30 +0530",
@@ -6876,6 +6961,12 @@
   "adorn:recipes/crimson_kitchen_cupboard": {
     "criteria": {
       "has_key_item_0": "2026-09-06 23:45:00 +0530"
+    },
+    "done": true
+  },
+  "upgradednetherite_ultimate:recipes/upgraded_netherite_sword_smithing": {
+    "criteria": {
+      "has_netherite_sword": "2026-09-14 13:45:25 +0530"
     },
     "done": true
   },
@@ -7080,6 +7171,12 @@
   "decorative_blocks_abnormals:recipes/river_seat": {
     "criteria": {
       "has_plank": "2026-09-12 15:14:42 +0530"
+    },
+    "done": true
+  },
+  "minecraft:recipes/brewing/brewing_stand": {
+    "criteria": {
+      "has_blaze_rod": "2026-09-14 17:33:11 +0530"
     },
     "done": true
   },
@@ -7311,6 +7408,12 @@
     },
     "done": true
   },
+  "minecraft:nether/netherite_armor": {
+    "criteria": {
+      "netherite_armor": "2026-09-14 13:06:45 +0530"
+    },
+    "done": true
+  },
   "minecraft:recipes/decorations/stone_brick_walls_from_stone_stonecutting": {
     "criteria": {
       "has_stone": "2026-09-06 14:47:52 +0530"
@@ -7458,6 +7561,12 @@
   "minecraft:recipes/redstone/warped_door": {
     "criteria": {
       "has_planks": "2026-09-06 22:44:11 +0530"
+    },
+    "done": true
+  },
+  "upgradednetherite:recipes/upgraded_netherite_sword_smithing": {
+    "criteria": {
+      "has_netherite_sword": "2026-09-14 13:45:25 +0530"
     },
     "done": true
   },
