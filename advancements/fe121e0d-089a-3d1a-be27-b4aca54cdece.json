@@ -4300,6 +4300,12 @@
     },
     "done": true
   },
+  "savageandravage:adventure/mask_of_dishonesty": {
+    "criteria": {
+      "mask_of_dishonesty": "2026-09-16 23:48:58 +0530"
+    },
+    "done": true
+  },
   "minecraft:recipes/decorations/polished_blackstone_wall_from_polished_blackstone_stonecutting": {
     "criteria": {
       "has_polished_blackstone": "2026-09-12 17:13:54 +0530"
@@ -4688,9 +4694,11 @@
     "criteria": {
       "minecraft:pillager": "2026-09-06 14:55:47 +0530",
       "minecraft:skeleton": "2026-09-06 12:09:27 +0530",
+      "savageandravage:executioner": "2026-09-16 23:48:43 +0530",
       "savageandravage:skeleton_villager": "2026-09-06 17:38:06 +0530",
       "minecraft:ravager": "2026-09-06 17:18:02 +0530",
       "savageandravage:creepie": "2026-09-06 17:09:36 +0530",
+      "savageandravage:griefer": "2026-09-16 23:19:36 +0530",
       "minecraft:ghast": "2026-09-13 11:09:36 +0530",
       "minecraft:hoglin": "2026-09-06 23:52:43 +0530",
       "minecraft:vindicator": "2026-09-06 15:42:34 +0530",
@@ -4698,6 +4706,8 @@
       "minecraft:spider": "2026-09-06 11:18:10 +0530",
       "minecraft:piglin_brute": "2026-09-06 23:01:18 +0530",
       "minecraft:creeper": "2026-09-06 13:11:28 +0530",
+      "minecraft:evoker": "2026-09-16 23:48:47 +0530",
+      "savageandravage:trickster": "2026-09-16 23:46:26 +0530",
       "minecraft:phantom": "2026-09-11 23:16:52 +0530",
       "minecraft:zombified_piglin": "2026-09-13 00:55:04 +0530",
       "minecraft:witch": "2026-09-12 18:20:34 +0530",
@@ -4706,6 +4716,7 @@
       "minecraft:piglin": "2026-09-06 23:02:38 +0530",
       "minecraft:enderman": "2026-09-06 12:40:32 +0530",
       "minecraft:silverfish": "2026-09-09 23:35:51 +0530",
+      "minecraft:vex": "2026-09-16 23:45:03 +0530",
       "minecraft:zombie": "2026-09-06 11:13:19 +0530",
       "minecraft:drowned": "2026-09-06 22:42:54 +0530",
       "minecraft:zombie_villager": "2026-09-12 19:28:46 +0530"
