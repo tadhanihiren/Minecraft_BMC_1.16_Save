@@ -161,6 +161,12 @@
     },
     "done": true
   },
+  "minecraft:recipes/decorations/blast_furnace": {
+    "criteria": {
+      "has_smooth_stone": "2026-09-18 23:05:21 +0530"
+    },
+    "done": true
+  },
   "minecraft:recipes/decorations/ladder": {
     "criteria": {
       "has_stick": "2026-09-06 11:03:29 +0530"
@@ -203,6 +209,12 @@
     },
     "done": true
   },
+  "immersivecooking:recipes/immersivecooking/oak_stone_pantry": {
+    "criteria": {
+      "has_smooth_stone": "2026-09-18 23:05:21 +0530"
+    },
+    "done": true
+  },
   "minecraft:recipes/decorations/torch": {
     "criteria": {
       "has_stone_pickaxe": "2026-09-06 11:04:15 +0530"
@@ -242,6 +254,12 @@
   "minecraft:recipes/misc/flower_banner_pattern": {
     "criteria": {
       "has_oxeye_daisy": "2026-09-06 11:17:07 +0530"
+    },
+    "done": true
+  },
+  "minecraft:recipes/immersivecooking/stone_countertop_from_smooth_stone_slab_stonecutting": {
+    "criteria": {
+      "has_smooth_stone": "2026-09-18 23:05:21 +0530"
     },
     "done": true
   },
@@ -362,6 +380,12 @@
   "extendedmushrooms:recipes/building_blocks/mushroom_wood/colorless/mushroom_bookshelf": {
     "criteria": {
       "has_book": "2026-09-06 12:09:45 +0530"
+    },
+    "done": true
+  },
+  "immersivecooking:recipes/immersivecooking/crimson_stone_pantry": {
+    "criteria": {
+      "has_smooth_stone": "2026-09-18 23:05:21 +0530"
     },
     "done": true
   },
@@ -1070,6 +1094,12 @@
   "minecraft:recipes/redstone/birch_button": {
     "criteria": {
       "has_planks": "2026-09-12 23:09:30 +0530"
+    },
+    "done": true
+  },
+  "immersivecooking:recipes/immersivecooking/oak_stone_counter": {
+    "criteria": {
+      "has_smooth_stone": "2026-09-18 23:05:21 +0530"
     },
     "done": true
   },
@@ -2288,6 +2318,12 @@
     },
     "done": true
   },
+  "immersivecooking:recipes/immersivecooking/acacia_stone_counter": {
+    "criteria": {
+      "has_smooth_stone": "2026-09-18 23:05:21 +0530"
+    },
+    "done": true
+  },
   "minecraft:recipes/decorations/yellow_bed_from_white_bed": {
     "criteria": {
       "has_bed": "2026-09-06 11:43:51 +0530"
@@ -2363,6 +2399,12 @@
   "minecraft:recipes/decorations/mossy_cobblestone_wall": {
     "criteria": {
       "has_mossy_cobblestone": "2026-09-11 21:40:37 +0530"
+    },
+    "done": true
+  },
+  "immersivecooking:recipes/immersivecooking/spruce_stone_counter": {
+    "criteria": {
+      "has_smooth_stone": "2026-09-18 23:05:21 +0530"
     },
     "done": true
   },
@@ -2934,6 +2976,12 @@
     },
     "done": true
   },
+  "minecraft:recipes/immersivecooking/stone_countertop_from_smooth_stone_stonecutting": {
+    "criteria": {
+      "has_smooth_stone": "2026-09-18 23:05:21 +0530"
+    },
+    "done": true
+  },
   "minecraft:recipes/tools/wooden_axe": {
     "criteria": {
       "has_the_recipe": "2026-09-06 11:03:09 +0530"
@@ -2957,6 +3005,12 @@
   "minecraft:recipes/building_blocks/mossy_stone_bricks": {
     "criteria": {
       "has_mossy_cobblestone": "2026-09-11 21:40:37 +0530"
+    },
+    "done": true
+  },
+  "immersivecooking:recipes/immersivecooking/birch_stone_counter": {
+    "criteria": {
+      "has_smooth_stone": "2026-09-18 23:05:21 +0530"
     },
     "done": true
   },
@@ -3962,6 +4016,12 @@
     },
     "done": true
   },
+  "immersivecooking:recipes/immersivecooking/acacia_stone_pantry": {
+    "criteria": {
+      "has_smooth_stone": "2026-09-18 23:05:21 +0530"
+    },
+    "done": true
+  },
   "minecraft:recipes/building_blocks/cracked_polished_blackstone_bricks": {
     "criteria": {
       "has_blackstone_bricks": "2026-09-06 23:45:21 +0530"
@@ -4037,6 +4097,12 @@
   "minecraft:recipes/building_blocks/purple_stained_glass": {
     "criteria": {
       "has_glass": "2026-09-07 21:33:09 +0530"
+    },
+    "done": true
+  },
+  "immersivecooking:recipes/immersivecooking/dark_oak_stone_pantry": {
+    "criteria": {
+      "has_smooth_stone": "2026-09-18 23:05:21 +0530"
     },
     "done": true
   },
@@ -4303,6 +4369,12 @@
   "savageandravage:adventure/mask_of_dishonesty": {
     "criteria": {
       "mask_of_dishonesty": "2026-09-16 23:48:58 +0530"
+    },
+    "done": true
+  },
+  "immersivecooking:recipes/immersivecooking/jungle_stone_counter": {
+    "criteria": {
+      "has_smooth_stone": "2026-09-18 23:05:21 +0530"
     },
     "done": true
   },
@@ -4690,6 +4762,12 @@
     },
     "done": true
   },
+  "immersivecooking:recipes/immersivecooking/warped_stone_pantry": {
+    "criteria": {
+      "has_smooth_stone": "2026-09-18 23:05:21 +0530"
+    },
+    "done": true
+  },
   "minecraft:adventure/kill_all_mobs": {
     "criteria": {
       "minecraft:pillager": "2026-09-06 14:55:47 +0530",
@@ -4849,6 +4927,12 @@
     },
     "done": true
   },
+  "immersivecooking:recipes/immersivecooking/jungle_stone_pantry": {
+    "criteria": {
+      "has_smooth_stone": "2026-09-18 23:05:21 +0530"
+    },
+    "done": true
+  },
   "minecraft:recipes/building_blocks/quartz_pillar_from_quartz_block_stonecutting": {
     "criteria": {
       "has_quartz_block": "2026-09-11 21:19:00 +0530"
@@ -4942,6 +5026,12 @@
   "minecraft:recipes/decorations/magenta_stained_glass_pane_from_glass_pane": {
     "criteria": {
       "has_magenta_dye": "2026-09-06 21:52:30 +0530"
+    },
+    "done": true
+  },
+  "immersivecooking:recipes/immersivecooking/dark_oak_stone_counter": {
+    "criteria": {
+      "has_smooth_stone": "2026-09-18 23:05:21 +0530"
     },
     "done": true
   },
@@ -5967,6 +6057,12 @@
     },
     "done": true
   },
+  "immersivecooking:recipes/immersivecooking/brick_stone_counter": {
+    "criteria": {
+      "has_smooth_stone": "2026-09-18 23:05:21 +0530"
+    },
+    "done": true
+  },
   "minecraft:recipes/redstone/birch_pressure_plate": {
     "criteria": {
       "has_planks": "2026-09-12 23:09:30 +0530"
@@ -6024,6 +6120,12 @@
   "minecraft:recipes/decorations/black_bed_from_white_bed": {
     "criteria": {
       "has_bed": "2026-09-06 11:43:51 +0530"
+    },
+    "done": true
+  },
+  "immersivecooking:recipes/immersivecooking/birch_stone_pantry": {
+    "criteria": {
+      "has_smooth_stone": "2026-09-18 23:05:21 +0530"
     },
     "done": true
   },
@@ -6232,6 +6334,12 @@
     },
     "done": true
   },
+  "adorn:recipes/smooth_stone_post": {
+    "criteria": {
+      "has_key_item_0": "2026-09-18 23:05:21 +0530"
+    },
+    "done": true
+  },
   "farmersdelight:recipes/farmersdelight/grilled_salmon": {
     "criteria": {
       "has_salmon": "2026-09-06 14:56:23 +0530"
@@ -6310,6 +6418,12 @@
     },
     "done": true
   },
+  "immersivecooking:recipes/immersivecooking/nether_brick_stone_counter": {
+    "criteria": {
+      "has_smooth_stone": "2026-09-18 23:05:21 +0530"
+    },
+    "done": true
+  },
   "cavesandcliffs:recipes/misc/copper_ingot_from_smelting_raw_copper": {
     "criteria": {
       "has_raw_copper": "2026-09-06 13:11:02 +0530"
@@ -6334,6 +6448,12 @@
     },
     "done": true
   },
+  "immersivecooking:recipes/immersivecooking/warped_stone_counter": {
+    "criteria": {
+      "has_smooth_stone": "2026-09-18 23:05:21 +0530"
+    },
+    "done": true
+  },
   "minecraft:recipes/redstone/tnt": {
     "criteria": {
       "has_gunpowder": "2026-09-06 12:59:32 +0530"
@@ -6349,6 +6469,12 @@
   "minecraft:recipes/building_blocks/purple_concrete_powder": {
     "criteria": {
       "has_gravel": "2026-09-06 11:21:38 +0530"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/smooth_stone_slab": {
+    "criteria": {
+      "has_smooth_stone": "2026-09-18 23:05:21 +0530"
     },
     "done": true
   },
@@ -6451,6 +6577,12 @@
   "aquaculture:recipes/misc/red_mushroom_from_fish": {
     "criteria": {
       "has_items": "2026-09-06 14:56:23 +0530"
+    },
+    "done": true
+  },
+  "immersivecooking:recipes/immersivecooking/crimson_stone_counter": {
+    "criteria": {
+      "has_smooth_stone": "2026-09-18 23:05:21 +0530"
     },
     "done": true
   },
@@ -6764,6 +6896,12 @@
   "minecraft:recipes/building_blocks/cyan_concrete_powder": {
     "criteria": {
       "has_gravel": "2026-09-06 11:21:38 +0530"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/smooth_stone_slab_from_smooth_stone_stonecutting": {
+    "criteria": {
+      "has_smooth_stone": "2026-09-18 23:05:21 +0530"
     },
     "done": true
   },
@@ -7393,6 +7531,12 @@
   "minecraft:recipes/building_blocks/blackstone_stairs_from_blackstone_stonecutting": {
     "criteria": {
       "has_blackstone": "2026-09-07 22:34:28 +0530"
+    },
+    "done": true
+  },
+  "immersivecooking:recipes/immersivecooking/spruce_stone_pantry": {
+    "criteria": {
+      "has_smooth_stone": "2026-09-18 23:05:21 +0530"
     },
     "done": true
   },
