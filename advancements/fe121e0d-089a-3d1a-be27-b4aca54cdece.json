@@ -5,6 +5,12 @@
     },
     "done": true
   },
+  "cavesandcliffs:recipes/building_blocks/deepslate_tiles_from_polished_deepslate_stonecutting": {
+    "criteria": {
+      "has_polished_deepslate": "2026-09-19 21:42:39 +0530"
+    },
+    "done": true
+  },
   "minecraft:recipes/redstone/lever": {
     "criteria": {
       "has_cobblestone": "2026-09-06 11:03:46 +0530"
@@ -56,6 +62,12 @@
   "minecraft:recipes/decorations/gray_glazed_terracotta": {
     "criteria": {
       "has_gray_terracotta": "2026-09-12 18:19:32 +0530"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/magenta_dye_from_lilac": {
+    "criteria": {
+      "has_double_plant": "2026-09-20 01:09:02 +0530"
     },
     "done": true
   },
@@ -209,6 +221,12 @@
     },
     "done": true
   },
+  "adorn:recipes/crimson_platform": {
+    "criteria": {
+      "has_key_item_0": "2026-09-19 23:56:19 +0530"
+    },
+    "done": true
+  },
   "immersivecooking:recipes/immersivecooking/oak_stone_pantry": {
     "criteria": {
       "has_smooth_stone": "2026-09-18 23:05:21 +0530"
@@ -266,6 +284,12 @@
   "adorn:recipes/dark_oak_drawer": {
     "criteria": {
       "has_key_item_0": "2026-09-06 17:01:35 +0530"
+    },
+    "done": true
+  },
+  "immersivecooking:recipes/immersivecooking/oak_andesite_counter": {
+    "criteria": {
+      "has_polished_andesite": "2026-09-19 18:38:46 +0530"
     },
     "done": true
   },
@@ -425,6 +449,12 @@
     },
     "done": true
   },
+  "minecraft:recipes/misc/emerald": {
+    "criteria": {
+      "has_emerald_block": "2026-09-20 01:17:32 +0530"
+    },
+    "done": true
+  },
   "minecraft:recipes/decorations/iron_bars": {
     "criteria": {
       "has_iron_ingot": "2026-09-06 11:07:29 +0530"
@@ -545,6 +575,12 @@
     },
     "done": true
   },
+  "minecraft:recipes/decorations/lime_stained_glass_pane_from_glass_pane": {
+    "criteria": {
+      "has_glass_pane": "2026-09-20 01:07:57 +0530"
+    },
+    "done": true
+  },
   "aquaculture:recipes/misc/jellyfish_to_slimeball": {
     "criteria": {
       "has_items": "2026-09-09 23:09:35 +0530"
@@ -596,6 +632,12 @@
   "extendedmushrooms:recipes/transportation/mushroom_wood/glowshroom/glowshroom_boat": {
     "criteria": {
       "in_water": "2026-09-06 11:11:37 +0530"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/red_carpet": {
+    "criteria": {
+      "has_red_wool": "2026-09-20 01:07:57 +0530"
     },
     "done": true
   },
@@ -665,6 +707,12 @@
     },
     "done": true
   },
+  "comforts:hammock_red": {
+    "criteria": {
+      "has_red_wool": "2026-09-20 01:07:57 +0530"
+    },
+    "done": true
+  },
   "supplementaries:recipes/hanging_sign_birch": {
     "criteria": {
       "has_plank": "2026-09-12 23:09:30 +0530"
@@ -731,6 +779,18 @@
     },
     "done": true
   },
+  "immersivecooking:recipes/immersivecooking/dark_oak_andesite_counter": {
+    "criteria": {
+      "has_polished_andesite": "2026-09-19 18:38:46 +0530"
+    },
+    "done": true
+  },
+  "immersivecooking:recipes/immersivecooking/acacia_andesite_counter": {
+    "criteria": {
+      "has_polished_andesite": "2026-09-19 18:38:46 +0530"
+    },
+    "done": true
+  },
   "minecraft:recipes/food/cooked_beef_from_smoking": {
     "criteria": {
       "has_beef": "2026-09-06 12:10:39 +0530"
@@ -776,6 +836,12 @@
   "minecraft:recipes/misc/iron_nugget_from_smelting": {
     "criteria": {
       "has_iron_pickaxe": "2026-09-06 11:08:30 +0530"
+    },
+    "done": true
+  },
+  "immersivecooking:recipes/immersivecooking/jungle_andesite_pantry": {
+    "criteria": {
+      "has_polished_andesite": "2026-09-19 18:38:46 +0530"
     },
     "done": true
   },
@@ -859,6 +925,12 @@
   "supplementaries:recipes/pulley_block": {
     "criteria": {
       "has_plank": "2026-09-06 11:07:29 +0530"
+    },
+    "done": true
+  },
+  "immersivecooking:recipes/immersivecooking/warped_andesite_pantry": {
+    "criteria": {
+      "has_polished_andesite": "2026-09-19 18:38:46 +0530"
     },
     "done": true
   },
@@ -1061,6 +1133,12 @@
     },
     "done": true
   },
+  "adorn:recipes/crimson_shelf": {
+    "criteria": {
+      "has_key_item_0": "2026-09-19 23:56:19 +0530"
+    },
+    "done": true
+  },
   "omnis:recipes/omnis/ravaged_hammer": {
     "criteria": {
       "has_ravaged_metal": "2026-09-06 17:47:15 +0530"
@@ -1130,6 +1208,12 @@
   "backpacked:recipes/backpacked/backpack": {
     "criteria": {
       "has_hide": "2026-09-07 23:25:22 +0530"
+    },
+    "done": true
+  },
+  "cavesandcliffs:recipes/building_blocks/polished_deepslate_stairs_from_polished_deepslate_stonecutting": {
+    "criteria": {
+      "has_polished_deepslate": "2026-09-19 21:42:39 +0530"
     },
     "done": true
   },
@@ -1262,6 +1346,12 @@
   "cavesandcliffs:recipes/decorations/red_candle": {
     "criteria": {
       "has_red_dye": "2026-09-07 21:34:23 +0530"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/red_banner": {
+    "criteria": {
+      "has_red_wool": "2026-09-20 01:07:57 +0530"
     },
     "done": true
   },
@@ -1802,6 +1892,12 @@
     },
     "done": true
   },
+  "cavesandcliffs:recipes/decorations/deepslate_tile_wall_from_polished_deepslate_stonecutting": {
+    "criteria": {
+      "has_polished_deepslate": "2026-09-19 21:42:39 +0530"
+    },
+    "done": true
+  },
   "minecraft:recipes/misc/gold_nugget_from_smelting": {
     "criteria": {
       "has_golden_hoe": "2026-09-06 22:29:50 +0530"
@@ -1976,6 +2072,18 @@
     },
     "done": true
   },
+  "minecraft:recipes/building_blocks/polished_andesite_stairs": {
+    "criteria": {
+      "has_polished_andesite": "2026-09-19 18:38:46 +0530"
+    },
+    "done": true
+  },
+  "adorn:recipes/crimson_bench": {
+    "criteria": {
+      "has_key_item_0": "2026-09-19 23:56:19 +0530"
+    },
+    "done": true
+  },
   "minecraft:recipes/transportation/furnace_minecart": {
     "criteria": {
       "has_minecart": "2026-09-12 14:49:19 +0530"
@@ -2057,6 +2165,12 @@
   "farmersdelight:recipes/farmersdelight/cooked_mutton_chops": {
     "criteria": {
       "cooked_mutton_chops": "2026-09-06 21:52:53 +0530"
+    },
+    "done": true
+  },
+  "betterendforge:recipes/betterendforge/andesite_pedestal": {
+    "criteria": {
+      "has_andesite_pillar": "2026-09-19 18:38:46 +0530"
     },
     "done": true
   },
@@ -2180,6 +2294,12 @@
     },
     "done": true
   },
+  "adorn:recipes/crimson_coffee_table": {
+    "criteria": {
+      "has_key_item_0": "2026-09-19 23:56:19 +0530"
+    },
+    "done": true
+  },
   "adorn:recipes/picket_fence": {
     "criteria": {
       "has_key_item_0": "2026-09-06 11:02:57 +0530"
@@ -2297,6 +2417,12 @@
   "extendedmushrooms:recipes/misc/glowstone_crumbs": {
     "criteria": {
       "has_dust": "2026-09-07 21:27:02 +0530"
+    },
+    "done": true
+  },
+  "adorn:recipes/polished_andesite_post": {
+    "criteria": {
+      "has_key_item_0": "2026-09-19 18:38:46 +0530"
     },
     "done": true
   },
@@ -2474,6 +2600,18 @@
     },
     "done": true
   },
+  "cavesandcliffs:recipes/building_blocks/polished_deepslate_slab_from_polished_deepslate_stonecutting": {
+    "criteria": {
+      "has_polished_deepslate": "2026-09-19 21:42:39 +0530"
+    },
+    "done": true
+  },
+  "cavesandcliffs:recipes/building_blocks/deepslate_tile_stairs_from_polished_deepslate_stonecutting": {
+    "criteria": {
+      "has_polished_deepslate": "2026-09-19 21:42:39 +0530"
+    },
+    "done": true
+  },
   "adorn:recipes/stone_post": {
     "criteria": {
       "has_key_item_0": "2026-09-06 14:47:52 +0530"
@@ -2501,6 +2639,12 @@
   "minecraft:recipes/decorations/orange_bed_from_white_bed": {
     "criteria": {
       "has_bed": "2026-09-06 11:43:51 +0530"
+    },
+    "done": true
+  },
+  "immersivecooking:recipes/immersivecooking/dark_oak_andesite_pantry": {
+    "criteria": {
+      "has_polished_andesite": "2026-09-19 18:38:46 +0530"
     },
     "done": true
   },
@@ -2642,6 +2786,12 @@
     },
     "done": true
   },
+  "immersivecooking:recipes/immersivecooking/birch_andesite_counter": {
+    "criteria": {
+      "has_polished_andesite": "2026-09-19 18:38:46 +0530"
+    },
+    "done": true
+  },
   "adorn:recipes/oak_bench": {
     "criteria": {
       "has_key_item_0": "2026-09-09 21:17:19 +0530"
@@ -2738,6 +2888,12 @@
     },
     "done": true
   },
+  "buzzier_bees:adventure/four_leaf_clover": {
+    "criteria": {
+      "four_leaf_clover": "2026-09-20 01:11:13 +0530"
+    },
+    "done": true
+  },
   "minecraft:recipes/tools/clock": {
     "criteria": {
       "has_redstone": "2026-09-06 13:10:52 +0530"
@@ -2807,6 +2963,12 @@
   "farmersdelight:recipes/farmersdelight/mixed_salad": {
     "criteria": {
       "has_bowl": "2026-09-06 21:55:34 +0530"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/black_stained_glass_pane_from_glass_pane": {
+    "criteria": {
+      "has_glass_pane": "2026-09-20 01:07:57 +0530"
     },
     "done": true
   },
@@ -3110,6 +3272,12 @@
     },
     "done": true
   },
+  "cavesandcliffs:recipes/decorations/polished_deepslate_wall_from_polished_deepslate_stonecutting": {
+    "criteria": {
+      "has_polished_deepslate": "2026-09-19 21:42:39 +0530"
+    },
+    "done": true
+  },
   "alexsmobs:alexsmobs/sunbird_blessing": {
     "criteria": {
       "all_effects": "2026-09-07 23:35:53 +0530"
@@ -3227,6 +3395,12 @@
   "minecraft:recipes/tools/netherite_axe_smithing": {
     "criteria": {
       "has_netherite_ingot": "2026-09-06 17:35:47 +0530"
+    },
+    "done": true
+  },
+  "immersivecooking:recipes/immersivecooking/brick_andesite_counter": {
+    "criteria": {
+      "has_polished_andesite": "2026-09-19 18:38:46 +0530"
     },
     "done": true
   },
@@ -3746,6 +3920,12 @@
     },
     "done": true
   },
+  "alexsmobs:alexsmobs/emu_dodge": {
+    "criteria": {
+      "ex": "2026-09-19 18:34:39 +0530"
+    },
+    "done": true
+  },
   "architects_palette:main/buy_pipe": {
     "criteria": {
       "pipe": "2026-09-12 20:12:19 +0530"
@@ -3788,6 +3968,12 @@
     },
     "done": true
   },
+  "farmersdelight:main/place_campfire": {
+    "criteria": {
+      "campfire": "2026-09-19 21:34:07 +0530"
+    },
+    "done": true
+  },
   "minecraft:recipes/redstone/spruce_trapdoor": {
     "criteria": {
       "has_planks": "2026-09-06 11:02:57 +0530"
@@ -3827,6 +4013,12 @@
   "supplementaries:recipes/turn_table": {
     "criteria": {
       "has_item": "2026-09-06 13:10:52 +0530"
+    },
+    "done": true
+  },
+  "minecraft:recipes/immersivecooking/andesite_countertop_from_polished_andesite_stonecutting": {
+    "criteria": {
+      "has_polished_andesite": "2026-09-19 18:38:46 +0530"
     },
     "done": true
   },
@@ -3950,6 +4142,12 @@
     },
     "done": true
   },
+  "minecraft:recipes/building_blocks/polished_andesite_slab": {
+    "criteria": {
+      "has_polished_andesite": "2026-09-19 18:38:46 +0530"
+    },
+    "done": true
+  },
   "cavesandcliffs:recipes/building_blocks/copper_block": {
     "criteria": {
       "has_copper_ingot": "2026-09-06 17:43:14 +0530"
@@ -3959,6 +4157,12 @@
   "betterendforge:recipes/betterendforge/netherite_hammer_smithing": {
     "criteria": {
       "has_netherite_ingot": "2026-09-06 17:35:47 +0530"
+    },
+    "done": true
+  },
+  "cavesandcliffs:recipes/building_blocks/deepslate_brick_slab_from_polished_deepslate_stonecutting": {
+    "criteria": {
+      "has_polished_deepslate": "2026-09-19 21:42:39 +0530"
     },
     "done": true
   },
@@ -4306,6 +4510,12 @@
     },
     "done": true
   },
+  "extendedmushrooms:recipes/redstone/mushroom_wood/honey_fungus/honey_fungus_chest_trapped": {
+    "criteria": {
+      "has_tripwire_hook": "2026-09-20 01:10:18 +0530"
+    },
+    "done": true
+  },
   "farmersdelight:recipes/farmersdelight/sweet_berry_cookie": {
     "criteria": {
       "has_sweet_berries": "2026-09-06 11:12:56 +0530"
@@ -4363,6 +4573,12 @@
   "immersivecooking:recipes/immersivecooking/jungle_blackstone_pantry": {
     "criteria": {
       "has_polished_blackstone": "2026-09-12 17:13:54 +0530"
+    },
+    "done": true
+  },
+  "minecraft:recipes/redstone/trapped_chest": {
+    "criteria": {
+      "has_tripwire_hook": "2026-09-20 01:10:18 +0530"
     },
     "done": true
   },
@@ -4579,6 +4795,12 @@
   "upgradednetherite_ultimate:recipes/upgraded_netherite_boots_smithing": {
     "criteria": {
       "has_netherite_boots": "2026-09-12 23:50:26 +0530"
+    },
+    "done": true
+  },
+  "immersivecooking:recipes/immersivecooking/crimson_andesite_pantry": {
+    "criteria": {
+      "has_polished_andesite": "2026-09-19 18:38:46 +0530"
     },
     "done": true
   },
@@ -4885,6 +5107,12 @@
     },
     "done": true
   },
+  "minecraft:recipes/decorations/brown_stained_glass_pane_from_glass_pane": {
+    "criteria": {
+      "has_glass_pane": "2026-09-20 01:07:57 +0530"
+    },
+    "done": true
+  },
   "minecraft:recipes/decorations/pink_bed_from_white_bed": {
     "criteria": {
       "has_bed": "2026-09-06 11:43:51 +0530"
@@ -4972,6 +5200,12 @@
   "minecraft:recipes/decorations/nether_brick_wall_from_nether_bricks_stonecutting": {
     "criteria": {
       "has_nether_bricks": "2026-09-07 00:30:39 +0530"
+    },
+    "done": true
+  },
+  "immersivecooking:recipes/immersivecooking/birch_andesite_pantry": {
+    "criteria": {
+      "has_polished_andesite": "2026-09-19 18:38:46 +0530"
     },
     "done": true
   },
@@ -5134,6 +5368,12 @@
   "adorn:recipes/nether_brick_chimney_from_block": {
     "criteria": {
       "has_key_item_0": "2026-09-07 00:30:39 +0530"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/cyan_stained_glass_pane_from_glass_pane": {
+    "criteria": {
+      "has_glass_pane": "2026-09-20 01:07:57 +0530"
     },
     "done": true
   },
@@ -5438,6 +5678,12 @@
     },
     "done": true
   },
+  "adorn:recipes/crimson_chair": {
+    "criteria": {
+      "has_key_item_0": "2026-09-19 23:56:19 +0530"
+    },
+    "done": true
+  },
   "minecraft:recipes/redstone/birch_fence_gate": {
     "criteria": {
       "has_planks": "2026-09-12 23:09:30 +0530"
@@ -5588,6 +5834,12 @@
     },
     "done": true
   },
+  "immersivecooking:recipes/immersivecooking/crimson_andesite_counter": {
+    "criteria": {
+      "has_polished_andesite": "2026-09-19 18:38:46 +0530"
+    },
+    "done": true
+  },
   "betterendforge:recipes/betterendforge/thallasium_hoe_smithing": {
     "criteria": {
       "has_stick": "2026-09-06 11:03:29 +0530"
@@ -5721,6 +5973,12 @@
     },
     "done": true
   },
+  "immersivecooking:recipes/immersivecooking/spruce_andesite_pantry": {
+    "criteria": {
+      "has_polished_andesite": "2026-09-19 18:38:46 +0530"
+    },
+    "done": true
+  },
   "adorn:recipes/byg/maple_drawer": {
     "criteria": {
       "has_key_item_0": "2026-09-06 15:02:19 +0530"
@@ -5817,6 +6075,18 @@
     },
     "done": true
   },
+  "minecraft:recipes/immersivecooking/andesite_countertop_from_polished_andesite_slab_stonecutting": {
+    "criteria": {
+      "has_polished_andesite": "2026-09-19 18:38:46 +0530"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/polished_andesite_slab_from_polished_andesite_stonecutting": {
+    "criteria": {
+      "has_polished_andesite": "2026-09-19 18:38:46 +0530"
+    },
+    "done": true
+  },
   "minecraft:recipes/misc/orange_dye_from_orange_tulip": {
     "criteria": {
       "has_red_flower": "2026-09-12 18:23:22 +0530"
@@ -5862,6 +6132,12 @@
   "minecraft:recipes/decorations/flower_pot": {
     "criteria": {
       "has_brick": "2026-09-06 17:53:55 +0530"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/orange_stained_glass_pane_from_glass_pane": {
+    "criteria": {
+      "has_glass_pane": "2026-09-20 01:07:57 +0530"
     },
     "done": true
   },
@@ -5937,6 +6213,12 @@
     },
     "done": true
   },
+  "cavesandcliffs:recipes/building_blocks/deepslate_brick_stairs_from_polished_deepslate_stonecutting": {
+    "criteria": {
+      "has_polished_deepslate": "2026-09-19 21:42:39 +0530"
+    },
+    "done": true
+  },
   "minecraft:recipes/decorations/light_blue_stained_glass_pane_from_glass_pane": {
     "criteria": {
       "has_light_blue_dye": "2026-09-07 21:34:25 +0530"
@@ -5964,6 +6246,12 @@
   "minecraft:recipes/building_blocks/acacia_stairs": {
     "criteria": {
       "has_planks": "2026-09-07 21:19:35 +0530"
+    },
+    "done": true
+  },
+  "immersivecooking:recipes/immersivecooking/spruce_andesite_counter": {
+    "criteria": {
+      "has_polished_andesite": "2026-09-19 18:38:46 +0530"
     },
     "done": true
   },
@@ -6048,6 +6336,12 @@
   "betterendforge:recipes/betterendforge/iron_chandelier": {
     "criteria": {
       "has_iron_ingot": "2026-09-06 11:07:29 +0530"
+    },
+    "done": true
+  },
+  "immersivecooking:recipes/immersivecooking/oak_andesite_pantry": {
+    "criteria": {
+      "has_polished_andesite": "2026-09-19 18:38:46 +0530"
     },
     "done": true
   },
@@ -6328,6 +6622,12 @@
     },
     "done": true
   },
+  "cavesandcliffs:recipes/building_blocks/deepslate_tile_slab_from_polished_deepslate_stonecutting": {
+    "criteria": {
+      "has_polished_deepslate": "2026-09-19 21:42:39 +0530"
+    },
+    "done": true
+  },
   "minecraft:recipes/redstone/note_block": {
     "criteria": {
       "has_redstone": "2026-09-06 13:10:52 +0530"
@@ -6373,6 +6673,18 @@
   "supplementaries:recipes/daub": {
     "criteria": {
       "has_plank": "2026-09-11 21:55:25 +0530"
+    },
+    "done": true
+  },
+  "immersivecooking:recipes/immersivecooking/nether_brick_andesite_counter": {
+    "criteria": {
+      "has_polished_andesite": "2026-09-19 18:38:46 +0530"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/green_stained_glass_pane_from_glass_pane": {
+    "criteria": {
+      "has_glass_pane": "2026-09-20 01:07:57 +0530"
     },
     "done": true
   },
@@ -6532,6 +6844,12 @@
     },
     "done": true
   },
+  "adorn:recipes/crimson_drawer": {
+    "criteria": {
+      "has_key_item_0": "2026-09-19 23:56:19 +0530"
+    },
+    "done": true
+  },
   "minecraft:recipes/building_blocks/red_nether_bricks": {
     "criteria": {
       "has_nether_wart": "2026-09-07 22:45:01 +0530"
@@ -6583,6 +6901,12 @@
   "immersivecooking:recipes/immersivecooking/crimson_stone_counter": {
     "criteria": {
       "has_smooth_stone": "2026-09-18 23:05:21 +0530"
+    },
+    "done": true
+  },
+  "adorn:recipes/red_sofa": {
+    "criteria": {
+      "has_key_item_0": "2026-09-20 01:07:57 +0530"
     },
     "done": true
   },
@@ -6655,6 +6979,12 @@
   "architects_palette:main/buy_plating": {
     "criteria": {
       "plating": "2026-09-10 01:16:42 +0530"
+    },
+    "done": true
+  },
+  "immersivecooking:recipes/immersivecooking/warped_andesite_counter": {
+    "criteria": {
+      "has_polished_andesite": "2026-09-19 18:38:46 +0530"
     },
     "done": true
   },
@@ -6763,6 +7093,12 @@
   "supplementaries:recipes/sign_post_warped": {
     "criteria": {
       "has_plank": "2026-09-06 22:44:11 +0530"
+    },
+    "done": true
+  },
+  "cavesandcliffs:recipes/building_blocks/deepslate_bricks_from_polished_deepslate_stonecutting": {
+    "criteria": {
+      "has_polished_deepslate": "2026-09-19 21:42:39 +0530"
     },
     "done": true
   },
@@ -6893,6 +7229,12 @@
     },
     "done": true
   },
+  "immersivecooking:recipes/immersivecooking/jungle_andesite_counter": {
+    "criteria": {
+      "has_polished_andesite": "2026-09-19 18:38:46 +0530"
+    },
+    "done": true
+  },
   "minecraft:recipes/building_blocks/cyan_concrete_powder": {
     "criteria": {
       "has_gravel": "2026-09-06 11:21:38 +0530"
@@ -6908,6 +7250,12 @@
   "cavesandcliffs:recipes/decorations/moss_carpet": {
     "criteria": {
       "has_moss_block": "2026-09-06 12:47:24 +0530"
+    },
+    "done": true
+  },
+  "extendedmushrooms:recipes/redstone/mushroom_wood/poisonous_mushroom/poisonous_mushroom_chest_trapped": {
+    "criteria": {
+      "has_tripwire_hook": "2026-09-20 01:10:18 +0530"
     },
     "done": true
   },
@@ -7180,6 +7528,12 @@
     },
     "done": true
   },
+  "extendedmushrooms:recipes/redstone/mushroom_wood/glowshroom/glowshroom_chest_trapped": {
+    "criteria": {
+      "has_tripwire_hook": "2026-09-20 01:10:18 +0530"
+    },
+    "done": true
+  },
   "minecraft:recipes/misc/conduit": {
     "criteria": {
       "has_nautilus_shell": "2026-09-06 11:38:17 +0530"
@@ -7228,6 +7582,12 @@
     },
     "done": true
   },
+  "minecraft:recipes/building_blocks/polished_andesite_stairs_from_polished_andesite_stonecutting": {
+    "criteria": {
+      "has_polished_andesite": "2026-09-19 18:38:46 +0530"
+    },
+    "done": true
+  },
   "blue_skies:recipes/blue_skies_dungeon/glowing_blinding_stone": {
     "criteria": {
       "has_item": "2026-09-07 21:27:02 +0530"
@@ -7255,6 +7615,12 @@
   "immersivecooking:recipes/immersivecooking/spruce_quartz_counter": {
     "criteria": {
       "has_quartz_block": "2026-09-11 21:19:00 +0530"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/white_stained_glass_pane_from_glass_pane": {
+    "criteria": {
+      "has_glass_pane": "2026-09-20 01:07:57 +0530"
     },
     "done": true
   },
@@ -7324,9 +7690,21 @@
     },
     "done": true
   },
+  "adorn:recipes/crimson_table": {
+    "criteria": {
+      "has_key_item_0": "2026-09-19 23:56:19 +0530"
+    },
+    "done": true
+  },
   "minecraft:recipes/brewing/brewing_stand": {
     "criteria": {
       "has_blaze_rod": "2026-09-14 17:33:11 +0530"
+    },
+    "done": true
+  },
+  "adorn:recipes/magenta_table_lamp": {
+    "criteria": {
+      "has_key_item_0": "2026-09-19 18:35:46 +0530"
     },
     "done": true
   },
@@ -7498,9 +7876,21 @@
     },
     "done": true
   },
+  "minecraft:recipes/decorations/red_bed": {
+    "criteria": {
+      "has_red_wool": "2026-09-20 01:07:57 +0530"
+    },
+    "done": true
+  },
   "extendedmushrooms:recipes/misc/mushroom_spores": {
     "criteria": {
       "has_mushroom": "2026-09-06 11:13:24 +0530"
+    },
+    "done": true
+  },
+  "immersivecooking:recipes/immersivecooking/acacia_andesite_pantry": {
+    "criteria": {
+      "has_polished_andesite": "2026-09-19 18:38:46 +0530"
     },
     "done": true
   },
@@ -7606,6 +7996,12 @@
     },
     "done": true
   },
+  "cavesandcliffs:recipes/decorations/deepslate_brick_wall_from_polished_deepslate_stonecutting": {
+    "criteria": {
+      "has_polished_deepslate": "2026-09-19 21:42:39 +0530"
+    },
+    "done": true
+  },
   "minecraft:recipes/redstone/heavy_weighted_pressure_plate": {
     "criteria": {
       "has_iron_ingot": "2026-09-06 11:07:29 +0530"
@@ -7645,6 +8041,12 @@
   "adorn:recipes/polished_blackstone_post": {
     "criteria": {
       "has_key_item_0": "2026-09-12 17:13:54 +0530"
+    },
+    "done": true
+  },
+  "extendedmushrooms:recipes/redstone/mushroom_wood/colorless/mushroom_chest_trapped": {
+    "criteria": {
+      "has_tripwire_hook": "2026-09-20 01:10:18 +0530"
     },
     "done": true
   },
@@ -7726,6 +8128,12 @@
     },
     "done": true
   },
+  "minecraft:recipes/decorations/gray_stained_glass_pane_from_glass_pane": {
+    "criteria": {
+      "has_glass_pane": "2026-09-20 01:07:57 +0530"
+    },
+    "done": true
+  },
   "minecraft:recipes/building_blocks/stripped_spruce_wood": {
     "criteria": {
       "has_log": "2026-09-07 21:19:22 +0530"
@@ -7783,6 +8191,12 @@
   "minecraft:recipes/decorations/polished_blackstone_brick_wall_from_polished_blackstone_stonecutting": {
     "criteria": {
       "has_polished_blackstone": "2026-09-12 17:13:54 +0530"
+    },
+    "done": true
+  },
+  "adorn:recipes/crimson_step": {
+    "criteria": {
+      "has_key_item_0": "2026-09-19 23:56:19 +0530"
     },
     "done": true
   },

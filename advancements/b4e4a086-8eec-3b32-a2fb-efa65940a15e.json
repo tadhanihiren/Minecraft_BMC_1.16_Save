@@ -23,6 +23,12 @@
     },
     "done": true
   },
+  "minecraft:nether/obtain_crying_obsidian": {
+    "criteria": {
+      "crying_obsidian": "2026-09-20 01:05:55 +0530"
+    },
+    "done": true
+  },
   "minecraft:recipes/combat/iron_sword": {
     "criteria": {
       "has_iron_ingot": "2026-09-06 11:07:20 +0530"
@@ -32,6 +38,12 @@
   "minecraft:recipes/misc/light_blue_dye_from_blue_orchid": {
     "criteria": {
       "has_red_flower": "2026-09-06 23:06:18 +0530"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/gray_glazed_terracotta": {
+    "criteria": {
+      "has_gray_terracotta": "2026-09-20 01:06:52 +0530"
     },
     "done": true
   },
@@ -50,6 +62,12 @@
   "adorn:recipes/spruce_coffee_table": {
     "criteria": {
       "has_key_item_0": "2026-09-07 23:31:02 +0530"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/light_gray_dye_from_white_tulip": {
+    "criteria": {
+      "has_red_flower": "2026-09-20 01:06:52 +0530"
     },
     "done": true
   },
@@ -125,6 +143,12 @@
     },
     "done": true
   },
+  "upgradednetherite:recipes/upgraded_netherite_axe_smithing": {
+    "criteria": {
+      "has_netherite_axe": "2026-09-20 01:27:52 +0530"
+    },
+    "done": true
+  },
   "decorative_blocks:recipes/decorations/dark_oak_support": {
     "criteria": {
       "has_plank": "2026-09-06 15:16:23 +0530"
@@ -188,6 +212,12 @@
   "minecraft:recipes/misc/flower_banner_pattern": {
     "criteria": {
       "has_oxeye_daisy": "2026-09-06 11:37:25 +0530"
+    },
+    "done": true
+  },
+  "upgradednetherite:recipes/upgraded_netherite_bow_smithing": {
+    "criteria": {
+      "has_netherite_bow": "2026-09-20 01:26:01 +0530"
     },
     "done": true
   },
@@ -332,6 +362,12 @@
   "minecraft:recipes/building_blocks/pink_concrete_powder": {
     "criteria": {
       "has_gravel": "2026-09-06 12:35:18 +0530"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/emerald": {
+    "criteria": {
+      "has_emerald_block": "2026-09-20 01:18:03 +0530"
     },
     "done": true
   },
@@ -533,6 +569,12 @@
     },
     "done": true
   },
+  "supplementaries:recipes/hanging_sign_birch": {
+    "criteria": {
+      "has_plank": "2026-09-19 13:42:15 +0530"
+    },
+    "done": true
+  },
   "architects_palette:main/buy_fish_block": {
     "criteria": {
       "salmon_log": "2026-09-08 01:16:30 +0530"
@@ -548,6 +590,12 @@
   "minecraft:recipes/building_blocks/stone_brick_stairs_from_stone_stonecutting": {
     "criteria": {
       "has_stone": "2026-09-07 01:32:54 +0530"
+    },
+    "done": true
+  },
+  "supplementaries:recipes/hanging_sign_maple": {
+    "criteria": {
+      "has_plank": "2026-09-20 01:05:55 +0530"
     },
     "done": true
   },
@@ -635,8 +683,15 @@
     },
     "done": true
   },
+  "upgradednetherite:recipes/upgraded_netherite_boots_smithing": {
+    "criteria": {
+      "has_netherite_boots": "2026-09-20 01:22:25 +0530"
+    },
+    "done": true
+  },
   "morevillagers:all_professions_traded": {
     "criteria": {
+      "toolsmith": "2026-09-19 13:43:03 +0530",
       "fletcher": "2026-09-08 00:20:13 +0530",
       "woodworker": "2026-09-06 19:40:37 +0530",
       "librarian": "2026-09-08 00:22:53 +0530",
@@ -656,6 +711,12 @@
   "minecraft:recipes/combat/netherite_boots_smithing": {
     "criteria": {
       "has_netherite_ingot": "2026-09-07 21:10:58 +0530"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/light_blue_dye_from_blue_white_dye": {
+    "criteria": {
+      "has_blue_dye": "2026-09-20 01:01:20 +0530"
     },
     "done": true
   },
@@ -743,6 +804,12 @@
     },
     "done": true
   },
+  "minecraft:recipes/building_blocks/chiseled_polished_blackstone": {
+    "criteria": {
+      "has_polished_blackstone": "2026-09-20 00:59:29 +0530"
+    },
+    "done": true
+  },
   "betterendforge:recipes/betterendforge/golden_hammer": {
     "criteria": {
       "has_gold_ingot": "2026-09-06 11:52:49 +0530"
@@ -752,6 +819,12 @@
   "supplementaries:recipes/notice_board": {
     "criteria": {
       "has_item": "2026-09-08 00:22:16 +0530"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/cyan_dye": {
+    "criteria": {
+      "has_blue_dye": "2026-09-20 01:01:20 +0530"
     },
     "done": true
   },
@@ -767,9 +840,21 @@
     },
     "done": true
   },
+  "upgradednetherite_ultimate:recipes/upgraded_netherite_pickaxe_smithing": {
+    "criteria": {
+      "has_netherite_pickaxe": "2026-09-20 01:26:01 +0530"
+    },
+    "done": true
+  },
   "supplementaries:recipes/flute": {
     "criteria": {
       "has_item": "2026-09-11 00:05:08 +0530"
+    },
+    "done": true
+  },
+  "upgradednetherite:recipes/upgraded_netherite_helmet_smithing": {
+    "criteria": {
+      "has_netherite_helmet": "2026-09-20 01:22:26 +0530"
     },
     "done": true
   },
@@ -860,6 +945,12 @@
   "adorn:recipes/stone_brick_post": {
     "criteria": {
       "has_key_item_0": "2026-09-06 11:52:12 +0530"
+    },
+    "done": true
+  },
+  "minecraft:recipes/redstone/birch_button": {
+    "criteria": {
+      "has_planks": "2026-09-19 13:42:15 +0530"
     },
     "done": true
   },
@@ -1013,6 +1104,12 @@
     },
     "done": true
   },
+  "adorn:recipes/cobblestone_step": {
+    "criteria": {
+      "has_key_item_0": "2026-09-20 01:06:52 +0530"
+    },
+    "done": true
+  },
   "minecraft:recipes/building_blocks/birch_planks": {
     "criteria": {
       "has_logs": "2026-09-07 00:55:39 +0530"
@@ -1037,6 +1134,12 @@
     },
     "done": true
   },
+  "adorn:recipes/birch_kitchen_counter": {
+    "criteria": {
+      "has_key_item_0": "2026-09-19 13:42:15 +0530"
+    },
+    "done": true
+  },
   "adorn:recipes/nether_brick_post": {
     "criteria": {
       "has_key_item_0": "2026-09-07 22:57:30 +0530"
@@ -1052,6 +1155,12 @@
   "supplementaries:recipes/key": {
     "criteria": {
       "has_plank": "2026-09-06 11:52:49 +0530"
+    },
+    "done": true
+  },
+  "decorative_blocks:recipes/decorations/birch_support": {
+    "criteria": {
+      "has_plank": "2026-09-19 13:42:15 +0530"
     },
     "done": true
   },
@@ -1241,6 +1350,12 @@
     },
     "done": true
   },
+  "adorn:recipes/warped_shelf": {
+    "criteria": {
+      "has_key_item_0": "2026-09-20 01:02:06 +0530"
+    },
+    "done": true
+  },
   "comforts:sleeping_bag_gray_from_white": {
     "criteria": {
       "has_the_recipe": "2026-09-06 11:48:05 +0530",
@@ -1278,6 +1393,12 @@
     },
     "done": true
   },
+  "upgradednetherite:recipes/upgraded_netherite_pickaxe_smithing": {
+    "criteria": {
+      "has_netherite_pickaxe": "2026-09-20 01:26:01 +0530"
+    },
+    "done": true
+  },
   "upgradednetherite:recipes/netherite_horse_armor": {
     "criteria": {
       "has_netherite_ingot": "2026-09-07 21:10:58 +0530"
@@ -1302,6 +1423,12 @@
     },
     "done": true
   },
+  "minecraft:recipes/misc/purple_dye": {
+    "criteria": {
+      "has_blue_dye": "2026-09-20 01:01:20 +0530"
+    },
+    "done": true
+  },
   "blue_skies:recipes/blue_skies_dungeon/glowing_aquatic_stone": {
     "criteria": {
       "has_item": "2026-09-06 17:06:22 +0530"
@@ -1314,9 +1441,21 @@
     },
     "done": true
   },
+  "aquaculture:recipes/misc/gold_nugget_from_blasting": {
+    "criteria": {
+      "has_fishing_rod": "2026-09-20 00:55:37 +0530"
+    },
+    "done": true
+  },
   "minecraft:recipes/misc/black_dye": {
     "criteria": {
       "has_ink_sac": "2026-09-06 22:58:29 +0530"
+    },
+    "done": true
+  },
+  "supplementaries:recipes/sign_post_maple": {
+    "criteria": {
+      "has_plank": "2026-09-20 01:05:55 +0530"
     },
     "done": true
   },
@@ -1341,6 +1480,12 @@
   "comforts:sleeping_bag_yellow_from_white": {
     "criteria": {
       "has_sleeping_bag": "2026-09-06 11:48:05 +0530"
+    },
+    "done": true
+  },
+  "immersivecooking:recipes/immersivecooking/brick_blackstone_counter": {
+    "criteria": {
+      "has_polished_blackstone": "2026-09-20 00:59:29 +0530"
     },
     "done": true
   },
@@ -1404,6 +1549,18 @@
     },
     "done": true
   },
+  "immersivecooking:recipes/immersivecooking/warped_blackstone_pantry": {
+    "criteria": {
+      "has_polished_blackstone": "2026-09-20 00:59:29 +0530"
+    },
+    "done": true
+  },
+  "adorn:recipes/cobblestone_platform": {
+    "criteria": {
+      "has_key_item_0": "2026-09-20 01:06:52 +0530"
+    },
+    "done": true
+  },
   "adorn:recipes/dark_oak_platform": {
     "criteria": {
       "has_key_item_0": "2026-09-06 15:16:25 +0530"
@@ -1435,9 +1592,21 @@
     },
     "done": false
   },
+  "minecraft:recipes/misc/diamond": {
+    "criteria": {
+      "has_diamond_block": "2026-09-20 00:54:25 +0530"
+    },
+    "done": true
+  },
   "minecraft:recipes/misc/gold_nugget_from_smelting": {
     "criteria": {
       "has_golden_horse_armor": "2026-09-06 11:51:04 +0530"
+    },
+    "done": true
+  },
+  "cavesandcliffs:recipes/decorations/blue_candle": {
+    "criteria": {
+      "has_blue_dye": "2026-09-20 01:01:20 +0530"
     },
     "done": true
   },
@@ -1465,6 +1634,12 @@
     },
     "done": true
   },
+  "upgradednetherite_ultimate:recipes/upgraded_netherite_helmet_smithing": {
+    "criteria": {
+      "has_netherite_helmet": "2026-09-20 01:22:26 +0530"
+    },
+    "done": true
+  },
   "minecraft:recipes/tools/stone_axe": {
     "criteria": {
       "has_cobblestone": "2026-09-06 11:05:40 +0530"
@@ -1474,6 +1649,24 @@
   "minecraft:recipes/food/cooked_mutton": {
     "criteria": {
       "has_mutton": "2026-09-06 11:17:49 +0530"
+    },
+    "done": true
+  },
+  "adorn:recipes/warped_drawer": {
+    "criteria": {
+      "has_key_item_0": "2026-09-20 01:02:06 +0530"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/polished_blackstone_bricks_from_polished_blackstone_stonecutting": {
+    "criteria": {
+      "has_polished_blackstone": "2026-09-20 00:59:29 +0530"
+    },
+    "done": true
+  },
+  "adorn:recipes/warped_chair": {
+    "criteria": {
+      "has_key_item_0": "2026-09-20 01:02:06 +0530"
     },
     "done": true
   },
@@ -1519,6 +1712,12 @@
     },
     "done": true
   },
+  "upgradednetherite:recipes/upgraded_netherite_chestplate_smithing": {
+    "criteria": {
+      "has_netherite_chestplate": "2026-09-20 01:22:26 +0530"
+    },
+    "done": true
+  },
   "blue_skies:recipes/blue_skies_everdawn_blocks/coarse_lunar_dirt": {
     "criteria": {
       "has_item": "2026-09-06 12:35:18 +0530"
@@ -1546,6 +1745,12 @@
   "minecraft:nether/root": {
     "criteria": {
       "entered_nether": "2026-09-06 23:25:32 +0530"
+    },
+    "done": true
+  },
+  "adorn:recipes/birch_kitchen_sink": {
+    "criteria": {
+      "has_key_item_0": "2026-09-19 13:42:15 +0530"
     },
     "done": true
   },
@@ -1600,6 +1805,12 @@
   "minecraft:recipes/misc/netherite_scrap_from_blasting": {
     "criteria": {
       "has_ancient_debris": "2026-09-07 00:06:58 +0530"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/blue_stained_glass_pane_from_glass_pane": {
+    "criteria": {
+      "has_blue_dye": "2026-09-20 01:01:20 +0530"
     },
     "done": true
   },
@@ -1795,6 +2006,18 @@
     },
     "done": true
   },
+  "upgradednetherite_ultimate:recipes/upgraded_netherite_leggings_smithing": {
+    "criteria": {
+      "has_netherite_leggings": "2026-09-20 01:22:26 +0530"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/respawn_anchor": {
+    "criteria": {
+      "has_obsidian": "2026-09-20 01:05:55 +0530"
+    },
+    "done": true
+  },
   "minecraft:recipes/misc/bucket": {
     "criteria": {
       "has_iron_ingot": "2026-09-06 11:07:20 +0530"
@@ -1861,6 +2084,12 @@
     },
     "done": true
   },
+  "immersivecooking:recipes/immersivecooking/crimson_blackstone_counter": {
+    "criteria": {
+      "has_polished_blackstone": "2026-09-20 00:59:29 +0530"
+    },
+    "done": true
+  },
   "minecraft:recipes/decorations/white_banner": {
     "criteria": {
       "has_white_wool": "2026-09-06 11:17:49 +0530"
@@ -1876,6 +2105,12 @@
   "minecraft:recipes/building_blocks/light_blue_concrete_powder": {
     "criteria": {
       "has_gravel": "2026-09-06 12:35:18 +0530"
+    },
+    "done": true
+  },
+  "bygonenether:acquire_wither_waltz": {
+    "criteria": {
+      "music_disc": "2026-09-20 00:57:39 +0530"
     },
     "done": true
   },
@@ -1968,6 +2203,12 @@
   "adorn:root": {
     "criteria": {
       "has_wool": "2026-09-06 11:17:49 +0530"
+    },
+    "done": true
+  },
+  "farmersdelight:recipes/farmersdelight/rice": {
+    "criteria": {
+      "has_rice_panicle": "2026-09-19 13:23:14 +0530"
     },
     "done": true
   },
@@ -2139,6 +2380,12 @@
     },
     "done": true
   },
+  "minecraft:recipes/building_blocks/chiseled_polished_blackstone_from_polished_blackstone_stonecutting": {
+    "criteria": {
+      "has_polished_blackstone": "2026-09-20 00:59:29 +0530"
+    },
+    "done": true
+  },
   "minecraft:recipes/building_blocks/polished_blackstone": {
     "criteria": {
       "has_blackstone": "2026-09-07 22:56:56 +0530"
@@ -2235,6 +2482,12 @@
     },
     "done": true
   },
+  "upgradednetherite_ultimate:recipes/upgraded_netherite_bow_smithing": {
+    "criteria": {
+      "has_netherite_bow": "2026-09-20 01:26:01 +0530"
+    },
+    "done": true
+  },
   "minecraft:recipes/food/baked_potato": {
     "criteria": {
       "has_potato": "2026-09-06 15:05:01 +0530"
@@ -2253,9 +2506,21 @@
     },
     "done": true
   },
+  "minecraft:recipes/decorations/magenta_carpet_from_white_carpet": {
+    "criteria": {
+      "has_magenta_dye": "2026-09-20 01:06:52 +0530"
+    },
+    "done": true
+  },
   "cavesandcliffs:recipes/decorations/yellow_candle": {
     "criteria": {
       "has_yellow_dye": "2026-09-11 23:38:40 +0530"
+    },
+    "done": true
+  },
+  "minecraft:recipes/redstone/birch_door": {
+    "criteria": {
+      "has_planks": "2026-09-19 13:42:15 +0530"
     },
     "done": true
   },
@@ -2266,7 +2531,8 @@
       "grindstone": "2026-09-06 21:24:42 +0530",
       "gardeningtable": "2026-09-06 21:23:56 +0530",
       "blastfurnace": "2026-09-07 22:36:43 +0530",
-      "woodworkingtable": "2026-09-06 21:22:50 +0530"
+      "woodworkingtable": "2026-09-06 21:22:50 +0530",
+      "cauldron": "2026-09-20 00:55:47 +0530"
     },
     "done": false
   },
@@ -2279,6 +2545,12 @@
   "comforts:sleeping_bag_light_gray_from_white": {
     "criteria": {
       "has_sleeping_bag": "2026-09-06 11:48:05 +0530"
+    },
+    "done": true
+  },
+  "immersivecooking:recipes/immersivecooking/birch_blackstone_counter": {
+    "criteria": {
+      "has_polished_blackstone": "2026-09-20 00:59:29 +0530"
     },
     "done": true
   },
@@ -2333,6 +2605,12 @@
   "minecraft:recipes/decorations/blue_bed_from_white_bed": {
     "criteria": {
       "has_bed": "2026-09-10 20:36:03 +0530"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/birch_fence": {
+    "criteria": {
+      "has_planks": "2026-09-19 13:42:15 +0530"
     },
     "done": true
   },
@@ -2678,9 +2956,27 @@
     },
     "done": true
   },
+  "immersivecooking:recipes/immersivecooking/crimson_blackstone_pantry": {
+    "criteria": {
+      "has_polished_blackstone": "2026-09-20 00:59:29 +0530"
+    },
+    "done": true
+  },
   "minecraft:recipes/decorations/blackstone_wall": {
     "criteria": {
       "has_blackstone": "2026-09-07 22:56:56 +0530"
+    },
+    "done": true
+  },
+  "decorative_blocks:recipes/decorations/warped_palisade": {
+    "criteria": {
+      "has_log": "2026-09-20 01:06:52 +0530"
+    },
+    "done": true
+  },
+  "adorn:recipes/byg/maple_kitchen_cupboard": {
+    "criteria": {
+      "has_key_item_0": "2026-09-20 01:05:55 +0530"
     },
     "done": true
   },
@@ -2693,6 +2989,18 @@
   "omnis:recipes/omnis/ravaged_battle_axe": {
     "criteria": {
       "has_ravaged_metal": "2026-09-06 21:17:14 +0530"
+    },
+    "done": true
+  },
+  "immersivecooking:recipes/immersivecooking/oak_blackstone_counter": {
+    "criteria": {
+      "has_polished_blackstone": "2026-09-20 00:59:29 +0530"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/polished_blackstone_stairs_from_polished_blackstone_stonecutting": {
+    "criteria": {
+      "has_polished_blackstone": "2026-09-20 00:59:29 +0530"
     },
     "done": true
   },
@@ -2798,6 +3106,12 @@
     },
     "done": true
   },
+  "immersivecooking:recipes/immersivecooking/warped_blackstone_counter": {
+    "criteria": {
+      "has_polished_blackstone": "2026-09-20 00:59:29 +0530"
+    },
+    "done": true
+  },
   "comforts:sleeping_bag_red_from_white": {
     "criteria": {
       "has_sleeping_bag": "2026-09-06 11:48:05 +0530"
@@ -2807,6 +3121,12 @@
   "betterendforge:recipes/betterendforge/thallasium_axe_smithing": {
     "criteria": {
       "has_stick": "2026-09-06 11:02:37 +0530"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/magenta_dye_from_blue_red_pink": {
+    "criteria": {
+      "has_blue_dye": "2026-09-20 01:01:20 +0530"
     },
     "done": true
   },
@@ -2840,9 +3160,27 @@
     },
     "done": true
   },
+  "minecraft:recipes/decorations/blue_carpet_from_white_carpet": {
+    "criteria": {
+      "has_blue_dye": "2026-09-20 01:01:20 +0530"
+    },
+    "done": true
+  },
   "adorn:recipes/byg/aspen_kitchen_sink": {
     "criteria": {
       "has_key_item_0": "2026-09-11 00:46:57 +0530"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/polished_blackstone_slab_from_polished_blackstone_stonecutting": {
+    "criteria": {
+      "has_polished_blackstone": "2026-09-20 00:59:29 +0530"
+    },
+    "done": true
+  },
+  "immersivecooking:recipes/immersivecooking/acacia_blackstone_counter": {
+    "criteria": {
+      "has_polished_blackstone": "2026-09-20 00:59:29 +0530"
     },
     "done": true
   },
@@ -2873,6 +3211,18 @@
   "minecraft:recipes/decorations/composter": {
     "criteria": {
       "has_wood_slab": "2026-09-06 15:16:25 +0530"
+    },
+    "done": true
+  },
+  "adorn:recipes/warped_step": {
+    "criteria": {
+      "has_key_item_0": "2026-09-20 01:02:06 +0530"
+    },
+    "done": true
+  },
+  "adorn:recipes/warped_coffee_table": {
+    "criteria": {
+      "has_key_item_0": "2026-09-20 01:02:06 +0530"
     },
     "done": true
   },
@@ -2930,6 +3280,12 @@
     },
     "done": true
   },
+  "minecraft:recipes/building_blocks/polished_blackstone_stairs": {
+    "criteria": {
+      "has_polished_blackstone": "2026-09-20 00:59:29 +0530"
+    },
+    "done": true
+  },
   "minecraft:recipes/transportation/carrot_on_a_stick": {
     "criteria": {
       "has_carrot": "2026-09-06 16:59:26 +0530"
@@ -2975,6 +3331,12 @@
   "minecraft:recipes/building_blocks/polished_blackstone_brick_slab_from_blackstone_stonecutting": {
     "criteria": {
       "has_blackstone": "2026-09-07 22:56:56 +0530"
+    },
+    "done": true
+  },
+  "minecraft:recipes/redstone/birch_trapdoor": {
+    "criteria": {
+      "has_planks": "2026-09-19 13:42:15 +0530"
     },
     "done": true
   },
@@ -3038,15 +3400,33 @@
     },
     "done": true
   },
+  "supplementaries:recipes/sign_post_birch": {
+    "criteria": {
+      "has_plank": "2026-09-19 13:42:15 +0530"
+    },
+    "done": true
+  },
   "decorative_blocks:recipes/decorations/lattice": {
     "criteria": {
       "has_stick": "2026-09-06 11:02:37 +0530"
     },
     "done": true
   },
+  "adorn:recipes/warped_table": {
+    "criteria": {
+      "has_key_item_0": "2026-09-20 01:02:06 +0530"
+    },
+    "done": true
+  },
   "minecraft:recipes/building_blocks/pink_stained_glass": {
     "criteria": {
       "has_glass": "2026-09-07 01:32:47 +0530"
+    },
+    "done": true
+  },
+  "immersivecooking:recipes/immersivecooking/spruce_blackstone_pantry": {
+    "criteria": {
+      "has_polished_blackstone": "2026-09-20 00:59:29 +0530"
     },
     "done": true
   },
@@ -3089,6 +3469,18 @@
   "minecraft:recipes/building_blocks/black_stained_glass": {
     "criteria": {
       "has_glass": "2026-09-07 01:32:47 +0530"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/polished_blackstone_brick_stairs_from_polished_blackstone_stonecutting": {
+    "criteria": {
+      "has_polished_blackstone": "2026-09-20 00:59:29 +0530"
+    },
+    "done": true
+  },
+  "minecraft:recipes/immersivecooking/blackstone_countertop_from_polished_blackstone_stonecutting": {
+    "criteria": {
+      "has_polished_blackstone": "2026-09-20 00:59:29 +0530"
     },
     "done": true
   },
@@ -3161,6 +3553,12 @@
   "minecraft:recipes/decorations/yellow_stained_glass_pane_from_glass_pane": {
     "criteria": {
       "has_yellow_dye": "2026-09-11 23:38:40 +0530"
+    },
+    "done": true
+  },
+  "adorn:recipes/birch_post": {
+    "criteria": {
+      "has_key_item_0": "2026-09-19 13:42:15 +0530"
     },
     "done": true
   },
@@ -3284,6 +3682,12 @@
     },
     "done": true
   },
+  "farmersdelight:recipes/farmersdelight/rice_bag": {
+    "criteria": {
+      "has_rice": "2026-09-20 01:05:55 +0530"
+    },
+    "done": true
+  },
   "minecraft:recipes/tools/shears": {
     "criteria": {
       "has_iron_ingot": "2026-09-06 11:07:20 +0530"
@@ -3324,6 +3728,12 @@
   "minecraft:recipes/building_blocks/polished_blackstone_brick_slab_from_polished_blackstone_bricks_stonecutting": {
     "criteria": {
       "has_polished_blackstone_bricks": "2026-09-06 23:44:56 +0530"
+    },
+    "done": true
+  },
+  "minecraft:recipes/redstone/polished_blackstone_button": {
+    "criteria": {
+      "has_polished_blackstone": "2026-09-20 00:59:29 +0530"
     },
     "done": true
   },
@@ -3419,9 +3829,21 @@
     },
     "done": true
   },
+  "immersivecooking:recipes/immersivecooking/jungle_blackstone_pantry": {
+    "criteria": {
+      "has_polished_blackstone": "2026-09-20 00:59:29 +0530"
+    },
+    "done": true
+  },
   "dungeons_plus:adventure/find_snowy_temple": {
     "criteria": {
       "structure": "2026-09-07 23:27:36 +0530"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/polished_blackstone_wall_from_polished_blackstone_stonecutting": {
+    "criteria": {
+      "has_polished_blackstone": "2026-09-20 00:59:29 +0530"
     },
     "done": true
   },
@@ -3443,6 +3865,12 @@
     },
     "done": true
   },
+  "aquaculture:recipes/misc/gold_nugget_from_smelting": {
+    "criteria": {
+      "has_fishing_rod": "2026-09-20 00:55:37 +0530"
+    },
+    "done": true
+  },
   "supplementaries:recipes/bamboo_spikes": {
     "criteria": {
       "has_plank": "2026-09-11 00:05:08 +0530"
@@ -3452,6 +3880,12 @@
   "minecraft:recipes/misc/brick": {
     "criteria": {
       "has_clay_ball": "2026-09-06 13:39:36 +0530"
+    },
+    "done": true
+  },
+  "immersivecooking:recipes/immersivecooking/oak_blackstone_pantry": {
+    "criteria": {
+      "has_polished_blackstone": "2026-09-20 00:59:29 +0530"
     },
     "done": true
   },
@@ -3581,6 +4015,12 @@
     },
     "done": true
   },
+  "upgradednetherite_ultimate:recipes/upgraded_netherite_boots_smithing": {
+    "criteria": {
+      "has_netherite_boots": "2026-09-20 01:22:25 +0530"
+    },
+    "done": true
+  },
   "cavesandcliffs:recipes/building_blocks/smooth_basalt": {
     "criteria": {
       "has_basalt": "2026-09-06 23:50:35 +0530"
@@ -3629,6 +4069,18 @@
     },
     "done": true
   },
+  "upgradednetherite:recipes/upgraded_netherite_leggings_smithing": {
+    "criteria": {
+      "has_netherite_leggings": "2026-09-20 01:22:26 +0530"
+    },
+    "done": true
+  },
+  "minecraft:recipes/immersivecooking/blackstone_countertop_from_polished_blackstone_slab_stonecutting": {
+    "criteria": {
+      "has_polished_blackstone": "2026-09-20 00:59:29 +0530"
+    },
+    "done": true
+  },
   "minecraft:recipes/redstone/iron_trapdoor": {
     "criteria": {
       "has_iron_ingot": "2026-09-06 11:07:20 +0530"
@@ -3641,6 +4093,12 @@
     },
     "done": true
   },
+  "decorative_blocks_abnormals:recipes/red_mushroom_palisade": {
+    "criteria": {
+      "has_log": "2026-09-20 00:59:11 +0530"
+    },
+    "done": true
+  },
   "minecraft:recipes/building_blocks/prismarine_slab_from_prismarine_stonecutting": {
     "criteria": {
       "has_prismarine": "2026-09-06 11:40:33 +0530"
@@ -3650,6 +4108,12 @@
   "farmersdelight:recipes/farmersdelight/cutting_board": {
     "criteria": {
       "has_stick": "2026-09-06 11:02:37 +0530"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/birch_sign": {
+    "criteria": {
+      "has_birch_planks": "2026-09-19 13:42:15 +0530"
     },
     "done": true
   },
@@ -3710,6 +4174,12 @@
   "minecraft:recipes/tools/diamond_pickaxe": {
     "criteria": {
       "has_diamond": "2026-09-06 13:31:12 +0530"
+    },
+    "done": true
+  },
+  "adorn:recipes/warped_platform": {
+    "criteria": {
+      "has_key_item_0": "2026-09-20 01:02:06 +0530"
     },
     "done": true
   },
@@ -3813,6 +4283,12 @@
     },
     "done": true
   },
+  "decorative_blocks:recipes/decorations/birch_seat": {
+    "criteria": {
+      "has_plank": "2026-09-19 13:42:15 +0530"
+    },
+    "done": true
+  },
   "supplementaries:recipes/hanging_sign_jungle": {
     "criteria": {
       "has_plank": "2026-09-11 23:04:59 +0530"
@@ -3873,6 +4349,12 @@
     },
     "done": true
   },
+  "minecraft:recipes/redstone/polished_blackstone_pressure_plate": {
+    "criteria": {
+      "has_polished_blackstone": "2026-09-20 00:59:29 +0530"
+    },
+    "done": true
+  },
   "minecraft:recipes/decorations/nether_brick_wall_from_nether_bricks_stonecutting": {
     "criteria": {
       "has_nether_bricks": "2026-09-07 22:52:11 +0530"
@@ -3906,6 +4388,12 @@
   "decorative_blocks_abnormals:recipes/red_mushroom_seat": {
     "criteria": {
       "has_plank": "2026-09-06 12:04:10 +0530"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/magenta_stained_glass_pane_from_glass_pane": {
+    "criteria": {
+      "has_magenta_dye": "2026-09-20 01:06:52 +0530"
     },
     "done": true
   },
@@ -3972,6 +4460,12 @@
   "bygonenether:root": {
     "criteria": {
       "entered_nether": "2026-09-06 23:25:32 +0530"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/polished_blackstone_brick_slab_from_polished_blackstone_stonecutting": {
+    "criteria": {
+      "has_polished_blackstone": "2026-09-20 00:59:29 +0530"
     },
     "done": true
   },
@@ -4083,6 +4577,12 @@
     },
     "done": true
   },
+  "adorn:recipes/byg/maple_kitchen_counter": {
+    "criteria": {
+      "has_key_item_0": "2026-09-20 01:05:55 +0530"
+    },
+    "done": true
+  },
   "minecraft:recipes/building_blocks/gray_concrete_powder": {
     "criteria": {
       "has_gravel": "2026-09-06 12:35:18 +0530"
@@ -4092,6 +4592,12 @@
   "blue_skies:recipes/blue_skies_dungeon/glowing_life_stone": {
     "criteria": {
       "has_item": "2026-09-06 17:06:22 +0530"
+    },
+    "done": true
+  },
+  "upgradednetherite_ultimate:recipes/upgraded_netherite_axe_smithing": {
+    "criteria": {
+      "has_netherite_axe": "2026-09-20 01:27:52 +0530"
     },
     "done": true
   },
@@ -4131,6 +4637,12 @@
     },
     "done": true
   },
+  "immersivecooking:recipes/immersivecooking/jungle_blackstone_counter": {
+    "criteria": {
+      "has_polished_blackstone": "2026-09-20 00:59:29 +0530"
+    },
+    "done": true
+  },
   "minecraft:recipes/building_blocks/glowstone": {
     "criteria": {
       "has_glowstone_dust": "2026-09-06 17:06:22 +0530"
@@ -4167,6 +4679,12 @@
     },
     "done": true
   },
+  "adorn:recipes/warped_bench": {
+    "criteria": {
+      "has_key_item_0": "2026-09-20 01:02:06 +0530"
+    },
+    "done": true
+  },
   "minecraft:recipes/building_blocks/black_concrete_powder": {
     "criteria": {
       "has_gravel": "2026-09-06 12:35:18 +0530"
@@ -4189,6 +4707,12 @@
   "minecraft:recipes/building_blocks/prismarine_brick_slab_from_prismarine_stonecutting": {
     "criteria": {
       "has_prismarine_brick": "2026-09-06 11:40:19 +0530"
+    },
+    "done": true
+  },
+  "minecraft:recipes/redstone/birch_fence_gate": {
+    "criteria": {
+      "has_planks": "2026-09-19 13:42:15 +0530"
     },
     "done": true
   },
@@ -4240,9 +4764,27 @@
     },
     "done": true
   },
+  "upgradednetherite_ultimate:recipes/upgraded_netherite_chestplate_smithing": {
+    "criteria": {
+      "has_netherite_chestplate": "2026-09-20 01:22:26 +0530"
+    },
+    "done": true
+  },
+  "immersivecooking:recipes/immersivecooking/birch_blackstone_pantry": {
+    "criteria": {
+      "has_polished_blackstone": "2026-09-20 00:59:29 +0530"
+    },
+    "done": true
+  },
   "minecraft:recipes/building_blocks/chiseled_nether_bricks": {
     "criteria": {
       "has_nether_bricks": "2026-09-07 22:52:11 +0530"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/warped_planks": {
+    "criteria": {
+      "has_logs": "2026-09-20 01:06:52 +0530"
     },
     "done": true
   },
@@ -4409,6 +4951,12 @@
     },
     "done": true
   },
+  "cavesandcliffs:recipes/decorations/magenta_candle": {
+    "criteria": {
+      "has_magenta_dye": "2026-09-20 01:06:52 +0530"
+    },
+    "done": true
+  },
   "minecraft:husbandry/plant_seed": {
     "criteria": {
       "wheat": "2026-09-06 20:23:10 +0530"
@@ -4430,6 +4978,24 @@
   "minecraft:nether/find_bastion": {
     "criteria": {
       "bastion": "2026-09-06 23:44:35 +0530"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/polished_blackstone_slab": {
+    "criteria": {
+      "has_polished_blackstone": "2026-09-20 00:59:29 +0530"
+    },
+    "done": true
+  },
+  "immersivecooking:recipes/immersivecooking/dark_oak_blackstone_pantry": {
+    "criteria": {
+      "has_polished_blackstone": "2026-09-20 00:59:29 +0530"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/red_dye_from_tulip": {
+    "criteria": {
+      "has_red_flower": "2026-09-20 01:06:52 +0530"
     },
     "done": true
   },
@@ -4526,6 +5092,12 @@
   "blue_skies:recipes/blue_skies_everdawn_blocks/maple_bookshelf": {
     "criteria": {
       "has_item": "2026-09-06 16:09:13 +0530"
+    },
+    "done": true
+  },
+  "immersivecooking:recipes/immersivecooking/nether_brick_blackstone_counter": {
+    "criteria": {
+      "has_polished_blackstone": "2026-09-20 00:59:29 +0530"
     },
     "done": true
   },
@@ -4640,6 +5212,12 @@
   "minecraft:recipes/food/rabbit_stew_from_red_mushroom": {
     "criteria": {
       "has_cooked_rabbit": "2026-09-08 01:24:33 +0530"
+    },
+    "done": true
+  },
+  "minecraft:recipes/redstone/birch_pressure_plate": {
+    "criteria": {
+      "has_planks": "2026-09-19 13:42:15 +0530"
     },
     "done": true
   },
@@ -4832,6 +5410,12 @@
     },
     "done": true
   },
+  "minecraft:recipes/building_blocks/warped_hyphae": {
+    "criteria": {
+      "has_log": "2026-09-20 01:06:52 +0530"
+    },
+    "done": true
+  },
   "supplementaries:recipes/gold_door": {
     "criteria": {
       "has_plank": "2026-09-06 11:52:49 +0530"
@@ -4862,6 +5446,12 @@
     },
     "done": true
   },
+  "minecraft:recipes/building_blocks/birch_slab": {
+    "criteria": {
+      "has_planks": "2026-09-19 13:42:15 +0530"
+    },
+    "done": true
+  },
   "minecraft:recipes/redstone/note_block": {
     "criteria": {
       "has_redstone": "2026-09-06 13:11:55 +0530"
@@ -4871,6 +5461,12 @@
   "farmersdelight:recipes/farmersdelight/grilled_salmon": {
     "criteria": {
       "has_salmon": "2026-09-06 15:02:06 +0530"
+    },
+    "done": true
+  },
+  "immersivecooking:recipes/immersivecooking/spruce_blackstone_counter": {
+    "criteria": {
+      "has_polished_blackstone": "2026-09-20 00:59:29 +0530"
     },
     "done": true
   },
@@ -4889,6 +5485,12 @@
   "minecraft:recipes/building_blocks/polished_blackstone_stairs_from_blackstone_stonecutting": {
     "criteria": {
       "has_blackstone": "2026-09-07 22:56:56 +0530"
+    },
+    "done": true
+  },
+  "adorn:recipes/byg/maple_kitchen_sink": {
+    "criteria": {
+      "has_key_item_0": "2026-09-20 01:05:55 +0530"
     },
     "done": true
   },
@@ -4940,6 +5542,12 @@
     },
     "done": true
   },
+  "minecraft:recipes/misc/magenta_dye_from_blue_red_white_dye": {
+    "criteria": {
+      "has_blue_dye": "2026-09-20 01:01:20 +0530"
+    },
+    "done": true
+  },
   "blue_skies:recipes/blue_skies_everdawn_blocks/dusk_bookshelf": {
     "criteria": {
       "has_item": "2026-09-06 16:09:13 +0530"
@@ -4979,6 +5587,12 @@
   "decorative_blocks_abnormals:recipes/rosewood_palisade": {
     "criteria": {
       "has_log": "2026-09-10 21:10:54 +0530"
+    },
+    "done": true
+  },
+  "decorative_blocks:recipes/decorations/spruce_beam": {
+    "criteria": {
+      "has_stripped_log": "2026-09-20 00:59:12 +0530"
     },
     "done": true
   },
@@ -5090,6 +5704,12 @@
     },
     "done": true
   },
+  "farmersdelight:recipes/farmersdelight/rice_bale": {
+    "criteria": {
+      "has_rice_panicle": "2026-09-19 13:23:14 +0530"
+    },
+    "done": true
+  },
   "adorn:recipes/byg/pine_kitchen_counter": {
     "criteria": {
       "has_key_item_0": "2026-09-06 11:45:11 +0530"
@@ -5111,6 +5731,12 @@
   "decorative_blocks:recipes/decorations/warped_support": {
     "criteria": {
       "has_plank": "2026-09-06 23:08:27 +0530"
+    },
+    "done": true
+  },
+  "architects_palette:main/buy_plating": {
+    "criteria": {
+      "plating": "2026-09-20 00:59:11 +0530"
     },
     "done": true
   },
@@ -5171,6 +5797,18 @@
   "minecraft:recipes/building_blocks/dark_oak_stairs": {
     "criteria": {
       "has_planks": "2026-09-06 15:16:23 +0530"
+    },
+    "done": true
+  },
+  "immersivecooking:recipes/immersivecooking/dark_oak_blackstone_counter": {
+    "criteria": {
+      "has_polished_blackstone": "2026-09-20 00:59:29 +0530"
+    },
+    "done": true
+  },
+  "shieldexp:get_netherite_shield": {
+    "criteria": {
+      "netherite_shield": "2026-09-20 01:27:52 +0530"
     },
     "done": true
   },
@@ -5427,6 +6065,12 @@
     },
     "done": true
   },
+  "minecraft:recipes/building_blocks/polished_blackstone_bricks": {
+    "criteria": {
+      "has_polished_blackstone": "2026-09-20 00:59:29 +0530"
+    },
+    "done": true
+  },
   "supplementaries:recipes/stone_lamp": {
     "criteria": {
       "has_item": "2026-09-06 23:31:19 +0530"
@@ -5436,6 +6080,12 @@
   "farmersdelight:recipes/farmersdelight/cooked_bacon": {
     "criteria": {
       "cooked_bacon": "2026-09-07 21:45:58 +0530"
+    },
+    "done": true
+  },
+  "adorn:recipes/byg/maple_post": {
+    "criteria": {
+      "has_key_item_0": "2026-09-20 01:05:55 +0530"
     },
     "done": true
   },
@@ -5493,6 +6143,12 @@
     },
     "done": true
   },
+  "upgradednetherite_ultimate:recipes/upgraded_netherite_sword_smithing": {
+    "criteria": {
+      "has_netherite_sword": "2026-09-20 01:26:01 +0530"
+    },
+    "done": true
+  },
   "supplementaries:recipes/hanging_sign_spruce": {
     "criteria": {
       "has_plank": "2026-09-06 14:53:30 +0530"
@@ -5538,6 +6194,12 @@
   "minecraft:recipes/misc/conduit": {
     "criteria": {
       "has_nautilus_shell": "2026-09-06 11:36:30 +0530"
+    },
+    "done": true
+  },
+  "adorn:recipes/birch_kitchen_cupboard": {
+    "criteria": {
+      "has_key_item_0": "2026-09-19 13:42:15 +0530"
     },
     "done": true
   },
@@ -5664,6 +6326,12 @@
   "minecraft:recipes/building_blocks/jungle_slab": {
     "criteria": {
       "has_planks": "2026-09-11 23:04:59 +0530"
+    },
+    "done": true
+  },
+  "immersivecooking:recipes/immersivecooking/acacia_blackstone_pantry": {
+    "criteria": {
+      "has_polished_blackstone": "2026-09-20 00:59:29 +0530"
     },
     "done": true
   },
@@ -5871,6 +6539,12 @@
     },
     "done": true
   },
+  "minecraft:nether/netherite_armor": {
+    "criteria": {
+      "netherite_armor": "2026-09-20 01:22:25 +0530"
+    },
+    "done": true
+  },
   "farmersdelight:recipes/farmersdelight/onion_crate": {
     "criteria": {
       "has_onion": "2026-09-06 22:52:05 +0530"
@@ -5883,6 +6557,12 @@
     },
     "done": true
   },
+  "minecraft:recipes/building_blocks/birch_stairs": {
+    "criteria": {
+      "has_planks": "2026-09-19 13:42:15 +0530"
+    },
+    "done": true
+  },
   "supplementaries:recipes/hanging_sign_pine": {
     "criteria": {
       "has_plank": "2026-09-06 11:45:11 +0530"
@@ -5892,6 +6572,12 @@
   "minecraft:recipes/building_blocks/jungle_stairs": {
     "criteria": {
       "has_planks": "2026-09-11 23:04:59 +0530"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/polished_blackstone_wall": {
+    "criteria": {
+      "has_polished_blackstone": "2026-09-20 00:59:29 +0530"
     },
     "done": true
   },
@@ -5928,6 +6614,12 @@
   "omnis:recipes/omnis/vexwart_block": {
     "criteria": {
       "has_tear_of_vex": "2026-09-06 17:34:31 +0530"
+    },
+    "done": true
+  },
+  "adorn:recipes/polished_blackstone_post": {
+    "criteria": {
+      "has_key_item_0": "2026-09-20 00:59:29 +0530"
     },
     "done": true
   },
@@ -5997,6 +6689,18 @@
     },
     "done": true
   },
+  "upgradednetherite:recipes/upgraded_netherite_sword_smithing": {
+    "criteria": {
+      "has_netherite_sword": "2026-09-20 01:26:01 +0530"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/stripped_spruce_wood": {
+    "criteria": {
+      "has_log": "2026-09-20 00:59:12 +0530"
+    },
+    "done": true
+  },
   "minecraft:recipes/decorations/yellow_carpet_from_white_carpet": {
     "criteria": {
       "has_yellow_dye": "2026-09-11 23:38:40 +0530"
@@ -6036,6 +6740,12 @@
   "adorn:recipes/spruce_step": {
     "criteria": {
       "has_key_item_0": "2026-09-07 23:31:02 +0530"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/polished_blackstone_brick_wall_from_polished_blackstone_stonecutting": {
+    "criteria": {
+      "has_polished_blackstone": "2026-09-20 00:59:29 +0530"
     },
     "done": true
   },

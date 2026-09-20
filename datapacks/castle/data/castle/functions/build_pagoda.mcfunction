@@ -1,0 +1,8 @@
+function castle:pagoda_part_0
+function castle:pagoda_part_1
+function castle:pagoda_part_2
+function castle:pagoda_part_3
+function castle:pagoda_part_4
+function castle:pagoda_part_5
+function castle:pagoda_part_6
+function castle:pagoda_part_7

@@ -1,0 +1,2 @@
+function castle:restore_old_part_0
+function castle:restore_old_part_1
