@@ -131,6 +131,12 @@
     },
     "done": true
   },
+  "conjurer_illager:find_theatre": {
+    "criteria": {
+      "in_city": "2026-09-20 22:56:05 +0530"
+    },
+    "done": true
+  },
   "minecraft:recipes/building_blocks/dark_prismarine_stairs_from_dark_prismarine_stonecutting": {
     "criteria": {
       "has_dark_prismarine": "2026-09-06 11:40:32 +0530"
@@ -233,6 +239,12 @@
     },
     "done": true
   },
+  "minecraft:recipes/building_blocks/lime_terracotta": {
+    "criteria": {
+      "has_terracotta": "2026-09-20 23:03:53 +0530"
+    },
+    "done": true
+  },
   "minecraft:recipes/building_blocks/smooth_quartz_slab_from_smooth_quartz_stonecutting": {
     "criteria": {
       "has_smooth_quartz": "2026-09-11 01:10:34 +0530"
@@ -272,6 +284,12 @@
   "minecraft:recipes/redstone/dark_oak_door": {
     "criteria": {
       "has_planks": "2026-09-06 15:16:23 +0530"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/light_gray_terracotta": {
+    "criteria": {
+      "has_terracotta": "2026-09-20 23:03:53 +0530"
     },
     "done": true
   },
@@ -512,6 +530,12 @@
   "adorn:recipes/spruce_bench": {
     "criteria": {
       "has_key_item_0": "2026-09-07 23:31:02 +0530"
+    },
+    "done": true
+  },
+  "dungeons_arise:find_thornborn_towers": {
+    "criteria": {
+      "location0": "2026-09-20 23:03:10 +0530"
     },
     "done": true
   },
@@ -1110,6 +1134,12 @@
     },
     "done": true
   },
+  "twilightforest:magic_map": {
+    "criteria": {
+      "map": "2026-09-20 22:58:08 +0530"
+    },
+    "done": true
+  },
   "minecraft:recipes/building_blocks/birch_planks": {
     "criteria": {
       "has_logs": "2026-09-07 00:55:39 +0530"
@@ -1634,6 +1664,12 @@
     },
     "done": true
   },
+  "minecraft:recipes/building_blocks/white_terracotta": {
+    "criteria": {
+      "has_terracotta": "2026-09-20 23:03:53 +0530"
+    },
+    "done": true
+  },
   "upgradednetherite_ultimate:recipes/upgraded_netherite_helmet_smithing": {
     "criteria": {
       "has_netherite_helmet": "2026-09-20 01:22:26 +0530"
@@ -2084,6 +2120,12 @@
     },
     "done": true
   },
+  "extendedmushrooms:recipes/misc/honeycomb_shred": {
+    "criteria": {
+      "has_honeycomb": "2026-09-20 23:18:30 +0530"
+    },
+    "done": true
+  },
   "immersivecooking:recipes/immersivecooking/crimson_blackstone_counter": {
     "criteria": {
       "has_polished_blackstone": "2026-09-20 00:59:29 +0530"
@@ -2123,6 +2165,12 @@
   "minecraft:recipes/decorations/mossy_cobblestone_wall": {
     "criteria": {
       "has_mossy_cobblestone": "2026-09-11 00:53:31 +0530"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/orange_terracotta": {
+    "criteria": {
+      "has_terracotta": "2026-09-20 23:03:53 +0530"
     },
     "done": true
   },
@@ -2177,6 +2225,12 @@
   "minecraft:nether/get_wither_skull": {
     "criteria": {
       "wither_skull": "2026-09-10 23:00:01 +0530"
+    },
+    "done": true
+  },
+  "twilightforest:alt/treasures/magic_map": {
+    "criteria": {
+      "magic_map": "2026-09-20 22:58:08 +0530"
     },
     "done": true
   },
@@ -2500,6 +2554,12 @@
     },
     "done": true
   },
+  "upgradednetherite:recipes/upgraded_netherite_crossbow_smithing": {
+    "criteria": {
+      "has_netherite_crossbow": "2026-09-20 15:43:16 +0530"
+    },
+    "done": true
+  },
   "farmersdelight:recipes/farmersdelight/mixed_salad": {
     "criteria": {
       "has_bowl": "2026-09-06 21:57:05 +0530"
@@ -2658,7 +2718,8 @@
   },
   "farmersdelight:main/master_chef": {
     "criteria": {
-      "fish_stew": "2026-09-07 22:19:21 +0530"
+      "fish_stew": "2026-09-07 22:19:21 +0530",
+      "beef_stew": "2026-09-20 23:05:58 +0530"
     },
     "done": false
   },
@@ -2761,6 +2822,12 @@
   "minecraft:recipes/decorations/painting": {
     "criteria": {
       "has_wool": "2026-09-06 11:17:49 +0530"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/red_terracotta": {
+    "criteria": {
+      "has_terracotta": "2026-09-20 23:03:53 +0530"
     },
     "done": true
   },
@@ -2959,6 +3026,12 @@
   "immersivecooking:recipes/immersivecooking/crimson_blackstone_pantry": {
     "criteria": {
       "has_polished_blackstone": "2026-09-20 00:59:29 +0530"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/black_terracotta": {
+    "criteria": {
+      "has_terracotta": "2026-09-20 23:03:53 +0530"
     },
     "done": true
   },
@@ -3337,6 +3410,12 @@
   "minecraft:recipes/redstone/birch_trapdoor": {
     "criteria": {
       "has_planks": "2026-09-19 13:42:15 +0530"
+    },
+    "done": true
+  },
+  "farmersdelight:main/eat_nourishing_food": {
+    "criteria": {
+      "nourishment": "2026-09-20 23:22:15 +0530"
     },
     "done": true
   },
@@ -3751,6 +3830,12 @@
     },
     "done": true
   },
+  "minecraft:recipes/decorations/beehive": {
+    "criteria": {
+      "has_honeycomb": "2026-09-20 23:18:30 +0530"
+    },
+    "done": true
+  },
   "extendedmushrooms:recipes/food/mushroom_bread": {
     "criteria": {
       "has_mushroom": "2026-09-06 11:39:44 +0530"
@@ -3841,6 +3926,12 @@
     },
     "done": true
   },
+  "minecraft:recipes/building_blocks/pink_terracotta": {
+    "criteria": {
+      "has_terracotta": "2026-09-20 23:03:53 +0530"
+    },
+    "done": true
+  },
   "minecraft:recipes/decorations/polished_blackstone_wall_from_polished_blackstone_stonecutting": {
     "criteria": {
       "has_polished_blackstone": "2026-09-20 00:59:29 +0530"
@@ -3874,6 +3965,12 @@
   "supplementaries:recipes/bamboo_spikes": {
     "criteria": {
       "has_plank": "2026-09-11 00:05:08 +0530"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/magenta_terracotta": {
+    "criteria": {
+      "has_terracotta": "2026-09-20 23:03:53 +0530"
     },
     "done": true
   },
@@ -4129,6 +4226,12 @@
     },
     "done": true
   },
+  "upgradednetherite_ultimate:recipes/upgraded_netherite_crossbow_smithing": {
+    "criteria": {
+      "has_netherite_crossbow": "2026-09-20 15:43:16 +0530"
+    },
+    "done": true
+  },
   "extendedmushrooms:recipes/transportation/mushroom_wood/honey_fungus/honey_fungus_boat": {
     "criteria": {
       "in_water": "2026-09-06 11:11:48 +0530"
@@ -4352,6 +4455,12 @@
   "minecraft:recipes/redstone/polished_blackstone_pressure_plate": {
     "criteria": {
       "has_polished_blackstone": "2026-09-20 00:59:29 +0530"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/cyan_terracotta": {
+    "criteria": {
+      "has_terracotta": "2026-09-20 23:03:53 +0530"
     },
     "done": true
   },
@@ -4830,6 +4939,12 @@
     },
     "done": true
   },
+  "minecraft:recipes/building_blocks/blue_terracotta": {
+    "criteria": {
+      "has_terracotta": "2026-09-20 23:03:53 +0530"
+    },
+    "done": true
+  },
   "betterendforge:recipes/betterendforge/thallasium_hoe_smithing": {
     "criteria": {
       "has_stick": "2026-09-06 11:02:37 +0530"
@@ -4863,6 +4978,12 @@
   "minecraft:recipes/decorations/stonecutter": {
     "criteria": {
       "has_stone": "2026-09-07 01:32:54 +0530"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/light_blue_terracotta": {
+    "criteria": {
+      "has_terracotta": "2026-09-20 23:03:53 +0530"
     },
     "done": true
   },
@@ -5155,6 +5276,12 @@
     },
     "done": true
   },
+  "minecraft:recipes/building_blocks/yellow_terracotta": {
+    "criteria": {
+      "has_terracotta": "2026-09-20 23:03:53 +0530"
+    },
+    "done": true
+  },
   "farmersdelight:recipes/farmersdelight/wheat_dough_from_eggs": {
     "criteria": {
       "has_wheat": "2026-09-06 11:36:30 +0530"
@@ -5164,6 +5291,12 @@
   "supplementaries:recipes/hanging_sign_palm": {
     "criteria": {
       "has_plank": "2026-09-10 00:13:32 +0530"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/purple_terracotta": {
+    "criteria": {
+      "has_terracotta": "2026-09-20 23:03:53 +0530"
     },
     "done": true
   },
@@ -5367,6 +5500,7 @@
   },
   "minecraft:husbandry/balanced_diet": {
     "criteria": {
+      "baked_potato": "2026-09-20 21:58:42 +0530",
       "neapolitan:strawberry_scones": "2026-09-06 23:24:49 +0530",
       "potato": "2026-09-06 15:39:27 +0530",
       "bread": "2026-09-06 12:39:28 +0530",
@@ -5385,6 +5519,12 @@
       "carrot": "2026-09-07 00:57:37 +0530"
     },
     "done": false
+  },
+  "minecraft:recipes/building_blocks/gray_terracotta": {
+    "criteria": {
+      "has_terracotta": "2026-09-20 23:03:53 +0530"
+    },
+    "done": true
   },
   "cavesandcliffs:recipes/building_blocks/cobbled_deepslate_stairs_from_cobbled_deepslate_stonecutting": {
     "criteria": {
@@ -5491,6 +5631,12 @@
   "adorn:recipes/byg/maple_kitchen_sink": {
     "criteria": {
       "has_key_item_0": "2026-09-20 01:05:55 +0530"
+    },
+    "done": true
+  },
+  "twilightforest:alt/treasures/maps": {
+    "criteria": {
+      "0": "2026-09-20 22:58:08 +0530"
     },
     "done": true
   },
@@ -5884,6 +6030,12 @@
     },
     "done": true
   },
+  "twilightforest:root": {
+    "criteria": {
+      "make_portal": "2026-09-20 22:34:26 +0530"
+    },
+    "done": true
+  },
   "morevillagers:map_bastion": {
     "criteria": {
       "hasmap": "2026-09-06 11:39:44 +0530",
@@ -6215,6 +6367,12 @@
     },
     "done": true
   },
+  "minecraft:recipes/building_blocks/green_terracotta": {
+    "criteria": {
+      "has_terracotta": "2026-09-20 23:03:53 +0530"
+    },
+    "done": true
+  },
   "minecraft:recipes/decorations/polished_blackstone_wall_from_blackstone_stonecutting": {
     "criteria": {
       "has_blackstone": "2026-09-07 22:56:56 +0530"
@@ -6224,6 +6382,12 @@
   "minecraft:recipes/building_blocks/prismarine_stairs_from_prismarine_stonecutting": {
     "criteria": {
       "has_prismarine": "2026-09-06 11:40:33 +0530"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/brown_terracotta": {
+    "criteria": {
+      "has_terracotta": "2026-09-20 23:03:53 +0530"
     },
     "done": true
   },
@@ -6620,6 +6784,12 @@
   "adorn:recipes/polished_blackstone_post": {
     "criteria": {
       "has_key_item_0": "2026-09-20 00:59:29 +0530"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/honeycomb_block": {
+    "criteria": {
+      "has_honeycomb": "2026-09-20 23:18:30 +0530"
     },
     "done": true
   },

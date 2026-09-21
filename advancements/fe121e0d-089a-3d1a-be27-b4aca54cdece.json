@@ -197,6 +197,12 @@
     },
     "done": true
   },
+  "upgradednetherite:recipes/upgraded_netherite_axe_smithing": {
+    "criteria": {
+      "has_netherite_axe": "2026-09-20 14:05:44 +0530"
+    },
+    "done": true
+  },
   "decorative_blocks:recipes/decorations/dark_oak_support": {
     "criteria": {
       "has_plank": "2026-09-06 17:01:35 +0530"
@@ -581,6 +587,12 @@
     },
     "done": true
   },
+  "minecraft:story/lava_bucket": {
+    "criteria": {
+      "lava_bucket": "2026-09-20 13:39:19 +0530"
+    },
+    "done": true
+  },
   "aquaculture:recipes/misc/jellyfish_to_slimeball": {
     "criteria": {
       "has_items": "2026-09-09 23:09:35 +0530"
@@ -884,10 +896,12 @@
   "morevillagers:all_professions_traded": {
     "criteria": {
       "toolsmith": "2026-09-12 15:06:39 +0530",
+      "cleric": "2026-09-20 21:39:17 +0530",
       "fletcher": "2026-09-08 00:20:02 +0530",
       "librarian": "2026-09-09 22:01:43 +0530",
       "weaponsmith": "2026-09-09 21:48:34 +0530",
       "armorer": "2026-09-09 22:12:21 +0530",
+      "farmer": "2026-09-20 21:37:53 +0530",
       "fisherman": "2026-09-09 22:10:04 +0530"
     },
     "done": false
@@ -907,6 +921,12 @@
   "minecraft:recipes/misc/light_blue_dye_from_blue_white_dye": {
     "criteria": {
       "has_blue_dye": "2026-09-07 21:34:30 +0530"
+    },
+    "done": true
+  },
+  "morevillagers:kill_villager": {
+    "criteria": {
+      "killedvillager": "2026-09-20 15:13:37 +0530"
     },
     "done": true
   },
@@ -1036,6 +1056,12 @@
     },
     "done": true
   },
+  "upgradednetherite_ultimate:recipes/upgraded_netherite_pickaxe_smithing": {
+    "criteria": {
+      "has_netherite_pickaxe": "2026-09-20 14:05:44 +0530"
+    },
+    "done": true
+  },
   "adorn:recipes/dark_prismarine_step": {
     "criteria": {
       "has_key_item_0": "2026-09-09 22:59:27 +0530"
@@ -1076,6 +1102,12 @@
   "minecraft:recipes/food/cooked_salmon_from_smoking": {
     "criteria": {
       "has_salmon": "2026-09-06 14:56:23 +0530"
+    },
+    "done": true
+  },
+  "upgradednetherite:recipes/upgraded_netherite_shovel_smithing": {
+    "criteria": {
+      "has_netherite_shovel": "2026-09-20 14:05:44 +0530"
     },
     "done": true
   },
@@ -1529,6 +1561,12 @@
     },
     "done": true
   },
+  "morevillagers:kill_babyvillager": {
+    "criteria": {
+      "killedbabyvillager": "2026-09-20 15:14:11 +0530"
+    },
+    "done": true
+  },
   "adorn:recipes/spruce_kitchen_cupboard": {
     "criteria": {
       "has_key_item_0": "2026-09-06 11:02:57 +0530"
@@ -1647,6 +1685,12 @@
   "minecraft:recipes/decorations/cobblestone_wall": {
     "criteria": {
       "has_cobblestone": "2026-09-06 11:03:46 +0530"
+    },
+    "done": true
+  },
+  "upgradednetherite:recipes/upgraded_netherite_pickaxe_smithing": {
+    "criteria": {
+      "has_netherite_pickaxe": "2026-09-20 14:05:44 +0530"
     },
     "done": true
   },
@@ -2021,6 +2065,12 @@
   "minecraft:recipes/building_blocks/purple_wool": {
     "criteria": {
       "has_white_wool": "2026-09-06 11:17:31 +0530"
+    },
+    "done": true
+  },
+  "alexsmobs:alexsmobs/emu": {
+    "criteria": {
+      "interact": "2026-09-20 12:27:42 +0530"
     },
     "done": true
   },
@@ -2636,6 +2686,12 @@
     },
     "done": true
   },
+  "minecraft:husbandry/bred_all_animals": {
+    "criteria": {
+      "minecraft:pig": "2026-09-20 12:22:48 +0530"
+    },
+    "done": false
+  },
   "minecraft:recipes/decorations/orange_bed_from_white_bed": {
     "criteria": {
       "has_bed": "2026-09-06 11:43:51 +0530"
@@ -2987,16 +3043,20 @@
   "morevillagers:all_workstations_get": {
     "criteria": {
       "barrel": "2026-09-06 11:58:10 +0530",
+      "cartographytable": "2026-09-20 13:19:36 +0530",
       "fletchingtable": "2026-09-08 00:18:39 +0530",
       "brewingstand": "2026-09-08 00:19:26 +0530",
       "grindstone": "2026-09-14 10:31:23 +0530",
       "gardeningtable": "2026-09-07 21:15:02 +0530",
       "smithingtable": "2026-09-12 15:03:55 +0530",
+      "smoker": "2026-09-20 13:19:36 +0530",
       "blastfurnace": "2026-09-14 10:31:16 +0530",
+      "loom": "2026-09-20 13:19:36 +0530",
       "lectern": "2026-09-08 00:39:32 +0530",
       "woodworkingtable": "2026-09-07 21:15:02 +0530",
       "stonecutter": "2026-09-06 14:47:59 +0530",
-      "cauldron": "2026-09-11 23:20:40 +0530"
+      "cauldron": "2026-09-11 23:20:40 +0530",
+      "composter": "2026-09-20 13:19:36 +0530"
     },
     "done": false
   },
@@ -3117,6 +3177,12 @@
   "adorn:recipes/dark_oak_kitchen_cupboard": {
     "criteria": {
       "has_key_item_0": "2026-09-06 17:01:35 +0530"
+    },
+    "done": true
+  },
+  "upgradednetherite_ultimate:recipes/upgraded_netherite_shovel_smithing": {
+    "criteria": {
+      "has_netherite_shovel": "2026-09-20 14:05:44 +0530"
     },
     "done": true
   },
@@ -5185,6 +5251,12 @@
     },
     "done": true
   },
+  "upgradednetherite_ultimate:recipes/upgraded_netherite_shield_smithing": {
+    "criteria": {
+      "has_netherite_shield": "2026-09-20 14:17:51 +0530"
+    },
+    "done": true
+  },
   "cavesandcliffs:recipes/decorations/deepslate_brick_wall_from_cobbled_deepslate_stonecutting": {
     "criteria": {
       "has_cobbled_deepslate": "2026-09-06 13:11:14 +0530"
@@ -5518,6 +5590,12 @@
   "blue_skies:recipes/blue_skies_dungeon/glowing_life_stone": {
     "criteria": {
       "has_item": "2026-09-07 21:27:02 +0530"
+    },
+    "done": true
+  },
+  "upgradednetherite_ultimate:recipes/upgraded_netherite_axe_smithing": {
+    "criteria": {
+      "has_netherite_axe": "2026-09-20 14:05:44 +0530"
     },
     "done": true
   },
@@ -7272,6 +7350,7 @@
       "sweet_berries": "2026-09-06 15:15:19 +0530",
       "tomato": "2026-09-06 18:01:37 +0530",
       "rice": "2026-09-13 13:21:34 +0530",
+      "beetroot": "2026-09-20 12:29:02 +0530",
       "sugar_cane": "2026-09-06 18:17:36 +0530",
       "potato": "2026-09-06 18:02:04 +0530",
       "red_mushroom": "2026-09-13 12:35:13 +0530",
@@ -7281,6 +7360,12 @@
       "carrot": "2026-09-06 18:01:57 +0530"
     },
     "done": false
+  },
+  "upgradednetherite:recipes/upgraded_netherite_shield_smithing": {
+    "criteria": {
+      "has_netherite_shield": "2026-09-20 14:17:51 +0530"
+    },
+    "done": true
   },
   "minecraft:recipes/misc/paper": {
     "criteria": {
@@ -8071,6 +8156,12 @@
   "minecraft:recipes/transportation/warped_fungus_on_a_stick": {
     "criteria": {
       "has_warped_fungus": "2026-09-06 22:45:31 +0530"
+    },
+    "done": true
+  },
+  "minecraft:husbandry/breed_an_animal": {
+    "criteria": {
+      "bred": "2026-09-20 12:22:48 +0530"
     },
     "done": true
   },
