@@ -671,6 +671,12 @@
     },
     "done": true
   },
+  "minecraft:recipes/food/cooked_chicken_from_campfire_cooking": {
+    "criteria": {
+      "has_chicken": "2026-09-24 23:15:37 +0530"
+    },
+    "done": true
+  },
   "minecraft:recipes/redstone/dark_oak_fence_gate": {
     "criteria": {
       "has_planks": "2026-09-06 15:16:23 +0530"
@@ -1194,6 +1200,12 @@
     },
     "done": true
   },
+  "mowziesmobs:kill_ferrous_wroughtnaut": {
+    "criteria": {
+      "ferrous_wroughtnaut": "2026-09-24 23:36:42 +0530"
+    },
+    "done": true
+  },
   "comforts:sleeping_bag_white": {
     "criteria": {
       "has_white_wool": "2026-09-06 11:17:49 +0530"
@@ -1643,6 +1655,12 @@
   "minecraft:recipes/building_blocks/light_gray_wool": {
     "criteria": {
       "has_white_wool": "2026-09-06 11:17:49 +0530"
+    },
+    "done": true
+  },
+  "minecraft:recipes/food/cooked_chicken": {
+    "criteria": {
+      "has_chicken": "2026-09-24 23:15:37 +0530"
     },
     "done": true
   },
@@ -2228,6 +2246,12 @@
     },
     "done": true
   },
+  "minecraft:recipes/food/cooked_chicken_from_smoking": {
+    "criteria": {
+      "has_chicken": "2026-09-24 23:15:37 +0530"
+    },
+    "done": true
+  },
   "twilightforest:alt/treasures/magic_map": {
     "criteria": {
       "magic_map": "2026-09-20 22:58:08 +0530"
@@ -2701,6 +2725,12 @@
   "upgradednetherite_items:recipes/upgraded_netherite_pearl_smithing": {
     "criteria": {
       "has_ender_pearl": "2026-09-06 16:47:04 +0530"
+    },
+    "done": true
+  },
+  "farmersdelight:recipes/farmersdelight/roast_chicken_block": {
+    "criteria": {
+      "has_cooked_chicken": "2026-09-24 23:17:44 +0530"
     },
     "done": true
   },
@@ -4136,6 +4166,12 @@
     },
     "done": true
   },
+  "farmersdelight:main/place_feast": {
+    "criteria": {
+      "roast_chicken": "2026-09-24 23:41:43 +0530"
+    },
+    "done": true
+  },
   "minecraft:recipes/building_blocks/oak_stairs": {
     "criteria": {
       "has_planks": "2026-09-06 11:04:09 +0530"
@@ -4268,6 +4304,12 @@
     },
     "done": true
   },
+  "farmersdelight:recipes/farmersdelight/chicken_sandwich": {
+    "criteria": {
+      "has_cooked_chicken": "2026-09-24 23:17:44 +0530"
+    },
+    "done": true
+  },
   "minecraft:recipes/building_blocks/white_wool_from_string": {
     "criteria": {
       "has_string": "2026-09-06 11:17:59 +0530"
@@ -4319,6 +4361,7 @@
       "minecraft:piglin": "2026-09-06 23:04:09 +0530",
       "minecraft:enderman": "2026-09-06 13:59:24 +0530",
       "minecraft:silverfish": "2026-09-10 00:31:09 +0530",
+      "minecraft:stray": "2026-09-24 22:47:09 +0530",
       "minecraft:vex": "2026-09-06 17:30:43 +0530",
       "minecraft:zombie": "2026-09-06 11:12:38 +0530",
       "minecraft:drowned": "2026-09-06 16:17:45 +0530",
@@ -5432,6 +5475,12 @@
     },
     "done": true
   },
+  "minecraft:recipes/building_blocks/packed_ice": {
+    "criteria": {
+      "has_ice": "2026-09-24 22:46:53 +0530"
+    },
+    "done": true
+  },
   "minecraft:recipes/transportation/spruce_boat": {
     "criteria": {
       "in_water": "2026-09-06 11:11:48 +0530"
@@ -6496,6 +6545,12 @@
   "immersivecooking:recipes/immersivecooking/acacia_blackstone_pantry": {
     "criteria": {
       "has_polished_blackstone": "2026-09-20 00:59:29 +0530"
+    },
+    "done": true
+  },
+  "mowziesmobs:kill_frostmaw": {
+    "criteria": {
+      "frostmaw": "2026-09-24 23:04:15 +0530"
     },
     "done": true
   },

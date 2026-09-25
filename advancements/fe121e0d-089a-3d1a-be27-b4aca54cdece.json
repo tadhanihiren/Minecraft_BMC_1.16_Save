@@ -1405,6 +1405,12 @@
     },
     "done": true
   },
+  "twilightforest:magic_map": {
+    "criteria": {
+      "map": "2026-09-24 22:36:18 +0530"
+    },
+    "done": true
+  },
   "minecraft:recipes/building_blocks/birch_planks": {
     "criteria": {
       "has_logs": "2026-09-10 22:48:32 +0530"
@@ -2641,6 +2647,12 @@
   "minecraft:nether/get_wither_skull": {
     "criteria": {
       "wither_skull": "2026-09-10 23:08:39 +0530"
+    },
+    "done": true
+  },
+  "twilightforest:alt/treasures/magic_map": {
+    "criteria": {
+      "magic_map": "2026-09-24 22:36:18 +0530"
     },
     "done": true
   },
@@ -4654,6 +4666,12 @@
     },
     "done": true
   },
+  "dungeons_plus:adventure/find_snowy_temple": {
+    "criteria": {
+      "structure": "2026-09-24 22:46:40 +0530"
+    },
+    "done": true
+  },
   "immersivecooking:recipes/immersivecooking/jungle_stone_counter": {
     "criteria": {
       "has_smooth_stone": "2026-09-18 23:05:21 +0530"
@@ -5082,6 +5100,7 @@
       "minecraft:piglin": "2026-09-06 23:02:38 +0530",
       "minecraft:enderman": "2026-09-06 12:40:32 +0530",
       "minecraft:silverfish": "2026-09-09 23:35:51 +0530",
+      "minecraft:stray": "2026-09-24 22:46:52 +0530",
       "minecraft:vex": "2026-09-16 23:45:03 +0530",
       "minecraft:zombie": "2026-09-06 11:13:19 +0530",
       "minecraft:drowned": "2026-09-06 22:42:54 +0530",
@@ -6543,6 +6562,12 @@
     },
     "done": true
   },
+  "minecraft:recipes/building_blocks/packed_ice": {
+    "criteria": {
+      "has_ice": "2026-09-24 22:47:26 +0530"
+    },
+    "done": true
+  },
   "minecraft:recipes/transportation/spruce_boat": {
     "criteria": {
       "in_water": "2026-09-06 11:11:37 +0530"
@@ -6769,6 +6794,12 @@
   "adorn:recipes/byg/maple_kitchen_sink": {
     "criteria": {
       "has_key_item_0": "2026-09-06 14:25:06 +0530"
+    },
+    "done": true
+  },
+  "twilightforest:alt/treasures/maps": {
+    "criteria": {
+      "0": "2026-09-24 22:36:18 +0530"
     },
     "done": true
   },
