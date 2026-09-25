@@ -2458,6 +2458,12 @@
     },
     "done": true
   },
+  "supplementaries:recipes/jar_tinted": {
+    "criteria": {
+      "has_item": "2026-09-25 22:30:09 +0530"
+    },
+    "done": true
+  },
   "minecraft:recipes/decorations/respawn_anchor": {
     "criteria": {
       "has_obsidian": "2026-09-07 22:38:02 +0530"
@@ -2532,6 +2538,7 @@
   },
   "twilightforest:arborist": {
     "criteria": {
+      "canopy_trapdoor": "2026-09-25 22:34:16 +0530",
       "mangrove_door": "2026-09-12 19:55:17 +0530"
     },
     "done": false
@@ -6878,6 +6885,12 @@
   "minecraft:recipes/redstone/tnt": {
     "criteria": {
       "has_gunpowder": "2026-09-06 12:59:32 +0530"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/black_stained_glass_pane": {
+    "criteria": {
+      "has_glass": "2026-09-25 22:30:09 +0530"
     },
     "done": true
   },
