@@ -3375,6 +3375,12 @@
     },
     "done": true
   },
+  "farmersdelight:recipes/farmersdelight/acacia_pantry": {
+    "criteria": {
+      "has_acacia_trapdoor": "2026-09-26 13:58:26 +0530"
+    },
+    "done": true
+  },
   "minecraft:recipes/building_blocks/chiseled_stone_bricks_from_stone_bricks_stonecutting": {
     "criteria": {
       "has_stone_bricks": "2026-09-06 14:27:05 +0530"
