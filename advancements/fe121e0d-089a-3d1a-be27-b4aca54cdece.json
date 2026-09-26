@@ -419,6 +419,12 @@
     },
     "done": true
   },
+  "blue_skies:recipes/blue_skies_dungeon/blinding_stairs": {
+    "criteria": {
+      "has_item": "2026-09-26 12:47:01 +0530"
+    },
+    "done": true
+  },
   "adorn:recipes/byg/holly_kitchen_counter": {
     "criteria": {
       "has_key_item_0": "2026-09-07 21:09:25 +0530"
@@ -1135,6 +1141,12 @@
     },
     "done": true
   },
+  "minecraft:recipes/building_blocks/diorite_stairs_from_diorite_stonecutting": {
+    "criteria": {
+      "has_diorite": "2026-09-26 12:41:14 +0530"
+    },
+    "done": true
+  },
   "minecraft:recipes/brewing/glass_bottle": {
     "criteria": {
       "has_glass": "2026-09-07 21:33:09 +0530"
@@ -1297,6 +1309,12 @@
     },
     "done": true
   },
+  "blue_skies:recipes/blue_skies_dungeon/carved_blinding_stone_stonecutting_blinding_stone": {
+    "criteria": {
+      "has_item": "2026-09-26 12:47:01 +0530"
+    },
+    "done": true
+  },
   "supplementaries:recipes/wind_vane": {
     "criteria": {
       "has_item": "2026-09-06 13:10:52 +0530"
@@ -1354,6 +1372,12 @@
   "minecraft:recipes/decorations/cyan_banner": {
     "criteria": {
       "has_cyan_wool": "2026-09-06 23:03:29 +0530"
+    },
+    "done": true
+  },
+  "blue_skies:recipes/blue_skies_dungeon/blinding_stone_pillar_stonecutting_blinding_stone": {
+    "criteria": {
+      "has_item": "2026-09-26 12:47:01 +0530"
     },
     "done": true
   },
@@ -1954,6 +1978,12 @@
     },
     "done": true
   },
+  "minecraft:recipes/building_blocks/polished_diorite": {
+    "criteria": {
+      "has_stone": "2026-09-26 12:41:14 +0530"
+    },
+    "done": true
+  },
   "cavesandcliffs:recipes/decorations/blue_candle": {
     "criteria": {
       "has_blue_dye": "2026-09-07 21:34:30 +0530"
@@ -2500,6 +2530,12 @@
     },
     "done": true
   },
+  "minecraft:recipes/building_blocks/diorite_slab": {
+    "criteria": {
+      "has_diorite": "2026-09-26 12:41:14 +0530"
+    },
+    "done": true
+  },
   "minecraft:recipes/building_blocks/stone_brick_stairs_from_stone_bricks_stonecutting": {
     "criteria": {
       "has_stone_bricks": "2026-09-06 14:27:05 +0530"
@@ -2711,6 +2747,12 @@
     },
     "done": false
   },
+  "minecraft:recipes/decorations/diorite_wall_from_diorite_stonecutting": {
+    "criteria": {
+      "has_diorite": "2026-09-26 12:41:13 +0530"
+    },
+    "done": true
+  },
   "minecraft:recipes/decorations/orange_bed_from_white_bed": {
     "criteria": {
       "has_bed": "2026-09-06 11:43:51 +0530"
@@ -2774,6 +2816,12 @@
   "supplementaries:recipes/faucet": {
     "criteria": {
       "has_item": "2026-09-06 11:07:29 +0530"
+    },
+    "done": true
+  },
+  "blue_skies:recipes/blue_skies_dungeon/blinding_stairs_stonecutting_blinding_stone": {
+    "criteria": {
+      "has_item": "2026-09-26 12:47:01 +0530"
     },
     "done": true
   },
@@ -3309,6 +3357,12 @@
     },
     "done": true
   },
+  "farmersdelight:recipes/farmersdelight/crimson_pantry": {
+    "criteria": {
+      "has_crimson_trapdoor": "2026-09-26 12:48:40 +0530"
+    },
+    "done": true
+  },
   "farmersdelight:recipes/farmersdelight/horse_feed": {
     "criteria": {
       "has_golden_carrot": "2026-09-07 00:06:44 +0530"
@@ -3537,6 +3591,12 @@
     },
     "done": true
   },
+  "minecraft:recipes/building_blocks/andesite": {
+    "criteria": {
+      "has_stone": "2026-09-26 12:41:13 +0530"
+    },
+    "done": true
+  },
   "cavesandcliffs:recipes/misc/iron_ingot_from_smelting_raw_iron": {
     "criteria": {
       "has_raw_iron": "2026-09-06 11:04:18 +0530"
@@ -3732,6 +3792,12 @@
   "darkerdepths:recipes/misc/rope": {
     "criteria": {
       "has_resin": "2026-09-10 00:51:15 +0530"
+    },
+    "done": true
+  },
+  "blue_skies:recipes/blue_skies_dungeon/blinding_wall": {
+    "criteria": {
+      "has_item": "2026-09-26 12:47:01 +0530"
     },
     "done": true
   },
@@ -5289,6 +5355,12 @@
     },
     "done": true
   },
+  "blue_skies:recipes/blue_skies_dungeon/blinding_slab": {
+    "criteria": {
+      "has_item": "2026-09-26 12:47:01 +0530"
+    },
+    "done": true
+  },
   "cavesandcliffs:recipes/decorations/deepslate_brick_wall_from_cobbled_deepslate_stonecutting": {
     "criteria": {
       "has_cobbled_deepslate": "2026-09-06 13:11:14 +0530"
@@ -5532,6 +5604,12 @@
   "decorative_blocks:recipes/decorations/crimson_palisade": {
     "criteria": {
       "has_log": "2026-09-06 23:31:16 +0530"
+    },
+    "done": true
+  },
+  "blue_skies:recipes/blue_skies_dungeon/blinding_wall_stonecutting_blinding_stone": {
+    "criteria": {
+      "has_item": "2026-09-26 12:47:01 +0530"
     },
     "done": true
   },
@@ -5794,6 +5872,12 @@
     },
     "done": true
   },
+  "blue_skies:recipes/blue_skies_dungeon/blinding_slab_stonecutting_blinding_stone": {
+    "criteria": {
+      "has_item": "2026-09-26 12:47:01 +0530"
+    },
+    "done": true
+  },
   "minecraft:recipes/redstone/birch_fence_gate": {
     "criteria": {
       "has_planks": "2026-09-12 23:09:30 +0530"
@@ -5878,6 +5962,12 @@
     },
     "done": true
   },
+  "minecraft:recipes/building_blocks/polished_diorite_from_diorite_stonecutting": {
+    "criteria": {
+      "has_diorite": "2026-09-26 12:41:13 +0530"
+    },
+    "done": true
+  },
   "immersivecooking:recipes/immersivecooking/birch_blackstone_pantry": {
     "criteria": {
       "has_polished_blackstone": "2026-09-12 17:13:54 +0530"
@@ -5959,6 +6049,12 @@
   "adorn:recipes/nether_brick_platform": {
     "criteria": {
       "has_key_item_0": "2026-09-13 01:00:57 +0530"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/diorite_wall": {
+    "criteria": {
+      "has_diorite": "2026-09-26 12:41:14 +0530"
     },
     "done": true
   },
@@ -6497,6 +6593,12 @@
     },
     "done": true
   },
+  "minecraft:recipes/building_blocks/diorite_slab_from_diorite_stonecutting": {
+    "criteria": {
+      "has_diorite": "2026-09-26 12:41:14 +0530"
+    },
+    "done": true
+  },
   "minecraft:recipes/building_blocks/smooth_stone": {
     "criteria": {
       "has_stone": "2026-09-06 14:47:52 +0530"
@@ -6506,6 +6608,12 @@
   "blue_skies:recipes/blue_skies_misc/cooked_charscale_moki_from_smoking": {
     "criteria": {
       "has_item": "2026-09-07 21:21:25 +0530"
+    },
+    "done": true
+  },
+  "adorn:recipes/diorite_post": {
+    "criteria": {
+      "has_key_item_0": "2026-09-26 12:41:14 +0530"
     },
     "done": true
   },
@@ -7690,6 +7798,12 @@
   "adorn:recipes/birch_kitchen_cupboard": {
     "criteria": {
       "has_key_item_0": "2026-09-12 23:09:30 +0530"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/diorite_stairs": {
+    "criteria": {
+      "has_diorite": "2026-09-26 12:41:14 +0530"
     },
     "done": true
   },
