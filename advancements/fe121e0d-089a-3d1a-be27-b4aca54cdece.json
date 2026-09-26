@@ -3519,6 +3519,12 @@
     },
     "done": true
   },
+  "extendedmushrooms:recipes/misc/brown_dye_from_infested_flower": {
+    "criteria": {
+      "has_flower": "2026-09-26 09:13:46 +0530"
+    },
+    "done": true
+  },
   "betterendforge:recipes/betterendforge/terminite_shovel_smithing": {
     "criteria": {
       "has_stick": "2026-09-06 11:03:29 +0530"
@@ -7275,6 +7281,12 @@
   "immersivecooking:recipes/immersivecooking/fried_potato_slice": {
     "criteria": {
       "has_potato": "2026-09-06 12:09:45 +0530"
+    },
+    "done": true
+  },
+  "twilightforest:root": {
+    "criteria": {
+      "make_portal": "2026-09-26 09:14:39 +0530"
     },
     "done": true
   },
