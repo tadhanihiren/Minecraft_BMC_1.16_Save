@@ -1,4 +1,10 @@
 {
+  "adorn:recipes/birch_shelf": {
+    "criteria": {
+      "has_key_item_0": "2026-09-27 22:17:02 +0530"
+    },
+    "done": true
+  },
   "adorn:recipes/dark_oak_kitchen_counter": {
     "criteria": {
       "has_key_item_0": "2026-09-06 15:16:23 +0530"
@@ -62,6 +68,12 @@
   "adorn:recipes/spruce_coffee_table": {
     "criteria": {
       "has_key_item_0": "2026-09-07 23:31:02 +0530"
+    },
+    "done": true
+  },
+  "adorn:recipes/acacia_table": {
+    "criteria": {
+      "has_key_item_0": "2026-09-27 13:10:19 +0530"
     },
     "done": true
   },
@@ -188,6 +200,12 @@
   "minecraft:recipes/misc/gold_ingot_from_blasting": {
     "criteria": {
       "has_gold_ore": "2026-09-06 16:18:06 +0530"
+    },
+    "done": true
+  },
+  "adorn:recipes/smooth_stone_step": {
+    "criteria": {
+      "has_key_item_0": "2026-09-27 22:06:35 +0530"
     },
     "done": true
   },
@@ -323,6 +341,12 @@
     },
     "done": true
   },
+  "twilightforest:alt/entities/naga": {
+    "criteria": {
+      "hurt": "2026-09-27 22:07:04 +0530"
+    },
+    "done": true
+  },
   "minecraft:recipes/building_blocks/coarse_dirt": {
     "criteria": {
       "has_gravel": "2026-09-06 12:35:18 +0530"
@@ -338,6 +362,12 @@
   "comforts:sleeping_bag_light_blue_from_white": {
     "criteria": {
       "has_sleeping_bag": "2026-09-06 11:48:05 +0530"
+    },
+    "done": true
+  },
+  "twilightforest:alt/biomes/dense_twilight_forest": {
+    "criteria": {
+      "discover": "2026-09-27 13:29:30 +0530"
     },
     "done": true
   },
@@ -389,6 +419,12 @@
     },
     "done": true
   },
+  "adorn:recipes/yellow_table_lamp": {
+    "criteria": {
+      "has_key_item_0": "2026-09-27 12:41:29 +0530"
+    },
+    "done": true
+  },
   "minecraft:recipes/decorations/iron_bars": {
     "criteria": {
       "has_iron_ingot": "2026-09-06 11:07:20 +0530"
@@ -404,6 +440,12 @@
   "betterendforge:recipes/betterendforge/thallasium_sword_handle_smithing": {
     "criteria": {
       "has_stick": "2026-09-06 11:02:37 +0530"
+    },
+    "done": true
+  },
+  "minecraft:recipes/redstone/crimson_button": {
+    "criteria": {
+      "has_planks": "2026-09-27 12:25:19 +0530"
     },
     "done": true
   },
@@ -460,6 +502,12 @@
       "always": "2026-09-06 11:00:36 +0530"
     },
     "done": true
+  },
+  "twilightforest:progress_trophy_pedestal": {
+    "criteria": {
+      "kill_lich": "2026-09-27 22:31:45 +0530"
+    },
+    "done": false
   },
   "minecraft:recipes/combat/diamond_leggings": {
     "criteria": {
@@ -750,6 +798,12 @@
     },
     "done": true
   },
+  "twilightforest:twilight_hunter": {
+    "criteria": {
+      "kobold": "2026-09-27 13:31:10 +0530"
+    },
+    "done": true
+  },
   "farmersdelight:recipes/farmersdelight/fried_egg_from_smoking": {
     "criteria": {
       "fried_egg": "2026-09-06 11:09:59 +0530"
@@ -942,6 +996,12 @@
     },
     "done": true
   },
+  "twilightforest:alt/entities/undead": {
+    "criteria": {
+      "0": "2026-09-27 13:32:15 +0530"
+    },
+    "done": true
+  },
   "farmersdelight:recipes/farmersdelight/mutton_wrap": {
     "criteria": {
       "has_mutton": "2026-09-06 11:21:49 +0530"
@@ -960,6 +1020,12 @@
     },
     "done": true
   },
+  "twilightforest:alt/treasures/shield_scepter": {
+    "criteria": {
+      "scepter": "2026-09-27 22:31:45 +0530"
+    },
+    "done": true
+  },
   "omnis:recipes/omnis/ravaged_hammer": {
     "criteria": {
       "has_ravaged_metal": "2026-09-06 21:17:14 +0530"
@@ -972,6 +1038,12 @@
     },
     "done": true
   },
+  "minecraft:recipes/building_blocks/crimson_slab": {
+    "criteria": {
+      "has_planks": "2026-09-27 12:25:19 +0530"
+    },
+    "done": true
+  },
   "adorn:recipes/stone_brick_post": {
     "criteria": {
       "has_key_item_0": "2026-09-06 11:52:12 +0530"
@@ -981,6 +1053,24 @@
   "minecraft:recipes/redstone/birch_button": {
     "criteria": {
       "has_planks": "2026-09-19 13:42:15 +0530"
+    },
+    "done": true
+  },
+  "twilightforest:alt/treasures/smoking_block": {
+    "criteria": {
+      "fire_swamp": "2026-09-27 23:23:00 +0530"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/crimson_stairs": {
+    "criteria": {
+      "has_planks": "2026-09-27 12:25:19 +0530"
+    },
+    "done": true
+  },
+  "adorn:recipes/birch_coffee_table": {
+    "criteria": {
+      "has_key_item_0": "2026-09-27 22:17:02 +0530"
     },
     "done": true
   },
@@ -1098,6 +1188,12 @@
     },
     "done": true
   },
+  "adorn:recipes/acacia_bench": {
+    "criteria": {
+      "has_key_item_0": "2026-09-27 13:10:19 +0530"
+    },
+    "done": true
+  },
   "minecraft:recipes/building_blocks/bookshelf": {
     "criteria": {
       "has_book": "2026-09-06 16:09:13 +0530"
@@ -1125,6 +1221,12 @@
   "comforts:sleeping_bag_orange_from_white": {
     "criteria": {
       "has_sleeping_bag": "2026-09-06 11:48:05 +0530"
+    },
+    "done": true
+  },
+  "twilightforest:alt/entities/skeleton_druid": {
+    "criteria": {
+      "hurt_by_indirect": "2026-09-27 13:32:15 +0530"
     },
     "done": true
   },
@@ -1224,6 +1326,12 @@
     },
     "done": true
   },
+  "twilightforest:alt/biomes/mushroom_forest": {
+    "criteria": {
+      "discover": "2026-09-27 22:03:13 +0530"
+    },
+    "done": true
+  },
   "minecraft:recipes/combat/iron_chestplate": {
     "criteria": {
       "has_iron_ingot": "2026-09-06 11:07:20 +0530"
@@ -1239,6 +1347,12 @@
   "minecraft:recipes/building_blocks/polished_blackstone_slab_from_blackstone_stonecutting": {
     "criteria": {
       "has_blackstone": "2026-09-07 22:56:56 +0530"
+    },
+    "done": true
+  },
+  "twilightforest:alt/treasures/fiery_tool_set": {
+    "criteria": {
+      "ingredien3": "2026-09-27 23:27:25 +0530"
     },
     "done": true
   },
@@ -1305,6 +1419,12 @@
   "extendedmushrooms:recipes/food/grilled_mushroom": {
     "criteria": {
       "has_mushroom": "2026-09-06 11:39:44 +0530"
+    },
+    "done": true
+  },
+  "twilightforest:alt/major_landmarks/hollow_hills": {
+    "criteria": {
+      "2": "2026-09-27 13:36:15 +0530"
     },
     "done": true
   },
@@ -1405,6 +1525,19 @@
     },
     "done": true
   },
+  "twilightforest:progress_labyrinth": {
+    "criteria": {
+      "meef": "2026-09-28 00:00:49 +0530",
+      "kill_lich": "2026-09-27 22:31:45 +0530"
+    },
+    "done": true
+  },
+  "adorn:recipes/acacia_coffee_table": {
+    "criteria": {
+      "has_key_item_0": "2026-09-27 13:10:19 +0530"
+    },
+    "done": true
+  },
   "adorn:recipes/prismarine_post": {
     "criteria": {
       "has_key_item_0": "2026-09-06 11:40:33 +0530"
@@ -1456,6 +1589,12 @@
   "minecraft:recipes/tools/stone_pickaxe": {
     "criteria": {
       "has_cobblestone": "2026-09-06 11:05:40 +0530"
+    },
+    "done": true
+  },
+  "twilightforest:alt/treasures/fiery_armor_set": {
+    "criteria": {
+      "ingredien3": "2026-09-27 23:27:25 +0530"
     },
     "done": true
   },
@@ -1627,6 +1766,12 @@
     },
     "done": true
   },
+  "adorn:recipes/crimson_post": {
+    "criteria": {
+      "has_key_item_0": "2026-09-27 12:25:19 +0530"
+    },
+    "done": true
+  },
   "minecraft:nether/explore_nether": {
     "criteria": {
       "minecraft:crimson_forest": "2026-09-06 23:31:18 +0530",
@@ -1646,6 +1791,12 @@
     },
     "done": true
   },
+  "twilightforest:alt/major_landmarks/labyrinth": {
+    "criteria": {
+      "discover": "2026-09-27 22:46:34 +0530"
+    },
+    "done": true
+  },
   "cavesandcliffs:recipes/decorations/blue_candle": {
     "criteria": {
       "has_blue_dye": "2026-09-20 01:01:20 +0530"
@@ -1655,6 +1806,12 @@
   "minecraft:recipes/building_blocks/light_gray_wool": {
     "criteria": {
       "has_white_wool": "2026-09-06 11:17:49 +0530"
+    },
+    "done": true
+  },
+  "twilightforest:alt/treasures/charm_of_keeping": {
+    "criteria": {
+      "1": "2026-09-27 22:53:08 +0530"
     },
     "done": true
   },
@@ -1697,6 +1854,12 @@
   "minecraft:recipes/tools/stone_axe": {
     "criteria": {
       "has_cobblestone": "2026-09-06 11:05:40 +0530"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/brown_dye": {
+    "criteria": {
+      "has_cocoa_beans": "2026-09-27 13:14:02 +0530"
     },
     "done": true
   },
@@ -1759,6 +1922,18 @@
       "in_pyramid_ocean": "2026-09-12 01:18:50 +0530"
     },
     "done": false
+  },
+  "twilightforest:alt/treasures/trophies": {
+    "criteria": {
+      "1": "2026-09-27 22:07:53 +0530"
+    },
+    "done": true
+  },
+  "twilightforest:alt/treasures/foods/maze_wafer": {
+    "criteria": {
+      "food": "2026-09-27 23:03:49 +0530"
+    },
+    "done": true
   },
   "minecraft:recipes/building_blocks/magenta_concrete_powder": {
     "criteria": {
@@ -1832,6 +2007,12 @@
     },
     "done": true
   },
+  "twilightforest:alt/treasures/fire_jet": {
+    "criteria": {
+      "fire_swamp": "2026-09-27 23:23:00 +0530"
+    },
+    "done": true
+  },
   "minecraft:recipes/misc/iron_nugget": {
     "criteria": {
       "has_iron_ingot": "2026-09-06 11:07:20 +0530"
@@ -1853,6 +2034,12 @@
   "minecraft:recipes/building_blocks/stone_slab_from_stone_stonecutting": {
     "criteria": {
       "has_stone": "2026-09-07 01:32:54 +0530"
+    },
+    "done": true
+  },
+  "twilightforest:alt/entities/maze_slime": {
+    "criteria": {
+      "hurt_by_indirect": "2026-09-27 22:53:54 +0530"
     },
     "done": true
   },
@@ -1907,6 +2094,12 @@
   "decorative_blocks:recipes/decorations/spruce_support": {
     "criteria": {
       "has_plank": "2026-09-06 14:53:30 +0530"
+    },
+    "done": true
+  },
+  "adorn:recipes/birch_step": {
+    "criteria": {
+      "has_key_item_0": "2026-09-27 22:17:02 +0530"
     },
     "done": true
   },
@@ -2144,6 +2337,14 @@
     },
     "done": true
   },
+  "twilightforest:arborist": {
+    "criteria": {
+      "twilight_oak_sapling": "2026-09-27 22:05:37 +0530",
+      "mangrove_sapling": "2026-09-27 23:25:45 +0530",
+      "canopy_sapling": "2026-09-27 13:30:44 +0530"
+    },
+    "done": false
+  },
   "immersivecooking:recipes/immersivecooking/crimson_blackstone_counter": {
     "criteria": {
       "has_polished_blackstone": "2026-09-20 00:59:29 +0530"
@@ -2171,6 +2372,12 @@
   "bygonenether:acquire_wither_waltz": {
     "criteria": {
       "music_disc": "2026-09-20 00:57:39 +0530"
+    },
+    "done": true
+  },
+  "supplementaries:recipes/sign_post_crimson": {
+    "criteria": {
+      "has_plank": "2026-09-27 12:25:19 +0530"
     },
     "done": true
   },
@@ -2227,6 +2434,12 @@
       "has_string": "2026-09-06 11:17:59 +0530"
     },
     "done": true
+  },
+  "twilightforest:progress_hydra": {
+    "criteria": {
+      "stroganoff": "2026-09-28 00:00:49 +0530"
+    },
+    "done": false
   },
   "minecraft:recipes/redstone/oak_fence_gate": {
     "criteria": {
@@ -2290,9 +2503,33 @@
     },
     "done": true
   },
+  "decorative_blocks:recipes/decorations/crimson_support": {
+    "criteria": {
+      "has_plank": "2026-09-27 12:25:19 +0530"
+    },
+    "done": true
+  },
+  "twilightforest:alt/biomes/twilight_forest": {
+    "criteria": {
+      "discover": "2026-09-27 13:29:58 +0530"
+    },
+    "done": true
+  },
+  "adorn:recipes/birch_chair": {
+    "criteria": {
+      "has_key_item_0": "2026-09-27 22:17:02 +0530"
+    },
+    "done": true
+  },
   "minecraft:recipes/decorations/orange_bed_from_white_bed": {
     "criteria": {
       "has_bed": "2026-09-10 20:36:03 +0530"
+    },
+    "done": true
+  },
+  "twilightforest:alt/entities/fire_beetle": {
+    "criteria": {
+      "hurt_by_indirect": "2026-09-27 22:57:13 +0530"
     },
     "done": true
   },
@@ -2386,6 +2623,12 @@
     },
     "done": true
   },
+  "minecraft:recipes/building_blocks/mossy_stone_brick_stairs": {
+    "criteria": {
+      "has_mossy_stone_bricks": "2026-09-27 22:10:16 +0530"
+    },
+    "done": true
+  },
   "minecraft:recipes/building_blocks/stone_brick_slab": {
     "criteria": {
       "has_stone_bricks": "2026-09-06 11:52:12 +0530"
@@ -2476,6 +2719,12 @@
     },
     "done": true
   },
+  "adorn:recipes/birch_table": {
+    "criteria": {
+      "has_key_item_0": "2026-09-27 22:17:02 +0530"
+    },
+    "done": true
+  },
   "adorn:recipes/crate": {
     "criteria": {
       "has_key_item_0": "2026-09-06 11:04:09 +0530"
@@ -2536,6 +2785,12 @@
     },
     "done": true
   },
+  "adorn:recipes/smooth_stone_platform": {
+    "criteria": {
+      "has_key_item_0": "2026-09-27 22:06:35 +0530"
+    },
+    "done": true
+  },
   "minecraft:story/enter_the_nether": {
     "criteria": {
       "entered_nether": "2026-09-06 23:25:32 +0530"
@@ -2563,6 +2818,12 @@
   "upgradednetherite_ultimate:recipes/upgraded_netherite_bow_smithing": {
     "criteria": {
       "has_netherite_bow": "2026-09-20 01:26:01 +0530"
+    },
+    "done": true
+  },
+  "twilightforest:alt/entities/death_tome": {
+    "criteria": {
+      "hurt": "2026-09-27 22:16:48 +0530"
     },
     "done": true
   },
@@ -2596,6 +2857,12 @@
     },
     "done": true
   },
+  "dungeons_arise:find_merchant_campsite": {
+    "criteria": {
+      "location0": "2026-09-27 13:04:42 +0530"
+    },
+    "done": true
+  },
   "cavesandcliffs:recipes/decorations/yellow_candle": {
     "criteria": {
       "has_yellow_dye": "2026-09-11 23:38:40 +0530"
@@ -2615,8 +2882,10 @@
       "grindstone": "2026-09-06 21:24:42 +0530",
       "gardeningtable": "2026-09-06 21:23:56 +0530",
       "blastfurnace": "2026-09-07 22:36:43 +0530",
+      "lectern": "2026-09-27 12:43:10 +0530",
       "woodworkingtable": "2026-09-06 21:22:50 +0530",
-      "cauldron": "2026-09-20 00:55:47 +0530"
+      "cauldron": "2026-09-20 00:55:47 +0530",
+      "composter": "2026-09-27 12:42:16 +0530"
     },
     "done": false
   },
@@ -2629,6 +2898,12 @@
   "comforts:sleeping_bag_light_gray_from_white": {
     "criteria": {
       "has_sleeping_bag": "2026-09-06 11:48:05 +0530"
+    },
+    "done": true
+  },
+  "twilightforest:alt/entities/minotaur": {
+    "criteria": {
+      "hurt": "2026-09-27 22:46:58 +0530"
     },
     "done": true
   },
@@ -2683,6 +2958,12 @@
   "adorn:recipes/stone_rod": {
     "criteria": {
       "has_key_item_0": "2026-09-07 01:32:54 +0530"
+    },
+    "done": true
+  },
+  "adorn:recipes/crimson_kitchen_sink": {
+    "criteria": {
+      "has_key_item_0": "2026-09-27 12:25:19 +0530"
     },
     "done": true
   },
@@ -2749,9 +3030,16 @@
   "farmersdelight:main/master_chef": {
     "criteria": {
       "fish_stew": "2026-09-07 22:19:21 +0530",
-      "beef_stew": "2026-09-20 23:05:58 +0530"
+      "beef_stew": "2026-09-20 23:05:58 +0530",
+      "fried_rice": "2026-09-27 22:18:11 +0530"
     },
     "done": false
+  },
+  "adorn:recipes/birch_drawer": {
+    "criteria": {
+      "has_key_item_0": "2026-09-27 22:17:02 +0530"
+    },
+    "done": true
   },
   "minecraft:recipes/building_blocks/mossy_stone_bricks": {
     "criteria": {
@@ -2852,6 +3140,12 @@
   "minecraft:recipes/decorations/painting": {
     "criteria": {
       "has_wool": "2026-09-06 11:17:49 +0530"
+    },
+    "done": true
+  },
+  "twilightforest:alt/biomes/snowy_forest": {
+    "criteria": {
+      "discover": "2026-09-27 13:30:56 +0530"
     },
     "done": true
   },
@@ -3020,6 +3314,12 @@
   "minecraft:recipes/combat/golden_helmet": {
     "criteria": {
       "has_gold_ingot": "2026-09-06 11:52:49 +0530"
+    },
+    "done": true
+  },
+  "twilightforest:alt/biomes/fire_swamp": {
+    "criteria": {
+      "discover": "2026-09-27 23:23:00 +0530"
     },
     "done": true
   },
@@ -3197,9 +3497,21 @@
     },
     "done": true
   },
+  "adorn:recipes/crimson_kitchen_counter": {
+    "criteria": {
+      "has_key_item_0": "2026-09-27 12:25:19 +0530"
+    },
+    "done": true
+  },
   "adorn:recipes/blackstone_post": {
     "criteria": {
       "has_key_item_0": "2026-09-07 22:56:56 +0530"
+    },
+    "done": true
+  },
+  "twilightforest:alt/entities/kobold": {
+    "criteria": {
+      "hurt": "2026-09-27 13:31:07 +0530"
     },
     "done": true
   },
@@ -3215,9 +3527,28 @@
     },
     "done": true
   },
+  "twilightforest:twilight_dinner": {
+    "criteria": {
+      "meef_stroganoff": "2026-09-28 00:00:49 +0530",
+      "cooked_meef": "2026-09-27 23:25:31 +0530"
+    },
+    "done": false
+  },
+  "adorn:recipes/acacia_drawer": {
+    "criteria": {
+      "has_key_item_0": "2026-09-27 13:10:19 +0530"
+    },
+    "done": true
+  },
   "comforts:sleeping_bag_red_from_white": {
     "criteria": {
       "has_sleeping_bag": "2026-09-06 11:48:05 +0530"
+    },
+    "done": true
+  },
+  "twilightforest:alt/major_landmarks/medium_hollow_hill": {
+    "criteria": {
+      "discover": "2026-09-27 22:01:45 +0530"
     },
     "done": true
   },
@@ -3230,6 +3561,18 @@
   "minecraft:recipes/misc/magenta_dye_from_blue_red_pink": {
     "criteria": {
       "has_blue_dye": "2026-09-20 01:01:20 +0530"
+    },
+    "done": true
+  },
+  "twilightforest:alt/entities/arthopods": {
+    "criteria": {
+      "3": "2026-09-27 22:57:13 +0530"
+    },
+    "done": true
+  },
+  "adorn:recipes/birch_platform": {
+    "criteria": {
+      "has_key_item_0": "2026-09-27 22:17:02 +0530"
     },
     "done": true
   },
@@ -3275,6 +3618,12 @@
     },
     "done": true
   },
+  "minecraft:nether/obtain_blaze_rod": {
+    "criteria": {
+      "blaze_rod": "2026-09-27 22:53:08 +0530"
+    },
+    "done": true
+  },
   "minecraft:recipes/building_blocks/polished_blackstone_slab_from_polished_blackstone_stonecutting": {
     "criteria": {
       "has_polished_blackstone": "2026-09-20 00:59:29 +0530"
@@ -3308,6 +3657,12 @@
   "adorn:recipes/trading_station": {
     "criteria": {
       "has_key_item_0": "2026-09-06 11:23:43 +0530"
+    },
+    "done": true
+  },
+  "twilightforest:alt/biomes/twilight_swamp": {
+    "criteria": {
+      "0": "2026-09-27 13:56:55 +0530"
     },
     "done": true
   },
@@ -3377,6 +3732,12 @@
     },
     "done": true
   },
+  "twilightforest:alt/treasures/steeleaf_tool_set": {
+    "criteria": {
+      "ingredient": "2026-09-27 23:50:51 +0530"
+    },
+    "done": true
+  },
   "minecraft:recipes/misc/iron_ingot_from_iron_block": {
     "criteria": {
       "has_iron_block": "2026-09-06 19:17:09 +0530"
@@ -3442,6 +3803,12 @@
       "has_planks": "2026-09-19 13:42:15 +0530"
     },
     "done": true
+  },
+  "twilightforest:progress_yeti": {
+    "criteria": {
+      "previous_progression": "2026-09-27 22:31:45 +0530"
+    },
+    "done": false
   },
   "farmersdelight:main/eat_nourishing_food": {
     "criteria": {
@@ -3695,6 +4062,13 @@
     },
     "done": true
   },
+  "twilightforest:progress_naga": {
+    "criteria": {
+      "kill_mob": "2026-09-27 13:31:10 +0530",
+      "naga": "2026-09-27 22:07:53 +0530"
+    },
+    "done": true
+  },
   "minecraft:recipes/building_blocks/yellow_concrete_powder": {
     "criteria": {
       "has_gravel": "2026-09-06 12:35:18 +0530"
@@ -3815,6 +4189,12 @@
     },
     "done": true
   },
+  "minecraft:recipes/redstone/crimson_pressure_plate": {
+    "criteria": {
+      "has_planks": "2026-09-27 12:25:19 +0530"
+    },
+    "done": true
+  },
   "morevillagers:first_trade": {
     "criteria": {
       "villagertrade": "2026-09-06 19:40:37 +0530"
@@ -3866,6 +4246,12 @@
     },
     "done": true
   },
+  "minecraft:recipes/decorations/crimson_fence": {
+    "criteria": {
+      "has_planks": "2026-09-27 12:25:19 +0530"
+    },
+    "done": true
+  },
   "extendedmushrooms:recipes/food/mushroom_bread": {
     "criteria": {
       "has_mushroom": "2026-09-06 11:39:44 +0530"
@@ -3893,6 +4279,18 @@
   "minecraft:recipes/food/cooked_rabbit_from_smoking": {
     "criteria": {
       "has_rabbit": "2026-09-07 23:39:37 +0530"
+    },
+    "done": true
+  },
+  "extendedmushrooms:recipes/redstone/mushroom_wood/honey_fungus/honey_fungus_chest_trapped": {
+    "criteria": {
+      "has_tripwire_hook": "2026-09-27 12:52:42 +0530"
+    },
+    "done": true
+  },
+  "twilightforest:alt/major_landmarks/large_hollow_hill": {
+    "criteria": {
+      "discover": "2026-09-27 13:36:15 +0530"
     },
     "done": true
   },
@@ -3947,6 +4345,12 @@
   "immersivecooking:recipes/immersivecooking/jungle_blackstone_pantry": {
     "criteria": {
       "has_polished_blackstone": "2026-09-20 00:59:29 +0530"
+    },
+    "done": true
+  },
+  "minecraft:recipes/redstone/trapped_chest": {
+    "criteria": {
+      "has_tripwire_hook": "2026-09-27 12:52:42 +0530"
     },
     "done": true
   },
@@ -4022,6 +4426,12 @@
     },
     "done": true
   },
+  "twilightforest:alt/treasures/scepters": {
+    "criteria": {
+      "3": "2026-09-27 22:31:45 +0530"
+    },
+    "done": true
+  },
   "adorn:recipes/brick_post": {
     "criteria": {
       "has_key_item_0": "2026-09-07 23:06:08 +0530"
@@ -4094,6 +4504,12 @@
     },
     "done": true
   },
+  "minecraft:recipes/decorations/mossy_stone_brick_wall": {
+    "criteria": {
+      "has_mossy_stone_bricks": "2026-09-27 22:10:16 +0530"
+    },
+    "done": true
+  },
   "supplementaries:recipes/pancake": {
     "criteria": {
       "has_plank": "2026-09-06 11:09:59 +0530"
@@ -4109,6 +4525,12 @@
   "minecraft:recipes/brewing/cauldron": {
     "criteria": {
       "has_water_bucket": "2026-09-06 13:09:54 +0530"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/armor_stand": {
+    "criteria": {
+      "has_stone_slab": "2026-09-27 22:06:35 +0530"
     },
     "done": true
   },
@@ -4271,6 +4693,12 @@
   "extendedmushrooms:recipes/transportation/mushroom_wood/honey_fungus/honey_fungus_boat": {
     "criteria": {
       "in_water": "2026-09-06 11:11:48 +0530"
+    },
+    "done": true
+  },
+  "twilightforest:alt/treasures/ironwood_tool_set": {
+    "criteria": {
+      "ingredien2": "2026-09-27 22:53:08 +0530"
     },
     "done": true
   },
@@ -4465,6 +4893,12 @@
     },
     "done": true
   },
+  "minecraft:recipes/decorations/crimson_sign": {
+    "criteria": {
+      "has_crimson_planks": "2026-09-27 12:25:19 +0530"
+    },
+    "done": true
+  },
   "adorn:recipes/andesite_platform": {
     "criteria": {
       "has_key_item_0": "2026-09-16 23:46:38 +0530"
@@ -4477,6 +4911,12 @@
     },
     "done": true
   },
+  "supplementaries:recipes/sign_post_painted_acacia": {
+    "criteria": {
+      "has_plank": "2026-09-27 13:15:27 +0530"
+    },
+    "done": true
+  },
   "minecraft:recipes/building_blocks/polished_blackstone_brick_stairs_from_blackstone_stonecutting": {
     "criteria": {
       "has_blackstone": "2026-09-07 22:56:56 +0530"
@@ -4486,6 +4926,12 @@
   "minecraft:recipes/decorations/chain": {
     "criteria": {
       "has_iron_ingot": "2026-09-06 11:07:20 +0530"
+    },
+    "done": true
+  },
+  "supplementaries:recipes/hanging_sign_painted_acacia": {
+    "criteria": {
+      "has_plank": "2026-09-27 13:15:27 +0530"
     },
     "done": true
   },
@@ -4531,9 +4977,21 @@
     },
     "done": true
   },
+  "twilightforest:alt/treasures/foods/meef": {
+    "criteria": {
+      "cooked": "2026-09-27 23:01:26 +0530"
+    },
+    "done": true
+  },
   "minecraft:recipes/food/cooked_cod_from_campfire_cooking": {
     "criteria": {
       "has_cod": "2026-09-06 11:30:23 +0530"
+    },
+    "done": true
+  },
+  "mowziesmobs:kill_barako": {
+    "criteria": {
+      "barako": "2026-09-27 13:10:47 +0530"
     },
     "done": true
   },
@@ -4546,6 +5004,12 @@
   "minecraft:recipes/decorations/magenta_stained_glass_pane_from_glass_pane": {
     "criteria": {
       "has_magenta_dye": "2026-09-20 01:06:52 +0530"
+    },
+    "done": true
+  },
+  "twilightforest:alt/major_landmarks/naga_courtyard": {
+    "criteria": {
+      "discover": "2026-09-27 22:03:32 +0530"
     },
     "done": true
   },
@@ -4585,9 +5049,21 @@
     },
     "done": true
   },
+  "minecraft:recipes/brewing/blaze_powder": {
+    "criteria": {
+      "has_blaze_rod": "2026-09-27 22:53:08 +0530"
+    },
+    "done": true
+  },
   "minecraft:recipes/building_blocks/black_wool": {
     "criteria": {
       "has_white_wool": "2026-09-06 11:17:49 +0530"
+    },
+    "done": true
+  },
+  "twilightforest:alt/entities/minoshroom": {
+    "criteria": {
+      "hurt_by_indirect": "2026-09-27 23:57:38 +0530"
     },
     "done": true
   },
@@ -4612,6 +5088,18 @@
   "bygonenether:root": {
     "criteria": {
       "entered_nether": "2026-09-06 23:25:32 +0530"
+    },
+    "done": true
+  },
+  "supplementaries:recipes/hanging_sign_crimson": {
+    "criteria": {
+      "has_plank": "2026-09-27 12:25:19 +0530"
+    },
+    "done": true
+  },
+  "twilightforest:alt/treasures/minotaur_axe_diamond": {
+    "criteria": {
+      "axe": "2026-09-28 00:00:12 +0530"
     },
     "done": true
   },
@@ -4645,6 +5133,12 @@
     },
     "done": true
   },
+  "twilightforest:alt/treasures/minotaur_axes": {
+    "criteria": {
+      "diamond": "2026-09-28 00:00:12 +0530"
+    },
+    "done": true
+  },
   "upgradednetherite_ultimate:recipes/upgraded_netherite_ingot": {
     "criteria": {
       "has_netherite_ingot": "2026-09-07 21:10:58 +0530"
@@ -4654,6 +5148,12 @@
   "minecraft:recipes/decorations/blackstone_wall_from_blackstone_stonecutting": {
     "criteria": {
       "has_blackstone": "2026-09-07 22:56:56 +0530"
+    },
+    "done": true
+  },
+  "minecraft:recipes/redstone/crimson_fence_gate": {
+    "criteria": {
+      "has_planks": "2026-09-27 12:25:19 +0530"
     },
     "done": true
   },
@@ -4675,9 +5175,21 @@
     },
     "done": true
   },
+  "minecraft:recipes/building_blocks/acacia_wood": {
+    "criteria": {
+      "has_log": "2026-09-27 13:10:16 +0530"
+    },
+    "done": true
+  },
   "dungeons_arise:find_fishing_hut": {
     "criteria": {
       "location0": "2026-09-06 11:29:38 +0530"
+    },
+    "done": true
+  },
+  "twilightforest:alt/entities/lich": {
+    "criteria": {
+      "slain_by": "2026-09-27 22:29:55 +0530"
     },
     "done": true
   },
@@ -4750,6 +5262,12 @@
   "upgradednetherite_ultimate:recipes/upgraded_netherite_axe_smithing": {
     "criteria": {
       "has_netherite_axe": "2026-09-20 01:27:52 +0530"
+    },
+    "done": true
+  },
+  "adorn:recipes/mossy_stone_brick_post": {
+    "criteria": {
+      "has_key_item_0": "2026-09-27 22:10:16 +0530"
     },
     "done": true
   },
@@ -4837,6 +5355,12 @@
     },
     "done": true
   },
+  "adorn:recipes/acacia_step": {
+    "criteria": {
+      "has_key_item_0": "2026-09-27 13:10:19 +0530"
+    },
+    "done": true
+  },
   "minecraft:recipes/building_blocks/black_concrete_powder": {
     "criteria": {
       "has_gravel": "2026-09-06 12:35:18 +0530"
@@ -4847,6 +5371,12 @@
     "criteria": {
       "has_the_recipe": "2026-09-06 11:48:05 +0530",
       "has_sleeping_bag": "2026-09-06 11:48:05 +0530"
+    },
+    "done": true
+  },
+  "twilightforest:alt/biomes/firefly_forest": {
+    "criteria": {
+      "discover": "2026-09-27 13:38:16 +0530"
     },
     "done": true
   },
@@ -4865,6 +5395,12 @@
   "minecraft:recipes/redstone/birch_fence_gate": {
     "criteria": {
       "has_planks": "2026-09-19 13:42:15 +0530"
+    },
+    "done": true
+  },
+  "decorative_blocks_abnormals:recipes/brown_mushroom_palisade": {
+    "criteria": {
+      "has_log": "2026-09-27 12:43:38 +0530"
     },
     "done": true
   },
@@ -4901,6 +5437,12 @@
   "minecraft:recipes/building_blocks/yellow_wool": {
     "criteria": {
       "has_white_wool": "2026-09-06 11:17:49 +0530"
+    },
+    "done": true
+  },
+  "farmersdelight:recipes/farmersdelight/onion": {
+    "criteria": {
+      "has_onion_crate": "2026-09-27 12:52:23 +0530"
     },
     "done": true
   },
@@ -4982,6 +5524,12 @@
     },
     "done": true
   },
+  "minecraft:recipes/decorations/black_glazed_terracotta": {
+    "criteria": {
+      "has_black_terracotta": "2026-09-27 22:10:08 +0530"
+    },
+    "done": true
+  },
   "minecraft:recipes/building_blocks/blue_terracotta": {
     "criteria": {
       "has_terracotta": "2026-09-20 23:03:53 +0530"
@@ -4997,6 +5545,12 @@
   "alexsmobs:alexsmobs/seagull_steal": {
     "criteria": {
       "ex": "2026-09-06 14:44:49 +0530"
+    },
+    "done": true
+  },
+  "twilightforest:alt/entities/pinch_beetle": {
+    "criteria": {
+      "hurt_by_indirect": "2026-09-27 23:06:09 +0530"
     },
     "done": true
   },
@@ -5073,6 +5627,12 @@
     },
     "done": true
   },
+  "twilightforest:alt/treasures/fiery_blood_tears": {
+    "criteria": {
+      "tools": "2026-09-27 23:27:25 +0530"
+    },
+    "done": true
+  },
   "extendedmushrooms:recipes/decorations/mushroom_wood/colorless/mushroom_chest": {
     "criteria": {
       "has_lots_of_items": "2026-09-06 11:06:17 +0530"
@@ -5091,6 +5651,12 @@
     },
     "done": true
   },
+  "supplementaries:recipes/bomb": {
+    "criteria": {
+      "has_plank": "2026-09-27 23:44:54 +0530"
+    },
+    "done": true
+  },
   "minecraft:recipes/decorations/barrel": {
     "criteria": {
       "has_planks": "2026-09-06 11:04:09 +0530"
@@ -5100,6 +5666,12 @@
   "supplementaries:recipes/hanging_sign_red_mushroom": {
     "criteria": {
       "has_plank": "2026-09-06 12:04:10 +0530"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/mossy_stone_brick_slab": {
+    "criteria": {
+      "has_mossy_stone_bricks": "2026-09-27 22:10:16 +0530"
     },
     "done": true
   },
@@ -5160,6 +5732,12 @@
   "minecraft:recipes/misc/red_dye_from_tulip": {
     "criteria": {
       "has_red_flower": "2026-09-20 01:06:52 +0530"
+    },
+    "done": true
+  },
+  "adorn:recipes/acacia_shelf": {
+    "criteria": {
+      "has_key_item_0": "2026-09-27 13:10:19 +0530"
     },
     "done": true
   },
@@ -5247,6 +5825,12 @@
     },
     "done": true
   },
+  "twilightforest:alt/treasures/tools": {
+    "criteria": {
+      "0": "2026-09-27 22:53:08 +0530"
+    },
+    "done": true
+  },
   "comforts:sleeping_bag_cyan_from_white": {
     "criteria": {
       "has_sleeping_bag": "2026-09-06 11:48:05 +0530"
@@ -5277,6 +5861,12 @@
     },
     "done": true
   },
+  "minecraft:recipes/food/cookie": {
+    "criteria": {
+      "has_cocoa": "2026-09-27 13:14:02 +0530"
+    },
+    "done": true
+  },
   "minecraft:recipes/decorations/red_bed_from_white_bed": {
     "criteria": {
       "has_bed": "2026-09-10 20:36:03 +0530"
@@ -5298,6 +5888,12 @@
   "minecraft:recipes/building_blocks/acacia_stairs": {
     "criteria": {
       "has_planks": "2026-09-07 01:33:50 +0530"
+    },
+    "done": true
+  },
+  "adorn:recipes/acacia_chair": {
+    "criteria": {
+      "has_key_item_0": "2026-09-27 13:10:19 +0530"
     },
     "done": true
   },
@@ -5553,6 +6149,7 @@
       "neapolitan:strawberry_scones": "2026-09-06 23:24:49 +0530",
       "potato": "2026-09-06 15:39:27 +0530",
       "bread": "2026-09-06 12:39:28 +0530",
+      "golden_apple": "2026-09-27 23:48:45 +0530",
       "melon_slice": "2026-09-10 23:19:56 +0530",
       "cooked_rabbit": "2026-09-08 02:24:21 +0530",
       "cooked_salmon": "2026-09-06 20:28:37 +0530",
@@ -5572,6 +6169,12 @@
   "minecraft:recipes/building_blocks/gray_terracotta": {
     "criteria": {
       "has_terracotta": "2026-09-20 23:03:53 +0530"
+    },
+    "done": true
+  },
+  "twilightforest:alt/biomes/general_biomes": {
+    "criteria": {
+      "4": "2026-09-27 13:29:30 +0530"
     },
     "done": true
   },
@@ -5638,6 +6241,12 @@
   "minecraft:recipes/building_blocks/birch_slab": {
     "criteria": {
       "has_planks": "2026-09-19 13:42:15 +0530"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/mossy_stone_brick_stairs_from_mossy_stone_brick_stonecutting": {
+    "criteria": {
+      "has_mossy_stone_bricks": "2026-09-27 22:10:16 +0530"
     },
     "done": true
   },
@@ -5833,6 +6442,12 @@
     },
     "done": true
   },
+  "minecraft:recipes/redstone/crimson_door": {
+    "criteria": {
+      "has_planks": "2026-09-27 12:25:19 +0530"
+    },
+    "done": true
+  },
   "decorative_blocks:recipes/decorations/spruce_palisade": {
     "criteria": {
       "has_log": "2026-09-06 19:26:00 +0530"
@@ -5944,6 +6559,12 @@
   "minecraft:recipes/tools/stone_hoe": {
     "criteria": {
       "has_cobblestone": "2026-09-06 11:05:40 +0530"
+    },
+    "done": true
+  },
+  "minecraft:recipes/redstone/crimson_trapdoor": {
+    "criteria": {
+      "has_planks": "2026-09-27 12:25:19 +0530"
     },
     "done": true
   },
@@ -6085,6 +6706,12 @@
     },
     "done": true
   },
+  "twilightforest:alt/treasures/ironwood_armor_set": {
+    "criteria": {
+      "ingredien2": "2026-09-27 22:53:08 +0530"
+    },
+    "done": true
+  },
   "morevillagers:map_bastion": {
     "criteria": {
       "hasmap": "2026-09-06 11:39:44 +0530",
@@ -6152,6 +6779,12 @@
     },
     "done": true
   },
+  "adorn:recipes/acacia_platform": {
+    "criteria": {
+      "has_key_item_0": "2026-09-27 13:10:19 +0530"
+    },
+    "done": true
+  },
   "minecraft:recipes/building_blocks/cyan_concrete_powder": {
     "criteria": {
       "has_gravel": "2026-09-06 12:35:18 +0530"
@@ -6164,9 +6797,21 @@
     },
     "done": true
   },
+  "extendedmushrooms:recipes/redstone/mushroom_wood/poisonous_mushroom/poisonous_mushroom_chest_trapped": {
+    "criteria": {
+      "has_tripwire_hook": "2026-09-27 12:52:42 +0530"
+    },
+    "done": true
+  },
   "minecraft:recipes/building_blocks/lime_wool": {
     "criteria": {
       "has_white_wool": "2026-09-06 11:17:49 +0530"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/mossy_stone_brick_wall_from_mossy_stone_brick_stonecutting": {
+    "criteria": {
+      "has_mossy_stone_bricks": "2026-09-27 22:10:16 +0530"
     },
     "done": true
   },
@@ -6224,6 +6869,12 @@
     },
     "done": true
   },
+  "adorn:recipes/birch_bench": {
+    "criteria": {
+      "has_key_item_0": "2026-09-27 22:17:02 +0530"
+    },
+    "done": true
+  },
   "minecraft:recipes/decorations/stone_brick_wall_from_stone_bricks_stonecutting": {
     "criteria": {
       "has_stone_bricks": "2026-09-06 11:52:12 +0530"
@@ -6263,6 +6914,12 @@
   "minecraft:recipes/decorations/scaffolding": {
     "criteria": {
       "has_bamboo": "2026-09-11 00:05:08 +0530"
+    },
+    "done": true
+  },
+  "decorative_blocks:recipes/decorations/crimson_seat": {
+    "criteria": {
+      "has_plank": "2026-09-27 12:25:19 +0530"
     },
     "done": true
   },
@@ -6344,6 +7001,12 @@
     },
     "done": true
   },
+  "adorn:recipes/crimson_kitchen_cupboard": {
+    "criteria": {
+      "has_key_item_0": "2026-09-27 12:25:19 +0530"
+    },
+    "done": true
+  },
   "upgradednetherite_ultimate:recipes/upgraded_netherite_sword_smithing": {
     "criteria": {
       "has_netherite_sword": "2026-09-20 01:26:01 +0530"
@@ -6392,6 +7055,12 @@
     },
     "done": true
   },
+  "extendedmushrooms:recipes/redstone/mushroom_wood/glowshroom/glowshroom_chest_trapped": {
+    "criteria": {
+      "has_tripwire_hook": "2026-09-27 12:52:42 +0530"
+    },
+    "done": true
+  },
   "minecraft:recipes/misc/conduit": {
     "criteria": {
       "has_nautilus_shell": "2026-09-06 11:36:30 +0530"
@@ -6437,6 +7106,12 @@
   "minecraft:recipes/building_blocks/brown_terracotta": {
     "criteria": {
       "has_terracotta": "2026-09-20 23:03:53 +0530"
+    },
+    "done": true
+  },
+  "decorative_blocks:recipes/decorations/acacia_palisade": {
+    "criteria": {
+      "has_log": "2026-09-27 13:10:16 +0530"
     },
     "done": true
   },
@@ -6530,6 +7205,18 @@
     },
     "done": true
   },
+  "minecraft:recipes/brewing/brewing_stand": {
+    "criteria": {
+      "has_blaze_rod": "2026-09-27 22:53:08 +0530"
+    },
+    "done": true
+  },
+  "adorn:recipes/magenta_table_lamp": {
+    "criteria": {
+      "has_key_item_0": "2026-09-27 12:41:29 +0530"
+    },
+    "done": true
+  },
   "omnis:recipes/omnis/ravaged_chestplate": {
     "criteria": {
       "has_ravaged_metal": "2026-09-06 21:17:14 +0530"
@@ -6584,6 +7271,18 @@
     },
     "done": true
   },
+  "twilightforest:alt/major_landmarks/lich_tower": {
+    "criteria": {
+      "discover": "2026-09-27 22:16:43 +0530"
+    },
+    "done": true
+  },
+  "twilightforest:alt/treasures/steeleaf_armor_set": {
+    "criteria": {
+      "boots": "2026-09-27 23:03:49 +0530"
+    },
+    "done": true
+  },
   "adorn:recipes/blackstone_platform": {
     "criteria": {
       "has_key_item_0": "2026-09-07 00:09:05 +0530"
@@ -6611,6 +7310,24 @@
   "minecraft:recipes/redstone/dark_oak_pressure_plate": {
     "criteria": {
       "has_planks": "2026-09-06 15:16:23 +0530"
+    },
+    "done": true
+  },
+  "twilightforest:alt/treasures/foods/any": {
+    "criteria": {
+      "2": "2026-09-27 23:01:26 +0530"
+    },
+    "done": true
+  },
+  "twilightforest:alt/treasures/armors": {
+    "criteria": {
+      "0": "2026-09-27 22:53:08 +0530"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/mossy_stone_brick_slab_from_mossy_stone_brick_stonecutting": {
+    "criteria": {
+      "has_mossy_stone_bricks": "2026-09-27 22:10:16 +0530"
     },
     "done": true
   },
@@ -6689,6 +7406,12 @@
   "blue_skies:recipes/blue_skies_blocks/trough": {
     "criteria": {
       "has_item": "2026-09-06 15:16:25 +0530"
+    },
+    "done": true
+  },
+  "twilightforest:alt/treasures/maze_map": {
+    "criteria": {
+      "maze_map_focus": "2026-09-27 23:05:50 +0530"
     },
     "done": true
   },
@@ -6848,6 +7571,12 @@
     },
     "done": true
   },
+  "extendedmushrooms:recipes/redstone/mushroom_wood/colorless/mushroom_chest_trapped": {
+    "criteria": {
+      "has_tripwire_hook": "2026-09-27 12:52:42 +0530"
+    },
+    "done": true
+  },
   "minecraft:recipes/decorations/brown_bed_from_white_bed": {
     "criteria": {
       "has_bed": "2026-09-10 20:36:03 +0530"
@@ -6920,6 +7649,12 @@
     },
     "done": true
   },
+  "twilightforest:alt/entities/slime_beetle": {
+    "criteria": {
+      "hurt_by_indirect": "2026-09-27 23:01:05 +0530"
+    },
+    "done": true
+  },
   "minecraft:recipes/building_blocks/stripped_spruce_wood": {
     "criteria": {
       "has_log": "2026-09-20 00:59:12 +0530"
@@ -6953,6 +7688,13 @@
   "minecraft:recipes/combat/diamond_boots": {
     "criteria": {
       "has_diamond": "2026-09-06 13:31:12 +0530"
+    },
+    "done": true
+  },
+  "twilightforest:progress_lich": {
+    "criteria": {
+      "shield_scepter": "2026-09-27 22:31:45 +0530",
+      "kill_naga": "2026-09-27 22:07:53 +0530"
     },
     "done": true
   },
