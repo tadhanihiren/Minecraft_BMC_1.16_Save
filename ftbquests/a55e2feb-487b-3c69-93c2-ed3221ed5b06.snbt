@@ -1,0 +1,13 @@
+{
+	version: 1
+	uuid: "a55e2feb487b3c6993c2ed3221ed5b06"
+	name: "_Seryx_"
+	can_edit: false
+	lock: false
+	auto_pin: false
+	task_progress: { }
+	started: { }
+	completed: { }
+	claimed_rewards: { }
+	pinned_quests: [ ]
+}

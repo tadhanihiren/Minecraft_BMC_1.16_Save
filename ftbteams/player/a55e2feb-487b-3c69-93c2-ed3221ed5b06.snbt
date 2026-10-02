@@ -1,0 +1,20 @@
+{
+	id: "a55e2feb-487b-3c69-93c2-ed3221ed5b06"
+	type: "player"
+	player_name: "_Seryx_"
+	ranks: {
+		a55e2feb-487b-3c69-93c2-ed3221ed5b06: "owner"
+	}
+	properties: {
+		"ftbchunks:allow_explosions": 0b
+		"ftbteams:display_name": "_Seryx_"
+		"ftbteams:color": "#C459FF"
+		"ftbchunks:block_edit_mode": "allies"
+		"ftbchunks:block_interact_mode": "allies"
+		"ftbteams:description": ""
+		"ftbteams:free_to_join": 0b
+		"ftbchunks:allow_fake_players": 1b
+	}
+	message_history: [ ]
+	extra: { }
+}

@@ -1,0 +1,93 @@
+{
+  "farmersdelight:main/root": {
+    "criteria": {
+      "seeds": "2026-09-30 06:41:12 +0530"
+    },
+    "done": true
+  },
+  "betterdungeons:root": {
+    "criteria": {
+      "always": "2026-09-30 06:41:12 +0530"
+    },
+    "done": true
+  },
+  "shieldexp:recipes/wooden_shield": {
+    "criteria": {
+      "has_stick": "2026-09-30 06:41:12 +0530"
+    },
+    "done": true
+  },
+  "shieldexp:recipes/iron_shield": {
+    "criteria": {
+      "has_iron_ingot": "2026-09-30 06:41:12 +0530"
+    },
+    "done": true
+  },
+  "architects_palette:main/root": {
+    "criteria": {
+      "craftingtable": "2026-09-30 06:41:12 +0530"
+    },
+    "done": true
+  },
+  "cataclysm:root": {
+    "criteria": {
+      "custom_test_name": "2026-09-30 06:41:12 +0530"
+    },
+    "done": true
+  },
+  "takesapillage:root": {
+    "criteria": {
+      "always": "2026-09-30 06:41:12 +0530"
+    },
+    "done": true
+  },
+  "dungeons_arise:wda_root": {
+    "criteria": {
+      "WDA": "2026-09-30 06:41:12 +0530"
+    },
+    "done": true
+  },
+  "dead_guys_untitled_deep_dark_:deep_dark": {
+    "criteria": {
+      "deep_dark": "2026-09-30 06:41:12 +0530"
+    },
+    "done": true
+  },
+  "shieldexp:recipes/diamond_shield": {
+    "criteria": {
+      "has_diamond": "2026-09-30 06:41:12 +0530"
+    },
+    "done": true
+  },
+  "shieldexp:recipes/golden_shield": {
+    "criteria": {
+      "has_gold_ingot": "2026-09-30 06:41:12 +0530"
+    },
+    "done": true
+  },
+  "shieldexp:recipes/netherite_shield": {
+    "criteria": {
+      "has_netherite_ingot": "2026-09-30 06:41:12 +0530"
+    },
+    "done": true
+  },
+  "mowziesmobs:root": {
+    "criteria": {
+      "custom_test_name": "2026-09-30 06:41:12 +0530"
+    },
+    "done": true
+  },
+  "morevillagers:root": {
+    "criteria": {
+      "always": "2026-09-30 06:41:12 +0530"
+    },
+    "done": true
+  },
+  "repurposed_structures:root": {
+    "criteria": {
+      "always": "2026-09-30 06:41:12 +0530"
+    },
+    "done": true
+  },
+  "DataVersion": 2586
+}
