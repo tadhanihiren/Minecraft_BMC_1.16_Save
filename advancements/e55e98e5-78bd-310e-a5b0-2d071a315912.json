@@ -89,6 +89,12 @@
     },
     "done": true
   },
+  "twilightforest:progress_naga": {
+    "criteria": {
+      "kill_mob": "2026-10-04 18:13:48 +0530"
+    },
+    "done": false
+  },
   "minecraft:recipes/redstone/spruce_fence_gate": {
     "criteria": {
       "has_planks": "2026-09-06 11:06:16 +0530"
@@ -293,6 +299,12 @@
     },
     "done": true
   },
+  "minecraft:recipes/food/cooked_rabbit_from_smoking": {
+    "criteria": {
+      "has_rabbit": "2026-10-04 18:10:09 +0530"
+    },
+    "done": true
+  },
   "farmersdelight:recipes/farmersdelight/sweet_berry_cookie": {
     "criteria": {
       "has_sweet_berries": "2026-09-06 11:21:27 +0530"
@@ -374,6 +386,12 @@
   "environmental:adventure/obtain_explorer_gear": {
     "criteria": {
       "thief_hood": "2026-09-07 21:33:50 +0530"
+    },
+    "done": true
+  },
+  "twilightforest:alt/biomes/dense_twilight_forest": {
+    "criteria": {
+      "discover": "2026-10-04 18:11:11 +0530"
     },
     "done": true
   },
@@ -530,6 +548,12 @@
   "adorn:recipes/byg/pine_kitchen_cupboard": {
     "criteria": {
       "has_key_item_0": "2026-09-06 12:00:24 +0530"
+    },
+    "done": true
+  },
+  "minecraft:recipes/food/cooked_rabbit_from_campfire_cooking": {
+    "criteria": {
+      "has_rabbit": "2026-10-04 18:10:09 +0530"
     },
     "done": true
   },
@@ -711,6 +735,12 @@
     },
     "done": true
   },
+  "twilightforest:twilight_hunter": {
+    "criteria": {
+      "kobold": "2026-10-04 18:13:48 +0530"
+    },
+    "done": true
+  },
   "farmersdelight:recipes/farmersdelight/fried_egg_from_smoking": {
     "criteria": {
       "fried_egg": "2026-09-06 11:30:18 +0530"
@@ -831,9 +861,21 @@
     },
     "done": true
   },
+  "twilightforest:alt/entities/undead": {
+    "criteria": {
+      "0": "2026-10-04 18:20:13 +0530"
+    },
+    "done": true
+  },
   "bygonenether:root": {
     "criteria": {
       "entered_nether": "2026-09-07 21:47:13 +0530"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/leather": {
+    "criteria": {
+      "has_rabbit_hide": "2026-10-04 18:10:08 +0530"
     },
     "done": true
   },
@@ -846,6 +888,12 @@
   "minecraft:recipes/misc/red_dye_from_poppy": {
     "criteria": {
       "has_red_flower": "2026-09-06 11:31:30 +0530"
+    },
+    "done": true
+  },
+  "backpacked:recipes/backpacked/backpack": {
+    "criteria": {
+      "has_hide": "2026-10-04 18:10:09 +0530"
     },
     "done": true
   },
@@ -975,6 +1023,12 @@
     },
     "done": true
   },
+  "twilightforest:alt/entities/skeleton_druid": {
+    "criteria": {
+      "hurt": "2026-10-04 18:20:13 +0530"
+    },
+    "done": true
+  },
   "adorn:recipes/iron_shelf": {
     "criteria": {
       "has_key_item_0": "2026-09-06 13:00:47 +0530"
@@ -1030,6 +1084,12 @@
     },
     "done": true
   },
+  "twilightforest:alt/biomes/firefly_forest": {
+    "criteria": {
+      "discover": "2026-10-04 18:15:40 +0530"
+    },
+    "done": true
+  },
   "minecraft:story/iron_tools": {
     "criteria": {
       "iron_pickaxe": "2026-09-06 12:48:50 +0530"
@@ -1057,6 +1117,12 @@
   "supplementaries:recipes/item_shelf": {
     "criteria": {
       "has_item": "2026-09-06 11:06:16 +0530"
+    },
+    "done": true
+  },
+  "twilightforest:alt/biomes/mushroom_forest": {
+    "criteria": {
+      "discover": "2026-10-04 18:14:44 +0530"
     },
     "done": true
   },
@@ -1135,6 +1201,12 @@
   "comforts:rope_and_nail": {
     "criteria": {
       "has_iron": "2026-09-06 13:00:47 +0530"
+    },
+    "done": true
+  },
+  "twilightforest:alt/major_landmarks/hollow_hills": {
+    "criteria": {
+      "0": "2026-10-04 18:13:52 +0530"
     },
     "done": true
   },
@@ -1728,6 +1800,7 @@
   },
   "minecraft:husbandry/balanced_diet": {
     "criteria": {
+      "rabbit": "2026-10-04 18:15:04 +0530",
       "bread": "2026-09-06 12:58:24 +0530",
       "rotten_flesh": "2026-09-06 11:34:56 +0530",
       "cooked_porkchop": "2026-09-12 14:51:39 +0530",
@@ -1736,6 +1809,12 @@
       "carrot": "2026-09-07 21:16:01 +0530"
     },
     "done": false
+  },
+  "twilightforest:alt/biomes/general_biomes": {
+    "criteria": {
+      "4": "2026-10-04 18:11:11 +0530"
+    },
+    "done": true
   },
   "minecraft:recipes/tools/wooden_hoe": {
     "criteria": {
@@ -1911,9 +1990,21 @@
     },
     "done": true
   },
+  "twilightforest:alt/biomes/oak_savannah": {
+    "criteria": {
+      "discover": "2026-10-04 18:19:22 +0530"
+    },
+    "done": true
+  },
   "minecraft:story/mine_stone": {
     "criteria": {
       "get_stone": "2026-09-06 11:04:06 +0530"
+    },
+    "done": true
+  },
+  "twilightforest:alt/entities/animals": {
+    "criteria": {
+      "4": "2026-10-04 18:19:34 +0530"
     },
     "done": true
   },
@@ -2136,6 +2227,12 @@
   "minecraft:recipes/decorations/green_bed_from_white_bed": {
     "criteria": {
       "has_bed": "2026-09-06 12:00:10 +0530"
+    },
+    "done": true
+  },
+  "twilightforest:alt/major_landmarks/small_hollow_hill": {
+    "criteria": {
+      "discover": "2026-10-04 18:13:52 +0530"
     },
     "done": true
   },
@@ -2415,6 +2512,12 @@
     },
     "done": true
   },
+  "twilightforest:alt/entities/squirrel": {
+    "criteria": {
+      "slay": "2026-10-04 18:19:34 +0530"
+    },
+    "done": true
+  },
   "cataclysm:root": {
     "criteria": {
       "custom_test_name": "2026-09-06 11:02:13 +0530"
@@ -2535,6 +2638,18 @@
     },
     "done": true
   },
+  "minecraft:recipes/food/cooked_rabbit": {
+    "criteria": {
+      "has_rabbit": "2026-10-04 18:10:09 +0530"
+    },
+    "done": true
+  },
+  "twilightforest:alt/entities/kobold": {
+    "criteria": {
+      "hurt_by_indirect": "2026-10-04 18:13:42 +0530"
+    },
+    "done": true
+  },
   "minecraft:recipes/combat/leather_chestplate": {
     "criteria": {
       "has_leather": "2026-09-06 15:31:48 +0530"
@@ -2610,6 +2725,12 @@
   "supplementaries:recipes/hanging_sign_maple_aut": {
     "criteria": {
       "has_plank": "2026-09-06 11:21:27 +0530"
+    },
+    "done": true
+  },
+  "twilightforest:alt/biomes/twilight_swamp": {
+    "criteria": {
+      "0": "2026-10-04 18:11:29 +0530"
     },
     "done": true
   },
