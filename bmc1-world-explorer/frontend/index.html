@@ -79,6 +79,30 @@
             </div>
           </div>
           <div class="subfilter-body" id="subOres">
+            <!-- Y-Level Filter -->
+            <div class="y-filter-box" style="margin-bottom: 12px; padding: 10px; background: rgba(0,0,0,0.25); border-radius: 8px; border: 1px solid rgba(255,255,255,0.1);">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
+                <span style="font-size: 12px; font-weight: 600; color: #cbd5e1;">?? Y-Level Filter</span>
+                <label style="font-size: 11px; display: flex; align-items: center; gap: 4px; cursor: pointer; color: #94a3b8;">
+                  <input type="checkbox" id="chkYFilter" style="accent-color: #3b82f6;"> Enable
+                </label>
+              </div>
+              <div style="display: flex; align-items: center; gap: 8px;">
+                <div style="flex: 1;">
+                  <span style="font-size: 10px; color: #94a3b8;">Min Y</span>
+                  <input type="number" id="inputMinY" value="10" min="-64" max="320" style="width: 100%; padding: 4px 6px; border-radius: 4px; border: 1px solid #475569; background: #0f172a; color: #f8fafc; font-size: 12px;">
+                </div>
+                <span style="color: #64748b; margin-top: 12px;">to</span>
+                <div style="flex: 1;">
+                  <span style="font-size: 10px; color: #94a3b8;">Max Y</span>
+                  <input type="number" id="inputMaxY" value="20" min="-64" max="320" style="width: 100%; padding: 4px 6px; border-radius: 4px; border: 1px solid #475569; background: #0f172a; color: #f8fafc; font-size: 12px;">
+                </div>
+              </div>
+              <div style="display: flex; gap: 6px; margin-top: 8px;">
+                <button type="button" class="btn-link" id="btnPresetNetherite" style="font-size: 11px; padding: 2px 6px; background: rgba(255,255,255,0.06); border-radius: 4px; color: #38bdf8;">Netherite (10-20)</button>
+                <button type="button" class="btn-link" id="btnPresetDiamonds" style="font-size: 11px; padding: 2px 6px; background: rgba(255,255,255,0.06); border-radius: 4px; color: #38bdf8;">Diamond (5-16)</button>
+              </div>
+            </div>
             <div class="subfilter-toolbar">
               <span>Filter by ore type</span>
               <div>
@@ -186,19 +210,15 @@
       <!-- World Tools footer: pinned below the deck, plain direct-click
            buttons — no accordion, no dropdown. -->
       <div class="sidebar-footer">
-        <!-- Player Coordinates -->
+        <!-- Live Server Players & Locate -->
         <div class="footer-player-section">
-          <div class="footer-player-label">Current Player Coordinates (X, Z)</div>
-          <div class="footer-player-row">
-            <div class="coord-input-wrapper">
-              <span class="coord-prefix">X</span>
-              <input type="number" id="nearX" class="input-clean coord-input" placeholder="0" value="0">
-            </div>
-            <div class="coord-input-wrapper">
-              <span class="coord-prefix">Z</span>
-              <input type="number" id="nearZ" class="input-clean coord-input" placeholder="0" value="0">
-            </div>
-            <button id="btnShowPlayer" class="btn btn-sm btn-primary" title="Drop a marker at these coordinates">📍 Show Me</button>
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px; gap: 4px;">
+            <span class="footer-player-label" style="margin-bottom:0; flex:1; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">🟢 Live (<span id="livePlayerCount">0</span>)</span>
+            <button id="btnLocateMe" class="btn btn-sm btn-primary" style="padding: 3px 7px; font-size: 11px;" title="Center map on player">📍 Locate</button>
+            <button id="btnScan5x5" class="btn btn-sm" style="padding: 3px 7px; font-size: 11px; background: rgba(56, 189, 248, 0.2); border: 1px solid #38bdf8; color: #38bdf8;" title="Rescan 5x5 chunks (80x80 blocks) around player">🎯 5x5 Rescan</button>
+          </div>
+          <div id="livePlayerList" style="max-height: 70px; overflow-y: auto; font-size: 11px; font-family: var(--font-mono); background: rgba(0,0,0,0.25); border-radius: 4px; padding: 4px 6px; border: 1px solid var(--border-subtle); color: var(--text-muted);">
+            Searching players...
           </div>
         </div>
 

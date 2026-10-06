@@ -47,6 +47,7 @@ class MinecraftMap {
     this.markers = [];
     this.highlight = null;
     this.player = null;
+    this.players = [];
 
     this.onLocationSelect = null;
     this.onMouseMove = null;
@@ -199,8 +200,14 @@ class MinecraftMap {
     this.draw();
   }
 
+  setPlayers(playersList) {
+    this.players = Array.isArray(playersList) ? playersList : [];
+    this.draw();
+  }
+
   clearPlayerMarker() {
     this.player = null;
+    this.players = [];
     this.draw();
   }
 
@@ -539,17 +546,63 @@ class MinecraftMap {
       ctx.setLineDash([]);
     }
 
-    // Player marker.
-    if (this.player) {
-      const [sx, sy] = this.worldToScreen(this.player.x + 0.5, this.player.z + 0.5);
-      ctx.font = `28px "Segoe UI Emoji", "Noto Color Emoji", sans-serif`;
-      ctx.textAlign = "center";
-      ctx.textBaseline = "middle";
-      ctx.shadowColor = "rgba(0, 0, 0, 0.45)";
-      ctx.shadowBlur = 3;
-      ctx.fillText("🧍", sx, sy - 12);
-      ctx.shadowBlur = 0;
+    // Player marker (rendered with old 🧍 marker and visible player badge)
+    const allPlayersToDraw = [];
+    if (this.players && this.players.length > 0) {
+      allPlayersToDraw.push(...this.players);
+    } else if (this.player) {
+      allPlayersToDraw.push(this.player);
     }
+
+    allPlayersToDraw.forEach(p => {
+      const px = p.x !== undefined ? p.x : 0;
+      const pz = p.z !== undefined ? p.z : 0;
+      const [sx, sy] = this.worldToScreen(px + 0.5, pz + 0.5);
+
+      // Glowing Cyan Target Indicator
+      ctx.beginPath();
+      ctx.arc(sx, sy, 16, 0, 2 * Math.PI);
+      ctx.fillStyle = "rgba(56, 189, 248, 0.35)";
+      ctx.fill();
+      ctx.strokeStyle = "#0284c7";
+      ctx.lineWidth = 3;
+      ctx.stroke();
+
+      // Inner solid point
+      ctx.beginPath();
+      ctx.arc(sx, sy, 4, 0, 2 * Math.PI);
+      ctx.fillStyle = "#0284c7";
+      ctx.fill();
+
+      // Bold Old Standing Avatar Icon
+      ctx.font = `32px "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji", sans-serif`;
+      ctx.textAlign = "center";
+      ctx.textBaseline = "bottom";
+      ctx.shadowColor = "rgba(0, 0, 0, 0.75)";
+      ctx.shadowBlur = 4;
+      ctx.fillText("🧍", sx, sy + 6);
+      ctx.shadowBlur = 0;
+
+      // Player Name Badge above avatar
+      if (p.name) {
+        ctx.font = "bold 12px system-ui, -apple-system, sans-serif";
+        const tag = p.name;
+        const tw = ctx.measureText(tag).width;
+        const bx = sx - tw / 2 - 6;
+        const by = sy - 38;
+        
+        ctx.fillStyle = "rgba(15, 23, 42, 0.9)";
+        ctx.fillRect(bx, by, tw + 12, 18);
+        ctx.strokeStyle = "#38bdf8";
+        ctx.lineWidth = 1.5;
+        ctx.strokeRect(bx, by, tw + 12, 18);
+        
+        ctx.fillStyle = "#38bdf8";
+        ctx.textAlign = "center";
+        ctx.textBaseline = "middle";
+        ctx.fillText(tag, sx, by + 9);
+      }
+    });
   }
 
   // ---- icon / color lookups (unchanged from the previous Leaflet build) ----

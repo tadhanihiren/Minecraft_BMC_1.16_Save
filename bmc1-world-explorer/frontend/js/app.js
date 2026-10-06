@@ -24,6 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   const mapController = new MinecraftMap("map");
+  window.mapController = mapController;
 
   // State: NOTHING selected by default
   let currentWorld = null;
@@ -31,6 +32,9 @@ document.addEventListener("DOMContentLoaded", () => {
   let activeFilters = {
     biomes: false,
     ores: false,
+    yFilterEnabled: false,
+    minY: 10,
+    maxY: 20,
     spawners: false,
     structures: false,
     chests: false,
@@ -39,6 +43,78 @@ document.addEventListener("DOMContentLoaded", () => {
     structureTypes: []
   };
   let pollInterval = null;
+
+  // Live Players, Locate Me & 5x5 Rescan
+  let livePlayersData = [];
+  const btnLocateMe = document.getElementById("btnLocateMe");
+  const btnScan5x5 = document.getElementById("btnScan5x5");
+  const livePlayerCount = document.getElementById("livePlayerCount");
+  const livePlayerList = document.getElementById("livePlayerList");
+
+  function readPlayerCoords() {
+    // If we have live players in the current dimension, use the first one
+    const activeInDim = livePlayersData.find(p => p.dimension === currentDimension);
+    if (activeInDim) {
+      return { x: Math.round(activeInDim.x), y: Math.round(activeInDim.y), z: Math.round(activeInDim.z) };
+    }
+    return { x: 0, y: 64, z: 0 };
+  }
+
+  async function fetchLivePlayers() {
+    try {
+      const res = await fetch("/api/map/players");
+      if (!res.ok) return;
+      const players = await res.json();
+      livePlayersData = players || [];
+      if (livePlayerCount) livePlayerCount.textContent = livePlayersData.length;
+
+      // Update sidebar player list
+      if (livePlayerList) {
+        if (livePlayersData.length === 0) {
+          livePlayerList.innerHTML = '<span style="color:var(--text-subtle);font-style:italic;">No players online</span>';
+        } else {
+          livePlayerList.innerHTML = livePlayersData.map(p => {
+            const inDim = p.dimension === currentDimension;
+            const dimTag = p.dimension === "minecraft:the_nether" ? "🔥 Nether" : (p.dimension === "minecraft:the_end" ? "🌌 End" : "🌲 Overworld");
+            return `<div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:2px; cursor:pointer;" class="live-player-item" data-name="${p.name}" data-x="${Math.round(p.x)}" data-y="${Math.round(p.y)}" data-z="${Math.round(p.z)}" data-dim="${p.dimension}" title="Click to view player">
+              <span style="font-weight:600; color:${inDim ? 'var(--cyan)' : 'var(--text-subtle)'};">🧍 ${p.name}</span>
+              <span style="font-size:10px; opacity:0.8;">${Math.round(p.x)}, ${Math.round(p.z)} (${dimTag})</span>
+            </div>`;
+          }).join("");
+
+          livePlayerList.querySelectorAll(".live-player-item").forEach(item => {
+            item.addEventListener("click", () => {
+              const targetDim = item.getAttribute("data-dim");
+              const px = parseFloat(item.getAttribute("data-x"));
+              const py = parseFloat(item.getAttribute("data-y"));
+              const pz = parseFloat(item.getAttribute("data-z"));
+              if (targetDim !== currentDimension) {
+                currentDimension = targetDim;
+                dimSelector.value = targetDim;
+                refreshMap();
+              }
+              const inDim = livePlayersData.filter(p => p.dimension === currentDimension);
+              mapController.setPlayers(inDim);
+              mapController.jumpTo(px, pz, 1);
+              mapController.draw();
+              showToast(`Jumped to ${item.getAttribute("data-name")} [X: ${px}, Z: ${pz}]`);
+            });
+          });
+        }
+      }
+
+      // Filter players for current dimension and update map markers
+      const inDimPlayers = livePlayersData.filter(p => p.dimension === currentDimension);
+      mapController.setPlayers(inDimPlayers);
+      mapController.draw();
+    } catch (err) {
+      console.warn("Error fetching live players:", err);
+    }
+  }
+
+  // Poll live players every 3 seconds
+  fetchLivePlayers();
+  setInterval(fetchLivePlayers, 3000);
 
   // DOM Elements
   const worldNameEl = document.getElementById("worldName");
@@ -231,6 +307,7 @@ document.addEventListener("DOMContentLoaded", () => {
         await updateStats();
         await loadFilterOptions();
         await refreshMap();
+        await fetchLivePlayers();
 
         // Pre-populate player position if available
         try {
@@ -259,16 +336,9 @@ document.addEventListener("DOMContentLoaded", () => {
   // Dimension Change
   dimSelector.addEventListener("change", async (e) => {
     currentDimension = e.target.value;
-    if (currentDimension === "minecraft:the_nether") {
-      const elX = document.getElementById("nearX");
-      const elZ = document.getElementById("nearZ");
-      const curX = elX ? parseInt(elX.value) : NaN;
-      const curZ = elZ ? parseInt(elZ.value) : NaN;
-      if ((curX === 0 && curZ === 0) || (curX === -94 && curZ === 0) || isNaN(curX)) {
-        if (elX) elX.value = -85;
-        if (elZ) elZ.value = -9;
-        mapController.setPlayerMarker(-85, -9, 13);
-      }
+    mapController.clearPlayerMarker();
+    if (typeof fetchLivePlayers === "function") {
+      await fetchLivePlayers();
     }
     await updateStats();
     await loadFilterOptions();
@@ -361,6 +431,53 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // Select All / None inside sub-filters
+  const chkYFilter = document.getElementById("chkYFilter");
+  const inputMinY = document.getElementById("inputMinY");
+  const inputMaxY = document.getElementById("inputMaxY");
+  const btnPresetNetherite = document.getElementById("btnPresetNetherite");
+  const btnPresetDiamonds = document.getElementById("btnPresetDiamonds");
+
+  if (chkYFilter) {
+    chkYFilter.addEventListener("change", (e) => {
+      activeFilters.yFilterEnabled = e.target.checked;
+      loadVisibleData();
+    });
+  }
+  if (inputMinY) {
+    inputMinY.addEventListener("input", (e) => {
+      activeFilters.minY = parseInt(e.target.value, 10);
+      if (activeFilters.yFilterEnabled) loadVisibleData();
+    });
+  }
+  if (inputMaxY) {
+    inputMaxY.addEventListener("input", (e) => {
+      activeFilters.maxY = parseInt(e.target.value, 10);
+      if (activeFilters.yFilterEnabled) loadVisibleData();
+    });
+  }
+  if (btnPresetNetherite) {
+    btnPresetNetherite.addEventListener("click", () => {
+      if (inputMinY) inputMinY.value = 10;
+      if (inputMaxY) inputMaxY.value = 20;
+      if (chkYFilter) chkYFilter.checked = true;
+      activeFilters.minY = 10;
+      activeFilters.maxY = 20;
+      activeFilters.yFilterEnabled = true;
+      loadVisibleData();
+    });
+  }
+  if (btnPresetDiamonds) {
+    btnPresetDiamonds.addEventListener("click", () => {
+      if (inputMinY) inputMinY.value = 5;
+      if (inputMaxY) inputMaxY.value = 16;
+      if (chkYFilter) chkYFilter.checked = true;
+      activeFilters.minY = 5;
+      activeFilters.maxY = 16;
+      activeFilters.yFilterEnabled = true;
+      loadVisibleData();
+    });
+  }
+
   setupBulkChipButtons("btnSelectAllOres", "btnClearAllOres", "oreChipsContainer", "oreTypes", "chkOres");
   setupBulkChipButtons("btnSelectAllSpawners", "btnClearAllSpawners", "spawnerChipsContainer", "spawnerTypes", "chkSpawners");
   setupBulkChipButtons("btnSelectAllStructures", "btnClearAllStructures", "structureChipsContainer", "structureTypes", "chkStructures");
@@ -458,6 +575,10 @@ document.addEventListener("DOMContentLoaded", () => {
       url += `&include_structures=${activeFilters.structures}`;
       url += `&include_chests=${activeFilters.chests}`;
       if (activeFilters.oreTypes.length) url += `&ores=${encodeURIComponent(activeFilters.oreTypes.join(","))}`;
+      if (activeFilters.yFilterEnabled) {
+        if (activeFilters.minY !== null && !isNaN(activeFilters.minY)) url += `&min_y=${activeFilters.minY}`;
+        if (activeFilters.maxY !== null && !isNaN(activeFilters.maxY)) url += `&max_y=${activeFilters.maxY}`;
+      }
       if (activeFilters.spawnerTypes.length) url += `&spawners=${encodeURIComponent(activeFilters.spawnerTypes.join(","))}`;
       if (activeFilters.structureTypes.length) url += `&structures=${encodeURIComponent(activeFilters.structureTypes.join(","))}`;
 
@@ -610,27 +731,77 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // Player Coordinates & Show Me
-  const btnShowPlayer = document.getElementById("btnShowPlayer");
 
-  function readPlayerCoords() {
-    const elX = document.getElementById("nearX");
-    const elZ = document.getElementById("nearZ");
-    const vx = elX && elX.value !== "" ? parseInt(elX.value) : NaN;
-    const vz = elZ && elZ.value !== "" ? parseInt(elZ.value) : NaN;
-    return {
-      x: !isNaN(vx) ? vx : 0,
-      y: 64,
-      z: !isNaN(vz) ? vz : 0
-    };
+
+  if (btnLocateMe) {
+    btnLocateMe.addEventListener("click", async () => {
+      await fetchLivePlayers();
+      if (livePlayersData.length === 0) {
+        showToast("No players currently online!");
+        return;
+      }
+      let p = livePlayersData.find(item => item.dimension === currentDimension) || livePlayersData[0];
+      if (p.dimension !== currentDimension) {
+        currentDimension = p.dimension;
+        dimSelector.value = p.dimension;
+        await refreshMap();
+      }
+      // Set the active player markers and jump to them
+      const inDim = livePlayersData.filter(item => item.dimension === currentDimension);
+      mapController.setPlayers(inDim);
+      mapController.jumpTo(p.x, p.z, 1);
+      mapController.draw();
+      showToast(`📍 Located ${p.name} at X: ${Math.round(p.x)}, Y: ${Math.round(p.y)}, Z: ${Math.round(p.z)}`);
+    });
   }
 
-  if (btnShowPlayer) {
-    btnShowPlayer.addEventListener("click", () => {
-      const { x, y, z } = readPlayerCoords();
-      mapController.setPlayerMarker(x, z, y);
-      mapController.jumpTo(x, z, 1);
-      showToast(`Showing location: X ${x}, Z ${z}`);
+  if (btnScan5x5) {
+    btnScan5x5.addEventListener("click", async () => {
+      await fetchLivePlayers();
+      if (livePlayersData.length === 0) {
+        showToast("No players online to scan around!");
+        return;
+      }
+      let p = livePlayersData.find(item => item.dimension === currentDimension) || livePlayersData[0];
+      if (p.dimension !== currentDimension) {
+        currentDimension = p.dimension;
+        dimSelector.value = p.dimension;
+        await refreshMap();
+      }
+
+      const centerCx = Math.floor(p.x) >> 4;
+      const centerCz = Math.floor(p.z) >> 4;
+      const targetChunks = [];
+      // 5x5 chunks around player (+- 2 chunks in each axis = 5x5 chunks / 80x80 blocks)
+      for (let dx = -2; dx <= 2; dx++) {
+        for (let dz = -2; dz <= 2; dz++) {
+          targetChunks.push([centerCx + dx, centerCz + dz]);
+        }
+      }
+
+      showToast(`⚡ Starting 5x5 Rescan around ${p.name} (${targetChunks.length} chunks)...`);
+
+      try {
+        const res = await fetch("/api/worlds/scan/start", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            force_rescan: true,
+            dimension_id: currentDimension,
+            target_chunks: targetChunks
+          })
+        });
+        const data = await res.json();
+        if (res.ok) {
+          scanBar.style.display = "flex";
+          btnCancelScan.style.display = "inline-flex";
+          pollProgress();
+        } else {
+          alert(data.detail || "Could not start 5x5 scan.");
+        }
+      } catch (err) {
+        console.error("Error starting 5x5 scan:", err);
+      }
     });
   }
 

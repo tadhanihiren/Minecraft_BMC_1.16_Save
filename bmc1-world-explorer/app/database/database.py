@@ -148,6 +148,20 @@ class Database:
             )
             conn.commit()
 
+    def clear_chunks_data(self, world_id: int, dimension: str, chunk_coords: list) -> None:
+        """Clear existing data for specific (cx, cz) chunks before rescanning."""
+        if not chunk_coords:
+            return
+        with self.get_connection() as conn:
+            for cx, cz in chunk_coords:
+                params = (world_id, dimension, cx, cz)
+                conn.execute("DELETE FROM chunks WHERE world_id=? AND dimension=? AND chunk_x=? AND chunk_z=?", params)
+                conn.execute("DELETE FROM spawners WHERE world_id=? AND dimension=? AND chunk_x=? AND chunk_z=?", params)
+                conn.execute("DELETE FROM structures WHERE world_id=? AND dimension=? AND chunk_x=? AND chunk_z=?", params)
+                conn.execute("DELETE FROM chests WHERE world_id=? AND dimension=? AND chunk_x=? AND chunk_z=?", params)
+                conn.execute("DELETE FROM ore_veins WHERE world_id=? AND dimension=? AND chunk_x=? AND chunk_z=?", params)
+            conn.commit()
+
     def clear_region_data(self, world_id: int, dimension: str, min_cx: int, max_cx: int, min_cz: int, max_cz: int) -> None:
         """Clear existing entity data for a modified region before rescanning it."""
         with self.get_connection() as conn:
@@ -331,6 +345,8 @@ class Database:
         max_x: Optional[int] = None,
         min_z: Optional[int] = None,
         max_z: Optional[int] = None,
+        min_y: Optional[int] = None,
+        max_y: Optional[int] = None,
         include_ores: bool = True,
         include_spawners: bool = True,
         include_structures: bool = True,
@@ -460,6 +476,12 @@ class Database:
                           AND center_x BETWEEN ? AND ? AND center_z BETWEEN ? AND ?
                     """
                     params: List[Any] = [grid_size, grid_size, world_id, dimension, min_x, max_x, min_z, max_z]
+                    if min_y is not None:
+                        query += " AND center_y >= ?"
+                        params.append(min_y)
+                    if max_y is not None:
+                        query += " AND center_y <= ?"
+                        params.append(max_y)
                     if ore_filter:
                         placeholders = ",".join("?" * len(ore_filter))
                         query += f" AND ore_id IN ({placeholders})"
@@ -489,6 +511,12 @@ class Database:
                     if min_x is not None:
                         query += " AND center_x BETWEEN ? AND ? AND center_z BETWEEN ? AND ?"
                         params.extend([min_x, max_x, min_z, max_z])
+                    if min_y is not None:
+                        query += " AND center_y >= ?"
+                        params.append(min_y)
+                    if max_y is not None:
+                        query += " AND center_y <= ?"
+                        params.append(max_y)
                     if ore_filter:
                         placeholders = ",".join("?" * len(ore_filter))
                         query += f" AND ore_id IN ({placeholders})"

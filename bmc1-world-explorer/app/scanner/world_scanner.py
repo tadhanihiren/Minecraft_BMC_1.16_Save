@@ -72,7 +72,7 @@ class WorldScanner:
                 self.progress.cancelled = True
                 self.progress.status_message = "Cancelling scan..."
 
-    def start_scan(self, world_folder: str, force_rescan: bool = False, dimension_id: Optional[str] = None) -> bool:
+    def start_scan(self, world_folder: str, force_rescan: bool = False, dimension_id: Optional[str] = None, target_chunks: Optional[set] = None) -> bool:
         with self._lock:
             if self.progress.is_scanning:
                 return False
@@ -83,13 +83,13 @@ class WorldScanner:
 
         self._thread = threading.Thread(
             target=self._run_scan,
-            args=(world_folder, force_rescan, dimension_id),
+            args=(world_folder, force_rescan, dimension_id, target_chunks),
             daemon=True
         )
         self._thread.start()
         return True
 
-    def _run_scan(self, world_folder: str, force_rescan: bool, target_dim_id: Optional[str]) -> None:
+    def _run_scan(self, world_folder: str, force_rescan: bool, target_dim_id: Optional[str], target_chunks: Optional[set] = None) -> None:
         try:
             logger.info(f"Starting world scan on: {world_folder}")
             # 1. Read level.dat
@@ -165,7 +165,7 @@ class WorldScanner:
                         size = os.path.getsize(mca_path)
 
                         # Check level 1 cache: Unchanged region file?
-                        if not force_rescan and db.is_region_scanned(world_id, dim.id, fname, mtime, size):
+                        if not force_rescan and not target_chunks and db.is_region_scanned(world_id, dim.id, fname, mtime, size):
                             scanned_region_count += 1
                             with self._lock:
                                 self.progress.scanned_regions = scanned_region_count
@@ -180,10 +180,19 @@ class WorldScanner:
                             continue
                         rx, rz = coords
 
-                        # Clear old data for this region in case of rescan
                         min_cx, max_cx = rx * 32, rx * 32 + 31
                         min_cz, max_cz = rz * 32, rz * 32 + 31
-                        db.clear_region_data(world_id, dim.id, min_cx, max_cx, min_cz, max_cz)
+
+                        # If targeted chunks specified, check if this region intersects
+                        if target_chunks:
+                            region_target_chunks = [(tcx, tcz) for (tcx, tcz) in target_chunks if min_cx <= tcx <= max_cx and min_cz <= tcz <= max_cz]
+                            if not region_target_chunks:
+                                scanned_region_count += 1
+                                continue
+                            db.clear_chunks_data(world_id, dim.id, region_target_chunks)
+                        else:
+                            # Clear old data for this region in case of rescan
+                            db.clear_region_data(world_id, dim.id, min_cx, max_cx, min_cz, max_cz)
 
                         reader = MCAReader(mca_path)
                         region_chunks = 0
@@ -198,12 +207,15 @@ class WorldScanner:
                             if self.progress.cancelled:
                                 break
 
+                            if target_chunks and (cx, cz) not in target_chunks:
+                                continue
+
                             level = chunk_nbt.get("Level", {})
                             last_update = level.get("LastUpdate")
                             region_chunks += 1
 
                             # Check level 2 cache: Unchanged chunk?
-                            if not force_rescan and (cx, cz) in known_chunk_updates:
+                            if not force_rescan and not target_chunks and (cx, cz) in known_chunk_updates:
                                 if known_chunk_updates[(cx, cz)] == last_update:
                                     continue
 

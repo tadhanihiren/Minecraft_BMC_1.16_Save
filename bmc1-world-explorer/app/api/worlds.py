@@ -1,3 +1,15 @@
+import sys
+sys.path.append("/home/ubuntu")
+try:
+    from rcon_cmd import rcon_command
+    def flush_minecraft_save():
+        try:
+            rcon_command("127.0.0.1", 25575, "bmc1admin", "save-all flush")
+        except Exception as e:
+            print("Auto save-all flush failed:", e)
+except Exception:
+    def flush_minecraft_save():
+        pass
 import os
 import gzip
 import math
@@ -33,6 +45,7 @@ class WorldSelectRequest(BaseModel):
 class ScanStartRequest(BaseModel):
     force_rescan: bool = False
     dimension_id: Optional[str] = None
+    target_chunks: Optional[List[List[int]]] = None
 
 @router.post("/select")
 def select_world(req: WorldSelectRequest):
@@ -176,13 +189,16 @@ def get_player_position():
 @router.post("/scan/start")
 def start_scan(req: ScanStartRequest):
     """Trigger background scanning of the active world."""
+    flush_minecraft_save()
     if not active_world_state["world_path"]:
         raise HTTPException(status_code=400, detail="No world selected. Please select a world first.")
 
+    target_chunks_set = set((c[0], c[1]) for c in req.target_chunks) if req.target_chunks else None
     started = scanner.start_scan(
         world_folder=active_world_state["world_path"],
         force_rescan=req.force_rescan,
-        dimension_id=req.dimension_id
+        dimension_id=req.dimension_id,
+        target_chunks=target_chunks_set
     )
     if not started:
         raise HTTPException(status_code=409, detail="A scan is already in progress.")

@@ -13,6 +13,8 @@ def get_map_markers(
     max_x: Optional[int] = Query(None),
     min_z: Optional[int] = Query(None),
     max_z: Optional[int] = Query(None),
+    min_y: Optional[int] = Query(None),
+    max_y: Optional[int] = Query(None),
     include_ores: bool = Query(True),
     include_spawners: bool = Query(True),
     include_structures: bool = Query(True),
@@ -37,6 +39,8 @@ def get_map_markers(
         max_x=max_x,
         min_z=min_z,
         max_z=max_z,
+        min_y=min_y,
+        max_y=max_y,
         include_ores=include_ores,
         include_spawners=include_spawners,
         include_structures=include_structures,
@@ -109,3 +113,61 @@ def get_filter_options(dimension: str = Query("minecraft:overworld")):
             "spawners": [{"id": r["entity_id"], "name": r["display_name"]} for r in spawner_rows],
             "structures": [{"id": r["structure_id"], "name": r["name"]} for r in struct_rows]
         }
+
+import sys
+sys.path.append("/home/ubuntu")
+try:
+    from rcon_cmd import rcon_command
+except Exception:
+    rcon_command = None
+
+import re
+
+@router.get("/players")
+def get_live_players():
+    """Get live online players, coordinates, rotation, and current dimension via RCON."""
+    if not rcon_command:
+        return []
+    try:
+        list_res = rcon_command("127.0.0.1", 25575, "bmc1admin", "list")
+        if ":" not in list_res:
+            return []
+        names_str = list_res.split(":", 1)[1].strip()
+        if not names_str:
+            return []
+        player_names = [p.strip() for p in names_str.split(",") if p.strip()]
+
+        players = []
+        for name in player_names:
+            try:
+                pos_str = rcon_command("127.0.0.1", 25575, "bmc1admin", f"data get entity {name} Pos")
+                dim_str = rcon_command("127.0.0.1", 25575, "bmc1admin", f"data get entity {name} Dimension")
+                rot_str = rcon_command("127.0.0.1", 25575, "bmc1admin", f"data get entity {name} Rotation")
+                
+                # Pos: [ -101.4d, 15.0d, -172.3d ]
+                coords = [float(x.replace("d", "")) for x in re.findall(r'[-+]?\d*\.?\d+d', pos_str)]
+                if len(coords) >= 3:
+                    px, py, pz = coords[0], coords[1], coords[2]
+                else:
+                    continue
+
+                dim_match = re.search(r'"([^"]+)"', dim_str)
+                dim = dim_match.group(1) if dim_match else "minecraft:overworld"
+
+                rot_match = re.findall(r'[-+]?\d*\.?\d+f', rot_str)
+                yaw = float(rot_match[0].replace("f", "")) if rot_match else 0.0
+
+                players.append({
+                    "name": name,
+                    "x": round(px, 1),
+                    "y": round(py, 1),
+                    "z": round(pz, 1),
+                    "yaw": round(yaw, 1),
+                    "dimension": dim
+                })
+            except Exception as e:
+                pass
+        return players
+    except Exception as e:
+        print("Error fetching players via RCON:", e)
+        return []
