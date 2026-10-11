@@ -1,0 +1,13 @@
+{
+	version: 1
+	uuid: "2231701c5705337893f6f68bf4ce3e2d"
+	name: "OJISSSS"
+	can_edit: false
+	lock: false
+	auto_pin: false
+	task_progress: { }
+	started: { }
+	completed: { }
+	claimed_rewards: { }
+	pinned_quests: [ ]
+}

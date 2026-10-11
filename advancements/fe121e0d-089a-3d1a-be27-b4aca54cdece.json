@@ -1,4 +1,10 @@
 {
+  "blue_skies:recipes/blue_skies_tools/starlit_sword": {
+    "criteria": {
+      "has_resource": "2026-10-10 11:55:04 +0530"
+    },
+    "done": true
+  },
   "adorn:recipes/dark_oak_kitchen_counter": {
     "criteria": {
       "has_key_item_0": "2026-09-06 17:01:35 +0530"
@@ -83,9 +89,21 @@
     },
     "done": true
   },
+  "blue_skies:recipes/blue_skies_everbright_blocks/starlit_fence": {
+    "criteria": {
+      "has_item": "2026-10-10 11:55:04 +0530"
+    },
+    "done": true
+  },
   "adorn:recipes/oak_step": {
     "criteria": {
       "has_key_item_0": "2026-09-09 21:17:19 +0530"
+    },
+    "done": true
+  },
+  "betterendforge:recipes/betterendforge/flavolite_button": {
+    "criteria": {
+      "has_flavolite": "2026-10-10 15:55:28 +0530"
     },
     "done": true
   },
@@ -212,6 +230,12 @@
   "supplementaries:recipes/hanging_sign_dark_oak": {
     "criteria": {
       "has_plank": "2026-09-06 17:01:35 +0530"
+    },
+    "done": true
+  },
+  "betterendforge:recipes/betterendforge/flavolite_bricks_stairs_from_flavolite_stonecutting": {
+    "criteria": {
+      "has_flavolite": "2026-10-10 15:55:28 +0530"
     },
     "done": true
   },
@@ -485,6 +509,12 @@
     },
     "done": true
   },
+  "minecraft:end/kill_dragon": {
+    "criteria": {
+      "killed_dragon": "2026-10-10 16:01:02 +0530"
+    },
+    "done": true
+  },
   "minecraft:recipes/building_blocks/polished_blackstone_brick_stairs": {
     "criteria": {
       "has_polished_blackstone_bricks": "2026-09-06 23:45:21 +0530"
@@ -494,6 +524,12 @@
   "decorative_blocks:recipes/decorations/chandelier": {
     "criteria": {
       "has_torch": "2026-09-06 11:18:52 +0530"
+    },
+    "done": true
+  },
+  "blue_skies:recipes/blue_skies_everbright_blocks/starlit_sign": {
+    "criteria": {
+      "has_item": "2026-10-10 11:55:04 +0530"
     },
     "done": true
   },
@@ -593,6 +629,12 @@
     },
     "done": true
   },
+  "blue_skies:recipes/blue_skies_combat/charoite_helmet": {
+    "criteria": {
+      "has_item": "2026-10-10 11:59:42 +0530"
+    },
+    "done": true
+  },
   "cavesandcliffs:recipes/decorations/purple_candle": {
     "criteria": {
       "has_purple_dye": "2026-09-06 16:57:00 +0530"
@@ -650,6 +692,12 @@
   "farmersdelight:recipes/farmersdelight/honey_glazed_ham_block": {
     "criteria": {
       "has_smoked_ham": "2026-09-07 00:03:49 +0530"
+    },
+    "done": true
+  },
+  "betterendforge:recipes/betterendforge/terminite_stairs": {
+    "criteria": {
+      "has_terminite_block": "2026-10-10 16:49:46 +0530"
     },
     "done": true
   },
@@ -834,6 +882,12 @@
     },
     "done": true
   },
+  "betterendforge:recipes/betterendforge/flavolite_wall_from_flavolite_stonecutting": {
+    "criteria": {
+      "has_flavolite": "2026-10-10 15:55:28 +0530"
+    },
+    "done": true
+  },
   "comforts:sleeping_bag_orange_from_white": {
     "criteria": {
       "has_sleeping_bag": "2026-09-06 11:23:23 +0530"
@@ -843,6 +897,12 @@
   "twilightforest:alt/entities/skeleton_druid": {
     "criteria": {
       "hurt": "2026-09-27 13:32:28 +0530"
+    },
+    "done": true
+  },
+  "blue_skies:recipes/decorations/enchanting_table_compat": {
+    "criteria": {
+      "has_item": "2026-10-10 11:59:42 +0530"
     },
     "done": true
   },
@@ -909,6 +969,12 @@
   "minecraft:recipes/decorations/polished_blackstone_brick_wall_from_blackstone_stonecutting": {
     "criteria": {
       "has_blackstone": "2026-09-07 22:34:28 +0530"
+    },
+    "done": true
+  },
+  "betterendforge:recipes/betterendforge/pythadendron_gate": {
+    "criteria": {
+      "has_planks": "2026-10-10 16:39:09 +0530"
     },
     "done": true
   },
@@ -1026,9 +1092,27 @@
     },
     "done": true
   },
+  "blue_skies:progression/unlock_everbright_blinding_key_trade": {
+    "criteria": {
+      "click_keystone": "2026-10-10 12:18:00 +0530"
+    },
+    "done": true
+  },
+  "betterendforge:recipes/betterendforge/terminite_tile": {
+    "criteria": {
+      "has_terminite_block": "2026-10-10 16:49:46 +0530"
+    },
+    "done": true
+  },
   "blue_skies:recipes/blue_skies_everbright_blocks/turquoise_stonebrick_slab_stonecutting_turquoise_stone": {
     "criteria": {
       "has_item": "2026-10-07 21:36:51 +0530"
+    },
+    "done": true
+  },
+  "blue_skies:enter_blinding_dungeon": {
+    "criteria": {
+      "entered_everbright_blinding_dungeon": "2026-10-10 11:48:42 +0530"
     },
     "done": true
   },
@@ -1042,6 +1126,12 @@
     "criteria": {
       "has_the_recipe": "2026-09-06 11:23:23 +0530",
       "has_sleeping_bag": "2026-09-06 11:23:23 +0530"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/purpur_slab": {
+    "criteria": {
+      "has_purpur_block": "2026-10-10 16:46:48 +0530"
     },
     "done": true
   },
@@ -1061,6 +1151,12 @@
   "adorn:recipes/prismarine_post": {
     "criteria": {
       "has_key_item_0": "2026-09-11 21:55:25 +0530"
+    },
+    "done": true
+  },
+  "minecraft:nether/brew_potion": {
+    "criteria": {
+      "potion": "2026-10-10 12:13:52 +0530"
     },
     "done": true
   },
@@ -1124,6 +1220,12 @@
     },
     "done": true
   },
+  "dungeons_plus:end/find_end_ruins": {
+    "criteria": {
+      "structure": "2026-10-10 16:08:28 +0530"
+    },
+    "done": true
+  },
   "cavesandcliffs:recipes/building_blocks/mossy_stone_bricks_from_moss_block": {
     "criteria": {
       "has_moss_block": "2026-09-06 12:47:24 +0530"
@@ -1178,6 +1280,12 @@
     },
     "done": true
   },
+  "betterendforge:recipes/betterendforge/pythadendron_fence": {
+    "criteria": {
+      "has_planks": "2026-10-10 16:39:09 +0530"
+    },
+    "done": true
+  },
   "immersivecooking:recipes/immersivecooking/warped_blackstone_pantry": {
     "criteria": {
       "has_polished_blackstone": "2026-09-12 17:13:54 +0530"
@@ -1193,6 +1301,12 @@
   "minecraft:recipes/food/cooked_cod_from_smoking": {
     "criteria": {
       "has_cod": "2026-09-06 11:30:15 +0530"
+    },
+    "done": true
+  },
+  "betterendforge:recipes/betterendforge/terminite_ingot_from_terminite_block": {
+    "criteria": {
+      "has_terminite_block": "2026-10-10 16:49:46 +0530"
     },
     "done": true
   },
@@ -1312,6 +1426,12 @@
     },
     "done": true
   },
+  "blue_skies:recipes/blue_skies_blocks/ventium_block": {
+    "criteria": {
+      "has_item": "2026-10-10 12:05:45 +0530"
+    },
+    "done": true
+  },
   "adorn:recipes/warped_chair": {
     "criteria": {
       "has_key_item_0": "2026-09-13 01:00:05 +0530"
@@ -1366,6 +1486,12 @@
     },
     "done": true
   },
+  "betterendforge:recipes/betterendforge/flavolite_stairs": {
+    "criteria": {
+      "has_flavolite": "2026-10-10 15:55:28 +0530"
+    },
+    "done": true
+  },
   "blue_skies:recipes/blue_skies_blocks/moonstone_block_from_moonstone": {
     "criteria": {
       "has_item": "2026-10-07 21:14:15 +0530"
@@ -1387,6 +1513,24 @@
   "minecraft:recipes/building_blocks/brown_concrete_powder": {
     "criteria": {
       "has_gravel": "2026-09-06 11:21:38 +0530"
+    },
+    "done": true
+  },
+  "blue_skies:recipes/blue_skies_combat/diopside_leggings": {
+    "criteria": {
+      "has_item": "2026-10-10 11:15:58 +0530"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/end_stone_brick_slab_from_end_stone_stonecutting": {
+    "criteria": {
+      "has_end_stone": "2026-10-10 15:53:16 +0530"
+    },
+    "done": true
+  },
+  "decorative_blocks_abnormals:recipes/decorations/ender_brazier": {
+    "criteria": {
+      "has_item": "2026-10-10 15:53:16 +0530"
     },
     "done": true
   },
@@ -1459,6 +1603,12 @@
   "cavesandcliffs:recipes/building_blocks/deepslate_tile_slab_from_cobbled_deepslate_stonecutting": {
     "criteria": {
       "has_cobbled_deepslate": "2026-09-06 13:11:14 +0530"
+    },
+    "done": true
+  },
+  "blue_skies:recipes/blue_skies_misc/cooked_carabeef_from_smoking": {
+    "criteria": {
+      "has_item": "2026-10-10 12:27:03 +0530"
     },
     "done": true
   },
@@ -1546,6 +1696,12 @@
     },
     "done": true
   },
+  "betterendforge:recipes/betterendforge/flavolite_polished_from_flavolite_stonecutting": {
+    "criteria": {
+      "has_flavolite": "2026-10-10 15:55:28 +0530"
+    },
+    "done": true
+  },
   "immersivecooking:recipes/immersivecooking/acacia_stone_counter": {
     "criteria": {
       "has_smooth_stone": "2026-09-18 23:05:21 +0530"
@@ -1561,6 +1717,12 @@
   "aquaculture:recipes/tools/diamond_fillet_knife": {
     "criteria": {
       "has_items": "2026-09-06 13:35:05 +0530"
+    },
+    "done": true
+  },
+  "betterendforge:recipes/betterendforge/pythadendron_sign": {
+    "criteria": {
+      "has_planks": "2026-10-10 16:39:09 +0530"
     },
     "done": true
   },
@@ -1584,6 +1746,12 @@
   "minecraft:recipes/building_blocks/light_blue_concrete_powder": {
     "criteria": {
       "has_gravel": "2026-09-06 11:21:38 +0530"
+    },
+    "done": true
+  },
+  "blue_skies:recipes/blue_skies_tools/starlit_pickaxe": {
+    "criteria": {
+      "has_resource": "2026-10-10 11:55:04 +0530"
     },
     "done": true
   },
@@ -1620,6 +1788,26 @@
   "twilightforest:progress_hydra": {
     "criteria": {
       "stroganoff": "2026-09-28 00:01:01 +0530"
+    },
+    "done": false
+  },
+  "outer_end:end/explore_end": {
+    "criteria": {
+      "find_minecraft:end_barrens": "2026-10-10 17:08:35 +0530",
+      "find_outer_end:crystal_crag": "2026-10-10 16:27:26 +0530",
+      "find_byg:imparius_grove": "2026-10-10 16:05:13 +0530",
+      "find_minecraft:the_end": "2026-10-10 15:52:01 +0530",
+      "find_betterendforge:megalake_grove": "2026-10-10 17:08:55 +0530",
+      "find_betterendforge:glowing_grasslands": "2026-10-10 17:40:34 +0530",
+      "find_minecraft:small_end_islands": "2026-10-10 16:36:55 +0530",
+      "find_betterendforge:foggy_mushroomland": "2026-10-10 16:33:58 +0530",
+      "find_minecraft:end_midlands": "2026-10-10 16:07:09 +0530",
+      "find_minecraft:end_highlands": "2026-10-10 17:08:58 +0530",
+      "find_endergetic:poise_forest": "2026-10-10 16:30:18 +0530",
+      "find_byg:purpur_peaks": "2026-10-10 16:30:10 +0530",
+      "find_betterendforge:ice_starfield": "2026-10-10 16:31:26 +0530",
+      "find_betterendforge:painted_mountains": "2026-10-10 17:04:35 +0530",
+      "find_betterendforge:dust_wastelands": "2026-10-10 16:37:56 +0530"
     },
     "done": false
   },
@@ -1668,6 +1856,12 @@
   "minecraft:story/mine_stone": {
     "criteria": {
       "get_stone": "2026-09-06 11:03:46 +0530"
+    },
+    "done": true
+  },
+  "blue_skies:recipes/blue_skies_everbright_blocks/starlit_trapdoor": {
+    "criteria": {
+      "has_item": "2026-10-10 11:55:04 +0530"
     },
     "done": true
   },
@@ -1737,6 +1931,12 @@
     },
     "done": true
   },
+  "blue_skies:recipes/blue_skies_everbright_blocks/rimestone_stairs_stonecutting_rimestone": {
+    "criteria": {
+      "has_item": "2026-10-10 11:57:44 +0530"
+    },
+    "done": true
+  },
   "minecraft:recipes/building_blocks/green_concrete_powder": {
     "criteria": {
       "has_gravel": "2026-09-06 11:21:38 +0530"
@@ -1785,6 +1985,12 @@
     },
     "done": true
   },
+  "blue_skies:recipes/blue_skies_misc/cooked_grittle_flatfish_from_campfire_cooking": {
+    "criteria": {
+      "has_item": "2026-10-10 12:27:03 +0530"
+    },
+    "done": true
+  },
   "minecraft:recipes/misc/bowl": {
     "criteria": {
       "has_brown_mushroom": "2026-09-06 11:13:24 +0530"
@@ -1827,6 +2033,12 @@
     },
     "done": true
   },
+  "minecraft:recipes/decorations/end_crystal": {
+    "criteria": {
+      "has_ender_eye": "2026-10-10 12:38:07 +0530"
+    },
+    "done": true
+  },
   "cavesandcliffs:recipes/building_blocks/deepslate_tiles_from_cobbled_deepslate_stonecutting": {
     "criteria": {
       "has_cobbled_deepslate": "2026-09-06 13:11:14 +0530"
@@ -1836,6 +2048,12 @@
   "minecraft:recipes/food/baked_potato": {
     "criteria": {
       "has_potato": "2026-09-06 12:09:45 +0530"
+    },
+    "done": true
+  },
+  "blue_skies:recipes/blue_skies_combat/charoite_boots": {
+    "criteria": {
+      "has_item": "2026-10-10 11:59:42 +0530"
     },
     "done": true
   },
@@ -1970,6 +2188,12 @@
   "farmersdelight:recipes/farmersdelight/spruce_pantry": {
     "criteria": {
       "has_spruce_trapdoor": "2026-09-06 17:01:58 +0530"
+    },
+    "done": true
+  },
+  "blue_skies:recipes/blue_skies_combat/diopside_chestplate": {
+    "criteria": {
+      "has_item": "2026-10-10 11:15:58 +0530"
     },
     "done": true
   },
@@ -2180,6 +2404,12 @@
   "immersivecooking:recipes/immersivecooking/jungle_quartz_counter": {
     "criteria": {
       "has_quartz_block": "2026-09-11 21:19:00 +0530"
+    },
+    "done": true
+  },
+  "betterendforge:recipes/betterendforge/flavolite_furnace": {
+    "criteria": {
+      "has_flavolite": "2026-10-10 15:55:28 +0530"
     },
     "done": true
   },
@@ -2406,6 +2636,12 @@
     },
     "done": true
   },
+  "blue_skies:recipes/blue_skies_tools/charoite_shovel": {
+    "criteria": {
+      "has_resource": "2026-10-10 11:59:42 +0530"
+    },
+    "done": true
+  },
   "adorn:recipes/spruce_shelf": {
     "criteria": {
       "has_key_item_0": "2026-09-06 11:44:13 +0530"
@@ -2433,6 +2669,18 @@
   "adorn:recipes/warped_step": {
     "criteria": {
       "has_key_item_0": "2026-09-13 01:00:05 +0530"
+    },
+    "done": true
+  },
+  "blue_skies:recipes/blue_skies_tools/ventium_shears": {
+    "criteria": {
+      "has_item": "2026-10-10 12:05:45 +0530"
+    },
+    "done": true
+  },
+  "blue_skies:recipes/blue_skies_everbright_blocks/rimestone_wall": {
+    "criteria": {
+      "has_item": "2026-10-10 11:57:44 +0530"
     },
     "done": true
   },
@@ -2475,6 +2723,12 @@
   "minecraft:recipes/building_blocks/polished_blackstone_stairs": {
     "criteria": {
       "has_polished_blackstone": "2026-09-12 17:13:54 +0530"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/end_stone_bricks": {
+    "criteria": {
+      "has_end_stone": "2026-10-10 15:53:16 +0530"
     },
     "done": true
   },
@@ -2571,6 +2825,12 @@
   "supplementaries:recipes/sign_post_birch": {
     "criteria": {
       "has_plank": "2026-09-12 23:09:30 +0530"
+    },
+    "done": true
+  },
+  "blue_skies:recipes/blue_skies_blocks/diopside_block": {
+    "criteria": {
+      "has_item": "2026-10-10 11:15:58 +0530"
     },
     "done": true
   },
@@ -2688,9 +2948,21 @@
     },
     "done": true
   },
+  "betterendforge:recipes/betterendforge/terminite_slab": {
+    "criteria": {
+      "has_net.minecraftforge.fml.RegistryObject@dc446b5b_block": "2026-10-10 16:49:46 +0530"
+    },
+    "done": true
+  },
   "minecraft:recipes/building_blocks/gray_stained_glass": {
     "criteria": {
       "has_glass": "2026-09-07 21:33:09 +0530"
+    },
+    "done": true
+  },
+  "blue_skies:recipes/blue_skies_combat/charoite_leggings": {
+    "criteria": {
+      "has_item": "2026-10-10 11:59:42 +0530"
     },
     "done": true
   },
@@ -2785,6 +3057,12 @@
     },
     "done": true
   },
+  "blue_skies:recipes/blue_skies_tools/charoite_hoe": {
+    "criteria": {
+      "has_resource": "2026-10-10 11:59:42 +0530"
+    },
+    "done": true
+  },
   "minecraft:recipes/building_blocks/emerald_block": {
     "criteria": {
       "has_emerald": "2026-09-06 11:22:10 +0530"
@@ -2842,6 +3120,12 @@
   "minecraft:recipes/building_blocks/nether_wart_block": {
     "criteria": {
       "has_nether_wart": "2026-09-07 22:45:01 +0530"
+    },
+    "done": true
+  },
+  "blue_skies:recipes/blue_skies_misc/charoite_from_blasting": {
+    "criteria": {
+      "has_item": "2026-10-10 11:25:50 +0530"
     },
     "done": true
   },
@@ -3067,9 +3351,21 @@
     },
     "done": true
   },
+  "minecraft:end/dragon_breath": {
+    "criteria": {
+      "dragon_breath": "2026-10-10 15:57:27 +0530"
+    },
+    "done": true
+  },
   "blue_skies:recipes/blue_skies_combat/starlit_spear": {
     "criteria": {
       "has_item": "2026-10-07 21:26:31 +0530"
+    },
+    "done": true
+  },
+  "endergetic:poise_forest": {
+    "criteria": {
+      "in_poise_forest": "2026-10-10 16:30:18 +0530"
     },
     "done": true
   },
@@ -3150,6 +3446,8 @@
       "minecraft:zombified_piglin": "2026-09-13 00:55:04 +0530",
       "minecraft:witch": "2026-09-12 18:20:34 +0530",
       "minecraft:wither_skeleton": "2026-09-10 22:50:17 +0530",
+      "minecraft:ender_dragon": "2026-10-10 16:01:02 +0530",
+      "minecraft:shulker": "2026-10-10 16:39:36 +0530",
       "minecraft:cave_spider": "2026-09-10 22:58:48 +0530",
       "minecraft:piglin": "2026-09-06 23:02:38 +0530",
       "minecraft:enderman": "2026-09-06 12:40:32 +0530",
@@ -3192,6 +3490,12 @@
     },
     "done": true
   },
+  "blue_skies:recipes/blue_skies_blocks/warding_pearl": {
+    "criteria": {
+      "has_item": "2026-10-10 11:00:19 +0530"
+    },
+    "done": true
+  },
   "minecraft:recipes/decorations/pink_bed_from_white_bed": {
     "criteria": {
       "has_bed": "2026-09-06 11:43:51 +0530"
@@ -3207,6 +3511,12 @@
   "minecraft:recipes/decorations/crimson_sign": {
     "criteria": {
       "has_crimson_planks": "2026-09-06 23:45:00 +0530"
+    },
+    "done": true
+  },
+  "blue_skies:recipes/blue_skies_tools/diopside_pickaxe": {
+    "criteria": {
+      "has_resource": "2026-10-10 11:15:58 +0530"
     },
     "done": true
   },
@@ -3354,6 +3664,12 @@
     },
     "done": true
   },
+  "blue_skies:recipes/blue_skies_blocks/falsite_block": {
+    "criteria": {
+      "has_item": "2026-10-10 10:53:52 +0530"
+    },
+    "done": true
+  },
   "dungeons_arise:find_fishing_hut": {
     "criteria": {
       "location0": "2026-09-06 11:29:18 +0530"
@@ -3441,6 +3757,12 @@
   "supplementaries:recipes/cog_block": {
     "criteria": {
       "has_item": "2026-09-06 13:10:52 +0530"
+    },
+    "done": true
+  },
+  "blue_skies:recipes/blue_skies_combat/diopside_boots": {
+    "criteria": {
+      "has_item": "2026-10-10 11:15:58 +0530"
     },
     "done": true
   },
@@ -3613,6 +3935,12 @@
     },
     "done": true
   },
+  "blue_skies:recipes/blue_skies_everbright_blocks/rimestone_wall_stonecutting_rimestone": {
+    "criteria": {
+      "has_item": "2026-10-10 11:57:44 +0530"
+    },
+    "done": true
+  },
   "minecraft:recipes/decorations/stonecutter": {
     "criteria": {
       "has_stone": "2026-09-06 14:47:52 +0530"
@@ -3739,6 +4067,12 @@
     },
     "done": true
   },
+  "betterendforge:recipes/betterendforge/flavolite_slab": {
+    "criteria": {
+      "has_flavolite": "2026-10-10 15:55:28 +0530"
+    },
+    "done": true
+  },
   "blue_skies:recipes/blue_skies_blocks/moonstone_pressure_plate": {
     "criteria": {
       "has_item": "2026-10-07 21:26:31 +0530"
@@ -3781,6 +4115,12 @@
     },
     "done": true
   },
+  "blue_skies:recipes/blue_skies_tools/diopside_axe": {
+    "criteria": {
+      "has_resource": "2026-10-10 11:15:58 +0530"
+    },
+    "done": true
+  },
   "aquaculture:recipes/food/turtle_soup": {
     "criteria": {
       "has_items": "2026-09-27 13:51:07 +0530"
@@ -3796,6 +4136,12 @@
   "dungeons_arise:find_infested_temple_map": {
     "criteria": {
       "find_map": "2026-09-08 00:14:10 +0530"
+    },
+    "done": true
+  },
+  "blue_skies:recipes/blue_skies_everbright_blocks/starlit_fence_gate": {
+    "criteria": {
+      "has_item": "2026-10-10 11:55:04 +0530"
     },
     "done": true
   },
@@ -3826,6 +4172,12 @@
   "minecraft:recipes/building_blocks/acacia_stairs": {
     "criteria": {
       "has_planks": "2026-09-07 21:19:35 +0530"
+    },
+    "done": true
+  },
+  "blue_skies:recipes/blue_skies_misc/ventium_ingot_from_smelting": {
+    "criteria": {
+      "has_item": "2026-10-10 11:07:24 +0530"
     },
     "done": true
   },
@@ -3892,6 +4244,12 @@
   "immersivecooking:recipes/immersivecooking/oak_andesite_pantry": {
     "criteria": {
       "has_polished_andesite": "2026-09-19 18:38:46 +0530"
+    },
+    "done": true
+  },
+  "blue_skies:recipes/blue_skies_tools/starlit_axe": {
+    "criteria": {
+      "has_resource": "2026-10-10 11:55:04 +0530"
     },
     "done": true
   },
@@ -3994,6 +4352,12 @@
   "adorn:recipes/light_gray_sofa": {
     "criteria": {
       "has_key_item_0": "2026-09-06 11:47:33 +0530"
+    },
+    "done": true
+  },
+  "blue_skies:recipes/blue_skies_misc/cooked_grittle_flatfish_from_smelting": {
+    "criteria": {
+      "has_item": "2026-10-10 12:27:03 +0530"
     },
     "done": true
   },
@@ -4129,6 +4493,12 @@
     },
     "done": true
   },
+  "mowziesmobs:kill_naga": {
+    "criteria": {
+      "naga": "2026-10-10 12:43:24 +0530"
+    },
+    "done": true
+  },
   "dungeons_arise:find_mushroom_house": {
     "criteria": {
       "location0": "2026-09-06 17:02:48 +0530"
@@ -4180,6 +4550,12 @@
   "adorn:recipes/soulful_prismarine_chimney": {
     "criteria": {
       "has_key_item_0": "2026-10-08 21:15:45 +0530"
+    },
+    "done": true
+  },
+  "blue_skies:recipes/blue_skies_misc/pine_fruit_seeds": {
+    "criteria": {
+      "has_item": "2026-10-10 11:37:55 +0530"
     },
     "done": true
   },
@@ -4345,6 +4721,18 @@
     },
     "done": true
   },
+  "betterendforge:recipes/betterendforge/pythadendron_barrel": {
+    "criteria": {
+      "has_planks": "2026-10-10 16:39:09 +0530"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/blue_ice": {
+    "criteria": {
+      "has_packed_ice": "2026-10-10 12:23:50 +0530"
+    },
+    "done": true
+  },
   "minecraft:adventure/trade": {
     "criteria": {
       "traded": "2026-09-06 14:01:27 +0530"
@@ -4384,6 +4772,12 @@
   "minecraft:recipes/decorations/pink_stained_glass_pane_from_glass_pane": {
     "criteria": {
       "has_pink_dye": "2026-09-07 21:34:41 +0530"
+    },
+    "done": true
+  },
+  "betterendforge:recipes/betterendforge/flavolite_bricks_wall_from_flavolite_stonecutting": {
+    "criteria": {
+      "has_flavolite": "2026-10-10 15:55:28 +0530"
     },
     "done": true
   },
@@ -4472,6 +4866,12 @@
     },
     "done": true
   },
+  "betterendforge:recipes/betterendforge/flavolite_pressure_plate": {
+    "criteria": {
+      "has_flavolite": "2026-10-10 15:55:28 +0530"
+    },
+    "done": true
+  },
   "farmersdelight:main/plant_all_crops": {
     "criteria": {
       "cabbage": "2026-09-06 18:01:41 +0530",
@@ -4523,6 +4923,18 @@
   "minecraft:recipes/building_blocks/brown_wool": {
     "criteria": {
       "has_white_wool": "2026-09-06 11:17:31 +0530"
+    },
+    "done": true
+  },
+  "blue_skies:recipes/blue_skies_tools/starlit_shovel": {
+    "criteria": {
+      "has_resource": "2026-10-10 11:55:04 +0530"
+    },
+    "done": true
+  },
+  "blue_skies:recipes/blue_skies_blocks/star_emitter": {
+    "criteria": {
+      "has_item": "2026-10-10 10:53:52 +0530"
     },
     "done": true
   },
@@ -4679,6 +5091,12 @@
   "omnis:recipes/omnis/ravaged_chestplate": {
     "criteria": {
       "has_ravaged_metal": "2026-09-06 17:47:15 +0530"
+    },
+    "done": true
+  },
+  "betterendforge:recipes/betterendforge/flavolite_bricks_slab_from_flavolite_stonecutting": {
+    "criteria": {
+      "has_flavolite": "2026-10-10 15:55:28 +0530"
     },
     "done": true
   },
@@ -4874,9 +5292,21 @@
     },
     "done": true
   },
+  "minecraft:recipes/building_blocks/purpur_pillar": {
+    "criteria": {
+      "has_purpur_block": "2026-10-10 16:46:48 +0530"
+    },
+    "done": true
+  },
   "adorn:recipes/polished_blackstone_post": {
     "criteria": {
       "has_key_item_0": "2026-09-12 17:13:54 +0530"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/end_rod": {
+    "criteria": {
+      "has_chorus_fruit_popped": "2026-10-10 16:30:32 +0530"
     },
     "done": true
   },
@@ -4943,6 +5373,12 @@
   "minecraft:recipes/building_blocks/stripped_spruce_wood": {
     "criteria": {
       "has_log": "2026-09-07 21:19:22 +0530"
+    },
+    "done": true
+  },
+  "blue_skies:recipes/blue_skies_everbright_blocks/starlit_chest": {
+    "criteria": {
+      "has_item": "2026-10-10 11:02:34 +0530"
     },
     "done": true
   },
@@ -5115,6 +5551,12 @@
     },
     "done": true
   },
+  "betterendforge:recipes/betterendforge/pythadendron_button": {
+    "criteria": {
+      "has_planks": "2026-10-10 16:39:09 +0530"
+    },
+    "done": true
+  },
   "conjurer_illager:find_theatre": {
     "criteria": {
       "in_city": "2026-09-27 12:40:06 +0530"
@@ -5187,9 +5629,21 @@
     },
     "done": true
   },
+  "minecraft:recipes/misc/popped_chorus_fruit": {
+    "criteria": {
+      "has_chorus_fruit": "2026-10-10 16:30:16 +0530"
+    },
+    "done": true
+  },
   "minecraft:recipes/building_blocks/stone_brick_slab_from_stone_stonecutting": {
     "criteria": {
       "has_stone": "2026-09-06 14:47:52 +0530"
+    },
+    "done": true
+  },
+  "blue_skies:recipes/blue_skies_misc/cooked_municipal_monkfish_from_smelting": {
+    "criteria": {
+      "has_item": "2026-10-10 11:31:22 +0530"
     },
     "done": true
   },
@@ -5202,6 +5656,12 @@
   "minecraft:recipes/misc/flower_banner_pattern": {
     "criteria": {
       "has_oxeye_daisy": "2026-09-06 11:17:07 +0530"
+    },
+    "done": true
+  },
+  "blue_skies:recipes/blue_skies_everbright_blocks/rimestone_slab": {
+    "criteria": {
+      "has_item": "2026-10-10 11:57:44 +0530"
     },
     "done": true
   },
@@ -5307,6 +5767,12 @@
     },
     "done": true
   },
+  "blue_skies:recipes/blue_skies_everbright_blocks/starlit_planks": {
+    "criteria": {
+      "has_item": "2026-10-10 11:02:32 +0530"
+    },
+    "done": true
+  },
   "minecraft:recipes/decorations/iron_bars": {
     "criteria": {
       "has_iron_ingot": "2026-09-06 11:07:29 +0530"
@@ -5397,6 +5863,12 @@
     },
     "done": true
   },
+  "betterendforge:recipes/betterendforge/pythadendron_door": {
+    "criteria": {
+      "has_planks": "2026-10-10 16:39:09 +0530"
+    },
+    "done": true
+  },
   "supplementaries:recipes/candle_holder": {
     "criteria": {
       "has_item": "2026-09-06 17:43:14 +0530"
@@ -5427,9 +5899,27 @@
     },
     "done": true
   },
+  "betterendforge:recipes/betterendforge/pythadendron_chest": {
+    "criteria": {
+      "has_planks": "2026-10-10 16:39:09 +0530"
+    },
+    "done": true
+  },
+  "blue_skies:recipes/blue_skies_misc/cooked_carabeef_from_smelting": {
+    "criteria": {
+      "has_item": "2026-10-10 12:27:03 +0530"
+    },
+    "done": true
+  },
   "comforts:hammock_red": {
     "criteria": {
       "has_red_wool": "2026-09-20 01:07:57 +0530"
+    },
+    "done": true
+  },
+  "adorn:recipes/purpur_post": {
+    "criteria": {
+      "has_key_item_0": "2026-10-10 16:46:48 +0530"
     },
     "done": true
   },
@@ -5484,6 +5974,12 @@
   "minecraft:recipes/brewing/glistering_melon_slice": {
     "criteria": {
       "has_melon": "2026-09-10 23:20:43 +0530"
+    },
+    "done": true
+  },
+  "blue_skies:recipes/blue_skies_combat/diopside_helmet": {
+    "criteria": {
+      "has_item": "2026-10-10 11:15:58 +0530"
     },
     "done": true
   },
@@ -5584,6 +6080,12 @@
     },
     "done": true
   },
+  "repurposed_structures:shipwrecks": {
+    "criteria": {
+      "in_shipwreck_end": "2026-10-10 16:07:34 +0530"
+    },
+    "done": false
+  },
   "supplementaries:recipes/notice_board": {
     "criteria": {
       "has_item": "2026-09-12 19:27:08 +0530"
@@ -5662,6 +6164,12 @@
     },
     "done": true
   },
+  "blue_skies:recipes/blue_skies_everbright_blocks/starlit_stairs": {
+    "criteria": {
+      "has_item": "2026-10-10 11:55:04 +0530"
+    },
+    "done": true
+  },
   "omnis:recipes/omnis/ravaged_scythe": {
     "criteria": {
       "has_ravaged_metal": "2026-09-06 17:47:15 +0530"
@@ -5692,9 +6200,21 @@
     },
     "done": true
   },
+  "blue_skies:recipes/blue_skies_tools/diopside_shovel": {
+    "criteria": {
+      "has_resource": "2026-10-10 11:15:58 +0530"
+    },
+    "done": true
+  },
   "minecraft:recipes/building_blocks/blackstone_stairs": {
     "criteria": {
       "has_blackstone": "2026-09-07 22:34:28 +0530"
+    },
+    "done": true
+  },
+  "betterendforge:recipes/betterendforge/flavolite_bricks": {
+    "criteria": {
+      "has_flavolite": "2026-10-10 15:55:28 +0530"
     },
     "done": true
   },
@@ -5752,6 +6272,12 @@
     },
     "done": true
   },
+  "blue_skies:recipes/blue_skies_blocks/charoite_block": {
+    "criteria": {
+      "has_item": "2026-10-10 11:59:42 +0530"
+    },
+    "done": true
+  },
   "decorative_blocks_abnormals:recipes/red_mushroom_support": {
     "criteria": {
       "has_plank": "2026-09-06 11:22:47 +0530"
@@ -5785,6 +6311,12 @@
   "minecraft:recipes/decorations/red_banner": {
     "criteria": {
       "has_red_wool": "2026-09-20 01:07:57 +0530"
+    },
+    "done": true
+  },
+  "betterendforge:recipes/betterendforge/flavolite_tiles_from_flavolite_stonecutting": {
+    "criteria": {
+      "has_flavolite": "2026-10-10 15:55:28 +0530"
     },
     "done": true
   },
@@ -5872,6 +6404,18 @@
     },
     "done": true
   },
+  "blue_skies:recipes/blue_skies_misc/starlit_stick": {
+    "criteria": {
+      "has_item": "2026-10-10 11:55:04 +0530"
+    },
+    "done": true
+  },
+  "blue_skies:recipes/blue_skies_combat/charoite_chestplate": {
+    "criteria": {
+      "has_item": "2026-10-10 11:59:42 +0530"
+    },
+    "done": true
+  },
   "blue_skies:recipes/blue_skies_tools/bluebright_pickaxe": {
     "criteria": {
       "has_resource": "2026-10-07 21:25:53 +0530"
@@ -5911,6 +6455,12 @@
   "adorn:recipes/warped_shelf": {
     "criteria": {
       "has_key_item_0": "2026-09-13 01:00:05 +0530"
+    },
+    "done": true
+  },
+  "betterendforge:recipes/betterendforge/thallasium_ingot_from_smelting": {
+    "criteria": {
+      "has_thallasium_ore": "2026-10-10 16:05:08 +0530"
     },
     "done": true
   },
@@ -6151,6 +6701,12 @@
   "minecraft:recipes/building_blocks/purple_wool": {
     "criteria": {
       "has_white_wool": "2026-09-06 11:17:31 +0530"
+    },
+    "done": true
+  },
+  "betterendforge:recipes/betterendforge/flavolite_stairs_from_flavolite_stonecutting": {
+    "criteria": {
+      "has_flavolite": "2026-10-10 15:55:28 +0530"
     },
     "done": true
   },
@@ -6436,6 +6992,12 @@
     },
     "done": true
   },
+  "betterendforge:recipes/betterendforge/thallasium_ingot_from_blasting": {
+    "criteria": {
+      "has_thallasium_ore": "2026-10-10 16:05:08 +0530"
+    },
+    "done": true
+  },
   "adorn:recipes/stone_platform": {
     "criteria": {
       "has_key_item_0": "2026-09-11 21:18:29 +0530"
@@ -6564,7 +7126,8 @@
   },
   "minecraft:husbandry/bred_all_animals": {
     "criteria": {
-      "minecraft:pig": "2026-09-20 12:22:48 +0530"
+      "minecraft:pig": "2026-09-20 12:22:48 +0530",
+      "minecraft:panda": "2026-10-10 13:05:45 +0530"
     },
     "done": false
   },
@@ -6595,6 +7158,12 @@
   "dungeons_arise:find_illager_campsite": {
     "criteria": {
       "location0": "2026-09-12 19:22:03 +0530"
+    },
+    "done": true
+  },
+  "blue_skies:recipes/blue_skies_tools/diopside_sword": {
+    "criteria": {
+      "has_resource": "2026-10-10 11:15:58 +0530"
     },
     "done": true
   },
@@ -6637,6 +7206,12 @@
   "minecraft:recipes/redstone/warped_pressure_plate": {
     "criteria": {
       "has_planks": "2026-09-06 22:44:11 +0530"
+    },
+    "done": true
+  },
+  "blue_skies:recipes/blue_skies_misc/cooked_grittle_flatfish_from_smoking": {
+    "criteria": {
+      "has_item": "2026-10-10 12:27:03 +0530"
     },
     "done": true
   },
@@ -6769,6 +7344,12 @@
   "dungeons_arise:find_merchant_campsite": {
     "criteria": {
       "location0": "2026-09-27 13:06:56 +0530"
+    },
+    "done": true
+  },
+  "blue_skies:recipes/blue_skies_everbright_blocks/starlit_door": {
+    "criteria": {
+      "has_item": "2026-10-10 11:55:04 +0530"
     },
     "done": true
   },
@@ -6908,6 +7489,12 @@
     },
     "done": true
   },
+  "betterendforge:recipes/betterendforge/pythadendron_trapdoor": {
+    "criteria": {
+      "has_planks": "2026-10-10 16:39:09 +0530"
+    },
+    "done": true
+  },
   "minecraft:recipes/building_blocks/chiseled_nether_bricks_from_nether_bricks_stonecutting": {
     "criteria": {
       "has_nether_bricks": "2026-09-07 00:30:39 +0530"
@@ -6929,6 +7516,12 @@
   "minecraft:recipes/building_blocks/chiseled_stone_bricks_from_stone_bricks_stonecutting": {
     "criteria": {
       "has_stone_bricks": "2026-09-06 14:27:05 +0530"
+    },
+    "done": true
+  },
+  "betterendforge:recipes/betterendforge/pythadendron_ladder": {
+    "criteria": {
+      "has_planks": "2026-10-10 16:39:09 +0530"
     },
     "done": true
   },
@@ -7046,6 +7639,12 @@
     },
     "done": true
   },
+  "betterendforge:recipes/betterendforge/flavolite_wall": {
+    "criteria": {
+      "has_flavolite": "2026-10-10 15:55:28 +0530"
+    },
+    "done": true
+  },
   "blue_skies:recipes/blue_skies_everbright_blocks/turquoise_cobblestone_wall": {
     "criteria": {
       "has_item": "2026-10-07 21:26:23 +0530"
@@ -7118,6 +7717,12 @@
     },
     "done": true
   },
+  "blue_skies:recipes/misc/lime_dye_from_polar_posy": {
+    "criteria": {
+      "has_item": "2026-10-10 11:38:08 +0530"
+    },
+    "done": true
+  },
   "adorn:recipes/acacia_kitchen_counter": {
     "criteria": {
       "has_key_item_0": "2026-09-07 21:19:35 +0530"
@@ -7130,6 +7735,12 @@
     },
     "done": true
   },
+  "minecraft:end/find_end_city": {
+    "criteria": {
+      "in_city": "2026-10-10 16:37:56 +0530"
+    },
+    "done": true
+  },
   "adorn:recipes/crimson_kitchen_counter": {
     "criteria": {
       "has_key_item_0": "2026-09-06 23:45:00 +0530"
@@ -7139,6 +7750,12 @@
   "immersivecooking:recipes/immersivecooking/warped_blackstone_counter": {
     "criteria": {
       "has_polished_blackstone": "2026-09-12 17:13:54 +0530"
+    },
+    "done": true
+  },
+  "minecraft:end/enter_end_gateway": {
+    "criteria": {
+      "entered_end_gateway": "2026-10-10 16:04:30 +0530"
     },
     "done": true
   },
@@ -7193,6 +7810,12 @@
   "immersivecooking:recipes/immersivecooking/dark_oak_quartz_counter": {
     "criteria": {
       "has_quartz_block": "2026-09-11 21:19:00 +0530"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/purpur_block": {
+    "criteria": {
+      "has_chorus_fruit_popped": "2026-10-10 16:30:32 +0530"
     },
     "done": true
   },
@@ -7262,6 +7885,12 @@
     },
     "done": true
   },
+  "betterendforge:recipes/betterendforge/pythadendron_bookshelf": {
+    "criteria": {
+      "has_planks": "2026-10-10 16:39:09 +0530"
+    },
+    "done": true
+  },
   "adorn:recipes/byg/maple_bench": {
     "criteria": {
       "has_key_item_0": "2026-09-06 15:02:19 +0530"
@@ -7274,6 +7903,12 @@
     },
     "done": true
   },
+  "betterendforge:recipes/betterendforge/pythadendron_stairs": {
+    "criteria": {
+      "has_planks": "2026-10-10 16:39:09 +0530"
+    },
+    "done": true
+  },
   "alexsmobs:alexsmobs/emu_dodge": {
     "criteria": {
       "ex": "2026-09-19 18:34:39 +0530"
@@ -7283,6 +7918,12 @@
   "adorn:recipes/brick_platform": {
     "criteria": {
       "has_key_item_0": "2026-09-06 22:25:38 +0530"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/end_stone_brick_wall_from_end_stone_stonecutting": {
+    "criteria": {
+      "has_end_stone": "2026-10-10 15:53:16 +0530"
     },
     "done": true
   },
@@ -7454,6 +8095,12 @@
     },
     "done": true
   },
+  "betterendforge:recipes/betterendforge/pythadendron_slab": {
+    "criteria": {
+      "has_planks": "2026-10-10 16:39:09 +0530"
+    },
+    "done": true
+  },
   "minecraft:recipes/building_blocks/crimson_hyphae": {
     "criteria": {
       "has_log": "2026-09-06 23:31:16 +0530"
@@ -7509,6 +8156,12 @@
     },
     "done": true
   },
+  "minecraft:end/elytra": {
+    "criteria": {
+      "elytra": "2026-10-10 16:41:28 +0530"
+    },
+    "done": true
+  },
   "minecraft:recipes/building_blocks/chiseled_stone_bricks_stone_from_stonecutting": {
     "criteria": {
       "has_stone": "2026-09-06 14:47:52 +0530"
@@ -7536,6 +8189,12 @@
   "farmersdelight:recipes/farmersdelight/rice_bag": {
     "criteria": {
       "has_rice": "2026-09-12 14:49:15 +0530"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/purpur_stairs": {
+    "criteria": {
+      "has_purpur_block": "2026-10-10 16:46:48 +0530"
     },
     "done": true
   },
@@ -7618,9 +8277,21 @@
     },
     "done": true
   },
+  "supplementaries:recipes/hanging_sign_pythadendron": {
+    "criteria": {
+      "has_plank": "2026-10-10 16:39:09 +0530"
+    },
+    "done": true
+  },
   "extendedmushrooms:recipes/redstone/mushroom_wood/honey_fungus/honey_fungus_chest_trapped": {
     "criteria": {
       "has_tripwire_hook": "2026-09-20 01:10:18 +0530"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/purpur_pillar_from_purpur_block_stonecutting": {
+    "criteria": {
+      "has_purpur_block": "2026-10-10 16:46:48 +0530"
     },
     "done": true
   },
@@ -7777,6 +8448,12 @@
   "minecraft:recipes/decorations/armor_stand": {
     "criteria": {
       "has_stone_slab": "2026-09-27 22:07:28 +0530"
+    },
+    "done": true
+  },
+  "blue_skies:recipes/blue_skies_tools/charoite_sword": {
+    "criteria": {
+      "has_resource": "2026-10-10 11:59:42 +0530"
     },
     "done": true
   },
@@ -7990,6 +8667,12 @@
     },
     "done": true
   },
+  "blue_skies:recipes/blue_skies_tools/diopside_hoe": {
+    "criteria": {
+      "has_resource": "2026-10-10 11:15:58 +0530"
+    },
+    "done": true
+  },
   "minecraft:recipes/redstone/polished_blackstone_pressure_plate": {
     "criteria": {
       "has_polished_blackstone": "2026-09-12 17:13:54 +0530"
@@ -8044,6 +8727,18 @@
     },
     "done": true
   },
+  "minecraft:story/follow_ender_eye": {
+    "criteria": {
+      "in_stronghold_betterstrongholds": "2026-10-10 13:24:51 +0530"
+    },
+    "done": true
+  },
+  "blue_skies:recipes/misc/bone_meal_from_azulfo": {
+    "criteria": {
+      "has_item": "2026-10-10 15:45:23 +0530"
+    },
+    "done": true
+  },
   "minecraft:recipes/decorations/light_gray_carpet_from_white_carpet": {
     "criteria": {
       "has_light_gray_dye": "2026-09-07 21:34:29 +0530"
@@ -8095,6 +8790,12 @@
   "minecraft:recipes/brewing/blaze_powder": {
     "criteria": {
       "has_blaze_rod": "2026-09-14 17:33:11 +0530"
+    },
+    "done": true
+  },
+  "minecraft:end/root": {
+    "criteria": {
+      "entered_end": "2026-10-10 15:51:59 +0530"
     },
     "done": true
   },
@@ -8218,15 +8919,57 @@
     },
     "done": true
   },
+  "betterendforge:recipes/betterendforge/flavolite_slab_from_flavolite_stonecutting": {
+    "criteria": {
+      "has_flavolite": "2026-10-10 15:55:28 +0530"
+    },
+    "done": true
+  },
+  "blue_skies:recipes/blue_skies_tools/ventium_bucket": {
+    "criteria": {
+      "has_item": "2026-10-10 12:05:45 +0530"
+    },
+    "done": true
+  },
+  "blue_skies:recipes/blue_skies_tools/charoite_axe": {
+    "criteria": {
+      "has_resource": "2026-10-10 11:59:42 +0530"
+    },
+    "done": true
+  },
+  "betterendforge:recipes/betterendforge/terminite_anvil_smithing": {
+    "criteria": {
+      "has_terminite_block": "2026-10-10 16:49:46 +0530"
+    },
+    "done": true
+  },
   "minecraft:recipes/decorations/polished_blackstone_brick_wall": {
     "criteria": {
       "has_polished_blackstone_bricks": "2026-09-06 23:45:21 +0530"
     },
     "done": true
   },
+  "blue_skies:recipes/blue_skies_everbright_blocks/polished_rimestone_stonecutting_rimestone": {
+    "criteria": {
+      "has_item": "2026-10-10 11:57:44 +0530"
+    },
+    "done": true
+  },
+  "blue_skies:recipes/blue_skies_everbright_blocks/starlit_button": {
+    "criteria": {
+      "has_item": "2026-10-10 11:55:04 +0530"
+    },
+    "done": true
+  },
   "minecraft:recipes/combat/wooden_sword": {
     "criteria": {
       "has_stick": "2026-09-06 11:03:29 +0530"
+    },
+    "done": true
+  },
+  "blue_skies:recipes/blue_skies_everbright_blocks/starlit_slab": {
+    "criteria": {
+      "has_item": "2026-10-10 11:55:04 +0530"
     },
     "done": true
   },
@@ -8322,9 +9065,10 @@
   },
   "morevillagers:map_endcity": {
     "criteria": {
-      "hasmap": "2026-09-06 14:29:24 +0530"
+      "hasmap": "2026-09-06 14:29:24 +0530",
+      "endcity": "2026-10-10 16:37:56 +0530"
     },
-    "done": false
+    "done": true
   },
   "blue_skies:recipes/blue_skies_misc/bluebright_stick": {
     "criteria": {
@@ -8353,6 +9097,18 @@
   "blue_skies:recipes/blue_skies_dungeon/blinding_slab_stonecutting_blinding_stone": {
     "criteria": {
       "has_item": "2026-09-26 12:47:01 +0530"
+    },
+    "done": true
+  },
+  "betterendforge:recipes/betterendforge/flavolite_button_from_flavolite_stonecutting": {
+    "criteria": {
+      "has_flavolite": "2026-10-10 15:55:28 +0530"
+    },
+    "done": true
+  },
+  "blue_skies:recipes/blue_skies_everbright_blocks/polished_rimestone": {
+    "criteria": {
+      "has_item": "2026-10-10 11:57:44 +0530"
     },
     "done": true
   },
@@ -8479,6 +9235,12 @@
   "immersivecooking:recipes/immersivecooking/crimson_andesite_counter": {
     "criteria": {
       "has_polished_andesite": "2026-09-19 18:38:46 +0530"
+    },
+    "done": true
+  },
+  "supplementaries:recipes/sign_post_pythadendron": {
+    "criteria": {
+      "has_plank": "2026-10-10 16:39:09 +0530"
     },
     "done": true
   },
@@ -8657,6 +9419,12 @@
     },
     "done": true
   },
+  "blue_skies:recipes/decorations/jukebox_compat": {
+    "criteria": {
+      "has_item": "2026-10-10 11:59:42 +0530"
+    },
+    "done": true
+  },
   "adorn:recipes/oak_shelf": {
     "criteria": {
       "has_key_item_0": "2026-09-09 21:17:19 +0530"
@@ -8723,6 +9491,12 @@
     },
     "done": true
   },
+  "blue_skies:recipes/blue_skies_everbright_blocks/starlit_crafting_table": {
+    "criteria": {
+      "has_item": "2026-10-10 11:55:04 +0530"
+    },
+    "done": true
+  },
   "blue_skies:recipes/blue_skies_tools/turquoise_stone_pickaxe": {
     "criteria": {
       "has_resource": "2026-10-07 21:26:23 +0530"
@@ -8747,9 +9521,21 @@
     },
     "done": true
   },
+  "betterendforge:recipes/betterendforge/end_stone_furnace": {
+    "criteria": {
+      "has_end_stone": "2026-10-10 15:53:16 +0530"
+    },
+    "done": true
+  },
   "adorn:recipes/byg/maple_platform": {
     "criteria": {
       "has_key_item_0": "2026-09-06 15:02:19 +0530"
+    },
+    "done": true
+  },
+  "blue_skies:recipes/blue_skies_tools/charoite_pickaxe": {
+    "criteria": {
+      "has_resource": "2026-10-10 11:59:42 +0530"
     },
     "done": true
   },
@@ -8798,6 +9584,12 @@
   "minecraft:recipes/tools/golden_hoe": {
     "criteria": {
       "has_gold_ingot": "2026-09-06 13:20:35 +0530"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/purpur_stairs_from_purpur_block_stonecutting": {
+    "criteria": {
+      "has_purpur_block": "2026-10-10 16:46:48 +0530"
     },
     "done": true
   },
@@ -8861,6 +9653,12 @@
     },
     "done": true
   },
+  "blue_skies:recipes/blue_skies_everbright_blocks/starlit_ladder": {
+    "criteria": {
+      "has_item": "2026-10-10 11:02:34 +0530"
+    },
+    "done": true
+  },
   "blue_skies:recipes/blue_skies_everbright_blocks/starlit_bookshelf": {
     "criteria": {
       "has_item": "2026-09-06 12:09:45 +0530"
@@ -8885,9 +9683,21 @@
     },
     "done": true
   },
+  "blue_skies:recipes/blue_skies_everbright_blocks/rimestone_slab_stonecutting_rimestone": {
+    "criteria": {
+      "has_item": "2026-10-10 11:57:44 +0530"
+    },
+    "done": true
+  },
   "minecraft:recipes/food/mushroom_stew": {
     "criteria": {
       "has_brown_mushroom": "2026-09-06 11:13:24 +0530"
+    },
+    "done": true
+  },
+  "blue_skies:recipes/blue_skies_misc/ventium_ingot_from_blasting": {
+    "criteria": {
+      "has_item": "2026-10-10 11:07:24 +0530"
     },
     "done": true
   },
@@ -8899,6 +9709,7 @@
   },
   "minecraft:husbandry/balanced_diet": {
     "criteria": {
+      "baked_potato": "2026-10-10 10:56:21 +0530",
       "neapolitan:vanilla_fudge": "2026-09-13 12:54:19 +0530",
       "neapolitan:strawberry_scones": "2026-09-06 15:23:23 +0530",
       "potato": "2026-09-06 15:52:52 +0530",
@@ -8923,6 +9734,12 @@
   "minecraft:recipes/building_blocks/gray_terracotta": {
     "criteria": {
       "has_terracotta": "2026-10-07 20:11:28 +0530"
+    },
+    "done": true
+  },
+  "betterendforge:recipes/betterendforge/pythadendron_pressure_plate": {
+    "criteria": {
+      "has_planks": "2026-10-10 16:39:09 +0530"
     },
     "done": true
   },
@@ -8965,6 +9782,12 @@
   "aquaculture:recipes/tools/gold_fillet_knife": {
     "criteria": {
       "has_items": "2026-09-06 13:20:35 +0530"
+    },
+    "done": true
+  },
+  "blue_skies:recipes/blue_skies_everbright_blocks/starlit_pressure_plate": {
+    "criteria": {
+      "has_item": "2026-10-10 11:55:04 +0530"
     },
     "done": true
   },
@@ -9064,6 +9887,12 @@
     },
     "done": true
   },
+  "blue_skies:recipes/blue_skies_everbright_blocks/rimestone_stairs": {
+    "criteria": {
+      "has_item": "2026-10-10 11:57:44 +0530"
+    },
+    "done": true
+  },
   "minecraft:recipes/misc/magenta_dye_from_blue_red_white_dye": {
     "criteria": {
       "has_rose_red": "2026-09-07 21:34:23 +0530"
@@ -9100,9 +9929,21 @@
     },
     "done": true
   },
+  "betterendforge:recipes/betterendforge/flavolite_pillar_from_flavolite_stonecutting": {
+    "criteria": {
+      "has_flavolite": "2026-10-10 15:55:28 +0530"
+    },
+    "done": true
+  },
   "minecraft:recipes/building_blocks/purple_concrete_powder": {
     "criteria": {
       "has_gravel": "2026-09-06 11:21:38 +0530"
+    },
+    "done": true
+  },
+  "dungeons_arise:find_illager_windmill": {
+    "criteria": {
+      "location0": "2026-10-10 12:49:05 +0530"
     },
     "done": true
   },
@@ -9220,6 +10061,12 @@
     },
     "done": true
   },
+  "blue_skies:recipes/blue_skies_misc/cooked_carabeef_from_campfire_cooking": {
+    "criteria": {
+      "has_item": "2026-10-10 12:27:03 +0530"
+    },
+    "done": true
+  },
   "aquaculture:recipes/misc/iron_nugget_from_blasting": {
     "criteria": {
       "has_fillet_knife": "2026-09-08 00:32:57 +0530"
@@ -9253,6 +10100,12 @@
   "cavesandcliffs:recipes/building_blocks/deepslate_bricks_from_polished_deepslate_stonecutting": {
     "criteria": {
       "has_polished_deepslate": "2026-09-19 21:42:39 +0530"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/ender_chest": {
+    "criteria": {
+      "has_ender_eye": "2026-10-10 12:38:07 +0530"
     },
     "done": true
   },
@@ -9304,9 +10157,21 @@
     },
     "done": true
   },
+  "blue_skies:recipes/blue_skies_misc/cooked_municipal_monkfish_from_campfire_cooking": {
+    "criteria": {
+      "has_item": "2026-10-10 11:31:22 +0530"
+    },
+    "done": true
+  },
   "extendedmushrooms:recipes/food/grilled_mushroom_from_smoking": {
     "criteria": {
       "has_mushroom": "2026-09-06 11:13:24 +0530"
+    },
+    "done": true
+  },
+  "blue_skies:recipes/blue_skies_misc/charoite_from_smelting": {
+    "criteria": {
+      "has_item": "2026-10-10 11:25:50 +0530"
     },
     "done": true
   },
@@ -9340,6 +10205,12 @@
     },
     "done": true
   },
+  "blue_skies:recipes/decorations/anvil_compat": {
+    "criteria": {
+      "has_item": "2026-10-10 12:05:45 +0530"
+    },
+    "done": true
+  },
   "upgradednetherite:recipes/upgraded_netherite_shield_smithing": {
     "criteria": {
       "has_netherite_shield": "2026-09-20 14:17:51 +0530"
@@ -9367,6 +10238,18 @@
   "minecraft:recipes/tools/diamond_axe": {
     "criteria": {
       "has_diamond": "2026-09-06 13:35:05 +0530"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/end_stone_bricks_from_end_stone_stonecutting": {
+    "criteria": {
+      "has_end_stone": "2026-10-10 15:53:16 +0530"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/end_stone_brick_stairs_from_end_stone_stonecutting": {
+    "criteria": {
+      "has_end_stone": "2026-10-10 15:53:16 +0530"
     },
     "done": true
   },
@@ -9406,6 +10289,12 @@
     },
     "done": true
   },
+  "blue_skies:recipes/blue_skies_misc/cooked_municipal_monkfish_from_smoking": {
+    "criteria": {
+      "has_item": "2026-10-10 11:31:22 +0530"
+    },
+    "done": true
+  },
   "supplementaries:recipes/stone_lamp": {
     "criteria": {
       "has_item": "2026-09-06 23:31:37 +0530"
@@ -9415,6 +10304,12 @@
   "farmersdelight:recipes/farmersdelight/cooked_bacon": {
     "criteria": {
       "cooked_bacon": "2026-09-07 20:40:20 +0530"
+    },
+    "done": true
+  },
+  "blue_skies:recipes/blue_skies_tools/starlit_hoe": {
+    "criteria": {
+      "has_resource": "2026-10-10 11:55:04 +0530"
     },
     "done": true
   },
@@ -9520,6 +10415,12 @@
     },
     "done": true
   },
+  "blue_skies:recipes/blue_skies_blocks/tool_box": {
+    "criteria": {
+      "has_item": "2026-10-10 12:05:45 +0530"
+    },
+    "done": true
+  },
   "minecraft:recipes/building_blocks/brown_terracotta": {
     "criteria": {
       "has_terracotta": "2026-10-07 20:11:28 +0530"
@@ -9547,6 +10448,12 @@
   "dungeons_arise:find_monasteries": {
     "criteria": {
       "location0": "2026-09-07 23:52:02 +0530"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/shulker_box": {
+    "criteria": {
+      "has_shulker_shell": "2026-10-10 16:49:57 +0530"
     },
     "done": true
   },
@@ -9637,6 +10544,12 @@
   "adorn:recipes/spruce_platform": {
     "criteria": {
       "has_key_item_0": "2026-09-06 11:44:13 +0530"
+    },
+    "done": true
+  },
+  "betterendforge:recipes/betterendforge/flavolite_bricks_from_flavolite_stonecutting": {
+    "criteria": {
+      "has_flavolite": "2026-10-10 15:55:28 +0530"
     },
     "done": true
   },
@@ -9838,6 +10751,18 @@
     },
     "done": true
   },
+  "betterendforge:recipes/betterendforge/pythadendron_crafting_table": {
+    "criteria": {
+      "has_planks": "2026-10-10 16:39:09 +0530"
+    },
+    "done": true
+  },
+  "minecraft:story/enter_the_end": {
+    "criteria": {
+      "entered_end": "2026-10-10 15:51:59 +0530"
+    },
+    "done": true
+  },
   "minecraft:recipes/transportation/warped_fungus_on_a_stick": {
     "criteria": {
       "has_warped_fungus": "2026-09-06 22:45:31 +0530"
@@ -9883,6 +10808,12 @@
   "minecraft:recipes/transportation/rail": {
     "criteria": {
       "has_minecart": "2026-09-12 14:49:19 +0530"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/purpur_slab_from_purpur_block_stonecutting": {
+    "criteria": {
+      "has_purpur_block": "2026-10-10 16:46:48 +0530"
     },
     "done": true
   },

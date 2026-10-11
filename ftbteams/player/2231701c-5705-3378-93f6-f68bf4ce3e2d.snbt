@@ -1,0 +1,18 @@
+{
+	id: "2231701c-5705-3378-93f6-f68bf4ce3e2d"
+	type: "player"
+	player_name: "OJISSSS"
+	ranks: { }
+	properties: {
+		"ftbchunks:allow_explosions": 0b
+		"ftbteams:display_name": "OJISSSS"
+		"ftbteams:color": "#C7FF59"
+		"ftbchunks:block_edit_mode": "allies"
+		"ftbchunks:block_interact_mode": "allies"
+		"ftbteams:description": ""
+		"ftbteams:free_to_join": 0b
+		"ftbchunks:allow_fake_players": 1b
+	}
+	message_history: [ ]
+	extra: { }
+}
